@@ -1,0 +1,21 @@
+{
+  "name": "coverclarity-florida-aca-subsidy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Florida ACA subsidy calculator and guide library with generated SEO content.",
+  "scripts": {
+    "generate": "python scripts/generate_aca_articles.py",
+    "origin:apply": "python scripts/apply_site_origin.py",
+    "validate": "python scripts/validate_content_quality.py --write-report",
+    "validate:production": "python scripts/validate_content_quality.py --write-report --require-site-origin",
+    "check": "python scripts/generate_aca_articles.py && python scripts/validate_content_quality.py --write-report",
+    "check:production": "python scripts/generate_aca_articles.py && python scripts/apply_site_origin.py && python scripts/validate_content_quality.py --write-report --require-site-origin",
+    "ready": "python scripts/production_readiness_audit.py --write-report",
+    "ready:production": "python scripts/production_readiness_audit.py --write-report --require-ready",
+    "gsc:check": "python scripts/gsc_submit_sitemap.py --check-config",
+    "gsc:submit": "python scripts/gsc_submit_sitemap.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

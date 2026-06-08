@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Will the enhanced ACA subsidies come back? Where 2026 stands | CoverClarity</title>
+<link rel="stylesheet" href="styles/system.css" />
+<style>
+  .article { max-width: 720px; margin: 0 auto; }
+  .article p { color: var(--ink-soft); margin: 0 0 1.1em; }
+  .article h2 { margin: 38px 0 12px; }
+  .article .lead { color: var(--ink); margin-bottom: 1.4em; }
+  .takeaways { background: var(--paper-2); border:1px solid var(--line); border-radius: var(--r-lg); padding: 22px 26px; margin: 26px 0; }
+  .takeaways li { margin-bottom: 8px; color: var(--ink-soft); }
+  .pullquote { font-family: var(--serif); font-size: 1.5rem; line-height: 1.32; color: var(--ink); border-left: 4px solid var(--accent); padding: 6px 0 6px 22px; margin: 30px 0; font-style: italic; }
+  .pullquote cite { display:block; font-family: var(--sans); font-style:normal; font-size:.85rem; color:var(--quiet); margin-top:10px; }
+  .cta-card { background: var(--ink); color:#fff; border-radius: var(--r-lg); padding: 26px 28px; margin: 30px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .byline { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  @media (max-width: 980px){ .footgrid { grid-template-columns:1fr !important; } .mainnav{display:none !important;} }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="components/chrome.jsx"></script>
+<script type="text/babel" data-presets="react">
+function Article() {
+  return (
+    <React.Fragment>
+      <Header active="News & guides" />
+      <main className="wrap" style={{ paddingTop: 30 }}>
+        <div className="article">
+          <p className="eyebrow">Policy status · Updated weekly</p>
+          <h1 className="h1" style={{ margin:"12px 0 18px" }}>Will the enhanced ACA subsidies come back? Where things stand for 2026</h1>
+
+          <div className="byline" style={{ marginBottom:18 }}>
+            <span style={{ width:38,height:38,borderRadius:"50%",background:"var(--accent-tint)",color:"var(--accent-deep)",display:"grid",placeItems:"center",fontWeight:700,fontFamily:"var(--serif)" }}>ER</span>
+            <div>
+              <div style={{ fontWeight:600 }}>By Elena Rivas, Health Policy Writer</div>
+              <div className="datestamp tnum"><span><b>Published</b> May 2, 2026</span><span><b>Last reviewed</b> Jun 5, 2026</span></div>
+            </div>
+          </div>
+
+          <ReviewerChip />
+
+          <div className="takeaways" style={{ marginTop:22 }}>
+            <div className="eyebrow" style={{ marginBottom:10 }}>Key takeaways</div>
+            <ul style={{ margin:0, paddingLeft:20, lineHeight:1.6 }}>
+              <li>The enhanced premium tax credits <b>expired December 31, 2025</b>. Current law reverts to the pre-2021 subsidy rules.</li>
+              <li>For many Florida households, net premiums rise even though plan sticker prices are similar.</li>
+              <li>Congress could extend, modify, or let the change stand — nothing is final as of this update.</li>
+              <li>Use our calculator to see your own with-vs-without estimate in about a minute.</li>
+            </ul>
+          </div>
+
+          <p className="lead">If you buy your own health insurance in Florida, your 2026 premium likely depends less on your plan than on a tax-credit question Congress has not settled.</p>
+
+          <p>The enhanced premium tax credits — first passed in 2021 and extended through 2025 — lowered what Marketplace shoppers pay by capping their premium contribution as a share of income and removing the old "subsidy cliff" at 400% of the federal poverty level (FPL). Those rules <b>expired at the end of 2025</b>.</p>
+
+          <h2 className="h2">What "current law" means right now</h2>
+          <p>With the enhanced rules gone, subsidies revert to the pre-2021 formula. Households are expected to contribute a larger share of income toward the benchmark Silver plan, and anyone earning above 400% FPL loses premium help entirely. The plan you had may not change — but the credit applied to it can shrink.</p>
+
+          <div className="pullquote">"Letting the enhanced credits lapse would raise out-of-pocket premium payments for most Marketplace enrollees."
+            <cite>— Paraphrased from a Kaiser Family Foundation analysis (illustrative attribution)</cite>
+          </div>
+
+          <div className="adslot" style={{ margin:"26px 0" }}><span className="adnote">In-article responsive ad</span></div>
+
+          <h2 className="h2">What could still change</h2>
+          <p>Lawmakers have floated several paths: a clean extension of the enhanced credits, a scaled-back compromise, or allowing the reversion to stand. Because the outcome affects pricing directly, we update this page as the situation moves and stamp it with a review date.</p>
+
+          <div className="cta-card">
+            <div>
+              <div style={{ fontFamily:"var(--serif)", fontWeight:600, fontSize:"1.3rem", color:"#fff", marginBottom:6 }}>See your own with-vs-without estimate</div>
+              <div style={{ color:"rgba(255,255,255,.78)", fontSize:".95rem" }}>Free, private, no sign-up. About one minute.</div>
+            </div>
+            <a className="btn btn-primary" href="index.html">Open the calculator <Icon name="arrow" size={16}/></a>
+          </div>
+
+          <h2 className="h2">How to prepare either way</h2>
+          <p>Check your <b>estimated 2026 income</b>, since it drives both eligibility and the size of any credit. If your income is under 250% FPL, look closely at Silver plans for cost-sharing reductions. And confirm everything at <a href="https://www.healthcare.gov" target="_blank" rel="noopener">HealthCare.gov</a> before you enroll — our figures are estimates, not quotes.</p>
+
+          <div style={{ marginTop:30, paddingTop:18, borderTop:"1px solid var(--line)" }}>
+            <SourceRow />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Article />);
+</script>
+</body>
+</html>

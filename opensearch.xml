@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>CoverClarity</ShortName>
+  <Description>Search Florida ACA subsidy calculator guides, county notes, MAGI topics, CSR explainers, and Marketplace verification paths.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" template="{SITE_ORIGIN}/blog.html?q={searchTerms}"/>
+</OpenSearchDescription>

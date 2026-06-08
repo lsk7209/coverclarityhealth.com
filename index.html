@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Florida ACA Subsidy Calculator 2026 | CoverClarity</title>
+  <meta name="description" content="Florida ACA subsidy calculator for 2026 Marketplace premiums. Estimate your monthly cost with and without enhanced premium tax credits.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="{SITE_ORIGIN}/">
+  <link rel="alternate" type="application/rss+xml" title="CoverClarity Florida ACA Subsidy Guides" href="{SITE_ORIGIN}/feed.xml">
+  <link rel="search" type="application/opensearchdescription+xml" title="CoverClarity" href="{SITE_ORIGIN}/opensearch.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Florida ACA Subsidy Calculator 2026 | CoverClarity">
+  <meta property="og:description" content="Florida ACA subsidy calculator for 2026 Marketplace premiums, with current-law and enhanced-credit estimates side by side.">
+  <meta property="og:url" content="{SITE_ORIGIN}/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Florida ACA Subsidy Calculator 2026 | CoverClarity">
+  <meta name="twitter:description" content="Estimate 2026 Florida Marketplace premiums with and without enhanced premium tax credits.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"{SITE_ORIGIN}/#organization","name":"CoverClarity","url":"{SITE_ORIGIN}","description":"CoverClarity publishes Florida ACA subsidy calculator guidance, Marketplace estimate explainers, and source-based verification paths.","areaServed":{"@type":"AdministrativeArea","name":"Florida"},"knowsAbout":["Florida ACA subsidy estimates","Marketplace premium tax credits","federal poverty level calculations","cost-sharing reductions","HealthCare.gov verification"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"{SITE_ORIGIN}/#website","name":"CoverClarity","url":"{SITE_ORIGIN}","publisher":{"@id":"{SITE_ORIGIN}/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"{SITE_ORIGIN}/blog.html?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Florida ACA Subsidy Calculator 2026","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Browser-based Florida ACA subsidy calculator for estimating 2026 Marketplace premiums with current-law and enhanced-credit comparisons.","url":"{SITE_ORIGIN}/","publisher":{"@id":"{SITE_ORIGIN}/#organization"},"isPartOf":{"@id":"{SITE_ORIGIN}/#website"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #faf7f1;
+      --paper-2: #f3eee3;
+      --card: #fffdf9;
+      --ink: #1b2a36;
+      --ink-soft: #34434f;
+      --quiet: #5b7184;
+      --quiet-2: #8a99a6;
+      --line: #e4dccb;
+      --line-2: #d8cdb6;
+      --accent: #c8862b;
+      --accent-deep: #a66c1c;
+      --accent-tint: #f4e7ce;
+      --accent-wash: #fbf3e1;
+      --favorable: #2e7d5b;
+      --favorable-deep: #1f5e43;
+      --favorable-tint: #e4f0ea;
+      --favorable-line: #beddcc;
+      --increase: #b5503c;
+      --increase-deep: #8f3d2d;
+      --increase-tint: #f5e5e0;
+      --increase-line: #e4c3b9;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+      --r-sm: 7px;
+      --r: 11px;
+      --r-lg: 16px;
+      --shadow: 0 2px 6px rgba(27,42,54,.06), 0 8px 24px rgba(27,42,54,.07);
+      --maxw: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--accent-deep); text-underline-offset: 2px; }
+    a:hover { color: var(--accent); }
+    button, input, select { font: inherit; }
+    .tnum { font-variant-numeric: tabular-nums lining-nums; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+    .wrap-wide { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+    .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--ink); color: #fff; padding: 10px 16px; }
+    .skip-link:focus { left: 0; }
+    .display {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(2.4rem, 5.2vw, 4rem);
+      line-height: 1.04;
+      letter-spacing: 0;
+      text-wrap: balance;
+      margin: 0;
+    }
+    .h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      line-height: 1.15;
+      margin: 0;
+      text-wrap: balance;
+    }
+    .h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .lead { color: var(--ink-soft); font-size: 1.2rem; line-height: 1.5; margin: 0; text-wrap: pretty; }
+    .muted { color: var(--quiet); }
+    .caption { color: var(--quiet); font-size: .82rem; line-height: 1.45; }
+    .eyebrow {
+      color: var(--accent-deep);
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .row { display: flex; align-items: center; gap: 12px; }
+    .row-wrap { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .spread { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .center { text-align: center; }
+    .stack > * + * { margin-top: var(--gap, 1rem); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow);
+    }
+    .panel {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid transparent;
+      border-radius: var(--r-sm);
+      padding: 13px 22px;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .16s, border-color .16s, transform .08s, box-shadow .16s;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-deep); color: #fff; }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+    .btn-ghost:hover { background: var(--paper-2); color: var(--ink); border-color: var(--quiet); }
+    .btn-block { width: 100%; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 11px;
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--ink-soft);
+      font-size: .82rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .chip-accent { background: var(--accent-wash); border-color: #e8d2a6; color: var(--accent-deep); }
+    .nonaffil {
+      background: var(--ink);
+      color: rgba(255,255,255,.82);
+      font-size: .79rem;
+      text-align: center;
+    }
+    .nonaffil .wrap { padding-top: 7px; padding-bottom: 7px; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250,247,241,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .nav { height: 70px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--ink);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+    .brand-name { font-family: var(--serif); font-size: 1.34rem; font-weight: 600; line-height: 1; }
+    .mainnav { display: flex; gap: 4px; }
+    .mainnav a {
+      color: var(--ink-soft);
+      border-radius: var(--r-sm);
+      padding: 8px 13px;
+      font-size: .95rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .mainnav a[aria-current="page"] { background: var(--paper-2); color: var(--ink); }
+    .hero { padding: 46px 0 30px; }
+    .hero .eyebrow { justify-content: center; }
+    .kicker-line { width: 38px; height: 3px; background: var(--accent); border-radius: 2px; }
+    .hero-h1 { max-width: 16ch; margin: 14px auto 0; text-align: center; }
+    .hero-sub { max-width: 60ch; margin: 16px auto 0; text-align: center; }
+    .hero-chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .calc-shell { max-width: 980px; margin: 26px auto 0; }
+    .calculator { padding: 26px 28px; scroll-margin-top: 90px; }
+    .calc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .field-label { display: block; margin-bottom: 6px; color: var(--ink); font-size: .92rem; font-weight: 700; }
+    .field-hint { margin-top: 5px; color: var(--quiet); font-size: .82rem; }
+    .input, .select {
+      width: 100%;
+      border: 1.5px solid var(--line-2);
+      border-radius: var(--r-sm);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 12px 14px;
+      font-size: 1.05rem;
+      font-variant-numeric: tabular-nums lining-nums;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .input:focus, .select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-tint);
+    }
+    .input-prefix { position: relative; }
+    .pfx {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--quiet);
+      font-weight: 700;
+    }
+    .input-prefix .input { padding-left: 30px; }
+    .stepper {
+      display: inline-flex;
+      align-items: center;
+      overflow: hidden;
+      border: 1.5px solid var(--line-2);
+      border-radius: var(--r-sm);
+      background: var(--paper);
+    }
+    .stepper button {
+      width: 42px;
+      height: 46px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .stepper button:hover { background: var(--paper-2); }
+    .stepper .val { min-width: 46px; text-align: center; font-weight: 700; }
+    .age-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .age-list input { width: 64px; padding: 10px 6px; text-align: center; }
+    .policy-banner {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border: 1px solid var(--line-2);
+      border-radius: var(--r);
+      background: var(--paper-2);
+      padding: 13px 16px;
+    }
+    .result-area {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .cmp-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .result-card {
+      border-radius: var(--r);
+      padding: 20px 22px;
+      min-height: 178px;
+    }
+    .result-card.fav { background: var(--favorable-tint); border: 1px solid var(--favorable-line); }
+    .result-card.inc {
+      background: var(--increase-tint);
+      border: 1px solid var(--increase-line);
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.22) 0 8px, transparent 8px 16px);
+    }
+    .coltag { display: inline-flex; align-items: center; gap: 7px; font-size: .9rem; font-weight: 700; }
+    .coltag::before { content: ""; width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+    .coltag.fav { color: var(--favorable-deep); }
+    .coltag.fav::before { background: var(--favorable); }
+    .coltag.inc { color: var(--increase-deep); }
+    .coltag.inc::before {
+      background: var(--increase);
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.45) 0 2px, transparent 2px 4px);
+    }
+    .big-money {
+      margin-top: 14px;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .big-money small {
+      color: var(--quiet);
+      font-family: var(--sans);
+      font-size: .4em;
+      font-weight: 500;
+    }
+    .diff {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-radius: var(--r);
+      background: var(--ink);
+      color: #fff;
+      padding: 18px 24px;
+      text-align: center;
+    }
+    .diff .amount {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 7px 16px;
+      color: var(--ink-soft);
+      font-size: .92rem;
+    }
+    .coverage-gap {
+      border: 1px solid var(--line-2);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      padding: 26px 28px;
+    }
+    .steps, .cluster { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--accent-tint);
+      color: var(--accent-deep);
+      display: grid;
+      place-items: center;
+      flex: none;
+      font-family: var(--serif);
+      font-weight: 700;
+    }
+    .trustband {
+      margin-top: 56px;
+      background: var(--paper-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .sourcerow, .datestamp {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      color: var(--quiet);
+      font-size: .84rem;
+    }
+    .sourcerow b, .datestamp b { color: var(--ink-soft); }
+    .reviewer {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      padding: 6px 14px 6px 6px;
+      text-decoration: none;
+    }
+    .avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--accent-tint);
+      color: var(--accent-deep);
+      font-family: var(--serif);
+      font-weight: 700;
+    }
+    .gcard {
+      display: block;
+      min-height: 190px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color .15s, transform .15s, box-shadow .15s;
+    }
+    .gcard:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: var(--shadow); color: inherit; }
+    footer {
+      margin-top: 72px;
+      background: var(--ink);
+      color: rgba(255,255,255,.72);
+    }
+    .footgrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+    .calc-sticky { display: none; }
+    :focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+    @media (max-width: 820px) {
+      body { font-size: 16px; padding-bottom: 78px; }
+      .wrap, .wrap-wide { padding: 0 18px; }
+      .nav.spread { height: auto; align-items: flex-start; flex-wrap: wrap; justify-content: flex-start; padding: 12px 0; }
+      .mainnav { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 4px; width: 100%; }
+      .mainnav a { padding: 7px 10px; }
+      .hero { padding-top: 34px; }
+      .calculator { padding: 22px 18px; }
+      .calc-grid, .cmp-cards, .steps, .cluster, .footgrid { grid-template-columns: 1fr; }
+      .spread { align-items: flex-start; }
+      .trustband .spread { align-items: center; }
+      .calc-sticky {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border-top: 1px solid var(--line-2);
+        background: var(--card);
+        box-shadow: 0 -6px 20px rgba(27,42,54,.12);
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+      }
+      .calc-sticky .btn { padding: 12px 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#calc" class="skip-link">Skip to calculator</a>
+
+  <div class="nonaffil">
+    <div class="wrap row" style="justify-content:center; gap:9px;">
+      <span aria-hidden="true">ⓘ</span>
+      <span><b style="color:#fff;">Independent.</b> Not affiliated with the U.S. government or HealthCare.gov.</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="wrap-wide nav spread">
+      <a class="brand" href="index.html" aria-label="CoverClarity home">
+        <span class="brand-mark" aria-hidden="true">⚖</span>
+        <span class="brand-name">Cover<span style="color:var(--accent-deep);">Clarity</span></span>
+      </a>
+      <nav class="mainnav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Calculator</a>
+        <a href="blog.html">News & guides</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow row">
+          <span class="kicker-line"></span>
+          Florida · Plan Year 2026
+          <span class="kicker-line"></span>
+        </div>
+        <h1 class="display hero-h1">See your 2026 Florida health insurance cost</h1>
+        <p class="lead hero-sub">
+          A plain-language estimate of your monthly Marketplace premium, shown <b>with</b> the enhanced subsidies and <b>without</b> them. The enhanced credits expired December 31, 2025; here is what that could mean for you.
+        </p>
+        <div class="hero-chips" aria-label="Privacy and freshness notes">
+          <span class="chip">🔒 Nothing saved or sent</span>
+          <span class="chip">🕒 Updated Jun 5, 2026</span>
+          <span class="chip">✓ No sign-up, no quote calls</span>
+        </div>
+      </div>
+
+      <div class="wrap-wide" id="calc">
+        <section class="calc-shell card calculator" aria-label="2026 Florida premium estimator">
+          <div class="spread" style="margin-bottom:16px; flex-wrap:wrap;">
+            <div class="row" style="gap:10px;">
+              <span class="brand-mark" style="width:30px; height:30px; border-radius:8px; background:var(--accent-tint); color:var(--accent-deep);" aria-hidden="true">∑</span>
+              <h2 class="h3">Estimate your 2026 premium</h2>
+            </div>
+            <span class="chip">🔒 Your numbers stay in your browser</span>
+          </div>
+
+          <div class="calc-grid">
+            <div class="field">
+              <label class="field-label" for="metro">Where in Florida do you live?</label>
+              <select class="select" id="metro">
+                <option value="miami">Miami-Fort Lauderdale</option>
+                <option value="tampa" selected>Tampa-St. Petersburg</option>
+                <option value="orlando">Orlando-Kissimmee</option>
+                <option value="jacksonville">Jacksonville</option>
+                <option value="tallahassee">Tallahassee</option>
+              </select>
+              <div class="field-hint" id="metroHint">Resolves to your Florida rating area.</div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="income">Estimated 2026 household income</label>
+              <div class="input-prefix">
+                <span class="pfx">$</span>
+                <input class="input tnum" id="income" inputmode="numeric" value="64,300">
+              </div>
+              <div class="field-hint tnum" id="fplHint">About 200% of the federal poverty level.</div>
+            </div>
+
+            <div class="field">
+              <label class="field-label">How many people need coverage?</label>
+              <div class="stepper" role="group" aria-label="Household size">
+                <button type="button" id="minusSize" aria-label="Fewer people">−</button>
+                <span class="val tnum" id="sizeVal">4</span>
+                <button type="button" id="plusSize" aria-label="More people">+</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label">Age of each person</label>
+              <div class="age-list" id="ages"></div>
+              <div class="field-hint">ACA rating counts adults and the three oldest children under 21.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <button type="button" id="moreOptions" class="btn btn-ghost" style="padding:9px 13px; font-size:.9rem;">More options</button>
+            <div id="morePanel" hidden style="margin-top:12px;">
+              <div class="row-wrap">
+                <span class="field-label" style="margin:0;">Does anyone use tobacco?</span>
+                <label class="chip"><input type="checkbox" id="tobacco"> Apply adult tobacco surcharge</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block" id="calculate" type="button" style="margin-top:20px;">Update estimate →</button>
+
+          <section class="result-area stack" id="results" aria-live="polite" style="--gap:18px;"></section>
+        </section>
+      </div>
+    </section>
+
+    <section class="wrap" style="margin-top:64px;">
+      <h2 class="h2 center" style="margin-bottom:6px;">How this works</h2>
+      <p class="center muted" style="max-width:52ch; margin:0 auto 30px;">Three short steps. We never ask for your name, email, or Social Security number.</p>
+      <div class="steps">
+        <div class="row" style="align-items:flex-start; gap:14px;">
+          <span class="step-num">1</span>
+          <div><b>Tell us where and who</b><p class="muted" style="margin:4px 0 0; font-size:.95rem;">Your Florida area and ages set the benchmark Silver plan estimate.</p></div>
+        </div>
+        <div class="row" style="align-items:flex-start; gap:14px;">
+          <span class="step-num">2</span>
+          <div><b>Add your 2026 income</b><p class="muted" style="margin:4px 0 0; font-size:.95rem;">We compare it to the federal poverty level to estimate the tax credit.</p></div>
+        </div>
+        <div class="row" style="align-items:flex-start; gap:14px;">
+          <span class="step-num">3</span>
+          <div><b>See both regimes</b><p class="muted" style="margin:4px 0 0; font-size:.95rem;">Your monthly cost with enhanced credits and under current law, side by side.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trustband" id="trust">
+      <div class="wrap spread" style="padding-top:26px; padding-bottom:26px; flex-wrap:wrap;">
+        <div class="stack" style="--gap:10px;">
+          <div class="sourcerow"><b>Data sources</b><a href="#methodology">CMS Exchange PUF</a><a href="#methodology">IRS contribution tables</a><a href="#methodology">HHS Poverty Guidelines</a></div>
+          <div class="datestamp tnum"><span><b>Last updated</b> Jun 5, 2026</span><span><b>Plan year</b> 2026</span><span><b>Regime as of</b> Jun 1, 2026</span></div>
+        </div>
+        <a class="reviewer" href="#trust">
+          <span class="avatar">DM</span>
+          <span><b style="display:block; color:var(--ink); font-size:.88rem; line-height:1.2;">Reviewed by Diane Marsh</b><span class="caption">Licensed Health Insurance Counselor (FL)</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap" id="guides" style="margin-top:56px;">
+      <div class="spread" style="margin-bottom:20px; flex-wrap:wrap;">
+        <h2 class="h2">Understand the 2026 changes</h2>
+        <a href="blog.html" class="btn btn-ghost">All news & guides →</a>
+      </div>
+      <div class="cluster">
+        <a class="gcard" href="aca-enhanced-subsidies-2026-florida.html">
+          <span style="color:var(--accent-deep); font-size:1.4rem;">◧</span>
+          <h3 class="h3" style="margin:12px 0 7px;">Policy status</h3>
+          <p class="muted" style="margin:0; font-size:.93rem;">What changed after the enhanced subsidies expired, and what to watch in Congress.</p>
+          <div style="margin-top:12px; color:var(--accent-deep); font-weight:700; font-size:.9rem;">Read →</div>
+        </a>
+        <a class="gcard" href="aca-enhanced-subsidies-2026-florida.html#subsidy-cliff">
+          <span style="color:var(--accent-deep); font-size:1.4rem;">◩</span>
+          <h3 class="h3" style="margin:12px 0 7px;">The subsidy cliff</h3>
+          <p class="muted" style="margin:0; font-size:.93rem;">Why earning over 400% of poverty can remove the premium tax credit under current law.</p>
+          <div style="margin-top:12px; color:var(--accent-deep); font-weight:700; font-size:.9rem;">Read →</div>
+        </a>
+        <a class="gcard" href="aca-enhanced-subsidies-2026-florida.html#coverage-gap">
+          <span style="color:var(--accent-deep); font-size:1.4rem;">◫</span>
+          <h3 class="h3" style="margin:12px 0 7px;">Florida's coverage gap</h3>
+          <p class="muted" style="margin:0; font-size:.93rem;">What it means when income is too low for Marketplace subsidies in a non-expansion state.</p>
+          <div style="margin-top:12px; color:var(--accent-deep); font-weight:700; font-size:.9rem;">Read →</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap" id="methodology" style="margin-top:56px;">
+      <div class="panel" style="padding:24px;">
+        <div class="eyebrow" style="margin-bottom:8px;">Methodology snapshot</div>
+        <h2 class="h2">What this estimate does and does not do</h2>
+        <p class="muted" style="max-width:78ch;">
+          The calculator estimates the benchmark Silver plan premium, the federal poverty level percentage, and the premium tax credit under two rule sets. Rates are illustrative for implementation and must be replaced with filed 2026 CMS data before consumer launch.
+        </p>
+        <p class="muted" style="max-width:78ch; margin-bottom:0;">
+          This is not a quote, not enrollment, and not insurance, tax, or legal advice. Confirm actual coverage and pricing at HealthCare.gov. See the full <a href="methodology.html">Florida ACA subsidy methodology</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap-wide" style="padding:52px 28px 30px;">
+      <div class="footgrid">
+        <div>
+          <div class="brand" style="color:#fff; margin-bottom:14px;">
+            <span class="brand-mark" aria-hidden="true">⚖</span>
+            <span class="brand-name">CoverClarity</span>
+          </div>
+          <p style="max-width:340px; margin:0; font-size:.88rem;">Independent, plain-language estimates of Florida ACA Marketplace premiums and subsidies. We inform; you enroll at HealthCare.gov.</p>
+        </div>
+        <div>
+          <h3 style="font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); margin:0 0 12px;">Explore</h3>
+          <a href="index.html#calc" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">Subsidy calculator</a>
+          <a href="blog.html" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">News & guides</a>
+          <a href="methodology.html" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">Methodology</a>
+          <a href="about.html" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">About</a>
+          <a href="editorial-policy.html" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">Editorial policy</a>
+          <a href="sources-corrections.html" style="display:block; color:rgba(255,255,255,.8); text-decoration:none; padding:5px 0;">Sources and corrections</a>
+        </div>
+        <div>
+          <h3 style="font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); margin:0 0 12px;">Official enrollment</h3>
+          <a href="https://www.healthcare.gov" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-size:.9rem; font-weight:700;">HealthCare.gov →</a>
+          <p style="font-size:.82rem; margin-top:12px;">Enroll in or change coverage only through the official Marketplace.</p>
+        </div>
+      </div>
+      <hr style="border:0; border-top:1px solid rgba(255,255,255,.12); margin:30px 0 20px;">
+      <p style="font-size:.8rem; line-height:1.6; color:rgba(255,255,255,.6); max-width:820px; margin:0;">
+        <b style="color:rgba(255,255,255,.82);">Disclaimer.</b> CoverClarity provides estimates only. This is not insurance, tax, or legal advice and is not a quote or an offer of coverage. Independent, not affiliated with the U.S. government or HealthCare.gov.
+      </p>
+    </div>
+  </footer>
+
+  <div class="calc-sticky" id="stickyCta">
+    <div style="font-weight:700;">See your 2026 estimate</div>
+    <button class="btn btn-primary" type="button" id="stickyBtn">Calculate →</button>
+  </div>
+
+  <script>
+    const FPL_BASE = 15650;
+    const FPL_ADD = 5500;
+    const METROS = {
+      miami: { label: "Miami-Fort Lauderdale", base: 485, area: "FL Rating Area 51" },
+      tampa: { label: "Tampa-St. Petersburg", base: 442, area: "FL Rating Area 41" },
+      orlando: { label: "Orlando-Kissimmee", base: 458, area: "FL Rating Area 38" },
+      jacksonville: { label: "Jacksonville", base: 470, area: "FL Rating Area 21" },
+      tallahassee: { label: "Tallahassee", base: 505, area: "FL Rating Area 11" }
+    };
+    const AGE_CURVE = {
+      0:.765,1:.765,2:.765,3:.765,4:.765,5:.765,6:.765,7:.765,8:.765,9:.765,10:.765,11:.765,12:.765,13:.765,14:.765,15:.833,16:.859,17:.885,18:.913,19:.941,20:.970,
+      21:1,22:1,23:1,24:1,25:1.004,26:1.024,27:1.048,28:1.087,29:1.119,30:1.135,31:1.159,32:1.183,33:1.198,34:1.214,35:1.222,36:1.230,37:1.238,38:1.246,39:1.262,40:1.278,41:1.302,42:1.325,43:1.357,44:1.397,45:1.444,46:1.5,47:1.563,48:1.635,49:1.706,50:1.786,51:1.865,52:1.952,53:2.04,54:2.135,55:2.23,56:2.333,57:2.437,58:2.548,59:2.603,60:2.714,61:2.81,62:2.873,63:2.952,64:3
+    };
+    const state = { metro: "tampa", size: 4, ages: [40, 38, 10, 8], income: 64300, tobacco: false };
+    const $ = (id) => document.getElementById(id);
+    const money = (n) => "$" + Math.round(Number(n) || 0).toLocaleString("en-US");
+    const fpl = (size) => FPL_BASE + (Math.max(1, size) - 1) * FPL_ADD;
+    const ageFactor = (age) => AGE_CURVE[Math.max(0, Math.min(64, Number(age) || 0))] || 1;
+    const lerp = (x, x0, x1, y0, y1) => y0 + (y1 - y0) * (x - x0) / (x1 - x0);
+
+    function applicableEnhanced(pct) {
+      if (pct <= 150) return 0;
+      if (pct <= 200) return lerp(pct, 150, 200, 0, 2) / 100;
+      if (pct <= 250) return lerp(pct, 200, 250, 2, 4) / 100;
+      if (pct <= 300) return lerp(pct, 250, 300, 4, 6) / 100;
+      if (pct <= 400) return lerp(pct, 300, 400, 6, 8.5) / 100;
+      return .085;
+    }
+    function applicableOriginal(pct) {
+      if (pct < 133) return .0207;
+      if (pct <= 150) return lerp(pct, 133, 150, 3.10, 4.14) / 100;
+      if (pct <= 200) return lerp(pct, 150, 200, 4.14, 6.52) / 100;
+      if (pct <= 250) return lerp(pct, 200, 250, 6.52, 8.33) / 100;
+      if (pct <= 300) return lerp(pct, 250, 300, 8.33, 9.83) / 100;
+      if (pct <= 400) return .0983;
+      return null;
+    }
+    function benchmarkMonthly() {
+      const base = METROS[state.metro].base;
+      const adults = state.ages.filter((a) => a >= 21).sort((a, b) => b - a);
+      const kids = state.ages.filter((a) => a < 21).sort((a, b) => b - a).slice(0, 3);
+      return adults.concat(kids).reduce((sum, age) => {
+        const tobacco = state.tobacco && age >= 21 ? 1.15 : 1;
+        return sum + base * ageFactor(age) * tobacco;
+      }, 0);
+    }
+    function regimeResult(appPct, benchmark) {
+      if (appPct === null) return { eligible: false, credit: 0, net: benchmark };
+      const contributionMonthly = (appPct * state.income) / 12;
+      const credit = Math.max(0, benchmark - contributionMonthly);
+      return { eligible: true, credit, net: Math.max(0, benchmark - credit) };
+    }
+    function estimate() {
+      const poverty = fpl(state.size);
+      const pct = state.income / poverty * 100;
+      const benchmark = benchmarkMonthly();
+      const enhanced = regimeResult(applicableEnhanced(pct), benchmark);
+      const original = regimeResult(applicableOriginal(pct), benchmark);
+      return {
+        poverty,
+        pct,
+        benchmark,
+        enhanced,
+        original,
+        diff: original.net - enhanced.net,
+        coverageGap: pct < 100,
+        csr: pct >= 100 && pct < 250,
+        over400: !original.eligible
+      };
+    }
+    function renderAges() {
+      const ages = $("ages");
+      ages.innerHTML = "";
+      state.ages.forEach((age, index) => {
+        const input = document.createElement("input");
+        input.className = "input tnum";
+        input.inputMode = "numeric";
+        input.ariaLabel = "Person " + (index + 1) + " age";
+        input.value = age;
+        input.addEventListener("input", () => {
+          state.ages[index] = Math.max(0, Math.min(99, parseInt(input.value, 10) || 0));
+          updateHints();
+        });
+        ages.appendChild(input);
+      });
+    }
+    function setSize(size) {
+      state.size = Math.max(1, Math.min(8, size));
+      state.ages = state.ages.slice(0, state.size);
+      while (state.ages.length < state.size) state.ages.push(state.ages.length === 0 ? 40 : 30);
+      $("sizeVal").textContent = state.size;
+      renderAges();
+      updateHints();
+    }
+    function updateHints() {
+      const res = estimate();
+      $("metroHint").textContent = "Resolves to your " + METROS[state.metro].area + ".";
+      $("fplHint").textContent = "About " + Math.round(res.pct) + "% of the federal poverty level for a household of " + state.size + ".";
+    }
+    function renderResults() {
+      const res = estimate();
+      const metro = METROS[state.metro];
+      const results = $("results");
+      let body = `
+        <div class="policy-banner" role="status">
+          <span aria-hidden="true" style="color:var(--quiet);">ⓘ</span>
+          <div>
+            <div class="eyebrow" style="color:var(--quiet); margin-bottom:3px;">Current law as of Jun 5, 2026</div>
+            <div style="font-size:.93rem; line-height:1.5; color:var(--ink-soft);">The enhanced premium tax credits <b>expired December 31, 2025</b>. Current-law estimates use the pre-2021 rules. We update this when Congress acts.</div>
+          </div>
+        </div>`;
+
+      if (res.coverageGap) {
+        body += `
+          <div class="coverage-gap">
+            <span class="chip">Florida coverage gap</span>
+            <h3 class="h3" style="margin:14px 0 10px;">Your income may fall into Florida's coverage gap</h3>
+            <p class="muted" style="margin:0 0 14px; max-width:66ch;">Florida did not expand Medicaid, so people earning below about 100% of the federal poverty level often earn too little to get a Marketplace tax credit. We will not show a misleading subsidy number here.</p>
+            <div class="panel" style="padding:16px 18px;">
+              <b>What you can do</b>
+              <ul style="margin:6px 0 0; padding-left:20px; color:var(--ink-soft);">
+                <li>Double-check your estimated 2026 income.</li>
+                <li>See whether you qualify for Florida Medicaid or KidCare.</li>
+                <li>Find free local help from a Navigator or certified assister.</li>
+              </ul>
+            </div>
+          </div>`;
+      } else {
+        const originalLabel = res.original.eligible ? `${money(res.original.net)}<small>/mo</small>` : `No tax credit`;
+        body += `
+          <div class="spread" style="flex-wrap:wrap; gap:10px;">
+            <div>
+              <div class="eyebrow">Your estimated monthly premium</div>
+              <div class="caption tnum">${metro.label} · household of ${state.size} · ${money(state.income)}/yr · ${Math.round(res.pct)}% FPL</div>
+            </div>
+            <a class="chip chip-accent" href="#methodology">Estimate, not a quote · confirm at HealthCare.gov</a>
+          </div>
+          <div class="cmp-cards">
+            <div class="result-card fav">
+              <div class="coltag fav">With enhanced credits</div>
+              <div class="caption" style="margin:3px 0 14px;">The expired enhanced rules · favorable</div>
+              <div class="big-money" style="color:var(--favorable-deep);">${money(res.enhanced.net)}<small>/mo</small></div>
+              <div class="caption" style="margin-top:4px;">You would pay each month</div>
+            </div>
+            <div class="result-card inc">
+              <div class="coltag inc">Without enhanced credits</div>
+              <div class="caption" style="margin:3px 0 14px;">Current law · pre-2021 rules</div>
+              <div class="big-money" style="color:var(--increase-deep);">${originalLabel}</div>
+              <div class="caption" style="margin-top:4px;">${res.original.eligible ? "You would pay each month" : "Over 400% FPL · full benchmark price"}</div>
+            </div>
+          </div>
+          <div class="diff">
+            <span style="color:rgba(255,255,255,.78);">Without the enhanced credits, you would pay</span>
+            <span class="amount tnum">${money(Math.max(0, res.diff))}</span>
+            <span style="color:rgba(255,255,255,.78);">more per month <span style="color:rgba(255,255,255,.5);">· about ${money(Math.max(0, res.diff) * 12)}/yr</span></span>
+          </div>
+          <div class="panel" style="padding:16px 18px;">
+            <div class="spread" style="margin-bottom:8px;"><b style="font-size:.95rem;">How we got there</b><a href="#methodology" style="font-size:.85rem;">Methodology →</a></div>
+            <div class="breakdown-grid tnum">
+              <span>Benchmark Silver plan (SLCSP)</span><b style="text-align:right;">${money(res.benchmark)}/mo</b>
+              <span>Estimated credit · enhanced rules</span><b style="text-align:right; color:var(--favorable-deep);">−${money(res.enhanced.credit)}/mo</b>
+              <span>Estimated credit · current law</span><b style="text-align:right; color:var(--increase-deep);">${res.original.eligible ? "−" + money(res.original.credit) + "/mo" : "none"}</b>
+            </div>
+          </div>`;
+        if (res.csr) {
+          body += `<div style="display:flex; gap:11px; align-items:flex-start; background:var(--favorable-tint); border:1px solid var(--favorable-line); border-radius:var(--r); padding:13px 16px;"><span aria-hidden="true">✦</span><div style="font-size:.92rem;"><b style="color:var(--favorable-deep);">You likely qualify for extra savings called CSR.</b> Because your income is under 250% of the federal poverty level, a Silver plan may include lower deductibles and copays.</div></div>`;
+        }
+        if (res.over400) {
+          body += `<div style="display:flex; gap:11px; align-items:flex-start; background:var(--increase-tint); border:1px solid var(--increase-line); border-radius:var(--r); padding:13px 16px;"><span aria-hidden="true">ⓘ</span><div style="font-size:.92rem;"><b style="color:var(--increase-deep);">Above 400% of the poverty level.</b> Under current law there is no premium tax credit over this threshold. The enhanced rules removed that cliff.</div></div>`;
+        }
+        body += `<div class="spread" style="flex-wrap:wrap; gap:12px; padding-top:4px;"><div class="datestamp tnum"><span><b>Last updated</b> Jun 5, 2026</span><span><b>Plan year</b> 2026</span><span><b>Regime as of</b> Jun 1, 2026</span></div><div class="caption">🔒 Your numbers stay in your browser. Nothing is saved or sent.</div></div>`;
+      }
+
+      results.innerHTML = body;
+      updateSticky(res);
+      history.replaceState(null, "", "?" + new URLSearchParams({
+        metro: state.metro,
+        size: state.size,
+        ages: state.ages.join("-"),
+        income: state.income,
+        tobacco: state.tobacco ? "1" : "0"
+      }).toString());
+    }
+    function updateSticky(res) {
+      const sticky = $("stickyCta");
+      if (res && !res.coverageGap) {
+        sticky.innerHTML = `<div style="line-height:1.2;"><div style="font-size:.74rem; color:var(--quiet);">Without enhanced credits</div><div class="tnum" style="font-weight:700; color:var(--increase-deep); font-size:1.12rem;">+${money(Math.max(0, res.diff))}/mo more</div></div><button class="btn btn-primary" type="button" id="stickyAdjust">Adjust</button>`;
+        $("stickyAdjust").addEventListener("click", () => $("calc").scrollIntoView({ behavior: "smooth" }));
+      }
+    }
+    function parseInitialQuery() {
+      const params = new URLSearchParams(location.search);
+      if (params.has("metro") && METROS[params.get("metro")]) state.metro = params.get("metro");
+      if (params.has("size")) state.size = Math.max(1, Math.min(8, parseInt(params.get("size"), 10) || state.size));
+      if (params.has("income")) state.income = parseInt(params.get("income"), 10) || state.income;
+      if (params.has("ages")) {
+        const ages = params.get("ages").split("-").map((x) => parseInt(x, 10) || 0).slice(0, 8);
+        if (ages.length) {
+          state.ages = ages;
+          state.size = ages.length;
+        }
+      }
+      state.tobacco = params.get("tobacco") === "1";
+    }
+    function init() {
+      parseInitialQuery();
+      $("metro").value = state.metro;
+      $("income").value = state.income.toLocaleString("en-US");
+      $("tobacco").checked = state.tobacco;
+      $("sizeVal").textContent = state.size;
+      renderAges();
+      updateHints();
+      renderResults();
+
+      $("metro").addEventListener("change", (event) => { state.metro = event.target.value; updateHints(); });
+      $("income").addEventListener("input", (event) => {
+        state.income = parseInt(event.target.value.replace(/[^0-9]/g, ""), 10) || 0;
+        event.target.value = state.income ? state.income.toLocaleString("en-US") : "";
+        updateHints();
+      });
+      $("minusSize").addEventListener("click", () => setSize(state.size - 1));
+      $("plusSize").addEventListener("click", () => setSize(state.size + 1));
+      $("tobacco").addEventListener("change", (event) => { state.tobacco = event.target.checked; });
+      $("moreOptions").addEventListener("click", () => {
+        const panel = $("morePanel");
+        panel.hidden = !panel.hidden;
+        $("moreOptions").textContent = panel.hidden ? "More options" : "Hide options";
+      });
+      $("calculate").addEventListener("click", renderResults);
+      $("stickyBtn")?.addEventListener("click", () => { renderResults(); $("calc").scrollIntoView({ behavior: "smooth" }); });
+    }
+    init();
+  </script>
+</body>
+</html>

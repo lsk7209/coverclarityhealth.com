@@ -1,0 +1,21 @@
+name: Content quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate static content
+        run: python scripts/generate_aca_articles.py
+      - name: Validate generated site
+        run: python scripts/validate_content_quality.py --write-report

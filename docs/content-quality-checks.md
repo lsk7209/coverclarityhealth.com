@@ -1,0 +1,64 @@
+# Content quality checks
+
+This project generates the ACA article library from `scripts/generate_aca_articles.py`.
+
+Run the generator:
+
+```powershell
+python scripts\generate_aca_articles.py
+```
+
+Run the quality validator and write the report:
+
+```powershell
+python scripts\validate_content_quality.py --write-report
+```
+
+The validator checks:
+
+- project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
+- Phase 0 launch-assumption report at `docs/phase0-verification-report.md`
+- optional production gate: `--require-site-origin` fails if `{SITE_ORIGIN}` remains in public artifacts
+- 200 queued articles and 200 article HTML files
+- 5 guide hub pages
+- 200 RSS feed items
+- sitemap URL counts
+- `404.html` exists, is `noindex,follow`, links to recovery paths, and is excluded from sitemap
+- `opensearch.xml` exists, points site search to `/blog.html`, is linked from every HTML page, and is excluded from sitemap
+- internal link targets, URL fragments, one H1, and main landmark checks across generated HTML
+- H1/H2/H3 heading hierarchy jumps across generated HTML
+- image alt text on every HTML image when images are present
+- unique title, slug, and main keyword values
+- readable article slug structure and maximum slug length
+- title cleanup patterns, lowercase title starts, and meta title/description length limits
+- unique meta title and meta description values across the 200 generated articles
+- meta titles do not end on truncation periods or weak dangling words such as `a`, `an`, `for`, or `read`
+- meta titles stay at 30-58 characters so SERP titles are specific but not chopped
+- meta titles use compact percent formatting without stray spaces before `%`
+- meta descriptions do not end on weak truncated connector words such as `and`, `with`, `before`, or `plus`
+- repeated title phrase checks for generated long-tail article patterns
+- 5-hour publishing interval
+- article meta, canonical, OG/Twitter, RSS alternate, OpenSearch discovery, table of contents, external source, related path, and editorial block
+- article CTA blocks, at least two internal links, and at least one external link
+- Article, BreadcrumbList, and FAQPage JSON-LD counts
+- representative Organization and WebSite/SearchAction entity schema on home, blog, guide hubs, and generated articles
+- guide hub CollectionPage, ItemList, and BreadcrumbList JSON-LD
+- blog page weight and representative BlogPosting schema count
+- skip links and visible keyboard focus styles on every HTML page
+- public HTML does not expose internal content quality scores
+- public HTML, RSS, `llms.txt`, and search index do not expose internal production labels such as pSEO, quality scores, or generation flags
+- trust page links
+- generated article body sentences are checked for excessive repetition across the 200-article library
+- `llms.txt` and `content/search-index.json`
+- public `content/article-queue.json` excludes internal generation flags, quality scores, and production-only labels
+- stale domains, manual ad slot markers, and mojibake markers
+
+The latest generated report is written to `reports/content-quality-report.json`.
+
+Run:
+
+```powershell
+python scripts\production_readiness_audit.py --write-report
+```
+
+The readiness audit writes `reports/production-readiness-report.json` and checks whether the project has a passing content-quality report, production origin replacement, a Git repository with remote, and Google Search Console configuration.

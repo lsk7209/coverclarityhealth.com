@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Methodology — how we estimate ACA subsidies | CoverClarity</title>
+<link rel="stylesheet" href="styles/system.css" />
+<style>
+  .doc { max-width: 760px; margin: 0 auto; }
+  .doc p { color: var(--ink-soft); margin: 0 0 1.05em; }
+  .doc h2 { margin: 36px 0 12px; scroll-margin-top: 90px; }
+  .doc ul { color: var(--ink-soft); line-height:1.7; }
+  .toc { background: var(--paper-2); border:1px solid var(--line); border-radius:var(--r); padding:18px 22px; }
+  .toc a { display:block; padding:5px 0; color:var(--ink-soft); text-decoration:none; font-size:.95rem; }
+  .toc a:hover { color:var(--accent-deep); }
+  .srclist { display:grid; gap:12px; }
+  .srcitem { display:flex; gap:13px; align-items:flex-start; padding:15px 17px; border:1px solid var(--line); border-radius:var(--r); background:var(--card); }
+  .notbox { background: var(--increase-tint); border:1px solid var(--increase-line); border-radius:var(--r-lg); padding:22px 26px; }
+  @media (max-width: 980px){ .footgrid { grid-template-columns:1fr !important; } .mainnav{display:none !important;} }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="components/chrome.jsx"></script>
+<script type="text/babel" data-presets="react">
+function Methodology() {
+  return (
+    <React.Fragment>
+      <Header active="Methodology" />
+      <main className="wrap" style={{ paddingTop: 30 }}>
+        <div className="doc">
+          <p className="eyebrow">Methodology</p>
+          <h1 className="h1" style={{ margin:"12px 0 14px" }}>How we estimate your subsidy</h1>
+          <p className="lead" style={{ color:"var(--ink)" }}>Plain-English answers to "where does this number come from?" — plus an honest list of what this tool does not do.</p>
+          <DateStamp />
+
+          <div className="toc" style={{ margin:"24px 0" }}>
+            <div className="eyebrow" style={{ marginBottom:8 }}>On this page</div>
+            <a href="#benchmark">1. The benchmark Silver plan (SLCSP)</a>
+            <a href="#contribution">2. The IRS contribution percentages</a>
+            <a href="#fpl">3. The federal poverty level (FPL)</a>
+            <a href="#regimes">4. The two subsidy regimes</a>
+            <a href="#limits">5. Limitations & what we don't do</a>
+            <a href="#sources">6. Data sources</a>
+          </div>
+
+          <h2 className="h2" id="benchmark">1. The benchmark Silver plan (SLCSP)</h2>
+          <p>Your premium tax credit is tied to the <b>Second Lowest Cost Silver Plan (SLCSP)</b> in your area — the "benchmark." We estimate this benchmark from your Florida rating area and the ages of everyone needing coverage, using the standard federal age-rating curve (premiums for older adults can be up to three times those for a 21-year-old).</p>
+
+          <h2 className="h2" id="contribution">2. The IRS contribution percentages</h2>
+          <p>The law defines the share of income you're expected to pay toward the benchmark plan — the <b>applicable percentage</b>. We multiply that percentage by your income to get your expected contribution; your tax credit is the benchmark premium minus that contribution (never less than zero).</p>
+
+          <h2 className="h2" id="fpl">3. The federal poverty level (FPL)</h2>
+          <p>Eligibility and your contribution percentage both depend on income as a share of the <b>federal poverty level</b> for your household size. We use the HHS poverty guidelines that apply to the plan year shown.</p>
+
+          <h2 className="h2" id="regimes">4. The two subsidy regimes</h2>
+          <p>We show both side by side:</p>
+          <ul>
+            <li><b>Enhanced (2021–2025 rules):</b> lower contribution percentages and no income cap on eligibility. <b>Expired Dec 31, 2025.</b></li>
+            <li><b>Current law (pre-2021 rules):</b> higher contribution percentages and a "cliff" at 400% FPL, above which no premium tax credit is available.</li>
+          </ul>
+          <p>The policy-status banner states which regime is current law as of the displayed date. We update it when Congress acts.</p>
+
+          <h2 className="h2" id="limits">5. Limitations & what we don't do</h2>
+          <div className="notbox">
+            <div style={{ fontWeight:700, color:"var(--increase-deep)", marginBottom:8 }}>What this tool does NOT do</div>
+            <ul style={{ margin:0, color:"var(--ink-soft)" }}>
+              <li>It gives <b>estimates, not quotes</b>. Only HealthCare.gov shows your real plan prices.</li>
+              <li>It does not sell insurance, capture leads, or enroll you in coverage.</li>
+              <li><b>Florida coverage gap:</b> below ~100% FPL we do not show a misleading subsidy — Florida did not expand Medicaid.</li>
+              <li>It covers <b>Florida only</b>; State-Based Marketplace (SBM) states are out of scope.</li>
+              <li>It does not account for every special situation (mid-year changes, immigration status nuances, employer-offer rules).</li>
+            </ul>
+          </div>
+
+          <h2 className="h2" id="sources">6. Data sources</h2>
+          <div className="srclist">
+            <div className="srcitem"><span style={{color:"var(--accent-deep)",flex:"none"}}><Icon name="doc" size={20}/></span><div><b>CMS Marketplace Public Use Files (PUF)</b><div className="caption">Plan and rate data for the federal Marketplace. <a href="#">cms.gov</a></div></div></div>
+            <div className="srcitem"><span style={{color:"var(--accent-deep)",flex:"none"}}><Icon name="doc" size={20}/></span><div><b>IRS Revenue Procedures</b><div className="caption">Applicable percentage tables for premium tax credits. <a href="#">irs.gov</a></div></div></div>
+            <div className="srcitem"><span style={{color:"var(--accent-deep)",flex:"none"}}><Icon name="doc" size={20}/></span><div><b>HHS Poverty Guidelines</b><div className="caption">Federal poverty levels by household size. <a href="#">aspe.hhs.gov</a></div></div></div>
+          </div>
+          <p className="caption" style={{ marginTop:16 }}>Data derived in part from the Centers for Medicare &amp; Medicaid Services (CMS) Marketplace PUF. CoverClarity is not affiliated with, and this content is not endorsed by, CMS or HHS. Figures on this site are illustrative estimates for design demonstration.</p>
+        </div>
+      </main>
+      <Footer />
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Methodology />);
+</script>
+</body>
+</html>

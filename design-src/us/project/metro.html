@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2026 ACA subsidies in Tampa–St. Petersburg | CoverClarity</title>
+<link rel="stylesheet" href="styles/system.css" />
+<style>
+  .breadcrumb { display:flex; flex-wrap:wrap; gap:7px; font-size:.84rem; color:var(--quiet); align-items:center; }
+  .breadcrumb a { color:var(--quiet); text-decoration:none; } .breadcrumb a:hover{ color:var(--accent-deep); }
+  .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .fact { border:1px solid var(--line); border-radius:var(--r); background:var(--card); padding:16px 18px; }
+  .fact .n { font-family:var(--serif); font-weight:600; font-size:1.7rem; color:var(--ink); }
+  /* matrix */
+  .matrix-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-lg); background:var(--card); }
+  table.matrix { border-collapse:collapse; width:100%; min-width:680px; }
+  table.matrix th, table.matrix td { text-align:center; padding:0; }
+  table.matrix thead th { font-size:.8rem; font-weight:600; color:var(--quiet); padding:14px 8px; border-bottom:1px solid var(--line); }
+  table.matrix tbody th { text-align:left; font-weight:600; font-size:.9rem; color:var(--ink); padding:12px 16px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  table.matrix tbody th small { display:block; font-weight:400; color:var(--quiet); font-size:.78rem; }
+  .cell { display:block; text-decoration:none; padding:12px 8px; border-bottom:1px solid var(--line); border-left:1px solid var(--line); transition:filter .12s; }
+  .cell:hover { filter:brightness(.97); }
+  .cell .d { font-family:var(--serif); font-weight:600; font-size:1.05rem; font-variant-numeric:tabular-nums; }
+  .cell .sub { font-size:.7rem; color:var(--quiet); }
+  .metros-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .mcard { display:block; text-decoration:none; color:inherit; padding:16px 18px; border:1px solid var(--line); border-radius:var(--r); background:var(--card); transition:border-color .15s; }
+  .mcard:hover { border-color:var(--accent); color:inherit; }
+  @media (max-width: 820px){ .facts{ grid-template-columns:1fr; } .metros-strip{ grid-template-columns:1fr 1fr; } .mainnav{display:none !important;} .calc-grid{grid-template-columns:1fr !important;} .cmp-cards{grid-template-columns:1fr !important;} }
+  @media (max-width: 980px){ .footgrid { grid-template-columns:1fr !important; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="js/aca-engine.js"></script>
+<script type="text/babel" src="components/chrome.jsx"></script>
+<script type="text/babel" src="components/result.jsx"></script>
+<script type="text/babel" src="components/calculator.jsx"></script>
+<script type="text/babel" data-presets="react">
+const HOUSEHOLDS = [
+  { label:"Single adult",      sub:"age 40",        ages:[40],          size:1 },
+  { label:"Young couple",      sub:"35 & 33",       ages:[35,33],       size:2 },
+  { label:"Single parent + 1", sub:"38 & child",    ages:[38,8],        size:2 },
+  { label:"Family of 3",       sub:"40, 38 & child",ages:[40,38,6],     size:3 },
+  { label:"Family of 4",       sub:"40, 38 & 2 kids",ages:[40,38,10,8], size:4 },
+  { label:"Older couple",      sub:"60 & 58",       ages:[60,58],       size:2 },
+];
+const BANDS = [138,150,200,250,300,400];
+
+function diffTint(diff, maxDiff) {
+  const t = Math.max(0, Math.min(1, diff / maxDiff));
+  // pale paper -> increase tint
+  const a = 0.10 + t * 0.78;
+  return `color-mix(in srgb, var(--increase-tint) ${Math.round(a*100)}%, var(--card))`;
+}
+
+function Matrix() {
+  const metro = "tampa";
+  // precompute diffs
+  const data = HOUSEHOLDS.map(h => BANDS.map(band => {
+    const income = Math.round(window.ACA.fpl(h.size) * band / 100);
+    const r = window.ACA.estimate({ metro, ages:h.ages, income, size:h.size });
+    return Math.max(0, r.diffMonthly);
+  }));
+  const maxDiff = Math.max(...data.flat());
+  return (
+    <div className="matrix-wrap">
+      <table className="matrix">
+        <thead>
+          <tr>
+            <th style={{ textAlign:"left", paddingLeft:16 }}>Household ↓ &nbsp; Income →</th>
+            {BANDS.map(b => <th key={b}>{b}%<small style={{ display:"block", fontWeight:400 }}>of poverty</small></th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {HOUSEHOLDS.map((h,ri) => (
+            <tr key={ri}>
+              <th scope="row">{h.label}<small>{h.sub}</small></th>
+              {BANDS.map((b,ci) => {
+                const diff = data[ri][ci];
+                return (
+                  <td key={ci}>
+                    <a className="cell" href="spoke.html" style={{ background: diffTint(diff, maxDiff) }}
+                       aria-label={`${h.label}, ${b}% FPL: $${Math.round(diff)} more per month without enhanced credits`}>
+                      <span className="d" style={{ color:"var(--increase-deep)" }}>+${Math.round(diff)}</span>
+                      <span className="sub">/mo more</span>
+                    </a>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function MetroHub() {
+  return (
+    <React.Fragment>
+      <Header active="Florida metros" />
+      <main className="wrap" style={{ paddingTop: 26 }}>
+        <nav className="breadcrumb" aria-label="Breadcrumb">
+          <a href="metro.html">Florida ACA subsidy</a><span>›</span>
+          <span style={{ color:"var(--ink-soft)", fontWeight:600 }}>Tampa–St. Petersburg</span>
+        </nav>
+
+        <p className="eyebrow" style={{ margin:"20px 0 10px" }}>Metro hub · Plan year 2026</p>
+        <h1 className="h1" style={{ marginBottom:14, maxWidth:"20ch" }}>2026 ACA subsidies in Tampa–St. Petersburg</h1>
+        <p className="lead" style={{ maxWidth:"62ch", marginBottom:22 }}>How much more Tampa households would pay each month <b>without</b> the enhanced premium tax credits — by family type and income. Pick your closest match to see the full estimate.</p>
+
+        <div className="facts" style={{ marginBottom:14 }}>
+          <div className="fact"><div className="caption">Rating area</div><div className="n">FL 41</div><div className="caption">Hillsborough &amp; Pinellas</div></div>
+          <div className="fact"><div className="caption">Sample benchmark Silver</div><div className="n tnum">$442<span style={{fontSize:".5em",color:"var(--quiet)"}}>/mo</span></div><div className="caption">age-21 base, before credits</div></div>
+          <div className="fact"><div className="caption">Medicaid expansion</div><div className="n" style={{color:"var(--increase-deep)"}}>No</div><div className="caption">coverage gap below ~100% FPL</div></div>
+        </div>
+        <div className="row" style={{ gap:10, marginBottom:34, flexWrap:"wrap" }}><DateStamp /><EstimateChip /></div>
+
+        {/* THE MATRIX */}
+        <h2 className="h2" style={{ marginBottom:6 }}>The premium increase, by household &amp; income</h2>
+        <p className="muted" style={{ marginTop:0, marginBottom:16, maxWidth:"60ch" }}>Each cell shows the estimated <b>extra monthly cost under current law</b> versus the enhanced credits. Darker means a bigger jump. Tap any cell for the full with-vs-without breakdown.</p>
+        <Matrix />
+        <div className="row" style={{ gap:14, marginTop:12, flexWrap:"wrap" }}>
+          <span className="row" style={{ gap:7 }}><span style={{ width:14,height:14,borderRadius:3, background:"var(--increase-tint)", border:"1px solid var(--increase-line)" }}></span><span className="caption">smaller increase</span></span>
+          <span className="row" style={{ gap:7 }}><span style={{ width:14,height:14,borderRadius:3, background:"var(--increase)" }}></span><span className="caption">larger increase</span></span>
+          <span className="caption">· Illustrative estimates, plan year 2026</span>
+        </div>
+
+        <div className="adslot" style={{ margin:"30px 0" }}><span className="adnote">In-content responsive ad · below the matrix</span></div>
+
+        {/* EMBEDDED CALCULATOR */}
+        <h2 className="h2" style={{ marginBottom:6 }}>Or estimate your exact household</h2>
+        <p className="muted" style={{ marginTop:0, marginBottom:16, maxWidth:"60ch" }}>Pre-filled for Tampa. Adjust any field.</p>
+        <Calculator initial={{ metro:"tampa", size:2, ages:[40,38], income:40000 }} startOpen={true} regime="expired" layout="cards" showAd={false} embedded={true} />
+
+        {/* OTHER METROS */}
+        <h2 className="h2" style={{ margin:"38px 0 14px" }}>Other Florida metros</h2>
+        <div className="metros-strip">
+          {[["Miami–Fort Lauderdale","Rating area 51"],["Orlando–Kissimmee","Rating area 38"],["Jacksonville","Rating area 21"],["Tallahassee","Rating area 11"]].map(([n,a],i)=>(
+            <a key={i} className="mcard" href="metro.html"><b>{n}</b><div className="caption" style={{ marginTop:3 }}>{a} <span style={{ color:"var(--accent-deep)" }}>→</span></div></a>
+          ))}
+        </div>
+
+        <div style={{ marginTop:30, paddingTop:18, borderTop:"1px solid var(--line)" }}><SourceRow /></div>
+      </main>
+      <Footer />
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<MetroHub />);
+</script>
+</body>
+</html>

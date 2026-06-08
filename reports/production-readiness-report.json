@@ -1,0 +1,68 @@
+{
+  "ready_for_production_submission": false,
+  "checks": [
+    {
+      "name": "content_quality",
+      "ok": true,
+      "detail": "content-quality-report.json has error_count 0"
+    },
+    {
+      "name": "production_origin_applied",
+      "ok": false,
+      "detail": "221 public files still contain {SITE_ORIGIN}"
+    },
+    {
+      "name": "git_repository",
+      "ok": true,
+      "detail": "D:/web/gungangbohum"
+    },
+    {
+      "name": "github_remote",
+      "ok": false,
+      "detail": "no git remotes available"
+    },
+    {
+      "name": "gsc_configuration",
+      "ok": false,
+      "detail": {
+        "GSC_SITE_URL": false,
+        "GSC_SITEMAP_URL": false,
+        "GSC_CLIENT_JSON": true,
+        "GSC_TOKEN_JSON": true
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "name": "production_origin_applied",
+      "ok": false,
+      "detail": "221 public files still contain {SITE_ORIGIN}"
+    },
+    {
+      "name": "github_remote",
+      "ok": false,
+      "detail": "no git remotes available"
+    },
+    {
+      "name": "gsc_configuration",
+      "ok": false,
+      "detail": {
+        "GSC_SITE_URL": false,
+        "GSC_SITEMAP_URL": false,
+        "GSC_CLIENT_JSON": true,
+        "GSC_TOKEN_JSON": true
+      }
+    }
+  ],
+  "quality_snapshot": {
+    "article_files": 200,
+    "guide_files": 5,
+    "sitemap_urls": 212,
+    "error_count": 0
+  },
+  "next_required_actions": [
+    "Assign an HTTPS production domain and run npm run check:production.",
+    "Initialize/connect this folder to a GitHub remote repository before git push.",
+    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
+  ]
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: {SITE_ORIGIN}/sitemap.xml
+# LLM guide: {SITE_ORIGIN}/llms.txt
