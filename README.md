@@ -61,6 +61,7 @@ npm run launch:prepare -- --origin https://your-domain.example --contact-email c
 - Do not add manual ad slots; AdSense should use automatic ads only.
 - Keep `ads.txt` at the site root with the verified AdSense publisher ID.
 - `sitemap.xml`, `robots.txt`, `feed.xml`, `llms.txt`, `opensearch.xml`, and `content/search-index.json` are public artifacts.
+- Empty guide hub pages stay `noindex,follow` and are excluded from `sitemap.xml` and `content/search-index.json` until at least one article in that hub is published.
 
 ## Search Console
 
@@ -87,7 +88,9 @@ Get-Content D:\env\gsc_token.json -Raw | gh secret set GSC_TOKEN_JSON --repo lsk
 
 ## Quality Gate
 
-Run `npm run check` before publishing. The validator checks generated article counts, metadata, canonical links, schemas, accessibility landmarks, sitemap/feed/search-index parity, public marker leakage, and repeated body sentence risk.
+Run `npm run check` before publishing. The validator checks generated article counts, the article generation contract, metadata, canonical links, schemas, accessibility landmarks, sitemap/feed/search-index parity, empty guide hub indexing, `llms.txt` section quality, public marker leakage, and repeated body sentence risk.
+
+`npm run generate` writes `reports/article-generation-report.json`. The readiness gate expects at least 200 articles, a minimum quality score of 90, all articles marked as Codex-generated, and zero manual ad slot articles.
 
 Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, canonical URLs, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.
 
@@ -95,4 +98,4 @@ Run `npm run audit:performance` to write `reports/performance-budget-report.json
 
 The launch assumptions are tracked in `docs/phase0-verification-report.md`. Keep that report current when rating-area data, SLCSP data, subsidy law status, or Florida coverage-gap handling changes.
 
-Run `npm run ready` to write `reports/production-readiness-report.json`. It reports whether content quality, SEO/AdSense audit status, static performance budgets, production origin replacement, GitHub remote state, public contact channel, GSC workflow automation, and GSC URL/credential configuration are ready for production submission.
+Run `npm run ready` to write `reports/production-readiness-report.json`. It reports whether content quality, article generation contract, SEO/AdSense audit status, static performance budgets, production origin replacement, GitHub remote state, public contact channel, GSC workflow automation, and GSC URL/credential configuration are ready for production submission.
