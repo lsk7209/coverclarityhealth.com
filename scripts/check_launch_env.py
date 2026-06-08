@@ -6,7 +6,13 @@ from apply_ads_txt import normalize_publisher_id
 from apply_contact_channel import contact_block, normalize_email, normalize_url
 from apply_ga4_measurement import normalize_measurement_id
 from apply_site_origin import normalize_origin
-from gsc_submit_sitemap import _json_from_env_or_file, normalize_site_url, normalize_sitemap_url
+from gsc_submit_sitemap import (
+    _json_from_env_or_file,
+    domain_property_covers_host,
+    normalize_site_url,
+    normalize_sitemap_url,
+    validate_sitemap_belongs_to_site,
+)
 
 
 def check_value(label, fn, value):
@@ -51,10 +57,14 @@ def check_url_alignment(origin_check, gsc_site_check, sitemap_check):
         return {"name": name, "ok": False, "detail": "GSC_SITEMAP_URL must use the same host as SITE_ORIGIN"}
     if sitemap_url.rstrip("/") != f"{origin}/sitemap.xml":
         return {"name": name, "ok": False, "detail": "GSC_SITEMAP_URL must be SITE_ORIGIN + /sitemap.xml"}
+    try:
+        validate_sitemap_belongs_to_site(gsc_site_url, sitemap_url)
+    except ValueError as exc:
+        return {"name": name, "ok": False, "detail": str(exc)}
     if gsc_site_url.startswith("sc-domain:"):
         domain = gsc_site_url.removeprefix("sc-domain:").strip().lower()
-        if domain != origin_host.lower():
-            return {"name": name, "ok": False, "detail": "GSC_SITE_URL sc-domain property must match SITE_ORIGIN host"}
+        if not domain_property_covers_host(domain, origin_host):
+            return {"name": name, "ok": False, "detail": "GSC_SITE_URL sc-domain property must cover SITE_ORIGIN host"}
     elif gsc_site_url.rstrip("/") != origin:
         return {"name": name, "ok": False, "detail": "GSC_SITE_URL URL-prefix property must match SITE_ORIGIN"}
 

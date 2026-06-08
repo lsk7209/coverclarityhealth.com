@@ -5,7 +5,12 @@ import re
 import subprocess
 from pathlib import Path
 
-from gsc_submit_sitemap import _json_from_env_or_file, normalize_site_url, normalize_sitemap_url
+from gsc_submit_sitemap import (
+    _json_from_env_or_file,
+    normalize_site_url,
+    normalize_sitemap_url,
+    validate_sitemap_belongs_to_site,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -139,16 +144,27 @@ def gsc_configuration_status():
         "GSC_TOKEN_JSON": False,
         "errors": [],
     }
+    site_url = ""
+    sitemap_url = ""
     try:
-        normalize_site_url(os.getenv("GSC_SITE_URL", ""))
+        site_url = normalize_site_url(os.getenv("GSC_SITE_URL", ""))
         detail["GSC_SITE_URL"] = True
     except ValueError as exc:
         detail["errors"].append({"name": "GSC_SITE_URL", "error": str(exc)})
     try:
-        normalize_sitemap_url(os.getenv("GSC_SITEMAP_URL", ""))
+        sitemap_url = normalize_sitemap_url(os.getenv("GSC_SITEMAP_URL", ""))
         detail["GSC_SITEMAP_URL"] = True
     except ValueError as exc:
         detail["errors"].append({"name": "GSC_SITEMAP_URL", "error": str(exc)})
+    if site_url and sitemap_url:
+        try:
+            validate_sitemap_belongs_to_site(site_url, sitemap_url)
+            detail["GSC_URL_ALIGNMENT"] = True
+        except ValueError as exc:
+            detail["GSC_URL_ALIGNMENT"] = False
+            detail["errors"].append({"name": "GSC_URL_ALIGNMENT", "error": str(exc)})
+    else:
+        detail["GSC_URL_ALIGNMENT"] = False
     for name, fallback in [
         ("GSC_CLIENT_JSON", r"D:\env\adsense_oauth_client.json"),
         ("GSC_TOKEN_JSON", r"D:\env\gsc_token.json"),
@@ -158,7 +174,7 @@ def gsc_configuration_status():
             detail[name] = True
         except (FileNotFoundError, json.JSONDecodeError, KeyError) as exc:
             detail["errors"].append({"name": name, "error": str(exc)})
-    ok = all(detail[name] for name in ("GSC_SITE_URL", "GSC_SITEMAP_URL", "GSC_CLIENT_JSON", "GSC_TOKEN_JSON"))
+    ok = all(detail[name] for name in ("GSC_SITE_URL", "GSC_SITEMAP_URL", "GSC_URL_ALIGNMENT", "GSC_CLIENT_JSON", "GSC_TOKEN_JSON"))
     if ok:
         detail.pop("errors")
     return ok, detail

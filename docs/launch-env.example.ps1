@@ -10,7 +10,8 @@ $env:ADSENSE_PUBLISHER_ID = "pub-3050601904412736"
 $env:GSC_SITE_URL = "https://your-production-domain.example/"
 $env:GSC_SITEMAP_URL = "https://your-production-domain.example/sitemap.xml"
 
-# SITE_ORIGIN, GSC_SITE_URL, and GSC_SITEMAP_URL must point to the same production host.
+# SITE_ORIGIN and GSC_SITEMAP_URL must use the same production host.
+# GSC_SITE_URL must be the same URL-prefix property or a covering sc-domain property.
 
 # Prefer GitHub repository secrets for CI. These local values are for manual verification only.
 $env:GSC_CLIENT_JSON = Get-Content D:\env\adsense_oauth_client.json -Raw

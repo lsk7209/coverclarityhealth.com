@@ -269,6 +269,7 @@ def validate(require_site_origin=False):
             ("gsc_workflow_automation", "gsc_workflow_automation_check"),
             ("normalize_site_url", "gsc_site_url_validation"),
             ("normalize_sitemap_url", "gsc_sitemap_url_validation"),
+            ("validate_sitemap_belongs_to_site", "gsc_sitemap_site_alignment"),
             ("_json_from_env_or_file", "gsc_credential_json_validation"),
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),

@@ -85,6 +85,29 @@ def normalize_sitemap_url(value: str) -> str:
     return sitemap_url
 
 
+def domain_property_covers_host(domain: str, hostname: str) -> bool:
+    domain = (domain or "").lower().strip(".")
+    hostname = (hostname or "").lower().strip(".")
+    return hostname == domain or hostname.endswith(f".{domain}")
+
+
+def validate_sitemap_belongs_to_site(site_url: str, sitemap_url: str) -> None:
+    parsed_sitemap = urlsplit(sitemap_url)
+    sitemap_host = parsed_sitemap.hostname or ""
+    if site_url.startswith("sc-domain:"):
+        domain = site_url.removeprefix("sc-domain:").strip()
+        if not domain_property_covers_host(domain, sitemap_host):
+            raise ValueError("GSC_SITEMAP_URL host must be covered by the GSC_SITE_URL sc-domain property.")
+        return
+
+    parsed_site = urlsplit(site_url)
+    site_host = parsed_site.hostname or ""
+    if sitemap_host.lower() != site_host.lower():
+        raise ValueError("GSC_SITEMAP_URL must use the same host as the GSC_SITE_URL URL-prefix property.")
+    if not sitemap_url.startswith(site_url):
+        raise ValueError("GSC_SITEMAP_URL must be inside the GSC_SITE_URL URL-prefix property.")
+
+
 def main() -> int:
     import argparse
 
@@ -98,6 +121,7 @@ def main() -> int:
     try:
         site_url = normalize_site_url(args.site_url)
         sitemap_url = normalize_sitemap_url(args.sitemap_url)
+        validate_sitemap_belongs_to_site(site_url, sitemap_url)
     except ValueError as exc:
         print(str(exc))
         return 2
