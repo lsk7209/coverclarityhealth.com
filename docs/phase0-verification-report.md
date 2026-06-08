@@ -118,6 +118,7 @@ npm run check:production
 ```
 
 Replace every `your-production-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
+Use `docs/launch-env.example.ps1` as the complete no-secret launch environment checklist.
 
 Launch wrapper:
 

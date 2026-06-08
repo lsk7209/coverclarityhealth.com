@@ -205,6 +205,7 @@ def validate(require_site_origin=False):
     gsc_workflow_path = ROOT / ".github" / "workflows" / "gsc-sitemap-submit.yml"
     readme_path = ROOT / "README.md"
     phase0_report_path = ROOT / "docs" / "phase0-verification-report.md"
+    launch_env_example_path = ROOT / "docs" / "launch-env.example.ps1"
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
@@ -221,6 +222,7 @@ def validate(require_site_origin=False):
         (gsc_workflow_path, "gsc_sitemap_workflow"),
         (readme_path, "readme"),
         (phase0_report_path, "phase0_verification_report"),
+        (launch_env_example_path, "launch_env_example"),
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (contact_script_path, "apply_contact_channel"),
@@ -340,6 +342,23 @@ def validate(require_site_origin=False):
         ]:
             if needle not in phase0_report:
                 errors.append({"type": f"phase0_report_missing_{label}"})
+    if launch_env_example_path.exists():
+        launch_env_example = launch_env_example_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("SITE_ORIGIN", "site_origin"),
+            ("PUBLIC_CONTACT_EMAIL", "public_contact_email"),
+            ("GA4_MEASUREMENT_ID", "ga4_measurement_id"),
+            ("ADSENSE_PUBLISHER_ID", "adsense_publisher_id"),
+            ("GSC_SITE_URL", "gsc_site_url"),
+            ("GSC_SITEMAP_URL", "gsc_sitemap_url"),
+            ("GSC_CLIENT_JSON", "gsc_client_json"),
+            ("GSC_TOKEN_JSON", "gsc_token_json"),
+            ("npm run launch:preflight", "launch_preflight"),
+            ("npm run launch:prepare", "launch_prepare"),
+            ("npm run ready:production", "ready_production"),
+        ]:
+            if needle not in launch_env_example:
+                errors.append({"type": f"launch_env_example_missing_{label}"})
 
     queue_path = CONTENT_DIR / "article-queue.json"
     q = load_json(queue_path)
