@@ -209,6 +209,7 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
+    launch_env_check_script_path = ROOT / "scripts" / "check_launch_env.py"
     ads_txt_script_path = ROOT / "scripts" / "apply_ads_txt.py"
     ga4_script_path = ROOT / "scripts" / "apply_ga4_measurement.py"
     seo_audit_script_path = ROOT / "scripts" / "audit_seo_adsense.py"
@@ -226,6 +227,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (contact_script_path, "apply_contact_channel"),
+        (launch_env_check_script_path, "check_launch_env"),
         (ads_txt_script_path, "apply_ads_txt"),
         (ga4_script_path, "apply_ga4_measurement"),
         (seo_audit_script_path, "seo_adsense_audit"),
@@ -239,7 +241,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:check-env", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -353,6 +355,7 @@ def validate(require_site_origin=False):
             ("GSC_SITEMAP_URL", "gsc_sitemap_url"),
             ("GSC_CLIENT_JSON", "gsc_client_json"),
             ("GSC_TOKEN_JSON", "gsc_token_json"),
+            ("npm run launch:check-env", "launch_check_env"),
             ("npm run launch:preflight", "launch_preflight"),
             ("npm run launch:prepare", "launch_prepare"),
             ("npm run ready:production", "ready_production"),
