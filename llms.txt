@@ -7,6 +7,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - Home and calculator: {SITE_ORIGIN}/
 - Blog library: {SITE_ORIGIN}/blog.html
 - Methodology: {SITE_ORIGIN}/methodology.html
+- Contact: {SITE_ORIGIN}/contact.html
 - Editorial policy: {SITE_ORIGIN}/editorial-policy.html
 - Sources and corrections: {SITE_ORIGIN}/sources-corrections.html
 - Sitemap: {SITE_ORIGIN}/sitemap.xml

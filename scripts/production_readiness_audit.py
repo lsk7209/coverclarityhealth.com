@@ -55,6 +55,21 @@ def load_quality_report():
     return json.loads(QUALITY_REPORT.read_text(encoding="utf-8"))
 
 
+def contact_channel_status():
+    contact_page = ROOT / "contact.html"
+    if not contact_page.exists():
+        return False, "contact.html is missing"
+    text = contact_page.read_text(encoding="utf-8")
+    prelaunch_markers = [
+        "not yet attached to a production domain",
+        "public contact channel must be added",
+        "public contact channel will be finalized",
+    ]
+    if any(marker in text for marker in prelaunch_markers):
+        return False, "contact page still contains prelaunch contact-channel language"
+    return True, "production public contact channel is present"
+
+
 def audit():
     quality = load_quality_report()
     public_with_placeholder = []
@@ -103,6 +118,8 @@ def audit():
             github_gsc["GSC_SITE_URL_variable"] = "GSC_SITE_URL" in variable_names
             github_gsc["GSC_SITEMAP_URL_variable"] = "GSC_SITEMAP_URL" in variable_names
 
+    contact_channel_ok, contact_channel_detail = contact_channel_status()
+
     checks = [
         {
             "name": "content_quality",
@@ -135,6 +152,11 @@ def audit():
             "detail": remotes[:4] if remotes else "no git remotes available",
         },
         {
+            "name": "production_contact_channel",
+            "ok": contact_channel_ok,
+            "detail": contact_channel_detail,
+        },
+        {
             "name": "gsc_configuration",
             "ok": all(gsc_env.values()),
             "detail": gsc_env,
@@ -160,6 +182,8 @@ def audit():
         next_required_actions.append("Commit the local work before git push.")
     if not remotes:
         next_required_actions.append("Connect this folder to a GitHub remote repository before git push.")
+    if not contact_channel_ok:
+        next_required_actions.append("Replace the prelaunch contact notice with a production public contact channel.")
     if not all(gsc_env.values()):
         next_required_actions.append("Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.")
     if remote_repo and not github_gsc["GSC_SITE_URL_variable"]:

@@ -1250,7 +1250,7 @@ def build_article(topic, idx):
     </article>
     <aside><nav class="toc" aria-label="Article tools"><strong>Article tools</strong><a href="../index.html#calc">Calculator</a><a href="../methodology.html">Methodology</a><a href="../blog.html">All guides</a></nav></aside>
   </main>
-  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="../editorial-policy.html">Editorial policy</a> - <a href="../sources-corrections.html">Sources and corrections</a></div></footer>
+  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="../editorial-policy.html">Editorial policy</a> - <a href="../sources-corrections.html">Sources and corrections</a> - <a href="../contact.html">Contact</a></div></footer>
 </body>
 </html>
 """
@@ -1719,7 +1719,7 @@ def render_blog(topics):
       <div class="grid" aria-label="Article list">{''.join(all_cards)}</div>
     </section>
   </main>
-  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="editorial-policy.html">Editorial policy</a> - <a href="sources-corrections.html">Sources and corrections</a></div></footer>
+  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="editorial-policy.html">Editorial policy</a> - <a href="sources-corrections.html">Sources and corrections</a> - <a href="contact.html">Contact</a></div></footer>
   <script>
     const searchInput = document.getElementById('guideSearch');
     const clusterFilter = document.getElementById('clusterFilter');
@@ -1849,7 +1849,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
     <section class="grid" aria-label="{esc(heading)}">{''.join(cards)}
     </section>
   </main>
-  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="../editorial-policy.html">Editorial policy</a> - <a href="../sources-corrections.html">Sources and corrections</a></div></footer>
+  <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="../editorial-policy.html">Editorial policy</a> - <a href="../sources-corrections.html">Sources and corrections</a> - <a href="../contact.html">Contact</a></div></footer>
 </body>
 </html>
 """
@@ -1861,6 +1861,7 @@ def render_sitemap(topics):
         (f"{SITE_ORIGIN}/blog.html", "0.9"),
         (f"{SITE_ORIGIN}/methodology.html", "0.7"),
         (f"{SITE_ORIGIN}/about.html", "0.6"),
+        (f"{SITE_ORIGIN}/contact.html", "0.6"),
         (f"{SITE_ORIGIN}/editorial-policy.html", "0.6"),
         (f"{SITE_ORIGIN}/sources-corrections.html", "0.6"),
         (f"{SITE_ORIGIN}/privacy.html", "0.4"),
@@ -1935,6 +1936,14 @@ def render_search_index(topics):
     ]
     trust_pages = [
         {
+            "id": "contact",
+            "type": "trust_page",
+            "title": "Contact CoverClarity",
+            "url": "contact.html",
+            "canonical": f"{SITE_ORIGIN}/contact.html",
+            "description": "Contact and correction request guidance for CoverClarity ACA subsidy estimate pages.",
+        },
+        {
             "id": "editorial-policy",
             "type": "trust_page",
             "title": "Editorial Policy",
@@ -1999,6 +2008,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - Home and calculator: {SITE_ORIGIN}/
 - Blog library: {SITE_ORIGIN}/blog.html
 - Methodology: {SITE_ORIGIN}/methodology.html
+- Contact: {SITE_ORIGIN}/contact.html
 - Editorial policy: {SITE_ORIGIN}/editorial-policy.html
 - Sources and corrections: {SITE_ORIGIN}/sources-corrections.html
 - Sitemap: {SITE_ORIGIN}/sitemap.xml

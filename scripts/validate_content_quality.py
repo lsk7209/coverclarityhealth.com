@@ -369,7 +369,7 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"missing_{label}", "slug": item["slug"]})
         if 'type="application/rss+xml"' not in html:
             article_feed_alt_missing += 1
-        if "../editorial-policy.html" not in html or "../sources-corrections.html" not in html:
+        if "../editorial-policy.html" not in html or "../sources-corrections.html" not in html or "../contact.html" not in html:
             article_trust_missing += 1
         parser = parse_page(path)
         article_internal_links = [
@@ -445,6 +445,7 @@ def validate(require_site_origin=False):
             ('"@type":"WebSite"', "website_schema"),
             ("editorial-policy.html", "editorial_link"),
             ("sources-corrections.html", "sources_link"),
+            ("contact.html", "contact_link"),
         ]:
             if needle not in html:
                 errors.append({"type": f"guide_missing_{label}", "file": p.name})
@@ -472,6 +473,9 @@ def validate(require_site_origin=False):
             errors.append({"type": "opensearch_bad_search_template"})
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
+    document_urls = {doc.get("url") for doc in documents}
+    if "contact.html" not in document_urls:
+        errors.append({"type": "search_index_missing_contact"})
     blog_html = (ROOT / "blog.html").read_text(encoding="utf-8")
     blog_size_bytes = (ROOT / "blog.html").stat().st_size
     blog_schema_posts = blog_html.count('"@type":"BlogPosting"')
@@ -528,6 +532,7 @@ def validate(require_site_origin=False):
         "blog.html",
         "methodology.html",
         "about.html",
+        "contact.html",
         "privacy.html",
         "editorial-policy.html",
         "sources-corrections.html",
@@ -546,6 +551,8 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"static_missing_{label}", "file": file_name})
         if BAD_PATTERNS.search(html):
             errors.append({"type": "bad_pattern_static", "file": file_name})
+        if file_name in {"about.html", "privacy.html", "editorial-policy.html", "sources-corrections.html"} and "contact.html" not in html:
+            errors.append({"type": "static_missing_contact_link", "file": file_name})
         if file_name == "index.html":
             errors.extend(validate_home_calculator(html))
             schemas = schemas_from_html(html)
@@ -572,6 +579,8 @@ def validate(require_site_origin=False):
         errors.append({"type": "not_found_in_sitemap"})
     if f"{site_origin}/opensearch.xml" in sitemap:
         errors.append({"type": "opensearch_in_sitemap"})
+    if f"{site_origin}/contact.html" not in sitemap:
+        errors.append({"type": "contact_missing_from_sitemap"})
 
     summary = {
         "queue_count": len(q),

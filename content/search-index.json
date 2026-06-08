@@ -5,6 +5,14 @@
   "language": "en-US",
   "documents": [
     {
+      "id": "contact",
+      "type": "trust_page",
+      "title": "Contact CoverClarity",
+      "url": "contact.html",
+      "canonical": "{SITE_ORIGIN}/contact.html",
+      "description": "Contact and correction request guidance for CoverClarity ACA subsidy estimate pages."
+    },
+    {
       "id": "editorial-policy",
       "type": "trust_page",
       "title": "Editorial Policy",
