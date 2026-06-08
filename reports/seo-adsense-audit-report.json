@@ -10,6 +10,7 @@
     "meta_description_unique": true,
     "keyword_front_signal": true,
     "canonical_per_page": true,
+    "sitemap_canonical_consistency": true,
     "sitemap_xml_present": true,
     "robots_txt_present": true,
     "ads_txt_present_valid": true,

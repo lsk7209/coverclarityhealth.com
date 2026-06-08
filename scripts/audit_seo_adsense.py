@@ -161,6 +161,32 @@ def add_duplicate_snippet_errors(pages, field, error_type, errors):
             errors.append({"files": files, "type": error_type, "value": value})
 
 
+def sitemap_locations(path):
+    if not path.exists():
+        return set()
+    return set(re.findall(r"<loc>(.*?)</loc>", path.read_text(encoding="utf-8")))
+
+
+def add_sitemap_consistency_errors(pages, sitemap_locs, errors):
+    pages_by_canonical = {
+        page["canonical_url"]: page
+        for page in pages
+        if page["canonical_url"]
+    }
+    for loc in sorted(sitemap_locs):
+        page = pages_by_canonical.get(loc)
+        if not page:
+            errors.append({"file": "sitemap.xml", "type": "sitemap_url_without_matching_canonical", "url": loc})
+        elif page["noindex"]:
+            errors.append({"file": page["file"], "type": "noindex_page_in_sitemap", "url": loc})
+
+    for page in pages:
+        if page["noindex"] or page["file"] == "404.html":
+            continue
+        if page["canonical_url"] not in sitemap_locs:
+            errors.append({"file": page["file"], "type": "indexable_page_missing_from_sitemap", "url": page["canonical_url"]})
+
+
 def audit():
     html_files = public_html_files()
     pages = []
@@ -189,6 +215,7 @@ def audit():
             page_errors.append("meta_description_length_outside_search_snippet_range")
         if not canonical(parser):
             page_errors.append("missing_canonical")
+        canonical_url = canonical(parser)
         if not heading_hierarchy_ok(parser.headings):
             page_errors.append("bad_heading_hierarchy")
         if any(not image.get("alt", "").strip() for image in parser.images):
@@ -228,6 +255,7 @@ def audit():
             "description_length_ok": noindex or snippet_length_ok(description_text, DESCRIPTION_MIN_LENGTH, DESCRIPTION_MAX_LENGTH),
             "noindex": noindex,
             "canonical": bool(canonical(parser)),
+            "canonical_url": canonical_url,
             "heading_hierarchy": heading_hierarchy_ok(parser.headings),
             "images": len(parser.images),
             "images_with_alt": sum(1 for image in parser.images if image.get("alt", "").strip()),
@@ -239,12 +267,16 @@ def audit():
     add_duplicate_snippet_errors(pages, "title_text", "duplicate_meta_title", errors)
     add_duplicate_snippet_errors(pages, "description_text", "duplicate_meta_description", errors)
 
-    sitemap_exists = (ROOT / "sitemap.xml").exists()
+    sitemap_path = ROOT / "sitemap.xml"
+    sitemap_exists = sitemap_path.exists()
+    sitemap_locs = sitemap_locations(sitemap_path)
     robots_exists = (ROOT / "robots.txt").exists()
     ads_txt_path = ROOT / "ads.txt"
     ads_txt_valid = False
     if not sitemap_exists:
         errors.append({"file": "sitemap.xml", "type": "missing_sitemap"})
+    else:
+        add_sitemap_consistency_errors(pages, sitemap_locs, errors)
     if not robots_exists:
         errors.append({"file": "robots.txt", "type": "missing_robots"})
     if not ads_txt_path.exists():
@@ -264,6 +296,11 @@ def audit():
         "meta_description_unique": not any(error["type"] == "duplicate_meta_description" for error in errors),
         "keyword_front_signal": len([w for w in warnings if w["type"] == "weak_keyword_front_signal"]) == 0,
         "canonical_per_page": all(page["canonical"] for page in pages),
+        "sitemap_canonical_consistency": not any(error["type"] in {
+            "sitemap_url_without_matching_canonical",
+            "noindex_page_in_sitemap",
+            "indexable_page_missing_from_sitemap",
+        } for error in errors),
         "sitemap_xml_present": sitemap_exists,
         "robots_txt_present": robots_exists,
         "ads_txt_present_valid": ads_txt_valid,
