@@ -1,6 +1,7 @@
 import argparse
 import json
 import subprocess
+from datetime import datetime, timezone
 
 
 def run(args):
@@ -87,12 +88,25 @@ def check_workflow(repo, branch, head, workflow, required=True):
     }
 
 
-def check_latest_workflow(repo, branch, workflow, required=True):
+def parse_github_time(value):
+    if not value:
+        return None
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def check_latest_workflow(repo, branch, workflow, required=True, max_age_hours=None):
     runs = workflow_runs(repo, branch, workflow)
     latest = runs[0] if runs else None
     ok = bool(latest and latest.get("status") == "completed" and latest.get("conclusion") == "success")
     if not required and latest is None:
         ok = True
+    age_hours = None
+    if latest and latest.get("createdAt"):
+        created_at = parse_github_time(latest.get("createdAt"))
+        if created_at:
+            age_hours = (datetime.now(timezone.utc) - created_at).total_seconds() / 3600
+    if ok and max_age_hours is not None and age_hours is not None and age_hours > max_age_hours:
+        ok = False
     return {
         "name": workflow,
         "ok": ok,
@@ -100,6 +114,8 @@ def check_latest_workflow(repo, branch, workflow, required=True):
         "current_head_run": None,
         "latest_run": run_summary(latest),
         "scope": "latest",
+        "latest_age_hours": round(age_hours, 2) if age_hours is not None else None,
+        "max_age_hours": max_age_hours,
     }
 
 
@@ -107,6 +123,7 @@ def main():
     parser = argparse.ArgumentParser(description="Check GitHub Actions status for the current launch commit.")
     parser.add_argument("--require-gsc-success", action="store_true", help="Require the GSC sitemap workflow to have succeeded for the current HEAD.")
     parser.add_argument("--skip-scheduled-check", action="store_true", help="Do not check the latest scheduled publishing workflow result.")
+    parser.add_argument("--scheduled-max-age-hours", type=float, default=2.0, help="Maximum accepted age for the latest scheduled publishing run.")
     args = parser.parse_args()
 
     head = git_value(["rev-parse", "--verify", "HEAD"])
@@ -117,7 +134,13 @@ def main():
         check_workflow(repo, branch, head, "Submit sitemap to Google Search Console", required=args.require_gsc_success),
     ]
     if not args.skip_scheduled_check:
-        checks.append(check_latest_workflow(repo, branch, "Publish scheduled content", required=True))
+        checks.append(check_latest_workflow(
+            repo,
+            branch,
+            "Publish scheduled content",
+            required=True,
+            max_age_hours=args.scheduled_max_age_hours,
+        ))
     report = {
         "passed": all(item["ok"] for item in checks),
         "repo": repo,

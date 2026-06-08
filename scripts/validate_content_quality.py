@@ -573,6 +573,8 @@ def validate(require_site_origin=False):
             ("Publish scheduled content", "scheduled_workflow"),
             ("--require-gsc-success", "require_gsc_success"),
             ("--skip-scheduled-check", "skip_scheduled_check"),
+            ("--scheduled-max-age-hours", "scheduled_max_age"),
+            ("latest_age_hours", "scheduled_latest_age"),
             ("headSha", "head_sha_match"),
         ]:
             if needle not in launch_ci_script:
