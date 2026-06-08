@@ -2,6 +2,8 @@ import argparse
 import json
 import re
 import statistics
+import subprocess
+import sys
 import xml.etree.ElementTree as ET
 from collections import Counter
 from datetime import datetime
@@ -224,6 +226,52 @@ def validate_html_structure(files):
     return errors
 
 
+def validate_launch_command_printer():
+    errors = []
+    base_args = [
+        sys.executable,
+        "scripts/print_launch_commands.py",
+        "--origin",
+        "https://www.coverclarity-test.com",
+        "--site-url",
+        "sc-domain:coverclarity-test.com",
+        "--sitemap-url",
+        "https://www.coverclarity-test.com/sitemap.xml",
+        "--contact-email",
+        "contact@coverclarity-test.com",
+        "--ga4-measurement-id",
+        "G-TEST123456",
+        "--adsense-publisher-id",
+        "pub-3050601904412736",
+    ]
+    success = subprocess.run(base_args, cwd=ROOT, capture_output=True, text=True, check=False)
+    required_output = [
+        "$env:SITE_ORIGIN = \"https://www.coverclarity-test.com\"",
+        "$env:GSC_SITE_URL = \"sc-domain:coverclarity-test.com\"",
+        "$env:GSC_SITEMAP_URL = \"https://www.coverclarity-test.com/sitemap.xml\"",
+        "npm run launch:check-env",
+        "npm run launch:preflight",
+        "npm run launch:prepare",
+        "npm run ready:production",
+    ]
+    if success.returncode != 0:
+        errors.append({"type": "launch_commands_sample_failed", "stderr": success.stderr.strip()})
+    for needle in required_output:
+        if needle not in success.stdout:
+            errors.append({"type": "launch_commands_sample_missing_output", "needle": needle})
+
+    failure_args = base_args.copy()
+    failure_args[failure_args.index("https://www.coverclarity-test.com/sitemap.xml")] = "https://bad-coverclarity-test.com/sitemap.xml"
+    failure = subprocess.run(failure_args, cwd=ROOT, capture_output=True, text=True, check=False)
+    if failure.returncode == 0:
+        errors.append({"type": "launch_commands_bad_sitemap_passed"})
+    if "Traceback" in failure.stderr:
+        errors.append({"type": "launch_commands_bad_sitemap_traceback"})
+    if "GSC_SITEMAP_URL" not in failure.stderr:
+        errors.append({"type": "launch_commands_bad_sitemap_missing_error"})
+    return errors
+
+
 def validate_home_calculator(html):
     errors = []
     required_markers = [
@@ -422,6 +470,8 @@ def validate(require_site_origin=False):
         ]:
             if needle not in launch_env_example:
                 errors.append({"type": f"launch_env_example_missing_{label}"})
+    if launch_commands_script_path.exists():
+        errors.extend(validate_launch_command_printer())
 
     queue_path = CONTENT_DIR / "article-queue.json"
     q = load_json(queue_path)
