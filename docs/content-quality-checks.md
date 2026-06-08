@@ -44,9 +44,9 @@ The validator checks:
 - Phase 0 launch-assumption report at `docs/phase0-verification-report.md`
 - optional production gate: `--require-site-origin` fails if `{SITE_ORIGIN}` remains in public artifacts
 - 200 queued articles and 200 article HTML files
-- 5 guide hub pages
+- 5 guide hub pages, with empty guide hubs kept `noindex,follow`
 - RSS feed items match currently published articles
-- sitemap URL counts
+- sitemap URL counts, including exclusion of empty guide hubs and scheduled articles
 - `404.html` exists, is `noindex,follow`, links to recovery paths, and is excluded from sitemap
 - `opensearch.xml` exists, points site search to `/blog.html`, is linked from every HTML page, and is excluded from sitemap
 - internal link targets, URL fragments, one H1, and main landmark checks across generated HTML
@@ -69,13 +69,14 @@ The validator checks:
 - Article, BreadcrumbList, and FAQPage JSON-LD counts
 - representative Organization and WebSite/SearchAction entity schema on home, blog, guide hubs, and generated articles
 - guide hub CollectionPage, ItemList, and BreadcrumbList JSON-LD
+- guide hub sitemap/search-index parity: populated hubs are indexable, empty hubs are not
 - blog page weight and representative BlogPosting schema count
 - skip links and visible keyboard focus styles on every HTML page
 - public HTML does not expose internal content quality scores
 - public HTML, RSS, `llms.txt`, and search index do not expose internal production labels such as pSEO, quality scores, or generation flags
 - trust page links
 - generated article body sentences are checked for excessive repetition across the 200-article library
-- `llms.txt` and `content/search-index.json`
+- `llms.txt` non-empty guide sections and `content/search-index.json`
 - public `content/article-queue.json` excludes internal generation flags, quality scores, and production-only labels
 - stale domains, manual ad slot markers, and mojibake markers
 

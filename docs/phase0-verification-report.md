@@ -99,9 +99,10 @@ npm run check
 Expected:
 
 - 200 generated ACA article pages.
-- 5 guide hubs.
-- 16 sitemap URLs while only currently published articles are indexable.
+- 5 guide hub files; empty guide hubs remain `noindex,follow` until at least one article in that cluster is published.
+- 11 sitemap URLs in the current dry-run state: core/trust pages, the evergreen subsidy explainer, and currently published articles only.
 - 2 RSS feed items while scheduled articles remain `noindex,follow`.
+- 0 guide hub sitemap URLs and 0 guide hub search-index documents until a guide cluster has published articles.
 - 0 validator errors.
 
 Production-only gate:
