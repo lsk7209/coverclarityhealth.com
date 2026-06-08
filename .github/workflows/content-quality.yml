@@ -26,3 +26,5 @@ jobs:
         run: python scripts/audit_performance_budget.py --write-report
       - name: Validate generated site
         run: python scripts/validate_content_quality.py --write-report
+      - name: Write production readiness report
+        run: python scripts/production_readiness_audit.py --write-report

@@ -254,6 +254,8 @@ def validate(require_site_origin=False):
             errors.append({"type": "content_quality_workflow_missing_seo_adsense_audit"})
         if "audit_performance_budget.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_performance_audit"})
+        if "production_readiness_audit.py" not in workflow:
+            errors.append({"type": "content_quality_workflow_missing_readiness_audit"})
     if readiness_script_path.exists():
         readiness_script = readiness_script_path.read_text(encoding="utf-8")
         for needle, label in [
