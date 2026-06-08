@@ -29,7 +29,7 @@
     {
       "name": "git_repository",
       "ok": true,
-      "detail": "D:/web/gungangbohum"
+      "detail": "/home/runner/work/gungangbohum/gungangbohum"
     },
     {
       "name": "git_has_commit",
@@ -38,15 +38,15 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
       "ok": true,
       "detail": [
-        "origin\thttps://github.com/lsk7209/gungangbohum.git (fetch)",
-        "origin\thttps://github.com/lsk7209/gungangbohum.git (push)"
+        "origin\thttps://github.com/lsk7209/gungangbohum (fetch)",
+        "origin\thttps://github.com/lsk7209/gungangbohum (push)"
       ]
     },
     {
@@ -75,8 +75,8 @@
       "detail": {
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
-        "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true,
+        "GSC_CLIENT_JSON": false,
+        "GSC_TOKEN_JSON": false,
         "errors": [
           {
             "name": "GSC_SITE_URL",
@@ -85,6 +85,14 @@
           {
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_CLIENT_JSON",
+            "error": "Missing GSC_CLIENT_JSON or D:\\env\\adsense_oauth_client.json"
+          },
+          {
+            "name": "GSC_TOKEN_JSON",
+            "error": "Missing GSC_TOKEN_JSON or D:\\env\\gsc_token.json"
           }
         ],
         "GSC_URL_ALIGNMENT": false
@@ -94,9 +102,9 @@
       "name": "github_gsc_configuration",
       "ok": false,
       "detail": {
-        "repo": "lsk7209/gungangbohum",
-        "GSC_CLIENT_JSON_secret": true,
-        "GSC_TOKEN_JSON_secret": true,
+        "repo": "",
+        "GSC_CLIENT_JSON_secret": false,
+        "GSC_TOKEN_JSON_secret": false,
         "GSC_SITE_URL_variable": false,
         "GSC_SITEMAP_URL_variable": false
       }
@@ -109,6 +117,11 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
+    },
+    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -119,8 +132,8 @@
       "detail": {
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
-        "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true,
+        "GSC_CLIENT_JSON": false,
+        "GSC_TOKEN_JSON": false,
         "errors": [
           {
             "name": "GSC_SITE_URL",
@@ -129,6 +142,14 @@
           {
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_CLIENT_JSON",
+            "error": "Missing GSC_CLIENT_JSON or D:\\env\\adsense_oauth_client.json"
+          },
+          {
+            "name": "GSC_TOKEN_JSON",
+            "error": "Missing GSC_TOKEN_JSON or D:\\env\\gsc_token.json"
           }
         ],
         "GSC_URL_ALIGNMENT": false
@@ -138,9 +159,9 @@
       "name": "github_gsc_configuration",
       "ok": false,
       "detail": {
-        "repo": "lsk7209/gungangbohum",
-        "GSC_CLIENT_JSON_secret": true,
-        "GSC_TOKEN_JSON_secret": true,
+        "repo": "",
+        "GSC_CLIENT_JSON_secret": false,
+        "GSC_TOKEN_JSON_secret": false,
         "GSC_SITE_URL_variable": false,
         "GSC_SITEMAP_URL_variable": false
       }
@@ -153,7 +174,9 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": []
+    "code_or_repository_blockers": [
+      "git_worktree_clean"
+    ]
   },
   "missing_external_inputs": [
     {
@@ -171,14 +194,6 @@
     {
       "name": "GSC_SITEMAP_URL",
       "detail": "Set the production sitemap URL, normally SITE_ORIGIN + /sitemap.xml."
-    },
-    {
-      "name": "GITHUB_VAR_GSC_SITE_URL",
-      "detail": "Set the GitHub repository variable GSC_SITE_URL after the production domain is assigned."
-    },
-    {
-      "name": "GITHUB_VAR_GSC_SITEMAP_URL",
-      "detail": "Set the GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
     }
   ],
   "quality_snapshot": {
@@ -187,16 +202,16 @@
     "sitemap_urls": 12,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
-      "404.html",
+      "contact.html",
       "about.html",
+      "404.html",
+      "privacy.html",
+      "sources-corrections.html",
+      "methodology.html",
       "aca-enhanced-subsidies-2026-florida.html",
       "blog.html",
-      "contact.html",
       "editorial-policy.html",
-      "index.html",
-      "methodology.html",
-      "privacy.html",
-      "sources-corrections.html"
+      "index.html"
     ],
     "public_origin_mismatch_count": 0,
     "error_count": 0
@@ -222,13 +237,12 @@
     "error_count": 0,
     "warning_count": 0,
     "largest_html_bytes": 43849,
-    "article_average_bytes": 24422
+    "article_average_bytes": 24311
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
+    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
-    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.",
-    "Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.",
-    "Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
+    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
 }
