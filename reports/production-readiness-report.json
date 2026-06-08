@@ -155,6 +155,32 @@
     ],
     "code_or_repository_blockers": []
   },
+  "missing_external_inputs": [
+    {
+      "name": "SITE_ORIGIN",
+      "detail": "Assign the HTTPS production origin, then run npm run launch:prepare or npm run check:production."
+    },
+    {
+      "name": "PUBLIC_CONTACT_EMAIL_OR_URL",
+      "detail": "Provide PUBLIC_CONTACT_EMAIL or PUBLIC_CONTACT_URL so contact.html exposes a production public contact channel."
+    },
+    {
+      "name": "GSC_SITE_URL",
+      "detail": "Set the verified Search Console URL-prefix property or covering sc-domain property after the production domain is assigned."
+    },
+    {
+      "name": "GSC_SITEMAP_URL",
+      "detail": "Set the production sitemap URL, normally SITE_ORIGIN + /sitemap.xml."
+    },
+    {
+      "name": "GITHUB_VAR_GSC_SITE_URL",
+      "detail": "Set the GitHub repository variable GSC_SITE_URL after the production domain is assigned."
+    },
+    {
+      "name": "GITHUB_VAR_GSC_SITEMAP_URL",
+      "detail": "Set the GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
+    }
+  ],
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
