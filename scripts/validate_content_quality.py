@@ -207,6 +207,7 @@ def validate(require_site_origin=False):
     phase0_report_path = ROOT / "docs" / "phase0-verification-report.md"
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
+    contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
     for path, label in [
         (package_path, "package_json"),
         (vercel_path, "vercel_json"),
@@ -216,6 +217,7 @@ def validate(require_site_origin=False):
         (phase0_report_path, "phase0_verification_report"),
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
+        (contact_script_path, "apply_contact_channel"),
     ]:
         if not path.exists():
             errors.append({"type": f"missing_{label}", "file": str(path.relative_to(ROOT))})
@@ -225,7 +227,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -258,6 +260,8 @@ def validate(require_site_origin=False):
             ("G0-3 Subsidy Regime Status", "subsidy_regime"),
             ("G0-4 Florida Coverage Gap Handling", "coverage_gap"),
             ("Production domain is not assigned", "domain_blocker"),
+            ("PUBLIC_CONTACT_EMAIL", "public_contact_email"),
+            ("npm run contact:apply", "contact_apply_gate"),
             ("npm run check:production", "production_gate"),
             ("npm run launch:prepare", "launch_prepare_gate"),
             ("npm run gsc:submit", "gsc_submit_gate"),

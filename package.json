@@ -6,6 +6,7 @@
   "scripts": {
     "generate": "python scripts/generate_aca_articles.py",
     "origin:apply": "python scripts/apply_site_origin.py",
+    "contact:apply": "python scripts/apply_contact_channel.py",
     "validate": "python scripts/validate_content_quality.py --write-report",
     "validate:production": "python scripts/validate_content_quality.py --write-report --require-site-origin",
     "check": "python scripts/generate_aca_articles.py && python scripts/validate_content_quality.py --write-report",

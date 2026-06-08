@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -67,6 +68,8 @@ def contact_channel_status():
     ]
     if any(marker in text for marker in prelaunch_markers):
         return False, "contact page still contains prelaunch contact-channel language"
+    if not re.search(r'href="mailto:[^"]+@[^"]+\.[^"]+"|href="https://[^"]+"', text):
+        return False, "contact page does not expose a public email or https contact URL"
     return True, "production public contact channel is present"
 
 

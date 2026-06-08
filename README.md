@@ -15,6 +15,8 @@ For production after a domain is assigned:
 
 ```powershell
 $env:SITE_ORIGIN = "https://your-domain.example"
+$env:PUBLIC_CONTACT_EMAIL = "contact@your-domain.example"
+npm run contact:apply
 npm run check:production
 npm run ready:production
 ```
@@ -22,13 +24,13 @@ npm run ready:production
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example
+npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example
 ```
 
 To also set the GitHub repository variables used by the sitemap workflow:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example --set-github-vars
+npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --set-github-vars
 ```
 
 ## Deployment Notes

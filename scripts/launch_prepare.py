@@ -52,6 +52,8 @@ def main():
     parser.add_argument("--origin", default=os.getenv("SITE_ORIGIN", ""), help="Production origin, for example https://example.com")
     parser.add_argument("--site-url", default=os.getenv("GSC_SITE_URL", ""), help="GSC property URL or sc-domain property. Defaults to origin URL-prefix.")
     parser.add_argument("--sitemap-url", default=os.getenv("GSC_SITEMAP_URL", ""), help="Production sitemap URL. Defaults to origin/sitemap.xml.")
+    parser.add_argument("--contact-email", default=os.getenv("PUBLIC_CONTACT_EMAIL", ""), help="Public contact email to apply to contact.html.")
+    parser.add_argument("--contact-url", default=os.getenv("PUBLIC_CONTACT_URL", ""), help="Public https contact form URL to apply to contact.html.")
     parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
     parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
     args = parser.parse_args()
@@ -64,6 +66,10 @@ def main():
     env["SITE_ORIGIN"] = origin
     env["GSC_SITE_URL"] = site_url
     env["GSC_SITEMAP_URL"] = sitemap_url
+    if args.contact_email:
+        env["PUBLIC_CONTACT_EMAIL"] = args.contact_email
+    if args.contact_url:
+        env["PUBLIC_CONTACT_URL"] = args.contact_url
 
     if args.set_github_vars:
         repo = github_repo(env)
@@ -72,6 +78,8 @@ def main():
         set_github_variable(repo, "GSC_SITEMAP_URL", sitemap_url, env)
 
     run_step("Generate public artifacts with production origin", [sys.executable, "scripts/generate_aca_articles.py"], env)
+    if args.contact_email or args.contact_url:
+        run_step("Apply public contact channel", [sys.executable, "scripts/apply_contact_channel.py"], env)
     run_step("Apply production origin to static files", [sys.executable, "scripts/apply_site_origin.py", "--origin", origin], env)
     run_step("Validate production content", [sys.executable, "scripts/validate_content_quality.py", "--write-report", "--require-site-origin"], env)
 
