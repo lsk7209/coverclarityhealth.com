@@ -355,6 +355,7 @@ def validate(require_site_origin=False):
             ('<meta name="description"', "meta_description"),
             ('<link rel="canonical"', "canonical"),
             ("Table of contents", "toc"),
+            ("Verification snapshot", "verification_snapshot"),
             ("Related guide path", "related_path"),
             ("Editorial standards for this ACA estimate", "editorial_block"),
             ('target="_blank"', "external_source"),

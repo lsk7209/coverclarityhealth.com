@@ -790,6 +790,29 @@ def hub_summary_html(topic):
     )
 
 
+def verification_snapshot_html(topic, idx):
+    exp = topic["expanded_keywords"]
+    rows = [
+        ("Estimate scope", f"{exp[0]}, income, household size, Florida area, and plan year."),
+        ("Not a final quote", "Use the result for planning before the official Marketplace screen."),
+        ("Official confirmation", "Verify eligibility, plans, and prices through HealthCare.gov."),
+        ("Review status", "Reviewed June 8, 2026 for 2026 ACA subsidy planning."),
+    ]
+    if idx % 4 == 1:
+        rows[0] = ("Estimate scope", f"{exp[1]}, benchmark premium, tax credit, and net premium.")
+    elif idx % 4 == 2:
+        rows[1] = ("Boundary", "This guide explains estimate logic, not insurance or tax advice.")
+    elif idx % 4 == 3:
+        rows[3] = ("Update trigger", "Recheck after income, household, county, or rule changes.")
+    return (
+        '<section class="verification-snapshot" id="verification-snapshot">'
+        '<h2>Verification snapshot</h2>'
+        '<div class="summary-grid">'
+        + "".join(f'<div><b>{esc(label)}</b><span>{esc(text)}</span></div>' for label, text in rows)
+        + "</div></section>"
+    )
+
+
 def related_intro(topic, idx):
     return variant([
         "Use these related guides to move from this article into the closest supporting cluster before returning to the calculator.",
@@ -1052,6 +1075,7 @@ def build_article(topic, idx):
     source_heading = SOURCE_HEADINGS[idx % len(SOURCE_HEADINGS)]
     toc = "\n".join(f'<a href="#s{i+1}">{esc(title)}</a>' for i, (title, _) in enumerate(sections))
     hub_summary = hub_summary_html(topic) if is_hub_topic(topic, idx) else ""
+    verification_snapshot = verification_snapshot_html(topic, idx)
     section_html = []
     for i, (title, paragraphs) in enumerate(sections):
         body = "\n".join(f"<p>{esc(p)}</p>" for p in paragraphs)
@@ -1158,7 +1182,7 @@ def build_article(topic, idx):
   <meta name="twitter:description" content="{esc(topic.get('twitter_description', topic['meta_description']))}">
   <style>
     :root{{--paper:#faf7f1;--paper2:#f3eee3;--card:#fffdf9;--ink:#1b2a36;--soft:#34434f;--muted:#5b7184;--line:#e4dccb;--accent:#c8862b;--accent2:#a66c1c;--callout-bg:{bg};--callout-fg:{fg};--serif:Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,sans-serif}}
-    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1120px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.layout{{display:grid;grid-template-columns:minmax(0,740px) 280px;gap:44px;padding:42px 22px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.05rem,5vw,3.45rem)/1.06 var(--serif);margin:.35em 0}}.subtitle{{font-size:1.15rem;color:var(--soft)}}.meta{{font-size:.86rem;color:var(--muted)}}.guide-hub{{font-size:.9rem;color:var(--soft)}}.answer,.cta,.sourcebox,.callout,.editorial,.related-guides,.hub-summary{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:22px 0}}.answer{{background:var(--callout-bg);border-color:var(--line)}}.answer b,.callout b,.editorial b,.hub-summary b{{color:var(--callout-fg)}}.toc{{position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}}.toc a{{display:block;text-decoration:none;margin:8px 0}}article h2{{font:600 1.72rem/1.2 var(--serif);margin:36px 0 10px}}article h3{{font:700 1.12rem/1.3 var(--serif);margin:22px 0 8px}}p{{margin:0 0 16px}}.checklist,.steps{{background:var(--paper2);border-radius:12px;padding:16px 18px 16px 34px}}.mini-table,.summary-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}}.mini-table.triad{{grid-template-columns:repeat(3,1fr)}}.mini-table div,.summary-grid div{{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px}}.mini-table span,.summary-grid span{{display:block;color:var(--soft);font-size:.92rem}}blockquote{{border-left:4px solid var(--callout-fg);margin:18px 0;padding:8px 0 8px 16px;color:var(--soft)}}.related-guides ul{{list-style:none;margin:0;padding:0;display:grid;gap:10px}}.related-guides li{{border-top:1px solid var(--line);padding-top:10px}}.related-guides span{{display:block;color:var(--muted);font-size:.86rem}}.btn{{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:900px){{.layout{{display:block}}.toc{{position:static;margin:22px 0}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}.mini-table,.mini-table.triad,.summary-grid{{grid-template-columns:1fr}}}}
+    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1120px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.layout{{display:grid;grid-template-columns:minmax(0,740px) 280px;gap:44px;padding:42px 22px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.05rem,5vw,3.45rem)/1.06 var(--serif);margin:.35em 0}}.subtitle{{font-size:1.15rem;color:var(--soft)}}.meta{{font-size:.86rem;color:var(--muted)}}.guide-hub{{font-size:.9rem;color:var(--soft)}}.answer,.cta,.sourcebox,.callout,.editorial,.related-guides,.hub-summary,.verification-snapshot{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:22px 0}}.answer{{background:var(--callout-bg);border-color:var(--line)}}.answer b,.callout b,.editorial b,.hub-summary b,.verification-snapshot b{{color:var(--callout-fg)}}.toc{{position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}}.toc a{{display:block;text-decoration:none;margin:8px 0}}article h2{{font:600 1.72rem/1.2 var(--serif);margin:36px 0 10px}}article h3{{font:700 1.12rem/1.3 var(--serif);margin:22px 0 8px}}p{{margin:0 0 16px}}.checklist,.steps{{background:var(--paper2);border-radius:12px;padding:16px 18px 16px 34px}}.mini-table,.summary-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}}.mini-table.triad{{grid-template-columns:repeat(3,1fr)}}.mini-table div,.summary-grid div{{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px}}.mini-table span,.summary-grid span{{display:block;color:var(--soft);font-size:.92rem}}blockquote{{border-left:4px solid var(--callout-fg);margin:18px 0;padding:8px 0 8px 16px;color:var(--soft)}}.related-guides ul{{list-style:none;margin:0;padding:0;display:grid;gap:10px}}.related-guides li{{border-top:1px solid var(--line);padding-top:10px}}.related-guides span{{display:block;color:var(--muted);font-size:.86rem}}.btn{{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:900px){{.layout{{display:block}}.toc{{position:static;margin:22px 0}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}.mini-table,.mini-table.triad,.summary-grid{{grid-template-columns:1fr}}}}
   </style>
   {schema_html}
 </head>
@@ -1174,7 +1198,8 @@ def build_article(topic, idx):
       {guide_hub_html}
       <section class="answer"><b>Direct answer:</b> {esc(direct_answer(topic))}</section>
       {hub_summary}
-      <nav class="toc" aria-label="Table of contents">{'<a href="#hub-summary">At-a-glance summary</a>' if is_hub_topic(topic, idx) else ''}{toc}<a href="#related-guides">Related guide path</a><a href="#editorial-standards">Editorial standards</a><a href="#sources">Sources</a></nav>
+      {verification_snapshot}
+      <nav class="toc" aria-label="Table of contents">{'<a href="#hub-summary">At-a-glance summary</a>' if is_hub_topic(topic, idx) else ''}<a href="#verification-snapshot">Verification snapshot</a>{toc}<a href="#related-guides">Related guide path</a><a href="#editorial-standards">Editorial standards</a><a href="#sources">Sources</a></nav>
       {''.join(section_html)}
       {faq_html}
       <section class="related-guides" id="related-guides">

@@ -9,7 +9,7 @@
     {
       "name": "production_origin_applied",
       "ok": false,
-      "detail": "221 public files still contain {SITE_ORIGIN}"
+      "detail": "220 public files still contain {SITE_ORIGIN}"
     },
     {
       "name": "git_repository",
@@ -60,7 +60,7 @@
     {
       "name": "production_origin_applied",
       "ok": false,
-      "detail": "221 public files still contain {SITE_ORIGIN}"
+      "detail": "220 public files still contain {SITE_ORIGIN}"
     },
     {
       "name": "git_worktree_clean",
