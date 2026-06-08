@@ -9,7 +9,7 @@
     {
       "name": "production_origin_applied",
       "ok": false,
-      "detail": "220 public files still contain {SITE_ORIGIN}"
+      "detail": "221 public files still contain {SITE_ORIGIN}"
     },
     {
       "name": "git_repository",
@@ -23,8 +23,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -60,12 +60,7 @@
     {
       "name": "production_origin_applied",
       "ok": false,
-      "detail": "220 public files still contain {SITE_ORIGIN}"
-    },
-    {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "detail": "221 public files still contain {SITE_ORIGIN}"
     },
     {
       "name": "gsc_configuration",
@@ -97,7 +92,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work before git push.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.",
     "Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.",
     "Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
