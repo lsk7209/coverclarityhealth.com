@@ -31,6 +31,10 @@ env:
 permissions:
   contents: read
 
+concurrency:
+  group: gsc-sitemap-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   submit-sitemap:
     runs-on: ubuntu-latest

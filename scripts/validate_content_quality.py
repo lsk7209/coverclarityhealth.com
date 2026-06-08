@@ -387,6 +387,17 @@ def validate(require_site_origin=False):
     ]:
         if workflow_path.exists() and permission not in workflow_path.read_text(encoding="utf-8"):
             errors.append({"type": f"{label}_workflow_missing_minimum_permissions", "permission": permission})
+    for workflow_path, label, group, cancel_policy in [
+        (quality_workflow_path, "content_quality", "group: content-quality-${{ github.ref }}", "cancel-in-progress: true"),
+        (gsc_workflow_path, "gsc_sitemap", "group: gsc-sitemap-${{ github.ref }}", "cancel-in-progress: false"),
+        (scheduled_workflow_path, "publish_scheduled_content", "group: publish-scheduled-content-${{ github.ref }}", "cancel-in-progress: false"),
+    ]:
+        if workflow_path.exists():
+            workflow = workflow_path.read_text(encoding="utf-8")
+            if group not in workflow:
+                errors.append({"type": f"{label}_workflow_missing_concurrency_group"})
+            if cancel_policy not in workflow:
+                errors.append({"type": f"{label}_workflow_missing_concurrency_cancel_policy"})
     if scheduled_workflow_path.exists():
         scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
         for needle, label in [
@@ -395,8 +406,6 @@ def validate(require_site_origin=False):
             ("reports/article-generation-report.json", "article_generation_report_commit"),
             ("reports/production-readiness-report.json", "readiness_report_commit"),
             ("scripts/production_readiness_audit.py", "readiness_script_commit"),
-            ("group: publish-scheduled-content-${{ github.ref }}", "concurrency_group"),
-            ("cancel-in-progress: false", "concurrency_no_cancel"),
             ("git pull --rebase", "rebase_before_push"),
         ]:
             if needle not in scheduled_workflow:
