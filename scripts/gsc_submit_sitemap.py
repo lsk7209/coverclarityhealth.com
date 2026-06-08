@@ -108,6 +108,24 @@ def validate_sitemap_belongs_to_site(site_url: str, sitemap_url: str) -> None:
         raise ValueError("GSC_SITEMAP_URL must be inside the GSC_SITE_URL URL-prefix property.")
 
 
+def sitemap_status_payload(site_url: str, sitemap_url: str, target: dict) -> dict:
+    errors = str(target.get("errors", "0"))
+    warnings = str(target.get("warnings", "0"))
+    downloaded = target.get("lastDownloaded")
+    is_pending = bool(target.get("isPending"))
+    status = "success" if errors == "0" and warnings == "0" and downloaded and not is_pending else "pending"
+    return {
+        "status": status,
+        "siteUrl": site_url,
+        "sitemapUrl": sitemap_url,
+        "lastSubmitted": target.get("lastSubmitted"),
+        "lastDownloaded": downloaded,
+        "isPending": is_pending,
+        "errors": errors,
+        "warnings": warnings,
+    }
+
+
 def main() -> int:
     import argparse
 
@@ -147,24 +165,13 @@ def main() -> int:
         print(f"Submitted {sitemap_url}, but it is not listed yet.")
         return 2
 
-    errors = str(target.get("errors", "0"))
-    warnings = str(target.get("warnings", "0"))
-    downloaded = target.get("lastDownloaded")
-    status = "success" if errors == "0" and downloaded else "pending"
-    print(json.dumps({
-        "status": status,
-        "siteUrl": site_url,
-        "sitemapUrl": sitemap_url,
-        "lastSubmitted": target.get("lastSubmitted"),
-        "lastDownloaded": downloaded,
-        "errors": errors,
-        "warnings": warnings,
-    }, ensure_ascii=False, indent=2))
+    payload = sitemap_status_payload(site_url, sitemap_url, target)
+    print(json.dumps(payload, ensure_ascii=False, indent=2))
 
-    if errors != "0":
+    if payload["errors"] != "0" or payload["warnings"] != "0":
         return 1
-    if not downloaded and not args.allow_pending:
-        print("GSC accepted the sitemap but has not downloaded it yet. Re-run later to prove success.")
+    if payload["status"] != "success" and not args.allow_pending:
+        print("GSC accepted the sitemap but has not reached green success yet. Re-run later to prove success.")
         return 2
     return 0
 

@@ -483,6 +483,17 @@ def validate(require_site_origin=False):
         ]:
             if needle not in workflow:
                 errors.append({"type": f"gsc_workflow_missing_{label}"})
+    gsc_submit_script_path = ROOT / "scripts" / "gsc_submit_sitemap.py"
+    if gsc_submit_script_path.exists():
+        gsc_submit_script = gsc_submit_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("sitemap_status_payload", "green_status_payload"),
+            ("isPending", "gsc_pending_status"),
+            ("warnings", "gsc_warning_status"),
+            ("green success", "green_success_message"),
+        ]:
+            if needle not in gsc_submit_script:
+                errors.append({"type": f"gsc_submit_missing_{label}"})
     if phase0_report_path.exists():
         phase0_report = phase0_report_path.read_text(encoding="utf-8")
         for needle, label in [
