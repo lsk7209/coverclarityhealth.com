@@ -146,6 +146,15 @@
       }
     }
   ],
+  "blocker_summary": {
+    "external_input_blockers": [
+      "production_origin_applied",
+      "production_contact_channel",
+      "gsc_configuration",
+      "github_gsc_configuration"
+    ],
+    "code_or_repository_blockers": []
+  },
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
