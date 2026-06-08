@@ -734,6 +734,10 @@ def validate(require_site_origin=False):
         errors.append({"type": "search_index_missing_privacy"})
     if "/privacy.html" not in llms:
         errors.append({"type": "llms_missing_privacy"})
+    for heading in ("## Guide Hubs", "## Priority Hub Articles"):
+        match = re.search(rf"{re.escape(heading)}\n\n(.+?)(?:\n\n## |\Z)", llms, re.DOTALL)
+        if not match or not match.group(1).strip():
+            errors.append({"type": "llms_empty_section", "heading": heading})
     if feed_items != len(published_items):
         errors.append({"type": "feed_published_count_mismatch", "feed_items": feed_items, "published_items": len(published_items)})
     if len(article_documents) != len(published_items) + legacy_article_count:

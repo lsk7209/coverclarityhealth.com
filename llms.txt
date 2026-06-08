@@ -17,11 +17,11 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 
 ## Guide Hubs
 
-
+No guide hubs are indexable yet because the currently published articles have not opened those clusters.
 
 ## Priority Hub Articles
 
-
+No priority hub articles are published yet. They will appear here when their scheduled publish times arrive.
 
 ## Content Notes
 

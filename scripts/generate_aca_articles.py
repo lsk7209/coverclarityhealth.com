@@ -2068,6 +2068,8 @@ def render_llms_txt(topics):
         f"- [{topic['title']}]({SITE_ORIGIN}/aca/{topic['slug']}.html): {topic.get('excerpt', topic['meta_description'])}"
         for topic in hubs[:30]
     ]
+    guide_section = "\n".join(guide_lines) if guide_lines else "No guide hubs are indexable yet because the currently published articles have not opened those clusters."
+    hub_section = "\n".join(hub_lines) if hub_lines else "No priority hub articles are published yet. They will appear here when their scheduled publish times arrive."
     return f"""# CoverClarity
 
 CoverClarity is an independent Florida ACA subsidy estimate and Marketplace verification guide library. It is not affiliated with the U.S. government or HealthCare.gov. Content is estimate guidance only, not insurance, tax, or legal advice.
@@ -2087,11 +2089,11 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 
 ## Guide Hubs
 
-{chr(10).join(guide_lines)}
+{guide_section}
 
 ## Priority Hub Articles
 
-{chr(10).join(hub_lines)}
+{hub_section}
 
 ## Content Notes
 
