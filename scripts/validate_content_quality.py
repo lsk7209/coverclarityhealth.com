@@ -388,6 +388,8 @@ def validate(require_site_origin=False):
             ("reports/article-generation-report.json", "article_generation_report_commit"),
             ("reports/production-readiness-report.json", "readiness_report_commit"),
             ("scripts/production_readiness_audit.py", "readiness_script_commit"),
+            ("group: publish-scheduled-content-${{ github.ref }}", "concurrency_group"),
+            ("cancel-in-progress: false", "concurrency_no_cancel"),
         ]:
             if needle not in scheduled_workflow:
                 errors.append({"type": f"publish_scheduled_workflow_missing_{label}"})
