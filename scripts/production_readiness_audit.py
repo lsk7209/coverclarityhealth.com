@@ -369,6 +369,8 @@ def audit():
             "article_files": quality.get("article_files") if quality else None,
             "guide_files": quality.get("guide_files") if quality else None,
             "sitemap_urls": quality.get("sitemap_urls") if quality else None,
+            "site_origin_placeholder_count": len(public_with_placeholder),
+            "site_origin_placeholder_sample": public_with_placeholder[:10],
             "public_origin_mismatch_count": quality.get("public_origin_mismatch_count") if quality else None,
             "error_count": quality.get("error_count") if quality else None,
         },

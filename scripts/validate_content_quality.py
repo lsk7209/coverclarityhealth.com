@@ -377,6 +377,7 @@ def validate(require_site_origin=False):
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),
             ("public_origin_mismatch_count", "public_origin_mismatch_snapshot"),
+            ("site_origin_placeholder_count", "site_origin_placeholder_snapshot"),
             ("EXTERNAL_INPUT_BLOCKERS", "external_input_blocker_classification"),
             ("blocker_summary", "blocker_summary"),
         ]:
