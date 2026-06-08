@@ -380,6 +380,17 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"{label}_workflow_checkout_not_node24"})
             if "actions/setup-python@v6" not in workflow:
                 errors.append({"type": f"{label}_workflow_setup_python_not_node24"})
+    if scheduled_workflow_path.exists():
+        scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("23 */5 * * *", "five_hour_schedule"),
+            ("production_readiness_audit.py --write-report", "readiness_report_step"),
+            ("reports/article-generation-report.json", "article_generation_report_commit"),
+            ("reports/production-readiness-report.json", "readiness_report_commit"),
+            ("scripts/production_readiness_audit.py", "readiness_script_commit"),
+        ]:
+            if needle not in scheduled_workflow:
+                errors.append({"type": f"publish_scheduled_workflow_missing_{label}"})
     if readiness_script_path.exists():
         readiness_script = readiness_script_path.read_text(encoding="utf-8")
         for needle, label in [
