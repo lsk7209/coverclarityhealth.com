@@ -16,6 +16,7 @@ from gsc_submit_sitemap import (
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "reports"
 QUALITY_REPORT = REPORT_DIR / "content-quality-report.json"
+ARTICLE_GENERATION_REPORT = REPORT_DIR / "article-generation-report.json"
 SEO_ADSENSE_REPORT = REPORT_DIR / "seo-adsense-audit-report.json"
 PERFORMANCE_REPORT = REPORT_DIR / "performance-budget-report.json"
 READINESS_REPORT = REPORT_DIR / "production-readiness-report.json"
@@ -101,6 +102,27 @@ def report_pass_status(path, label):
     }, report
 
 
+def article_generation_status():
+    report = load_json_report(ARTICLE_GENERATION_REPORT)
+    if not report:
+        return False, f"{ARTICLE_GENERATION_REPORT.name} is missing", None
+
+    articles = report.get("articles", 0)
+    min_quality = report.get("minQualityScore", 0)
+    codex_only = report.get("codexOnlyGenerationArticles", 0)
+    manual_ad_slots = report.get("manualAdSlotArticles", 0)
+    ok = articles >= 200 and min_quality >= 90 and codex_only == articles and manual_ad_slots == 0
+    if ok:
+        return True, "article generation contract passed: 200+ articles, quality >= 90, Codex-only, no manual ad slots", report
+    return False, {
+        "message": "article generation contract did not pass",
+        "articles": articles,
+        "minQualityScore": min_quality,
+        "codexOnlyGenerationArticles": codex_only,
+        "manualAdSlotArticles": manual_ad_slots,
+    }, report
+
+
 def contact_channel_status():
     contact_page = ROOT / "contact.html"
     if not contact_page.exists():
@@ -182,6 +204,7 @@ def gsc_configuration_status():
 
 def audit():
     quality = load_quality_report()
+    article_generation_ok, article_generation_detail, article_generation = article_generation_status()
     seo_adsense_ok, seo_adsense_detail, seo_adsense = report_pass_status(SEO_ADSENSE_REPORT, "SEO and AdSense audit")
     performance_ok, performance_detail, performance = report_pass_status(PERFORMANCE_REPORT, "Performance budget audit")
     public_with_placeholder = []
@@ -233,6 +256,11 @@ def audit():
             "name": "content_quality",
             "ok": bool(quality and quality.get("error_count") == 0),
             "detail": "content-quality-report.json has error_count 0" if quality else "content-quality-report.json is missing",
+        },
+        {
+            "name": "article_generation_contract",
+            "ok": article_generation_ok,
+            "detail": article_generation_detail,
         },
         {
             "name": "seo_adsense_audit",
@@ -299,6 +327,8 @@ def audit():
     ready = all(item["ok"] for item in checks)
     blockers = [item for item in checks if not item["ok"]]
     next_required_actions = []
+    if not article_generation_ok:
+        next_required_actions.append("Run npm run generate and fix article generation contract issues before production submission.")
     if not seo_adsense_ok:
         next_required_actions.append("Run npm run audit:seo and fix SEO or AdSense audit issues before production submission.")
     if not performance_ok:
@@ -330,6 +360,15 @@ def audit():
             "sitemap_urls": quality.get("sitemap_urls") if quality else None,
             "public_origin_mismatch_count": quality.get("public_origin_mismatch_count") if quality else None,
             "error_count": quality.get("error_count") if quality else None,
+        },
+        "article_generation_snapshot": {
+            "articles": article_generation.get("articles") if article_generation else None,
+            "publishedArticles": article_generation.get("publishedArticles") if article_generation else None,
+            "scheduledArticles": article_generation.get("scheduledArticles") if article_generation else None,
+            "minQualityScore": article_generation.get("minQualityScore") if article_generation else None,
+            "maxQualityScore": article_generation.get("maxQualityScore") if article_generation else None,
+            "codexOnlyGenerationArticles": article_generation.get("codexOnlyGenerationArticles") if article_generation else None,
+            "manualAdSlotArticles": article_generation.get("manualAdSlotArticles") if article_generation else None,
         },
         "seo_adsense_snapshot": {
             "pages_checked": seo_adsense.get("pages_checked") if seo_adsense else None,

@@ -2192,7 +2192,6 @@ def main():
         "articles": len(topics),
         "publishedArticles": len(published_topics),
         "scheduledArticles": len(topics) - len(published_topics),
-        "publicationNow": now.isoformat(),
         "firstPublishAt": topics[0]["publishAt"],
         "lastPublishAt": topics[-1]["publishAt"],
         "minQualityScore": min(t["quality_score"] for t in topics),
