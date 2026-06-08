@@ -17,6 +17,16 @@
       "detail": "D:/web/gungangbohum"
     },
     {
+      "name": "git_has_commit",
+      "ok": true,
+      "detail": "HEAD exists"
+    },
+    {
+      "name": "git_worktree_clean",
+      "ok": true,
+      "detail": "worktree clean"
+    },
+    {
       "name": "github_remote",
       "ok": false,
       "detail": "no git remotes available"
@@ -62,7 +72,7 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Initialize/connect this folder to a GitHub remote repository before git push.",
+    "Commit the local work and connect this folder to a GitHub remote repository before git push.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
 }
