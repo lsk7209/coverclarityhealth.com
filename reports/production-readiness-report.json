@@ -28,8 +28,11 @@
     },
     {
       "name": "github_remote",
-      "ok": false,
-      "detail": "no git remotes available"
+      "ok": true,
+      "detail": [
+        "origin\thttps://github.com/lsk7209/gungangbohum.git (fetch)",
+        "origin\thttps://github.com/lsk7209/gungangbohum.git (push)"
+      ]
     },
     {
       "name": "gsc_configuration",
@@ -47,11 +50,6 @@
       "name": "production_origin_applied",
       "ok": false,
       "detail": "221 public files still contain {SITE_ORIGIN}"
-    },
-    {
-      "name": "github_remote",
-      "ok": false,
-      "detail": "no git remotes available"
     },
     {
       "name": "gsc_configuration",
@@ -72,7 +70,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Connect this folder to a GitHub remote repository before git push.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
 }
