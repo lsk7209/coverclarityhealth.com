@@ -97,8 +97,18 @@ def audit():
     required_headers = [
         ("/(.*)\\.html", "Cache-Control", "must-revalidate"),
         ("/(.*)\\.html", "X-Content-Type-Options", "nosniff"),
+        ("/(.*)\\.html", "Referrer-Policy", "strict-origin-when-cross-origin"),
+        ("/(.*)\\.html", "X-Frame-Options", "SAMEORIGIN"),
+        ("/(.*)\\.html", "Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()"),
         ("/(sitemap|feed|opensearch)\\.xml", "Content-Type", "application/xml"),
+        ("/(sitemap|feed|opensearch)\\.xml", "X-Content-Type-Options", "nosniff"),
+        ("/(sitemap|feed|opensearch)\\.xml", "Referrer-Policy", "strict-origin-when-cross-origin"),
+        ("/(robots|llms|ads)\\.txt", "Content-Type", "text/plain"),
+        ("/(robots|llms|ads)\\.txt", "X-Content-Type-Options", "nosniff"),
+        ("/(robots|llms|ads)\\.txt", "Referrer-Policy", "strict-origin-when-cross-origin"),
         ("/content/(.*)\\.json", "Content-Type", "application/json"),
+        ("/content/(.*)\\.json", "X-Content-Type-Options", "nosniff"),
+        ("/content/(.*)\\.json", "Referrer-Policy", "strict-origin-when-cross-origin"),
     ]
     for source, key, expected in required_headers:
         value = header_value(vercel, source, key)

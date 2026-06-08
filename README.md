@@ -96,7 +96,7 @@ Run `npm run check` before publishing. The validator checks generated article co
 
 Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, search-snippet length and uniqueness, canonical URLs, sitemap/canonical/noindex consistency, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.
 
-Run `npm run audit:performance` to write `reports/performance-budget-report.json`. It checks static HTML size budgets, article average size, inline style/script budgets, public JSON size, and static header configuration.
+Run `npm run audit:performance` to write `reports/performance-budget-report.json`. It checks static HTML size budgets, article average size, inline style/script budgets, public JSON size, and static cache, content-type, security, and referrer-policy header configuration.
 
 The launch assumptions are tracked in `docs/phase0-verification-report.md`. Keep that report current when rating-area data, SLCSP data, subsidy law status, or Florida coverage-gap handling changes.
 

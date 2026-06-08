@@ -100,7 +100,7 @@ The performance budget audit writes `reports/performance-budget-report.json` and
 - article page maximum and average byte budgets
 - inline style and script byte budgets
 - public JSON size budgets for the article queue and search index
-- required static cache and content-type headers in `vercel.json`
+- required static cache, content-type, security, and referrer-policy headers in `vercel.json`
 
 Optional GA4 injection uses `scripts/apply_ga4_measurement.py` and only runs when a production `GA4_MEASUREMENT_ID` is supplied.
 
