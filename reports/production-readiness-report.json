@@ -7,6 +7,16 @@
       "detail": "content-quality-report.json has error_count 0"
     },
     {
+      "name": "seo_adsense_audit",
+      "ok": true,
+      "detail": "SEO and AdSense audit passed with 0 errors and 0 warnings"
+    },
+    {
+      "name": "performance_budget_audit",
+      "ok": true,
+      "detail": "Performance budget audit passed with 0 errors and 0 warnings"
+    },
+    {
       "name": "production_origin_applied",
       "ok": false,
       "detail": "222 public files still contain {SITE_ORIGIN}"
@@ -99,6 +109,20 @@
     "guide_files": 5,
     "sitemap_urls": 16,
     "error_count": 0
+  },
+  "seo_adsense_snapshot": {
+    "pages_checked": 215,
+    "error_count": 0,
+    "warning_count": 0,
+    "ads_txt_present_valid": true,
+    "adsense_auto_ads_only": true
+  },
+  "performance_snapshot": {
+    "html_files_checked": 215,
+    "error_count": 0,
+    "warning_count": 0,
+    "largest_html_bytes": 43849,
+    "article_average_bytes": 24422
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
