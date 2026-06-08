@@ -484,14 +484,18 @@ def validate(require_site_origin=False):
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
     article_documents = [doc for doc in documents if doc.get("type") == "article"]
+    legacy_article_urls = {"aca-enhanced-subsidies-2026-florida.html"}
+    legacy_article_count = sum(1 for doc in article_documents if doc.get("url") in legacy_article_urls)
     indexed_article_urls = {doc.get("url") for doc in article_documents}
     document_urls = {doc.get("url") for doc in documents}
     if "contact.html" not in document_urls:
         errors.append({"type": "search_index_missing_contact"})
     if feed_items != len(published_items):
         errors.append({"type": "feed_published_count_mismatch", "feed_items": feed_items, "published_items": len(published_items)})
-    if len(article_documents) != len(published_items):
-        errors.append({"type": "search_index_published_count_mismatch", "search_index_articles": len(article_documents), "published_items": len(published_items)})
+    if len(article_documents) != len(published_items) + legacy_article_count:
+        errors.append({"type": "search_index_published_count_mismatch", "search_index_articles": len(article_documents), "published_items": len(published_items), "legacy_article_count": legacy_article_count})
+    if "aca-enhanced-subsidies-2026-florida.html" not in indexed_article_urls:
+        errors.append({"type": "legacy_article_missing_search_index"})
     for item in published_items:
         article_url = f"{site_origin}/aca/{item['slug']}.html"
         relative_url = f"aca/{item['slug']}.html"
@@ -615,6 +619,8 @@ def validate(require_site_origin=False):
         errors.append({"type": "opensearch_in_sitemap"})
     if f"{site_origin}/contact.html" not in sitemap:
         errors.append({"type": "contact_missing_from_sitemap"})
+    if f"{site_origin}/aca-enhanced-subsidies-2026-florida.html" not in sitemap:
+        errors.append({"type": "legacy_article_missing_sitemap"})
 
     summary = {
         "queue_count": len(q),

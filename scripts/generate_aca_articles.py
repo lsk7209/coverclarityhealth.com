@@ -1896,6 +1896,7 @@ def render_sitemap(topics):
         (f"{SITE_ORIGIN}/editorial-policy.html", "0.6"),
         (f"{SITE_ORIGIN}/sources-corrections.html", "0.6"),
         (f"{SITE_ORIGIN}/privacy.html", "0.4"),
+        (f"{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html", "0.75"),
     ]
     urls.extend((f"{SITE_ORIGIN}/guides/{guide_slug}.html", "0.85") for _, _, guide_slug, _ in GUIDE_CLUSTERS)
     urls.extend((f"{SITE_ORIGIN}/aca/{t['slug']}.html", "0.8") for t in topics)
@@ -1966,6 +1967,22 @@ def render_search_index(topics):
         for heading, cluster, guide_slug, meta_title in GUIDE_CLUSTERS
     ]
     trust_pages = [
+        {
+            "id": "aca-enhanced-subsidies-2026-florida",
+            "type": "article",
+            "title": "Florida ACA Subsidy Calculator 2026: Enhanced Credits Explained",
+            "subtitle": "Enhanced premium tax credits, the subsidy cliff, CSR, and Florida coverage-gap planning.",
+            "url": "aca-enhanced-subsidies-2026-florida.html",
+            "canonical": f"{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html",
+            "main_keyword": "Florida ACA subsidy calculator 2026",
+            "expanded_keywords": ["enhanced premium tax credits", "ACA subsidy cliff", "cost-sharing reductions", "Florida coverage gap"],
+            "cluster": "Florida ACA subsidy calculator",
+            "guide_hub": None,
+            "excerpt": "Florida ACA subsidy calculator 2026 guide to enhanced premium tax credits, the subsidy cliff, CSR, and Florida coverage-gap planning.",
+            "publishAt": FIRST_PUBLISH_AT.isoformat(),
+            "is_hub": True,
+            "internal_links": ["index.html#calc", "methodology.html", "sources-corrections.html"],
+        },
         {
             "id": "contact",
             "type": "trust_page",

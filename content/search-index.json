@@ -5,6 +5,31 @@
   "language": "en-US",
   "documents": [
     {
+      "id": "aca-enhanced-subsidies-2026-florida",
+      "type": "article",
+      "title": "Florida ACA Subsidy Calculator 2026: Enhanced Credits Explained",
+      "subtitle": "Enhanced premium tax credits, the subsidy cliff, CSR, and Florida coverage-gap planning.",
+      "url": "aca-enhanced-subsidies-2026-florida.html",
+      "canonical": "{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html",
+      "main_keyword": "Florida ACA subsidy calculator 2026",
+      "expanded_keywords": [
+        "enhanced premium tax credits",
+        "ACA subsidy cliff",
+        "cost-sharing reductions",
+        "Florida coverage gap"
+      ],
+      "cluster": "Florida ACA subsidy calculator",
+      "guide_hub": null,
+      "excerpt": "Florida ACA subsidy calculator 2026 guide to enhanced premium tax credits, the subsidy cliff, CSR, and Florida coverage-gap planning.",
+      "publishAt": "2026-06-08T13:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "sources-corrections.html"
+      ]
+    },
+    {
       "id": "contact",
       "type": "trust_page",
       "title": "Contact CoverClarity",
