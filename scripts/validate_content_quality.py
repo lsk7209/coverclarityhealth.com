@@ -282,6 +282,8 @@ def validate(require_site_origin=False):
             ("--require-ready", "require_ready_gate"),
             ("--allow-incomplete-readiness", "allow_incomplete_readiness_flag"),
             ("--preflight", "preflight_flag"),
+            ("validate_launch_urls", "launch_url_alignment"),
+            ("validate_sitemap_belongs_to_site", "launch_gsc_sitemap_alignment"),
         ]:
             if needle not in launch_script:
                 errors.append({"type": f"launch_prepare_missing_{label}"})

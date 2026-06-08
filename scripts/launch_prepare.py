@@ -9,6 +9,12 @@ from apply_ads_txt import normalize_publisher_id
 from apply_contact_channel import contact_block, normalize_email, normalize_url
 from apply_ga4_measurement import normalize_measurement_id
 from apply_site_origin import normalize_origin
+from gsc_submit_sitemap import (
+    domain_property_covers_host,
+    normalize_site_url,
+    normalize_sitemap_url,
+    validate_sitemap_belongs_to_site,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +45,26 @@ def ensure_sitemap_url(origin):
     return f"{origin}/sitemap.xml"
 
 
+def validate_launch_urls(origin, site_url, sitemap_url):
+    normalized_site_url = normalize_site_url(site_url)
+    normalized_sitemap_url = normalize_sitemap_url(sitemap_url)
+    validate_sitemap_belongs_to_site(normalized_site_url, normalized_sitemap_url)
+
+    origin_host = urlsplit(origin).hostname or ""
+    sitemap_host = urlsplit(normalized_sitemap_url).hostname or ""
+    if sitemap_host.lower() != origin_host.lower():
+        raise SystemExit("GSC_SITEMAP_URL must use the same host as SITE_ORIGIN.")
+    if normalized_sitemap_url.rstrip("/") != f"{origin}/sitemap.xml":
+        raise SystemExit("GSC_SITEMAP_URL must be SITE_ORIGIN + /sitemap.xml.")
+    if normalized_site_url.startswith("sc-domain:"):
+        domain = normalized_site_url.removeprefix("sc-domain:").strip()
+        if not domain_property_covers_host(domain, origin_host):
+            raise SystemExit("GSC_SITE_URL sc-domain property must cover SITE_ORIGIN host.")
+    elif normalized_site_url.rstrip("/") != origin:
+        raise SystemExit("GSC_SITE_URL URL-prefix property must match SITE_ORIGIN.")
+    return normalized_site_url, normalized_sitemap_url
+
+
 def set_github_variable(repo, name, value, env):
     result = subprocess.run(
         ["gh", "variable", "set", name, "--repo", repo, "--body", value],
@@ -51,6 +77,7 @@ def set_github_variable(repo, name, value, env):
 
 
 def preflight(args, origin, site_url, sitemap_url, env):
+    site_url, sitemap_url = validate_launch_urls(origin, site_url, sitemap_url)
     print("Launch preflight")
     print(f"SITE_ORIGIN={origin}")
     print(f"GSC_SITE_URL={site_url}")
@@ -116,6 +143,7 @@ def main():
     origin = normalize_origin(args.origin)
     sitemap_url = args.sitemap_url.strip() or ensure_sitemap_url(origin)
     site_url = args.site_url.strip() or f"{origin}/"
+    site_url, sitemap_url = validate_launch_urls(origin, site_url, sitemap_url)
 
     env = os.environ.copy()
     env["SITE_ORIGIN"] = origin
