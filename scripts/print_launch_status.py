@@ -1,5 +1,6 @@
 import json
 import argparse
+import subprocess
 from pathlib import Path
 
 
@@ -28,6 +29,30 @@ def newer_inputs():
     ]
 
 
+def current_git_changed_paths():
+    try:
+        result = subprocess.run(
+            ["git", "status", "--short"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return []
+    if result.returncode != 0:
+        return ["<git status unavailable>"]
+    ignored = {"reports/production-readiness-report.json"}
+    changed = []
+    for line in result.stdout.splitlines():
+        if not line.strip():
+            continue
+        path = line[3:].replace("\\", "/")
+        if path not in ignored:
+            changed.append(path)
+    return changed
+
+
 def main():
     parser = argparse.ArgumentParser(description="Print the latest production readiness summary.")
     parser.add_argument("--require-ready", action="store_true", help="Exit non-zero when production readiness is incomplete.")
@@ -38,6 +63,9 @@ def main():
 
     report = json.loads(READINESS_REPORT.read_text(encoding="utf-8"))
     stale_inputs = newer_inputs()
+    report_git = report.get("git_snapshot", {})
+    current_changed_paths = current_git_changed_paths()
+    stale_git_status = bool(report_git.get("changed_paths") and not current_changed_paths)
     summary = report.get("blocker_summary", {})
     quality = report.get("quality_snapshot", {})
     article_generation = report.get("article_generation_snapshot", {})
@@ -48,6 +76,8 @@ def main():
     print("Launch status")
     if stale_inputs:
         print(f"Warning: readiness report may be stale. Run npm run ready. Newer inputs: {', '.join(stale_inputs)}")
+    if stale_git_status:
+        print("Warning: readiness report captured uncommitted files, but the current worktree is clean. Run npm run ready.")
     print(f"Ready for production submission: {str(bool(report.get('ready_for_production_submission'))).lower()}")
     print(f"Code or repository blockers: {', '.join(summary.get('code_or_repository_blockers', [])) or 'none'}")
     print(f"External input blockers: {', '.join(summary.get('external_input_blockers', [])) or 'none'}")

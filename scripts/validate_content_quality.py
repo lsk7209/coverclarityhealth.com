@@ -574,9 +574,20 @@ def validate(require_site_origin=False):
             ("--require-ready", "require_ready_flag"),
             ("READINESS_INPUTS", "readiness_inputs"),
             ("newer_inputs", "stale_report_warning"),
+            ("current_git_changed_paths", "git_status_stale_warning"),
+            ("git_snapshot", "git_snapshot"),
         ]:
             if needle not in launch_status_script:
                 errors.append({"type": f"launch_status_missing_{label}"})
+    if readiness_script_path.exists():
+        readiness_script = readiness_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("generatedAt", "generated_at"),
+            ("git_snapshot", "git_snapshot"),
+            ("changed_paths", "changed_paths"),
+        ]:
+            if needle not in readiness_script:
+                errors.append({"type": f"readiness_script_missing_{label}"})
 
     queue_path = CONTENT_DIR / "article-queue.json"
     generation_report_path = REPORT_DIR / "article-generation-report.json"

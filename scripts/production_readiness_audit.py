@@ -3,6 +3,7 @@ import json
 import os
 import re
 import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 
 from gsc_submit_sitemap import (
@@ -58,8 +59,12 @@ def run_gh(args):
 
 
 def worktree_has_uncommitted_changes(result):
+    return bool(worktree_changed_paths(result))
+
+
+def worktree_changed_paths(result):
     if not result or result.returncode != 0:
-        return True
+        return ["<git status unavailable>"]
     ignored = {"reports/production-readiness-report.json"}
     changed = []
     for line in result.stdout.splitlines():
@@ -68,7 +73,7 @@ def worktree_has_uncommitted_changes(result):
         path = line[3:].replace("\\", "/")
         if path not in ignored:
             changed.append(path)
-    return bool(changed)
+    return changed
 
 
 def public_files():
@@ -224,7 +229,9 @@ def audit():
     git_status = run_git(["status", "--short"])
     in_git_repo = bool(git_root and git_root.returncode == 0)
     has_commit = bool(git_head and git_head.returncode == 0)
-    worktree_clean = not worktree_has_uncommitted_changes(git_status)
+    changed_paths = worktree_changed_paths(git_status)
+    worktree_clean = not changed_paths
+    head_sha = git_head.stdout.strip() if has_commit else ""
     remotes = []
     if git_remote and git_remote.returncode == 0:
         remotes = [line.strip() for line in git_remote.stdout.splitlines() if line.strip()]
@@ -392,6 +399,12 @@ def audit():
         next_required_actions.append("Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned.")
 
     report = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "git_snapshot": {
+            "head": head_sha,
+            "worktree_clean": worktree_clean,
+            "changed_paths": changed_paths,
+        },
         "ready_for_production_submission": ready,
         "checks": checks,
         "blockers": blockers,

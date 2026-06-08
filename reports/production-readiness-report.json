@@ -1,4 +1,14 @@
 {
+  "generatedAt": "2026-06-08T14:42:23.989166+00:00",
+  "git_snapshot": {
+    "head": "21ee8fb9626256249b762619996e80e1f88b99bb",
+    "worktree_clean": false,
+    "changed_paths": [
+      "scripts/print_launch_status.py",
+      "scripts/production_readiness_audit.py",
+      "scripts/validate_content_quality.py"
+    ]
+  },
   "ready_for_production_submission": false,
   "checks": [
     {
