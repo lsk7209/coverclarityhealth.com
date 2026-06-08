@@ -32,6 +32,7 @@ npm run ready:production
 Replace every `your-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
 Use `docs/launch-env.example.ps1` as the complete no-secret launch environment checklist.
 Run `npm run launch:check-env` after filling local environment values to validate them without changing files or calling Google APIs. It also confirms `SITE_ORIGIN`, `GSC_SITE_URL`, and `GSC_SITEMAP_URL` point to the same production host or a covering `sc-domain` property.
+Run `npm run launch:commands -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-0000000000000000` to print validated PowerShell launch commands without changing files.
 
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
