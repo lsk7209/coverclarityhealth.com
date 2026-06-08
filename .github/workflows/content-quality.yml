@@ -28,3 +28,5 @@ jobs:
         run: python scripts/validate_content_quality.py --write-report
       - name: Write production readiness report
         run: python scripts/production_readiness_audit.py --write-report
+      - name: Ensure generated artifacts are committed
+        run: git diff --exit-code
