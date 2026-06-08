@@ -154,4 +154,4 @@ npm run ready:production
 Expected:
 
 - `ready` writes `reports/production-readiness-report.json`.
-- `ready:production` exits successfully only after production origin replacement, GitHub remote state, and GSC configuration are all proven.
+- `ready:production` exits successfully only after content quality, SEO/AdSense audit, performance budget audit, production origin replacement, public contact channel, GitHub remote state, and GSC configuration are all proven.

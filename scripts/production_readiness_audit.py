@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "reports"
 QUALITY_REPORT = REPORT_DIR / "content-quality-report.json"
+SEO_ADSENSE_REPORT = REPORT_DIR / "seo-adsense-audit-report.json"
+PERFORMANCE_REPORT = REPORT_DIR / "performance-budget-report.json"
 READINESS_REPORT = REPORT_DIR / "production-readiness-report.json"
 
 
@@ -70,6 +72,27 @@ def load_quality_report():
     return json.loads(QUALITY_REPORT.read_text(encoding="utf-8"))
 
 
+def load_json_report(path):
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def report_pass_status(path, label):
+    report = load_json_report(path)
+    if not report:
+        return False, f"{path.name} is missing", None
+    passed = bool(report.get("passed") and report.get("error_count") == 0 and report.get("warning_count", 0) == 0)
+    if passed:
+        return True, f"{label} passed with 0 errors and 0 warnings", report
+    return False, {
+        "message": f"{label} did not pass cleanly",
+        "passed": bool(report.get("passed")),
+        "error_count": report.get("error_count"),
+        "warning_count": report.get("warning_count"),
+    }, report
+
+
 def contact_channel_status():
     contact_page = ROOT / "contact.html"
     if not contact_page.exists():
@@ -89,6 +112,8 @@ def contact_channel_status():
 
 def audit():
     quality = load_quality_report()
+    seo_adsense_ok, seo_adsense_detail, seo_adsense = report_pass_status(SEO_ADSENSE_REPORT, "SEO and AdSense audit")
+    performance_ok, performance_detail, performance = report_pass_status(PERFORMANCE_REPORT, "Performance budget audit")
     public_with_placeholder = []
     for path in public_files():
         if "{SITE_ORIGIN}" in path.read_text(encoding="utf-8"):
@@ -144,6 +169,16 @@ def audit():
             "detail": "content-quality-report.json has error_count 0" if quality else "content-quality-report.json is missing",
         },
         {
+            "name": "seo_adsense_audit",
+            "ok": seo_adsense_ok,
+            "detail": seo_adsense_detail,
+        },
+        {
+            "name": "performance_budget_audit",
+            "ok": performance_ok,
+            "detail": performance_detail,
+        },
+        {
             "name": "production_origin_applied",
             "ok": not public_with_placeholder,
             "detail": f"{len(public_with_placeholder)} public files still contain {{SITE_ORIGIN}}",
@@ -193,6 +228,10 @@ def audit():
     ready = all(item["ok"] for item in checks)
     blockers = [item for item in checks if not item["ok"]]
     next_required_actions = []
+    if not seo_adsense_ok:
+        next_required_actions.append("Run npm run audit:seo and fix SEO or AdSense audit issues before production submission.")
+    if not performance_ok:
+        next_required_actions.append("Run npm run audit:performance and fix static performance budget issues before production submission.")
     if public_with_placeholder:
         next_required_actions.append("Assign an HTTPS production domain and run npm run check:production.")
     if not has_commit or not worktree_clean:
@@ -217,6 +256,24 @@ def audit():
             "guide_files": quality.get("guide_files") if quality else None,
             "sitemap_urls": quality.get("sitemap_urls") if quality else None,
             "error_count": quality.get("error_count") if quality else None,
+        },
+        "seo_adsense_snapshot": {
+            "pages_checked": seo_adsense.get("pages_checked") if seo_adsense else None,
+            "error_count": seo_adsense.get("error_count") if seo_adsense else None,
+            "warning_count": seo_adsense.get("warning_count") if seo_adsense else None,
+            "ads_txt_present_valid": seo_adsense.get("checklist", {}).get("ads_txt_present_valid") if seo_adsense else None,
+            "adsense_auto_ads_only": seo_adsense.get("checklist", {}).get("adsense_auto_ads_only") if seo_adsense else None,
+        },
+        "performance_snapshot": {
+            "html_files_checked": performance.get("html_files_checked") if performance else None,
+            "error_count": performance.get("error_count") if performance else None,
+            "warning_count": performance.get("warning_count") if performance else None,
+            "largest_html_bytes": (
+                performance.get("measurements", {}).get("largest_html", [{}])[0].get("bytes")
+                if performance and performance.get("measurements", {}).get("largest_html")
+                else None
+            ),
+            "article_average_bytes": performance.get("measurements", {}).get("article_average_bytes") if performance else None,
         },
         "next_required_actions": next_required_actions,
     }
