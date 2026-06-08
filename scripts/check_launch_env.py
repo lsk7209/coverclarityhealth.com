@@ -1,5 +1,6 @@
 import json
 import os
+from urllib.parse import urlsplit
 
 from apply_ads_txt import normalize_publisher_id
 from apply_contact_channel import contact_block, normalize_email, normalize_url
@@ -35,25 +36,61 @@ def check_credentials():
     return checks
 
 
+def check_url_alignment(origin_check, gsc_site_check, sitemap_check):
+    name = "LAUNCH_URL_ALIGNMENT"
+    if not (origin_check["ok"] and gsc_site_check["ok"] and sitemap_check["ok"]):
+        return {"name": name, "ok": False, "detail": "SITE_ORIGIN, GSC_SITE_URL, and GSC_SITEMAP_URL must all be valid first"}
+
+    origin = origin_check["detail"]
+    gsc_site_url = gsc_site_check["detail"]
+    sitemap_url = sitemap_check["detail"]
+    origin_host = urlsplit(origin).hostname or ""
+    sitemap_host = urlsplit(sitemap_url).hostname or ""
+
+    if sitemap_host.lower() != origin_host.lower():
+        return {"name": name, "ok": False, "detail": "GSC_SITEMAP_URL must use the same host as SITE_ORIGIN"}
+    if sitemap_url.rstrip("/") != f"{origin}/sitemap.xml":
+        return {"name": name, "ok": False, "detail": "GSC_SITEMAP_URL must be SITE_ORIGIN + /sitemap.xml"}
+    if gsc_site_url.startswith("sc-domain:"):
+        domain = gsc_site_url.removeprefix("sc-domain:").strip().lower()
+        if domain != origin_host.lower():
+            return {"name": name, "ok": False, "detail": "GSC_SITE_URL sc-domain property must match SITE_ORIGIN host"}
+    elif gsc_site_url.rstrip("/") != origin:
+        return {"name": name, "ok": False, "detail": "GSC_SITE_URL URL-prefix property must match SITE_ORIGIN"}
+
+    return {"name": name, "ok": True, "detail": "SITE_ORIGIN, GSC_SITE_URL, and GSC_SITEMAP_URL are aligned"}
+
+
 def audit():
     origin = os.getenv("SITE_ORIGIN", "")
     contact_email = os.getenv("PUBLIC_CONTACT_EMAIL", "")
     contact_url = os.getenv("PUBLIC_CONTACT_URL", "")
 
-    checks = [
-        check_value("SITE_ORIGIN", normalize_origin, origin),
-        check_value("PUBLIC_CONTACT_EMAIL", normalize_email, contact_email),
+    origin_check = check_value("SITE_ORIGIN", normalize_origin, origin)
+    contact_email_check = check_value("PUBLIC_CONTACT_EMAIL", normalize_email, contact_email)
+    contact_url_check = (
         check_value("PUBLIC_CONTACT_URL", normalize_url, contact_url)
         if contact_url
-        else {"name": "PUBLIC_CONTACT_URL", "ok": True, "detail": "not provided"},
-        check_value("GA4_MEASUREMENT_ID", normalize_measurement_id, os.getenv("GA4_MEASUREMENT_ID", "")),
-        check_value("ADSENSE_PUBLISHER_ID", normalize_publisher_id, os.getenv("ADSENSE_PUBLISHER_ID", "")),
-        check_value("GSC_SITE_URL", normalize_site_url, os.getenv("GSC_SITE_URL", "")),
-        check_value("GSC_SITEMAP_URL", normalize_sitemap_url, os.getenv("GSC_SITEMAP_URL", "")),
+        else {"name": "PUBLIC_CONTACT_URL", "ok": True, "detail": "not provided"}
+    )
+    ga4_check = check_value("GA4_MEASUREMENT_ID", normalize_measurement_id, os.getenv("GA4_MEASUREMENT_ID", ""))
+    adsense_check = check_value("ADSENSE_PUBLISHER_ID", normalize_publisher_id, os.getenv("ADSENSE_PUBLISHER_ID", ""))
+    gsc_site_check = check_value("GSC_SITE_URL", normalize_site_url, os.getenv("GSC_SITE_URL", ""))
+    sitemap_check = check_value("GSC_SITEMAP_URL", normalize_sitemap_url, os.getenv("GSC_SITEMAP_URL", ""))
+
+    checks = [
+        origin_check,
+        contact_email_check,
+        contact_url_check,
+        ga4_check,
+        adsense_check,
+        gsc_site_check,
+        sitemap_check,
+        check_url_alignment(origin_check, gsc_site_check, sitemap_check),
     ]
     checks.extend(check_credentials())
 
-    if checks[1]["ok"] or checks[2]["detail"] != "not provided":
+    if contact_email_check["ok"] or contact_url_check["detail"] != "not provided":
         try:
             contact_block(normalize_email(contact_email), normalize_url(contact_url))
         except SystemExit as exc:

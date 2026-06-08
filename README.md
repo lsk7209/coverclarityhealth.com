@@ -31,7 +31,7 @@ npm run ready:production
 
 Replace every `your-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
 Use `docs/launch-env.example.ps1` as the complete no-secret launch environment checklist.
-Run `npm run launch:check-env` after filling local environment values to validate them without changing files or calling Google APIs.
+Run `npm run launch:check-env` after filling local environment values to validate them without changing files or calling Google APIs. It also confirms `SITE_ORIGIN`, `GSC_SITE_URL`, and `GSC_SITEMAP_URL` point to the same production host.
 
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
@@ -75,6 +75,7 @@ npm run gsc:submit
 ```
 
 The GitHub workflow `.github/workflows/gsc-sitemap-submit.yml` also submits automatically on `main` pushes that change sitemap-related artifacts when repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON` are set. It can also be run manually with `site_url` and `sitemap_url` inputs, and it retries daily after the repository variables are set. The content quality workflow also writes the production readiness report so CI catches missing readiness-audit wiring.
+Keep `GSC_SITE_URL` aligned with `SITE_ORIGIN`, and set `GSC_SITEMAP_URL` to `SITE_ORIGIN + /sitemap.xml`.
 
 The repository secrets can be prepared before the domain is assigned:
 
