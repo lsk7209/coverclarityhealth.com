@@ -114,6 +114,33 @@
         "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
         "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html"
       ]
+    },
+    {
+      "id": "couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl",
+      "type": "article",
+      "title": "Couple in Miami: ACA subsidy calculator notes for 150 percent FPL",
+      "subtitle": "This guide frames Miami couple ACA subsidy estimate 150 percent FPL around Miami Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+      "main_keyword": "Miami couple ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami couple ACA subsidy estimate 150 percent FPL explained with Miami Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-08T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
+        "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html"
+      ]
     }
   ]
 }

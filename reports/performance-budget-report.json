@@ -86,6 +86,10 @@
         "bytes": 15057
       },
       {
+        "file": "blog.html",
+        "bytes": 5157
+      },
+      {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 5013
       },
@@ -96,14 +100,10 @@
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
         "bytes": 4878
-      },
-      {
-        "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
-        "bytes": 4870
       }
     ],
-    "article_queue_bytes": 360420,
-    "search_index_bytes": 6010
+    "article_queue_bytes": 360419,
+    "search_index_bytes": 7615
   },
   "errors": [],
   "warnings": []
