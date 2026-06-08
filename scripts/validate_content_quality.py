@@ -411,7 +411,7 @@ def validate(require_site_origin=False):
         if "print_committed_publication_now.py" in scheduled_workflow or "PUBLICATION_NOW=" in scheduled_workflow:
             errors.append({"type": "publish_scheduled_workflow_must_use_real_publication_time"})
         for needle, label in [
-            ("23 */5 * * *", "five_hour_schedule"),
+            ("23 * * * *", "hourly_due_content_check"),
             ("production_readiness_audit.py --write-report", "readiness_report_step"),
             ("reports/article-generation-report.json", "article_generation_report_commit"),
             ("reports/production-readiness-report.json", "readiness_report_commit"),
