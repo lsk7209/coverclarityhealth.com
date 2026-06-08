@@ -1,5 +1,6 @@
 import json
 import os
+import subprocess
 from urllib.parse import urlsplit
 
 from apply_ads_txt import normalize_publisher_id
@@ -13,6 +14,20 @@ from gsc_submit_sitemap import (
     normalize_sitemap_url,
     validate_sitemap_belongs_to_site,
 )
+
+GITHUB_CHECK_NAMES = {
+    "client_secret": "GITHUB_SECRET_GSC_CLIENT_JSON",
+    "token_secret": "GITHUB_SECRET_GSC_TOKEN_JSON",
+    "site_variable": "GITHUB_VAR_GSC_SITE_URL",
+    "sitemap_variable": "GITHUB_VAR_GSC_SITEMAP_URL",
+}
+
+
+def run_gh(args):
+    try:
+        return subprocess.run(["gh", *args], capture_output=True, text=True, check=False)
+    except FileNotFoundError:
+        return None
 
 
 def check_value(label, fn, value):
@@ -39,6 +54,54 @@ def check_credentials():
         else:
             source = "environment" if os.getenv(name) else fallback
             checks.append({"name": name, "ok": True, "detail": f"valid JSON from {source}"})
+    return checks
+
+
+def check_github_value(repo, kind, name, expected_value=""):
+    if kind == "secret":
+        result = run_gh(["secret", "list", "--repo", repo])
+        label = GITHUB_CHECK_NAMES.get(
+            "client_secret" if name == "GSC_CLIENT_JSON" else "token_secret",
+            f"GITHUB_SECRET_{name}",
+        )
+    else:
+        result = run_gh(["variable", "get", name, "--repo", repo])
+        label = GITHUB_CHECK_NAMES.get(
+            "site_variable" if name == "GSC_SITE_URL" else "sitemap_variable",
+            f"GITHUB_VAR_{name}",
+        )
+    if result is None:
+        return {"name": label, "ok": False, "detail": "GitHub CLI is not available"}
+    if result.returncode != 0:
+        return {"name": label, "ok": False, "detail": result.stderr.strip() or f"{name} is not configured"}
+
+    if kind == "secret":
+        secret_names = {line.split()[0] for line in result.stdout.splitlines() if line.strip()}
+        return {
+            "name": label,
+            "ok": name in secret_names,
+            "detail": "configured" if name in secret_names else f"{name} is not configured",
+        }
+
+    value = result.stdout.strip()
+    if expected_value and value != expected_value:
+        return {"name": label, "ok": False, "detail": "configured value does not match local launch environment"}
+    return {"name": label, "ok": True, "detail": "configured and aligned" if expected_value else "configured"}
+
+
+def check_github_configuration(gsc_site_check, sitemap_check):
+    repo_result = run_gh(["repo", "view", "--json", "nameWithOwner", "-q", ".nameWithOwner"])
+    if repo_result is None:
+        return [{"name": "GITHUB_REPOSITORY_ACCESS", "ok": False, "detail": "GitHub CLI is not available"}]
+    if repo_result.returncode != 0:
+        return [{"name": "GITHUB_REPOSITORY_ACCESS", "ok": False, "detail": repo_result.stderr.strip() or "gh repo view failed"}]
+
+    repo = repo_result.stdout.strip()
+    checks = [{"name": "GITHUB_REPOSITORY_ACCESS", "ok": True, "detail": repo}]
+    checks.append(check_github_value(repo, "secret", "GSC_CLIENT_JSON"))
+    checks.append(check_github_value(repo, "secret", "GSC_TOKEN_JSON"))
+    checks.append(check_github_value(repo, "variable", "GSC_SITE_URL", gsc_site_check["detail"] if gsc_site_check["ok"] else ""))
+    checks.append(check_github_value(repo, "variable", "GSC_SITEMAP_URL", sitemap_check["detail"] if sitemap_check["ok"] else ""))
     return checks
 
 
@@ -99,6 +162,7 @@ def audit():
         check_url_alignment(origin_check, gsc_site_check, sitemap_check),
     ]
     checks.extend(check_credentials())
+    checks.extend(check_github_configuration(gsc_site_check, sitemap_check))
 
     if contact_email_check["ok"] or contact_url_check["detail"] != "not provided":
         try:

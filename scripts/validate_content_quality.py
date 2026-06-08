@@ -534,6 +534,26 @@ def validate(require_site_origin=False):
         ]:
             if needle not in launch_env_example:
                 errors.append({"type": f"launch_env_example_missing_{label}"})
+    if launch_env_check_script_path.exists():
+        launch_env_check_script = launch_env_check_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("SITE_ORIGIN", "site_origin"),
+            ("PUBLIC_CONTACT_EMAIL", "public_contact_email"),
+            ("GA4_MEASUREMENT_ID", "ga4_measurement_id"),
+            ("ADSENSE_PUBLISHER_ID", "adsense_publisher_id"),
+            ("GSC_SITE_URL", "gsc_site_url"),
+            ("GSC_SITEMAP_URL", "gsc_sitemap_url"),
+            ("GSC_CLIENT_JSON", "gsc_client_json"),
+            ("GSC_TOKEN_JSON", "gsc_token_json"),
+            ("validate_sitemap_belongs_to_site", "gsc_sitemap_alignment"),
+            ("check_github_configuration", "github_gsc_configuration"),
+            ("GITHUB_SECRET_GSC_CLIENT_JSON", "github_gsc_client_secret"),
+            ("GITHUB_SECRET_GSC_TOKEN_JSON", "github_gsc_token_secret"),
+            ("GITHUB_VAR_GSC_SITE_URL", "github_gsc_site_var"),
+            ("GITHUB_VAR_GSC_SITEMAP_URL", "github_gsc_sitemap_var"),
+        ]:
+            if needle not in launch_env_check_script:
+                errors.append({"type": f"launch_env_check_missing_{label}"})
     if launch_commands_script_path.exists():
         errors.extend(validate_launch_command_printer())
     if launch_status_script_path.exists():

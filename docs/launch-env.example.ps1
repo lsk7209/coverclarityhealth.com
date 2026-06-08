@@ -14,6 +14,7 @@ $env:GSC_SITEMAP_URL = "https://your-production-domain.example/sitemap.xml"
 # GSC_SITE_URL must be the same URL-prefix property or a covering sc-domain property.
 
 # Prefer GitHub repository secrets for CI. These local values are for manual verification only.
+# launch:check-env also verifies GitHub GSC secrets and variables without printing secret values.
 $env:GSC_CLIENT_JSON = Get-Content D:\env\adsense_oauth_client.json -Raw
 $env:GSC_TOKEN_JSON = Get-Content D:\env\gsc_token.json -Raw
 
