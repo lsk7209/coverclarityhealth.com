@@ -159,6 +159,19 @@
     "article_files": 200,
     "guide_files": 5,
     "sitemap_urls": 11,
+    "site_origin_placeholder_count": 222,
+    "site_origin_placeholder_sample": [
+      "404.html",
+      "about.html",
+      "aca-enhanced-subsidies-2026-florida.html",
+      "blog.html",
+      "contact.html",
+      "editorial-policy.html",
+      "index.html",
+      "methodology.html",
+      "privacy.html",
+      "sources-corrections.html"
+    ],
     "public_origin_mismatch_count": 0,
     "error_count": 0
   },
