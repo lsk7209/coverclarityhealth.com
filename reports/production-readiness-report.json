@@ -50,6 +50,21 @@
       "detail": "contact page still contains prelaunch contact-channel language"
     },
     {
+      "name": "gsc_workflow_automation",
+      "ok": true,
+      "detail": {
+        "push_trigger": true,
+        "schedule_trigger": true,
+        "manual_trigger": true,
+        "manual_site_url_input": true,
+        "manual_sitemap_url_input": true,
+        "uses_gsc_site_url": true,
+        "uses_gsc_sitemap_url": true,
+        "validates_config": true,
+        "submits_sitemap": true
+      }
+    },
+    {
       "name": "gsc_configuration",
       "ok": false,
       "detail": {
