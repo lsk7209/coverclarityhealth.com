@@ -18,46 +18,46 @@
     "largest_html": [
       {
         "file": "index.html",
-        "bytes": 43849
+        "bytes": 45837
+      },
+      {
+        "file": "blog.html",
+        "bytes": 33774
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
-        "bytes": 32403
+        "bytes": 33586
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
-        "bytes": 32129
+        "bytes": 33312
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
-        "bytes": 32084
+        "bytes": 33267
       },
       {
         "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
-        "bytes": 32028
+        "bytes": 33211
       },
       {
         "file": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
-        "bytes": 31609
+        "bytes": 32775
       },
       {
         "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 31524
+        "bytes": 32707
       },
       {
         "file": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
-        "bytes": 31407
+        "bytes": 32590
       },
       {
         "file": "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
-        "bytes": 31297
-      },
-      {
-        "file": "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
-        "bytes": 31289
+        "bytes": 32463
       }
     ],
-    "article_average_bytes": 24422,
+    "article_average_bytes": 25596,
     "largest_inline_style": [
       {
         "file": "index.html",
@@ -65,7 +65,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 3660
+        "bytes": 3707
       },
       {
         "file": "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
@@ -83,27 +83,27 @@
     "largest_inline_script": [
       {
         "file": "index.html",
-        "bytes": 15057
+        "bytes": 15677
       },
       {
         "file": "blog.html",
-        "bytes": 5157
+        "bytes": 9517
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
-        "bytes": 5013
+        "bytes": 5735
       },
       {
         "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 4891
+        "bytes": 5613
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
-        "bytes": 4878
+        "bytes": 5600
       }
     ],
-    "article_queue_bytes": 360419,
-    "search_index_bytes": 7615
+    "article_queue_bytes": 363770,
+    "search_index_bytes": 93072
   },
   "errors": [],
   "warnings": []

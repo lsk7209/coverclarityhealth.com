@@ -7,9 +7,9 @@
    filed rates. Real tool would load CMS Exchange PUF data.
    ============================================================ */
 (function () {
-  // --- 2025 HHS Federal Poverty Guidelines (used for 2026 coverage), 48 states ---
-  const FPL_BASE = 15650;     // 1 person
-  const FPL_ADD  = 5500;      // each additional person
+  // --- 2026 HHS Federal Poverty Guidelines, 48 states ---
+  const FPL_BASE = 15960;     // 1 person
+  const FPL_ADD  = 5680;      // each additional person
   function fpl(size) { return FPL_BASE + (Math.max(1, size) - 1) * FPL_ADD; }
 
   // --- Federal default age curve (2018+). age -> rating factor (age 21 = 1.0) ---

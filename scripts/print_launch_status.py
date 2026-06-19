@@ -76,6 +76,14 @@ def display_actions(actions, current_changed_paths, stale_git_status):
     return filtered
 
 
+def path_sample(paths, limit=8):
+    if len(paths) <= limit:
+        return ", ".join(paths)
+    shown = ", ".join(paths[:limit])
+    remaining = len(paths) - limit
+    return f"{shown}, ... (+{remaining} more)"
+
+
 def parse_publish_at(value):
     dt = datetime.fromisoformat(value)
     return dt if dt.tzinfo else dt.replace(tzinfo=KST)
@@ -117,6 +125,8 @@ def main():
     missing_inputs = report.get("missing_external_inputs", [])
 
     print("Launch status")
+    if report.get("generatedAt"):
+        print(f"Readiness report generated: {report.get('generatedAt')}")
     if stale_inputs:
         print(f"Warning: readiness report may be stale. Run npm run ready. Newer inputs: {', '.join(stale_inputs)}")
     if stale_git_status:
@@ -124,7 +134,11 @@ def main():
     if current_dirty_after_clean_report:
         print("Warning: readiness report captured a clean worktree, but the current worktree now has uncommitted files. Run npm run ready.")
     print(f"Ready for production submission: {str(bool(report.get('ready_for_production_submission'))).lower()}")
-    print(f"Current worktree: {'dirty' if current_changed_paths else 'clean'}")
+    if current_changed_paths:
+        print(f"Current worktree: dirty ({len(current_changed_paths)} paths)")
+        print(f"Changed path sample: {path_sample(current_changed_paths)}")
+    else:
+        print("Current worktree: clean")
     print(f"Code or repository blockers: {', '.join(display_code_blockers(summary, current_changed_paths, stale_git_status)) or 'none'}")
     print(f"External input blockers: {', '.join(summary.get('external_input_blockers', [])) or 'none'}")
     print(f"Missing external inputs: {', '.join(names(missing_inputs)) or 'none'}")

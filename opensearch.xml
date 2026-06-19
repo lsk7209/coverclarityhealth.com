@@ -3,5 +3,5 @@
   <ShortName>CoverClarity</ShortName>
   <Description>Search Florida ACA subsidy calculator guides, county notes, MAGI topics, CSR explainers, and Marketplace verification paths.</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Url type="text/html" template="{SITE_ORIGIN}/blog.html?q={searchTerms}"/>
+  <Url type="text/html" template="https://coverclarityhealth.com/blog.html?q={searchTerms}"/>
 </OpenSearchDescription>

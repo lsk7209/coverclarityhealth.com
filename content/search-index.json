@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-06-08T00:00:00+09:00",
   "site": "CoverClarity",
-  "site_origin": "{SITE_ORIGIN}",
+  "site_origin": "https://coverclarityhealth.com",
   "language": "en-US",
   "documents": [
     {
@@ -10,7 +10,7 @@
       "title": "Florida ACA Subsidy Calculator 2026: Enhanced Credits Explained",
       "subtitle": "Enhanced premium tax credits, the subsidy cliff, CSR, and Florida coverage-gap planning.",
       "url": "aca-enhanced-subsidies-2026-florida.html",
-      "canonical": "{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html",
+      "canonical": "https://coverclarityhealth.com/aca-enhanced-subsidies-2026-florida.html",
       "main_keyword": "Florida ACA subsidy calculator 2026",
       "expanded_keywords": [
         "enhanced premium tax credits",
@@ -34,7 +34,7 @@
       "type": "trust_page",
       "title": "Contact CoverClarity",
       "url": "contact.html",
-      "canonical": "{SITE_ORIGIN}/contact.html",
+      "canonical": "https://coverclarityhealth.com/contact.html",
       "description": "Contact and correction request guidance for CoverClarity ACA subsidy estimate pages."
     },
     {
@@ -42,7 +42,7 @@
       "type": "trust_page",
       "title": "Editorial Policy",
       "url": "editorial-policy.html",
-      "canonical": "{SITE_ORIGIN}/editorial-policy.html",
+      "canonical": "https://coverclarityhealth.com/editorial-policy.html",
       "description": "CoverClarity editorial standards, independence policy, YMYL approach, and estimate limitations."
     },
     {
@@ -50,7 +50,7 @@
       "type": "trust_page",
       "title": "Sources and Corrections",
       "url": "sources-corrections.html",
-      "canonical": "{SITE_ORIGIN}/sources-corrections.html",
+      "canonical": "https://coverclarityhealth.com/sources-corrections.html",
       "description": "Official source hierarchy, correction standards, and update practices for ACA subsidy guide content."
     },
     {
@@ -58,7 +58,7 @@
       "type": "trust_page",
       "title": "Privacy Policy",
       "url": "privacy.html",
-      "canonical": "{SITE_ORIGIN}/privacy.html",
+      "canonical": "https://coverclarityhealth.com/privacy.html",
       "description": "Privacy policy for CoverClarity's browser-based ACA subsidy calculator, cookies, analytics, and Google AdSense auto ads."
     },
     {
@@ -67,7 +67,7 @@
       "title": "Miami single adult ACA subsidy estimate at 100 percent FPL: what the 2026 premium gap can mean",
       "subtitle": "Use this Miami single adult ACA subsidy estimate 100 percent FPL guide to connect Miami Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
       "url": "aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
-      "canonical": "{SITE_ORIGIN}/aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "main_keyword": "Miami single adult ACA subsidy estimate 100 percent FPL",
       "expanded_keywords": [
         "Miami Marketplace premium",
@@ -94,7 +94,7 @@
       "title": "At 250 percent FPL, how a Miami single adult can read an ACA premium estimate",
       "subtitle": "A plain-English look at Miami single adult ACA subsidy estimate 250 percent FPL, with Miami Marketplace premium and enhanced premium tax credits explained without quote forms.",
       "url": "aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html",
-      "canonical": "{SITE_ORIGIN}/aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html",
       "main_keyword": "Miami single adult ACA subsidy estimate 250 percent FPL",
       "expanded_keywords": [
         "Miami Marketplace premium",
@@ -121,7 +121,7 @@
       "title": "Couple in Miami: ACA subsidy calculator notes for 150 percent FPL",
       "subtitle": "This guide frames Miami couple ACA subsidy estimate 150 percent FPL around Miami Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
       "url": "aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
-      "canonical": "{SITE_ORIGIN}/aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
       "main_keyword": "Miami couple ACA subsidy estimate 150 percent FPL",
       "expanded_keywords": [
         "Miami Marketplace premium",
@@ -140,6 +140,1329 @@
         "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
         "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
         "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl",
+      "type": "article",
+      "title": "Reading the Miami Marketplace estimate for a couple near 300 percent FPL",
+      "subtitle": "For Miami couple ACA subsidy estimate 300 percent FPL, compare Miami Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
+      "main_keyword": "Miami couple ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami couple ACA subsidy estimate 300 percent FPL explained with Miami Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-09T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
+        "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent",
+      "type": "article",
+      "title": "200 percent FPL ACA subsidy guide for a Miami single parent",
+      "subtitle": "Use this Miami single parent ACA subsidy estimate 200 percent FPL guide to connect Miami Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
+      "canonical": "https://coverclarityhealth.com/aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
+      "main_keyword": "Miami single parent ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami single parent ACA subsidy estimate 200 percent FPL explained with Miami Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-09T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+        "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl",
+      "type": "article",
+      "title": "Why Miami single parent premium estimates shift around 400 percent FPL",
+      "subtitle": "A plain-English look at Miami single parent ACA subsidy estimate 400 percent FPL, with Miami Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+      "main_keyword": "Miami single parent ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami single parent ACA subsidy estimate 400 percent FPL explained with Miami Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-09T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+        "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html"
+      ]
+    },
+    {
+      "id": "miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl",
+      "type": "article",
+      "title": "Miami ACA benchmark premium questions for a family of three at 250 percent FPL",
+      "subtitle": "This guide frames Miami family of three ACA subsidy estimate 250 percent FPL around Miami Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+      "main_keyword": "Miami family of three ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of three ACA subsidy estimate 250 percent FPL explained with Miami Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-09T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
+        "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A family of three in Miami and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "For Miami family of three ACA subsidy estimate 100 percent FPL, compare Miami Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Miami family of three ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of three ACA subsidy estimate 100 percent FPL explained with Miami Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-10T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
+        "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+        "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four",
+      "type": "article",
+      "title": "What 300 percent FPL changes in a Miami ACA estimate for a family of four",
+      "subtitle": "Use this Miami family of four ACA subsidy estimate 300 percent FPL guide to connect Miami Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
+      "canonical": "https://coverclarityhealth.com/aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
+      "main_keyword": "Miami family of four ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of four ACA subsidy estimate 300 percent FPL explained with Miami Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+        "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Family of four ACA planning in Miami: subsidy notes at 150 percent FPL",
+      "subtitle": "A plain-English look at Miami family of four ACA subsidy estimate 150 percent FPL, with Miami Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Miami family of four ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of four ACA subsidy estimate 150 percent FPL explained with Miami Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Miami older couple ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Miami older couple ACA subsidy estimate 400 percent FPL around Miami Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Miami older couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami older couple ACA subsidy estimate 400 percent FPL explained with Miami Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how a Miami older couple can read an ACA premium estimate",
+      "subtitle": "For Miami older couple ACA subsidy estimate 200 percent FPL, compare Miami Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Miami older couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami older couple ACA subsidy estimate 200 percent FPL explained with Miami Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html"
+      ]
+    },
+    {
+      "id": "single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl",
+      "type": "article",
+      "title": "Single adult in Tampa: ACA subsidy calculator notes for 150 percent FPL",
+      "subtitle": "Use this Tampa single adult ACA subsidy estimate 150 percent FPL guide to connect Tampa Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+      "main_keyword": "Tampa single adult ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa single adult ACA subsidy estimate 150 percent FPL explained with Tampa Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+        "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl",
+      "type": "article",
+      "title": "Reading the Tampa Marketplace estimate for a single adult near 300 percent FPL",
+      "subtitle": "A plain-English look at Tampa single adult ACA subsidy estimate 300 percent FPL, with Tampa Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html",
+      "main_keyword": "Tampa single adult ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa single adult ACA subsidy estimate 300 percent FPL explained with Tampa Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+        "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple",
+      "type": "article",
+      "title": "200 percent FPL ACA subsidy guide for a Tampa couple",
+      "subtitle": "This guide frames Tampa couple ACA subsidy estimate 200 percent FPL around Tampa Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+      "canonical": "https://coverclarityhealth.com/aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+      "main_keyword": "Tampa couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa couple ACA subsidy estimate 200 percent FPL explained with Tampa Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+        "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-tampa-couple-premium-estimates-shift-around-400-percent-fpl",
+      "type": "article",
+      "title": "Why Tampa couple premium estimates shift around 400 percent FPL",
+      "subtitle": "For Tampa couple ACA subsidy estimate 400 percent FPL, compare Tampa Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+      "main_keyword": "Tampa couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa couple ACA subsidy estimate 400 percent FPL explained with Tampa Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+        "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html"
+      ]
+    },
+    {
+      "id": "tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl",
+      "type": "article",
+      "title": "Tampa ACA benchmark premium questions for a single parent at 250 percent FPL",
+      "subtitle": "Use this Tampa single parent ACA subsidy estimate 250 percent FPL guide to connect Tampa Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+      "main_keyword": "Tampa single parent ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa single parent ACA subsidy estimate 250 percent FPL explained with Tampa Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+        "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A single parent in Tampa and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "A plain-English look at Tampa single parent ACA subsidy estimate 100 percent FPL, with Tampa Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Tampa single parent ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa single parent ACA subsidy estimate 100 percent FPL explained with Tampa Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-12T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+        "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three",
+      "type": "article",
+      "title": "What 300 percent FPL changes in a Tampa ACA estimate for a family of three",
+      "subtitle": "This guide frames Tampa family of three ACA subsidy estimate 300 percent FPL around Tampa Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+      "canonical": "https://coverclarityhealth.com/aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+      "main_keyword": "Tampa family of three ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa family of three ACA subsidy estimate 300 percent FPL explained with Tampa Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-12T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Family of three ACA planning in Tampa: subsidy notes at 150 percent FPL",
+      "subtitle": "For Tampa family of three ACA subsidy estimate 150 percent FPL, compare Tampa Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Tampa family of three ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa family of three ACA subsidy estimate 150 percent FPL explained with Tampa Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-12T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+        "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Tampa family of four ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "Use this Tampa family of four ACA subsidy estimate 400 percent FPL guide to connect Tampa Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Tampa family of four ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa family of four ACA subsidy estimate 400 percent FPL explained with Tampa Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-12T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+        "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how a Tampa family of four can read an ACA premium estimate",
+      "subtitle": "A plain-English look at Tampa family of four ACA subsidy estimate 200 percent FPL, with Tampa Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Tampa family of four ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa family of four ACA subsidy estimate 200 percent FPL explained with Tampa Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-12T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html"
+      ]
+    },
+    {
+      "id": "older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Older couple in Tampa: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "This guide frames Tampa older couple ACA subsidy estimate 100 percent FPL around Tampa Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Tampa older couple ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa older couple ACA subsidy estimate 100 percent FPL explained with Tampa Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
+        "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl",
+      "type": "article",
+      "title": "Reading the Tampa Marketplace estimate for an older couple near 250 percent FPL",
+      "subtitle": "For Tampa older couple ACA subsidy estimate 250 percent FPL, compare Tampa Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+      "main_keyword": "Tampa older couple ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa older couple ACA subsidy estimate 250 percent FPL explained with Tampa Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
+        "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult",
+      "type": "article",
+      "title": "200 percent FPL ACA subsidy guide for an Orlando single adult",
+      "subtitle": "Use this Orlando single adult ACA subsidy estimate 200 percent FPL guide to connect Orlando Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
+      "canonical": "https://coverclarityhealth.com/aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
+      "main_keyword": "Orlando single adult ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single adult ACA subsidy estimate 200 percent FPL explained with Orlando Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
+        "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl",
+      "type": "article",
+      "title": "Why Orlando single adult premium estimates shift around 400 percent FPL",
+      "subtitle": "A plain-English look at Orlando single adult ACA subsidy estimate 400 percent FPL, with Orlando Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+      "main_keyword": "Orlando single adult ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single adult ACA subsidy estimate 400 percent FPL explained with Orlando Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
+        "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html"
+      ]
+    },
+    {
+      "id": "orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl",
+      "type": "article",
+      "title": "Orlando ACA benchmark premium questions for a couple at 250 percent FPL",
+      "subtitle": "This guide frames Orlando couple ACA subsidy estimate 250 percent FPL around Orlando Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
+      "main_keyword": "Orlando couple ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando couple ACA subsidy estimate 250 percent FPL explained with Orlando Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+        "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A couple in Orlando and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "For Orlando couple ACA subsidy estimate 100 percent FPL, compare Orlando Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Orlando couple ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando couple ACA subsidy estimate 100 percent FPL explained with Orlando Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-14T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+        "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+        "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent",
+      "type": "article",
+      "title": "What 300 percent FPL changes in an Orlando ACA estimate for a single parent",
+      "subtitle": "Use this Orlando single parent ACA subsidy estimate 300 percent FPL guide to connect Orlando Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+      "canonical": "https://coverclarityhealth.com/aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+      "main_keyword": "Orlando single parent ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single parent ACA subsidy estimate 300 percent FPL explained with Orlando Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-14T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+        "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Single parent ACA planning in Orlando: subsidy notes at 150 percent FPL",
+      "subtitle": "A plain-English look at Orlando single parent ACA subsidy estimate 150 percent FPL, with Orlando Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Orlando single parent ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single parent ACA subsidy estimate 150 percent FPL explained with Orlando Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-14T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+        "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Orlando family of three ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Orlando family of three ACA subsidy estimate 400 percent FPL around Orlando Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Orlando family of three ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of three ACA subsidy estimate 400 percent FPL explained with Orlando Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-14T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+        "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how an Orlando family of three can read an ACA premium estimate",
+      "subtitle": "For Orlando family of three ACA subsidy estimate 200 percent FPL, compare Orlando Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Orlando family of three ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of three ACA subsidy estimate 200 percent FPL explained with Orlando Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-15T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html"
+      ]
+    },
+    {
+      "id": "family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Family of four in Orlando: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "Use this Orlando family of four ACA subsidy estimate 100 percent FPL guide to connect Orlando Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Orlando family of four ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of four ACA subsidy estimate 100 percent FPL explained with Orlando Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-15T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+        "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl",
+      "type": "article",
+      "title": "Reading the Orlando Marketplace estimate for a family of four near 250 percent FPL",
+      "subtitle": "A plain-English look at Orlando family of four ACA subsidy estimate 250 percent FPL, with Orlando Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+      "main_keyword": "Orlando family of four ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of four ACA subsidy estimate 250 percent FPL explained with Orlando Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-15T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+        "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple",
+      "type": "article",
+      "title": "150 percent FPL ACA subsidy guide for an Orlando older couple",
+      "subtitle": "This guide frames Orlando older couple ACA subsidy estimate 150 percent FPL around Orlando Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+      "canonical": "https://coverclarityhealth.com/aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+      "main_keyword": "Orlando older couple ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando older couple ACA subsidy estimate 150 percent FPL explained with Orlando Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-15T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+        "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl",
+      "type": "article",
+      "title": "Why Orlando older couple premium estimates shift around 300 percent FPL",
+      "subtitle": "For Orlando older couple ACA subsidy estimate 300 percent FPL, compare Orlando Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+      "main_keyword": "Orlando older couple ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando older couple ACA subsidy estimate 300 percent FPL explained with Orlando Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-15T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+        "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html"
+      ]
+    },
+    {
+      "id": "jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl",
+      "type": "article",
+      "title": "Jacksonville ACA benchmark premium questions for a single adult at 250 percent FPL",
+      "subtitle": "Use this Jacksonville single adult ACA subsidy estimate 250 percent FPL guide to connect Jacksonville Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+      "main_keyword": "Jacksonville single adult ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville single adult ACA subsidy estimate 250 percent FPL explained with Jacksonville Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-16T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+        "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A single adult in Jacksonville and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "A plain-English look at Jacksonville single adult ACA subsidy estimate 100 percent FPL, with Jacksonville Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Jacksonville single adult ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville single adult ACA subsidy estimate 100 percent FPL explained with Jacksonville Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-16T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+        "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
+        "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple",
+      "type": "article",
+      "title": "What 300 percent FPL changes in a Jacksonville ACA estimate for a couple",
+      "subtitle": "This guide frames Jacksonville couple ACA subsidy estimate 300 percent FPL around Jacksonville Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+      "canonical": "https://coverclarityhealth.com/aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+      "main_keyword": "Jacksonville couple ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville couple ACA subsidy estimate 300 percent FPL explained with Jacksonville Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-16T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
+        "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Couple ACA planning in Jacksonville: subsidy notes at 150 percent FPL",
+      "subtitle": "For Jacksonville couple ACA subsidy estimate 150 percent FPL, compare Jacksonville Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Jacksonville couple ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville couple ACA subsidy estimate 150 percent FPL explained with Jacksonville Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-16T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
+        "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Jacksonville single parent ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "Use this Jacksonville single parent ACA subsidy estimate 400 percent FPL guide to connect Jacksonville Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Jacksonville single parent ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville single parent ACA subsidy estimate 400 percent FPL explained with Jacksonville Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-16T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
+        "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how a Jacksonville single parent can read an ACA premium estimate",
+      "subtitle": "A plain-English look at Jacksonville single parent ACA subsidy estimate 200 percent FPL, with Jacksonville Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Jacksonville single parent ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville single parent ACA subsidy estimate 200 percent FPL explained with Jacksonville Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-17T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html"
+      ]
+    },
+    {
+      "id": "family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Family of three in Jacksonville: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "This guide frames Jacksonville family of three ACA subsidy estimate 100 percent FPL around Jacksonville Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Jacksonville family of three ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of three ACA subsidy estimate 100 percent FPL explained with Jacksonville Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+        "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl",
+      "type": "article",
+      "title": "Reading the Jacksonville Marketplace estimate for a family of three near 250 percent FPL",
+      "subtitle": "For Jacksonville family of three ACA subsidy estimate 250 percent FPL, compare Jacksonville Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+      "main_keyword": "Jacksonville family of three ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of three ACA subsidy estimate 250 percent FPL explained with Jacksonville Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+        "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four",
+      "type": "article",
+      "title": "150 percent FPL ACA subsidy guide for a Jacksonville family of four",
+      "subtitle": "Use this Jacksonville family of four ACA subsidy estimate 150 percent FPL guide to connect Jacksonville Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+      "canonical": "https://coverclarityhealth.com/aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+      "main_keyword": "Jacksonville family of four ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of four ACA subsidy estimate 150 percent FPL explained with Jacksonville Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl",
+      "type": "article",
+      "title": "Why Jacksonville family of four premium estimates shift around 300 percent FPL",
+      "subtitle": "A plain-English look at Jacksonville family of four ACA subsidy estimate 300 percent FPL, with Jacksonville Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+      "main_keyword": "Jacksonville family of four ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of four ACA subsidy estimate 300 percent FPL explained with Jacksonville Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html"
+      ]
+    },
+    {
+      "id": "jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl",
+      "type": "article",
+      "title": "Jacksonville ACA benchmark premium questions for an older couple at 200 percent FPL",
+      "subtitle": "This guide frames Jacksonville older couple ACA subsidy estimate 200 percent FPL around Jacksonville Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+      "main_keyword": "Jacksonville older couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville older couple ACA subsidy estimate 200 percent FPL explained with Jacksonville Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl",
+      "type": "article",
+      "title": "An older couple in Jacksonville and the 2026 ACA current-law comparison at 400 percent FPL",
+      "subtitle": "For Jacksonville older couple ACA subsidy estimate 400 percent FPL, compare Jacksonville Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "main_keyword": "Jacksonville older couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville older couple ACA subsidy estimate 400 percent FPL explained with Jacksonville Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult",
+      "type": "article",
+      "title": "What 300 percent FPL changes in a Tallahassee ACA estimate for a single adult",
+      "subtitle": "Use this Tallahassee single adult ACA subsidy estimate 300 percent FPL guide to connect Tallahassee Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+      "canonical": "https://coverclarityhealth.com/aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+      "main_keyword": "Tallahassee single adult ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single adult ACA subsidy estimate 300 percent FPL explained with Tallahassee Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Single adult ACA planning in Tallahassee: subsidy notes at 150 percent FPL",
+      "subtitle": "A plain-English look at Tallahassee single adult ACA subsidy estimate 150 percent FPL, with Tallahassee Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Tallahassee single adult ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single adult ACA subsidy estimate 150 percent FPL explained with Tallahassee Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Tallahassee couple ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Tallahassee couple ACA subsidy estimate 400 percent FPL around Tallahassee Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "https://coverclarityhealth.com/aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Tallahassee couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee couple ACA subsidy estimate 400 percent FPL explained with Tallahassee Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-18T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how a Tallahassee couple can read an ACA premium estimate",
+      "subtitle": "For Tallahassee couple ACA subsidy estimate 200 percent FPL, compare Tallahassee Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Tallahassee couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee couple ACA subsidy estimate 200 percent FPL explained with Tallahassee Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-19T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html"
       ]
     }
   ]

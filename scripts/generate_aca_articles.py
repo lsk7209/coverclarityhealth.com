@@ -15,6 +15,24 @@ GENERATION_REPORT = REPORT_DIR / "article-generation-report.json"
 SITE_ORIGIN = os.getenv("SITE_ORIGIN", "{SITE_ORIGIN}").rstrip("/")
 KST = timezone(timedelta(hours=9))
 FIRST_PUBLISH_AT = datetime(2026, 6, 8, 13, 23, tzinfo=KST)
+HEAD_INTEGRATIONS = """  <meta name="naver-site-verification" content="855afb240140498254660c8577a49240ff1f8521" />
+  <meta name="google-site-verification" content="8rvm9Tcgkca483PET5WJCwwKsiML5yZc0tqTPsjKksE" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYRK9P50CW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GYRK9P50CW');
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x97p26p6y4");
+  </script>
+"""
 
 OFFICIAL_SOURCES = [
     {
@@ -1233,6 +1251,7 @@ def build_article(topic, idx):
     *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1120px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.layout{{display:grid;grid-template-columns:minmax(0,740px) 280px;gap:44px;padding:42px 22px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.05rem,5vw,3.45rem)/1.06 var(--serif);margin:.35em 0}}.subtitle{{font-size:1.15rem;color:var(--soft)}}.meta,.byline{{font-size:.86rem;color:var(--muted)}}.byline{{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:14px 0 18px}}.guide-hub{{font-size:.9rem;color:var(--soft)}}.answer,.cta,.sourcebox,.callout,.editorial,.related-guides,.hub-summary,.verification-snapshot{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:22px 0}}.answer{{background:var(--callout-bg);border-color:var(--line)}}.answer b,.callout b,.editorial b,.hub-summary b,.verification-snapshot b{{color:var(--callout-fg)}}.toc{{position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}}.toc a{{display:block;text-decoration:none;margin:8px 0}}article h2{{font:600 1.72rem/1.2 var(--serif);margin:36px 0 10px}}article h3{{font:700 1.12rem/1.3 var(--serif);margin:22px 0 8px}}p{{margin:0 0 16px}}.checklist,.steps{{background:var(--paper2);border-radius:12px;padding:16px 18px 16px 34px}}.mini-table,.summary-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}}.mini-table.triad{{grid-template-columns:repeat(3,1fr)}}.mini-table div,.summary-grid div{{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px}}.mini-table span,.summary-grid span{{display:block;color:var(--soft);font-size:.92rem}}blockquote{{border-left:4px solid var(--callout-fg);margin:18px 0;padding:8px 0 8px 16px;color:var(--soft)}}.related-guides ul,.source-list{{list-style:none;margin:0;padding:0;display:grid;gap:10px}}.related-guides li,.source-list li{{border-top:1px solid var(--line);padding-top:10px}}.related-guides span,.source-list span{{display:block;color:var(--muted);font-size:.86rem}}.btn{{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:900px){{.layout{{display:block}}.toc{{position:static;margin:22px 0}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}.mini-table,.mini-table.triad,.summary-grid{{grid-template-columns:1fr}}}}
   </style>
   {schema_html}
+{HEAD_INTEGRATIONS}
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
@@ -1601,6 +1620,10 @@ TOPICS = [normalize_topic(topic) for topic in TOPICS]
 
 def render_blog(topics):
     published_count = len(topics)
+    hub_card_limit = 8
+    cluster_card_limit = 2
+    recent_card_limit = 12
+
     def card(topic, featured=False):
         label = "Hub guide" if featured else display_cluster(topic["cluster"])
         cluster_label = display_cluster(topic["cluster"])
@@ -1625,22 +1648,37 @@ def render_blog(topics):
 
     hub_cards = []
     cluster_sections = []
-    hubs = [topic for i, topic in enumerate(topics) if is_hub_topic(topic, i)][:30]
+    hubs = [topic for i, topic in enumerate(topics) if is_hub_topic(topic, i)][:hub_card_limit]
     for topic in hubs:
         hub_cards.append(card(topic, True))
 
     for heading, cluster, guide_slug, _ in GUIDE_CLUSTERS:
         items = [topic for topic in topics if topic["cluster"] == cluster]
+        visible_items = items[-cluster_card_limit:]
+        extra_count = max(0, len(items) - len(visible_items))
+        cluster_note = (
+            f"{len(items)} focused guides support this decision area. Showing the {len(visible_items)} most recently published here; "
+            f"<a href=\"guides/{esc(guide_slug)}.html\">open this guide hub</a> for the full cluster."
+            if items
+            else f"0 focused guides are published yet. <a href=\"guides/{esc(guide_slug)}.html\">Open this guide hub</a>."
+        )
+        more_link = (
+            f'<p class="more-link"><a href="guides/{esc(guide_slug)}.html">View {extra_count} more in this cluster</a></p>'
+            if extra_count
+            else ""
+        )
         cluster_sections.append(f"""
     <section class="cluster-block" id="{slugify(heading)}">
       <div class="section-head">
         <h2>{esc(heading)}</h2>
-        <p>{len(items)} focused guides that support a specific Florida ACA subsidy estimate decision. <a href="guides/{esc(guide_slug)}.html">Open this guide hub</a>.</p>
+        <p>{cluster_note}</p>
       </div>
-      <div class="grid" aria-label="{esc(heading)}">{grid_content(items, heading.lower())}</div>
+      <div class="grid" aria-label="{esc(heading)}">{grid_content(visible_items, heading.lower())}</div>
+      {more_link}
     </section>""")
 
-    all_cards = grid_content(topics, "Florida ACA subsidy guides")
+    recent_topics = topics[-recent_card_limit:]
+    all_cards = grid_content(recent_topics, "Florida ACA subsidy guides")
     representative_topics = hubs[:20] + topics[-10:]
     blog_schemas = [
         organization_schema(),
@@ -1688,9 +1726,10 @@ def render_blog(topics):
   <meta name="twitter:description" content="A structured 200-guide library for Florida ACA subsidy estimates and Marketplace verification.">
   <style>
     :root{{--paper:#faf7f1;--paper2:#f3eee3;--card:#fffdf9;--ink:#1b2a36;--soft:#34434f;--muted:#5b7184;--line:#e4dccb;--accent:#c8862b;--accent2:#a66c1c;--serif:Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,sans-serif}}
-    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}.h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:15ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:70ch}}.section-head{{border-top:1px solid var(--line);padding-top:28px;margin-top:36px}}.section-head h2{{font:600 1.75rem/1.2 var(--serif);margin:0 0 6px}}.section-head p{{color:var(--soft);margin:0;max-width:70ch}}.quick-nav{{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 34px}}.quick-nav a{{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 12px;text-decoration:none;font-weight:700}}.library-tools{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0 30px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px;align-items:end}}.library-tools label{{display:block;font-size:.82rem;font-weight:800;color:var(--muted);margin-bottom:6px}}.library-tools input,.library-tools select{{width:100%;border:1px solid var(--line);border-radius:8px;background:#fffdf9;color:var(--ink);padding:11px 12px;font:inherit}}.result-status{{font-size:.9rem;color:var(--muted);margin:10px 0 0}}.no-results,.empty-state{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0 34px;color:var(--soft)}}.no-results{{display:none}}.empty-state{{grid-column:1/-1;margin:0}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:18px 0 44px}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card[hidden]{{display:none}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}.cta{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 34px}}.btn{{display:inline-block;background:var(--accent);color:white;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}.library-tools{{grid-template-columns:1fr}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
+    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}.h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:15ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:70ch}}.section-head{{border-top:1px solid var(--line);padding-top:28px;margin-top:36px}}.section-head h2{{font:600 1.75rem/1.2 var(--serif);margin:0 0 6px}}.section-head p{{color:var(--soft);margin:0;max-width:70ch}}.quick-nav{{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 34px}}.quick-nav a{{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 12px;text-decoration:none;font-weight:700}}.library-tools{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0 30px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px;align-items:end}}.library-tools label{{display:block;font-size:.82rem;font-weight:800;color:var(--muted);margin-bottom:6px}}.library-tools input,.library-tools select{{width:100%;border:1px solid var(--line);border-radius:8px;background:#fffdf9;color:var(--ink);padding:11px 12px;font:inherit}}.result-status{{font-size:.9rem;color:var(--muted);margin:10px 0 0}}.no-results,.empty-state{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0 34px;color:var(--soft)}}.no-results{{display:none}}.empty-state{{grid-column:1/-1;margin:0}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:18px 0 44px}}.more-link{{margin:-26px 0 38px;font-weight:700}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card[hidden]{{display:none}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}.cta{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 34px}}.btn{{display:inline-block;background:var(--accent);color:white;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}.library-tools{{grid-template-columns:1fr}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
   </style>
   {blog_schema_html}
+{HEAD_INTEGRATIONS}
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
@@ -1719,7 +1758,7 @@ def render_blog(topics):
       <div>
         <label for="guideSearch">Search guides</label>
         <input id="guideSearch" type="search" placeholder="Try county, MAGI, CSR, Silver, COBRA, verification" autocomplete="off">
-        <p class="result-status" id="guideSearchStatus" aria-live="polite">Showing all guide cards.</p>
+        <p class="result-status" id="guideSearchStatus" aria-live="polite">Showing featured and recent guide cards.</p>
       </div>
       <div>
         <label for="clusterFilter">Filter by cluster</label>
@@ -1745,8 +1784,8 @@ def render_blog(topics):
     {''.join(cluster_sections)}
     <section class="cluster-block" id="all-guides">
       <div class="section-head">
-        <h2>All Florida ACA subsidy guides</h2>
-        <p>The currently published article set in scheduled order. Future queued articles are excluded from this list until their scheduled publish time.</p>
+        <h2>Recent Florida ACA subsidy guides</h2>
+        <p>The most recently published guide cards in scheduled order. Use the cluster guide hubs, sitemap, RSS feed, or site search index for the full currently published set.</p>
       </div>
       <div class="grid" aria-label="Article list">{all_cards}</div>
     </section>
@@ -1769,7 +1808,7 @@ def render_blog(topics):
         card.hidden = !visible;
         if (visible) shown += 1;
       }});
-      statusEl.textContent = term || cluster ? `Showing ${{shown}} matching guide cards.` : 'Showing all guide cards.';
+      statusEl.textContent = term || cluster ? `Showing ${{shown}} matching featured or recent guide cards.` : 'Showing featured and recent guide cards.';
       noResults.style.display = shown ? 'none' : 'block';
     }}
     function syncGuideParams() {{
@@ -1869,6 +1908,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
     *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:17ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:74ch}}.intro{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 30px}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0 60px}}.empty-state{{grid-column:1/-1;background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--soft)}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
   </style>
   {schema_html}
+{HEAD_INTEGRATIONS}
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>

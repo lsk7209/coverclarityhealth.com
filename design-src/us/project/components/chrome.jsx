@@ -87,7 +87,7 @@ const Header = ({ active }) => {
 const SourceRow = ({ compact }) => (
   <div className="sourcerow" style={compact ? { fontSize: ".8rem" } : null}>
     <span className="src-label">Data sources</span>
-    <a href="methodology.html">CMS Exchange PUF</a>
+    <a href="methodology.html">Illustrative rate model</a>
     <a href="methodology.html">IRS Rev. Proc.</a>
     <a href="methodology.html">HHS Poverty Guidelines</a>
   </div>
