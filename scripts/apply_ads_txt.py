@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ADS_TXT = ROOT / "ads.txt"
 PUB_RE = re.compile(r"^(?:ca-)?pub-\d{16}$")
-GOOGLE_CERT_AUTHORITY_ID = "f08c47fec0942fa"
+GOOGLE_CERT_AUTHORITY_ID = "f08c47fec0942fa0"
 
 
 def normalize_publisher_id(value):

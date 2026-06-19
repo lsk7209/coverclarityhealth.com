@@ -1,11 +1,11 @@
 {
-  "articles": 200,
-  "publishedArticles": 52,
-  "scheduledArticles": 148,
+  "articles": 400,
+  "publishedArticles": 53,
+  "scheduledArticles": 347,
   "firstPublishAt": "2026-06-08T13:23:00+09:00",
-  "lastPublishAt": "2026-07-20T00:23:00+09:00",
+  "lastPublishAt": "2026-08-30T16:23:00+09:00",
   "minQualityScore": 94,
   "maxQualityScore": 99,
-  "codexOnlyGenerationArticles": 200,
+  "codexOnlyGenerationArticles": 400,
   "manualAdSlotArticles": 0
 }

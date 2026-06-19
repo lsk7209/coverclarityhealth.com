@@ -19,7 +19,7 @@ CONTENT_DIR = ROOT / "content"
 REPORT_DIR = ROOT / "reports"
 
 BAD_PATTERNS = re.compile(
-    r"insupang|healthgotoo|coverclarity\.com|adsbygoogle|Advertisement|adslot|<ins|"
+    r"insupang|healthgotoo|coverclarity\.com|Advertisement|adslot|<ins|adsbygoogle\s*\.push|"
     r"\?\?/(?:span|button|a|div)>|\?[\uBD4F\uBE29]|\?\?\{money|\"\?\? \+ money|"
     r"\.nav nav\{display:none\}|\.mainnav\s*\{\s*display:\s*none|"
     r"\uCA0C|\u0431\u0434",

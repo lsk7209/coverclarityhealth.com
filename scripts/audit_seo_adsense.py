@@ -11,7 +11,7 @@ REPORT_DIR = ROOT / "reports"
 REPORT_PATH = REPORT_DIR / "seo-adsense-audit-report.json"
 ARTICLE_DIR = ROOT / "aca"
 GUIDE_DIR = ROOT / "guides"
-ADS_TXT_RE = re.compile(r"^google\.com,\s+pub-\d{16},\s+DIRECT,\s+f08c47fec0942fa\s*$")
+ADS_TXT_RE = re.compile(r"^google\.com,\s+pub-\d{16},\s+DIRECT,\s+f08c47fec0942fa0\s*$")
 TITLE_MIN_LENGTH = 30
 TITLE_MAX_LENGTH = 70
 DESCRIPTION_MIN_LENGTH = 90
@@ -222,7 +222,12 @@ def audit():
             page_errors.append("image_missing_alt")
         if not is_readable_url(path):
             page_errors.append("unreadable_url")
-        if "<ins" in html or "adsbygoogle" in html or "adslot" in html.lower():
+        manual_ad_marker = (
+            "<ins" in html
+            or "adslot" in html.lower()
+            or re.search(r"adsbygoogle\s*\.push|class=[\"']adsbygoogle", html)
+        )
+        if manual_ad_marker:
             page_errors.append("manual_ad_slot_marker")
         if parser.forms:
             page_warnings.append("form_present_review_for_lead_capture")

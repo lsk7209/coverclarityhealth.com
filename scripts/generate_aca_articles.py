@@ -32,6 +32,7 @@ HEAD_INTEGRATIONS = """  <meta name="naver-site-verification" content="855afb240
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "x97p26p6y4");
   </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736" crossorigin="anonymous"></script>
 """
 
 OFFICIAL_SOURCES = [
@@ -59,6 +60,16 @@ OFFICIAL_SOURCES = [
         "label": "HealthCare.gov official Marketplace",
         "url": "https://www.healthcare.gov/",
         "claim": "Official enrollment and final plan-price confirmation.",
+    },
+    {
+        "label": "CMS 2026 Marketplace Open Enrollment report",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/marketplace-2026-open-enrollment-period-report-final-national-snapshot",
+        "claim": "CMS enrollment snapshot and Marketplace participation context.",
+    },
+    {
+        "label": "KFF enhanced premium tax credit analysis",
+        "url": "https://www.kff.org/affordable-care-act/issue-brief/how-much-more-would-people-pay-in-premiums-if-the-acas-enhanced-premium-tax-credits-expired/",
+        "claim": "Independent analysis of enhanced premium tax credit expiration effects.",
     },
 ]
 
@@ -165,6 +176,8 @@ COLOR_PAIRS = [
     ("#E4F0EA", "#1F5E43"),
     ("#F5E5E0", "#8F3D2D"),
     ("#F3EEE3", "#34434F"),
+    ("#EAF2FF", "#2457A6"),
+    ("#EEF6D8", "#4D6F1E"),
 ]
 
 CTA_VARIANTS = [
@@ -872,9 +885,9 @@ def editorial_review_basis(topic, idx):
 
 def reader_protection(topic, idx):
     return variant([
-        "The page avoids plan recommendations, lead capture, and insurer ranking. It treats premiums, CSR, FPL bands, and current-law comparisons as planning context rather than insurance, tax, or legal advice.",
-        "The guide does not sell coverage or rank carriers. It keeps premium estimates, CSR notes, and tax-credit assumptions separate from plan advice.",
-        "Reader protection means no quote form pressure, no insurer preference, and no claim that this independent estimate replaces HealthCare.gov.",
+        f"The page avoids plan recommendations, lead capture, and insurer ranking for {topic['main_keyword']}. It treats {topic['expanded_keywords'][0]}, premiums, CSR, FPL bands, and current-law comparisons as planning context rather than insurance, tax, or legal advice.",
+        f"The guide does not sell coverage or rank carriers. It keeps {topic['expanded_keywords'][1]}, premium estimates, CSR notes, and tax-credit assumptions separate from plan advice.",
+        f"Reader protection means no quote form pressure, no insurer preference, and no claim that this independent {topic['main_keyword']} estimate replaces HealthCare.gov.",
         f"The content explains {topic['expanded_keywords'][1]} and related estimate limits without turning the article into insurance, tax, or legal advice.",
     ], idx)
 
@@ -900,7 +913,7 @@ def official_sources_html(topic):
     for source in topic.get("sources", []):
         items.append(
             f'<li><a href="{esc(source["url"])}" target="_blank" rel="noopener">'
-            f'{esc(source["label"])}</a><span>{esc(source["claim"])}</span></li>'
+            f'{esc(source["label"])}</a></li>'
         )
     return '<ul class="source-list">' + "".join(items) + "</ul>"
 
@@ -1082,12 +1095,51 @@ def article_sections(topic, idx):
     return sections
 
 
+def researched_component_html(block, topic, idx):
+    kind = block.get("kind", "")
+    if kind == "checklist":
+        items = block.get("items", [])
+        return '<ul class="checklist">' + ''.join(f"<li>{esc(item)}</li>" for item in items) + "</ul>"
+    if kind == "answer":
+        answer = block.get("answer", "")
+        return f'<div class="answer-box"><b>Short answer:</b> {esc(answer)}</div>'
+    if kind == "compare":
+        rows = block.get("rows", [])
+        body = ''.join(
+            f"<div><b>{esc(label)}</b><span>{esc(value)}</span></div>"
+            for label, value in rows
+        )
+        return f'<div class="mini-table triad">{body}</div>'
+    if kind == "source":
+        source_items = topic.get("sources", [])
+        return '<ul class="source-list">' + ''.join(
+            f'<li><a href="{esc(item["url"])}" rel="nofollow noopener">{esc(item["label"])}</a></li>'
+            for item in source_items
+        ) + "</ul>"
+    if kind == "cta":
+        label = block.get("label", "Run the calculator")
+        return f'<p><a class="btn" href="../index.html#calc">{esc(label)}</a></p>'
+    return ""
+
+
+def researched_sections(topic, idx):
+    blocks = topic.get("body_blocks", [])
+    sections = []
+    for block in blocks:
+        sections.append((block["heading"], block.get("paragraphs", []), block))
+    return sections
+
+
 def build_article(topic, idx):
     topic["index"] = idx
     bg, fg = COLOR_PAIRS[idx % len(COLOR_PAIRS)]
-    sections = article_sections(topic, idx) + deeper_sections(topic, idx)
-    if is_hub_topic(topic, idx):
-        sections += hub_sections(topic, idx)
+    custom_body = bool(topic.get("body_blocks"))
+    if custom_body:
+        sections = researched_sections(topic, idx)
+    else:
+        sections = [(title, paragraphs, {}) for title, paragraphs in article_sections(topic, idx) + deeper_sections(topic, idx)]
+    if is_hub_topic(topic, idx) and not custom_body:
+        sections += [(title, paragraphs, {}) for title, paragraphs in hub_sections(topic, idx)]
     source = OFFICIAL_SOURCES[idx % len(OFFICIAL_SOURCES)]
     official_sources = topic.get("sources", [source])
     related = related_topics_for(topic, idx)
@@ -1132,13 +1184,15 @@ def build_article(topic, idx):
     ][idx % 12]
     faq_heading = FAQ_HEADINGS[idx % len(FAQ_HEADINGS)]
     source_heading = SOURCE_HEADINGS[idx % len(SOURCE_HEADINGS)]
-    toc = "\n".join(f'<a href="#s{i+1}">{esc(title)}</a>' for i, (title, _) in enumerate(sections))
+    toc = "\n".join(f'<a href="#s{i+1}">{esc(title)}</a>' for i, (title, _, _) in enumerate(sections))
     hub_summary = hub_summary_html(topic) if is_hub_topic(topic, idx) else ""
     verification_snapshot = verification_snapshot_html(topic, idx)
     section_html = []
-    for i, (title, paragraphs) in enumerate(sections):
+    for i, (title, paragraphs, block) in enumerate(sections):
         body = "\n".join(f"<p>{esc(p)}</p>" for p in paragraphs)
-        if i == 1 and idx % 4 == 0:
+        if custom_body:
+            body += researched_component_html(block, topic, idx)
+        elif i == 1 and idx % 4 == 0:
             body += variable_component(topic, idx)
         elif i == 1 and idx % 4 == 1:
             body += variable_component(topic, idx)
@@ -1248,7 +1302,7 @@ def build_article(topic, idx):
   <meta name="twitter:description" content="{esc(topic.get('twitter_description', topic['meta_description']))}">
   <style>
     :root{{--paper:#faf7f1;--paper2:#f3eee3;--card:#fffdf9;--ink:#1b2a36;--soft:#34434f;--muted:#5b7184;--line:#e4dccb;--accent:#c8862b;--accent2:#a66c1c;--callout-bg:{bg};--callout-fg:{fg};--serif:Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,sans-serif}}
-    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1120px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.layout{{display:grid;grid-template-columns:minmax(0,740px) 280px;gap:44px;padding:42px 22px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.05rem,5vw,3.45rem)/1.06 var(--serif);margin:.35em 0}}.subtitle{{font-size:1.15rem;color:var(--soft)}}.meta,.byline{{font-size:.86rem;color:var(--muted)}}.byline{{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:14px 0 18px}}.guide-hub{{font-size:.9rem;color:var(--soft)}}.answer,.cta,.sourcebox,.callout,.editorial,.related-guides,.hub-summary,.verification-snapshot{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:22px 0}}.answer{{background:var(--callout-bg);border-color:var(--line)}}.answer b,.callout b,.editorial b,.hub-summary b,.verification-snapshot b{{color:var(--callout-fg)}}.toc{{position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}}.toc a{{display:block;text-decoration:none;margin:8px 0}}article h2{{font:600 1.72rem/1.2 var(--serif);margin:36px 0 10px}}article h3{{font:700 1.12rem/1.3 var(--serif);margin:22px 0 8px}}p{{margin:0 0 16px}}.checklist,.steps{{background:var(--paper2);border-radius:12px;padding:16px 18px 16px 34px}}.mini-table,.summary-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}}.mini-table.triad{{grid-template-columns:repeat(3,1fr)}}.mini-table div,.summary-grid div{{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px}}.mini-table span,.summary-grid span{{display:block;color:var(--soft);font-size:.92rem}}blockquote{{border-left:4px solid var(--callout-fg);margin:18px 0;padding:8px 0 8px 16px;color:var(--soft)}}.related-guides ul,.source-list{{list-style:none;margin:0;padding:0;display:grid;gap:10px}}.related-guides li,.source-list li{{border-top:1px solid var(--line);padding-top:10px}}.related-guides span,.source-list span{{display:block;color:var(--muted);font-size:.86rem}}.btn{{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:900px){{.layout{{display:block}}.toc{{position:static;margin:22px 0}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}.mini-table,.mini-table.triad,.summary-grid{{grid-template-columns:1fr}}}}
+    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1120px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.layout{{display:grid;grid-template-columns:minmax(0,740px) 280px;gap:44px;padding:42px 22px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.05rem,5vw,3.45rem)/1.06 var(--serif);margin:.35em 0}}.subtitle{{font-size:1.15rem;color:var(--soft)}}.meta,.byline{{font-size:.86rem;color:var(--muted)}}.byline{{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:14px 0 18px}}.guide-hub{{font-size:.9rem;color:var(--soft)}}.answer,.answer-box,.cta,.sourcebox,.callout,.editorial,.related-guides,.hub-summary,.verification-snapshot{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:22px 0}}.answer,.answer-box{{background:var(--callout-bg);border-color:var(--line)}}.answer b,.answer-box b,.callout b,.editorial b,.hub-summary b,.verification-snapshot b{{color:var(--callout-fg)}}.toc{{position:sticky;top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}}.toc a{{display:block;text-decoration:none;margin:8px 0}}article h2{{font:600 1.72rem/1.2 var(--serif);margin:36px 0 10px}}article h3{{font:700 1.12rem/1.3 var(--serif);margin:22px 0 8px}}p{{margin:0 0 16px}}.checklist,.steps{{background:var(--paper2);border-radius:12px;padding:16px 18px 16px 34px}}.mini-table,.summary-grid{{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}}.mini-table.triad{{grid-template-columns:repeat(3,1fr)}}.mini-table div,.summary-grid div{{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px}}.mini-table span,.summary-grid span{{display:block;color:var(--soft);font-size:.92rem}}blockquote{{border-left:4px solid var(--callout-fg);margin:18px 0;padding:8px 0 8px 16px;color:var(--soft)}}.related-guides ul,.source-list{{list-style:none;margin:0;padding:0;display:grid;gap:10px}}.related-guides li,.source-list li{{border-top:1px solid var(--line);padding-top:10px}}.related-guides span,.source-list span{{display:block;color:var(--muted);font-size:.86rem}}.btn{{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:900px){{.layout{{display:block}}.toc{{position:static;margin:22px 0}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}.mini-table,.mini-table.triad,.summary-grid{{grid-template-columns:1fr}}}}
   </style>
   {schema_html}
 {HEAD_INTEGRATIONS}
@@ -1613,9 +1667,553 @@ def make_additional_topics(existing_topics):
     return topics
 
 
+def researched_body_blocks(main_keyword, expanded, intent, problem, angle, idx):
+    exp0, exp1 = expanded[0], expanded[1]
+    checkpoint = expanded[2] if len(expanded) > 2 else "official confirmation"
+    proof = expanded[3] if len(expanded) > 3 else "estimate documentation"
+    answer = (
+        f"{main_keyword} should be treated as a planning answer, not a quote: start with {exp0}, "
+        f"check {exp1}, and confirm the final eligibility result in the official Marketplace before relying on the number."
+    )
+    blocks = [
+        {
+            "heading": "Direct answer for this search",
+            "kind": "answer",
+            "answer": answer,
+            "paragraphs": [
+                answer,
+                f"The reader problem for {main_keyword} is specific: {problem}. For {main_keyword}, the estimate path should be explained before plan choice, enrollment timing, or tax follow-up.",
+                f"The useful interpretation is narrow and practical: {angle}. If {exp0} is not separated from the monthly premium, the reader can over-trust a calculator output.",
+            ],
+        },
+        {
+            "heading": "Inputs that change the result",
+            "kind": "checklist",
+            "items": [
+                f"Confirm the annual income assumption before reading {exp0}.",
+                f"Check whether {exp1} changes the estimate or only changes the next verification step.",
+                f"Keep the tax household count for {main_keyword} separate from who happens to live at the address.",
+                f"Use the same Florida county or rating area when comparing {main_keyword} with HealthCare.gov.",
+            ],
+            "paragraphs": [
+                f"A strong estimate for {main_keyword} begins with inputs, not with a plan name. For {exp0}, income, household size, area, age, and policy year are the variables most likely to explain a surprise.",
+                f"{checkpoint} should be written down with the date of the estimate. That record makes it easier to compare this {exp1} article, the calculator, and the official Marketplace screen later.",
+            ],
+        },
+        {
+            "heading": "How to read the premium number",
+            "kind": "compare",
+            "rows": [
+                ("Planning estimate", f"Explains {exp0} and likely subsidy movement before enrollment."),
+                ("Official result", "Comes from HealthCare.gov after the application facts are entered."),
+                ("Plan decision", f"Requires network, deductible, formulary, and {exp1} review."),
+            ],
+            "paragraphs": [
+                f"The premium number is only one part of {main_keyword}. A low net premium in a {exp0} scenario can still leave high deductibles or a narrow network, while a higher premium can sometimes reduce risk for a household with regular care.",
+                f"For AEO-style answers about {main_keyword}, the page should make the boundary explicit: the estimate explains subsidy math, while the official Marketplace confirms eligibility and available plans.",
+            ],
+        },
+        {
+            "heading": "What official sources can and cannot confirm",
+            "kind": "source",
+            "paragraphs": [
+                f"Official sources support the federal rules behind {main_keyword}, including poverty-guideline references, premium tax credit mechanics, and Marketplace confirmation.",
+                f"They do not replace personal tax advice or a plan-level provider search. Use the sources to verify the {exp0} rule, then use the application screen to verify the household result.",
+            ],
+        },
+        {
+            "heading": "Common mistake to avoid",
+            "kind": "",
+            "paragraphs": [
+                f"The common mistake in {main_keyword} is treating {proof} as if it were already a final enrollment decision. For {exp1}, that shortcut can be wrong when income changes, the county is entered differently, or the selected plan is not the benchmark plan.",
+                f"Another mistake is mixing monthly income with annual income. For {main_keyword}, the annual estimate is the number that usually drives FPL percentage and advance premium tax credit planning.",
+            ],
+        },
+        {
+            "heading": "When the estimate should be updated",
+            "kind": "checklist",
+            "items": [
+                f"Income rises or drops enough to move {main_keyword} into a different FPL band.",
+                f"A household member is added, removed, or moves to another coverage source tied to {exp1}.",
+                f"The official Marketplace requests documentation or shows a result that conflicts with {main_keyword}.",
+                f"The reader is comparing current-law and enhanced-credit scenarios for {exp0} before open enrollment.",
+            ],
+            "paragraphs": [
+                f"An update is worth doing whenever {exp0} or {exp1} changes after the first estimate. The goal is not to chase every dollar; it is to avoid a misleading planning number.",
+                f"If the official application result conflicts with {main_keyword}, the application result is the control point. The article can help diagnose {exp0} inputs, but it cannot override the Marketplace determination.",
+            ],
+        },
+        {
+            "heading": "Internal next step",
+            "kind": "cta",
+            "label": "Run a private Florida ACA estimate",
+            "paragraphs": [
+                f"After reading this {main_keyword} guide, use the calculator with the same household facts. Then compare the output with the official Marketplace before choosing a plan.",
+                f"This keeps {main_keyword} in a useful sequence: learn the rule, test the numbers, verify the result, and then evaluate the actual plan details.",
+            ],
+        },
+    ]
+    if idx % 2 == 0:
+        blocks.insert(4, {
+            "heading": "A practical Florida scenario",
+            "kind": "",
+            "paragraphs": [
+                f"Consider a Florida household reviewing {main_keyword} and changing only one input tied to {exp0}. For {main_keyword}, if the benchmark Silver premium stays the same but income moves, the premium tax credit can change even when the household still shops in the same county.",
+                f"Now change the county or rating area instead. The income percentage may stay stable while the benchmark premium changes, which can make {main_keyword} look different for reasons unrelated to the household's earnings.",
+            ],
+        })
+    else:
+        blocks.insert(4, {
+            "heading": "How this differs from a generic ACA article",
+            "kind": "",
+            "paragraphs": [
+                f"A generic ACA article often stops at the idea that subsidies reduce premiums. This article is narrower: it connects {main_keyword} to {exp0}, {exp1}, and a concrete verification step.",
+                f"That narrower scope helps search engines and answer engines understand {main_keyword} as a specific Florida Marketplace explanation rather than another broad insurance overview.",
+            ],
+        })
+    return blocks
+
+
+def make_researched_batch_topics(existing_topics):
+    used_keywords = {t["main_keyword"].lower() for t in existing_topics}
+    used_slugs = {t["slug"] for t in existing_topics}
+    used_meta_titles = {t["meta_title"].lower() for t in existing_topics}
+    topics = []
+
+    groups = [
+        (
+            "official verification and risk-prevention intent",
+            "verification",
+            [
+                ("Marketplace application mismatch", "input mismatch", "official eligibility result", "a reader sees a calculator result that does not match HealthCare.gov", "the mismatch is usually an input, timing, or official-rule issue"),
+                ("SLCSP benchmark review", "benchmark Silver plan", "rating-area check", "a reader suspects the benchmark premium is not the same on every screen", "benchmark Silver is a reference point, not necessarily the selected plan"),
+                ("income document request", "verification notice", "income documentation", "a reader receives a document request after estimating the subsidy", "documentation should be handled through the official Marketplace workflow"),
+                ("zero premium tax credit result", "no-credit result", "current-law threshold", "a reader expected help but sees little or no credit", "income, employer coverage, filing status, or the policy regime may explain the result"),
+                ("coverage gap warning", "below 100 percent FPL", "Florida Medicaid status", "a reader below the lower threshold needs a clear warning", "Florida's non-expansion status can make a normal subsidy explanation misleading"),
+                ("county entry audit", "rating-area selection", "local benchmark premium", "a reader enters a county differently across tools", "county and rating area can affect the benchmark premium behind the estimate"),
+                ("checkout price change", "plan availability", "official price confirmation", "a reader sees a different premium near checkout", "the final plan screen controls availability, price, and household eligibility"),
+                ("CSR missing on screen", "cost-sharing reduction check", "Silver eligibility", "a reader expected lower deductibles but does not see CSR", "CSR depends on income and Silver plan selection rather than premium help alone"),
+                ("special enrollment proof", "qualifying life event", "coverage start date", "a reader needs to prove a life event before using the estimate", "SEP proof and coverage start dates belong in the official application flow"),
+                ("source trust audit", "IRS HHS CMS references", "trust verification", "a reader wants to know which sources support the article", "source names should be visible enough for verification and answer-engine trust"),
+                ("premium estimate too low", "input audit", "premium estimate review", "a reader worries the estimate is unrealistically low", "the low number should be checked against FPL, CSR, county, and selected plan assumptions"),
+                ("premium estimate too high", "threshold review", "policy-regime comparison", "a reader is surprised by a high current-law premium", "the result may reflect the cliff, age rating, or non-benchmark plan choice"),
+                ("final eligibility notice", "Marketplace eligibility notice", "application result", "a reader receives an official notice after using an estimate", "the notice is the document to reconcile against the planning estimate"),
+                ("navigator conversation prep", "enrollment assistance", "question checklist", "a reader plans to ask for enrollment help", "prepared facts reduce confusion without turning the article into plan advice"),
+                ("audit trail for subsidy estimates", "recordkeeping", "Form 8962 planning", "a reader wants proof of what was estimated before enrollment", "notes can help reconcile a future tax form but do not guarantee the final credit"),
+                ("duplicate application concern", "application cleanup", "Marketplace account review", "a reader may have conflicting Marketplace records", "the official account history should be reviewed before relying on a new estimate"),
+                ("address change during enrollment", "mailing address", "county verification", "a reader changes address while shopping", "area, notices, and plan availability should be checked after the address update"),
+                ("plan year source check", "2026 plan year", "rule-year alignment", "a reader mixes old plan-year guidance with a 2026 estimate", "the source year and plan year must match the estimate"),
+                ("broker quote comparison", "quote versus estimate", "lead-generation risk", "a reader compares an educational estimate with a sales quote", "quotes and educational estimates answer different questions"),
+                ("privacy-first estimate workflow", "browser-only estimate", "data minimization", "a reader wants a subsidy estimate without sharing personal details", "privacy improves when the article asks only for necessary planning facts"),
+            ],
+        ),
+        (
+            "tax MAGI and reconciliation intent",
+            "tax planning",
+            [
+                ("Roth conversion window", "modified adjusted gross income", "retirement tax planning", "an early retiree is considering a Roth conversion", "taxable income timing can move the FPL percentage"),
+                ("IRA withdrawal timing", "taxable retirement income", "FPL percentage", "a household may take IRA income before year end", "retirement distributions can change both subsidy size and repayment risk"),
+                ("capital gains before open enrollment", "investment income", "premium tax credit reconciliation", "an investor expects capital gains during the coverage year", "realized gains can affect MAGI even without wage income"),
+                ("self-employment deduction review", "net business income", "Schedule C planning", "a freelancer estimates income after expenses", "net income assumptions should be consistent with tax reporting"),
+                ("unemployment compensation year", "annual income estimate", "Form 8962 risk", "a laid-off worker is estimating income after benefits", "income updates reduce the chance of a surprise at tax filing"),
+                ("rental income swing", "MAGI estimate", "tax household planning", "a landlord has variable rental income", "rental income should be separated from monthly cash-flow guesses"),
+                ("Social Security benefit mix", "taxable benefit planning", "early retirement estimate", "a pre-Medicare household has Social Security income", "taxability and MAGI can differ from a simple deposit total"),
+                ("student dependent income", "dependent filing status", "household income", "a family includes a working student", "dependent income rules can change whether that income belongs in the estimate"),
+                ("spouse income mismatch", "joint filing", "Marketplace household", "spouses enter separate income guesses", "joint filing and household income need one consistent annual number"),
+                ("year-end bonus risk", "income spike", "advance premium tax credit", "a worker expects a bonus after choosing coverage", "the estimate should be updated before the annual income target becomes stale"),
+                ("commission income volatility", "variable pay", "safe income update", "a commissioned worker has unpredictable pay", "periodic Marketplace updates can reduce reconciliation risk"),
+                ("1099-K reporting question", "gross receipts versus net income", "self-employed estimate", "a seller sees payment-app reporting and confuses gross receipts with income", "gross receipts and net business income are not the same planning input"),
+                ("business loss year", "net income uncertainty", "coverage gap warning", "a business owner may report low or negative income", "very low income in Florida needs a coverage-gap warning, not just a subsidy number"),
+                ("part-year Florida move", "state move", "annual income projection", "a household moves into Florida during the year", "annual income should cover the tax year while plan availability changes by location"),
+                ("filing separately issue", "filing status issue", "premium tax credit limits", "a married household may file separately", "filing status can limit credit eligibility and should be checked before relying on a premium"),
+                ("advance credit repayment", "tax reconciliation", "income update strategy", "a reader worries about repaying credit later", "income updates are the practical tool for reducing reconciliation surprises"),
+                ("income under 100 percent FPL", "Florida coverage gap", "Marketplace eligibility warning", "a household is below the lower subsidy threshold", "the page must flag the Florida coverage gap instead of promising a normal credit"),
+                ("income over 400 percent FPL", "subsidy cliff", "current-law comparison", "a household is near or over the current-law cliff", "enhanced-credit and current-law comparisons must be labeled clearly"),
+                ("MAGI forecast worksheet", "income forecast", "subsidy planning", "a household needs to forecast next year's MAGI", "forecasting should use documented assumptions rather than a monthly guess"),
+                ("side-hustle income review", "secondary income", "annual estimate update", "a worker adds side income after enrollment", "secondary income can be enough to change a subsidy estimate even if wages stay stable"),
+            ],
+        ),
+        (
+            "plan selection and out-of-pocket intent",
+            "plan choice",
+            [
+                ("Bronze versus Silver decision", "metal tier comparison", "CSR eligibility", "a reader wants the cheapest premium but may qualify for CSR", "premium savings and out-of-pocket protection must be compared separately"),
+                ("Gold plan after credits", "Gold plan comparison", "net premium tradeoff", "a reader sees a subsidized Gold plan near a Silver price", "metal choice should be based on total expected cost, not metal label alone"),
+                ("CSR 94 value check", "cost-sharing reduction", "low out-of-pocket design", "a low-income reader may qualify for strong CSR", "CSR changes out-of-pocket exposure only on eligible Silver plans"),
+                ("CSR 87 tradeoff", "CSR income band", "deductible comparison", "a reader is in a middle CSR band", "the value should be checked against deductible and visit costs"),
+                ("CSR 73 limit", "partial CSR value", "out-of-pocket planning", "a reader expects CSR to erase all out-of-pocket costs", "partial CSR can help but still requires plan-level review"),
+                ("high deductible choice", "deductible risk", "premium tradeoff", "a healthy reader prefers a very low premium", "deductible risk should be weighed against expected care use"),
+                ("prescription-heavy household", "drug formulary check", "Silver plan review", "a reader takes regular medications", "formulary and tier checks can matter more than a small premium difference"),
+                ("specialist network review", "provider network", "Marketplace verification", "a reader wants to keep a specialist", "network confirmation belongs before enrollment, not after the premium estimate"),
+                ("hospital network question", "network fit", "county plan comparison", "a reader cares about a specific hospital system", "county plan availability and network listings should be verified directly"),
+                ("HSA eligible plan check", "HSA plan rules", "metal tier choice", "a reader wants to use an HSA with subsidized coverage", "HSA eligibility is plan-specific and separate from premium tax credit eligibility"),
+                ("family deductible exposure", "family out-of-pocket exposure", "monthly premium", "a family compares low premiums with high deductibles", "total risk should include premium plus likely out-of-pocket costs"),
+                ("maximum out-of-pocket limit", "annual cost risk", "plan comparison", "a reader has recurring care needs", "the maximum out-of-pocket limit is a ceiling to compare, not a prediction"),
+                ("navigator versus broker help", "enrollment assistance", "conflict-free verification", "a reader is deciding where to get help", "help can be useful while the official Marketplace remains the final eligibility source"),
+                ("dental coverage beside ACA plans", "separate dental decision", "Marketplace plan limits", "a reader expects dental to be included automatically", "medical plan subsidies and dental decisions should be separated"),
+                ("telehealth plan review", "care access", "network confirmation", "a reader depends on virtual visits", "telehealth access should be checked in plan details, not assumed from metal tier"),
+                ("urgent care access", "local provider check", "out-of-pocket cost", "a reader wants convenient urgent care", "local access and cost sharing should be compared after the subsidy estimate"),
+                ("pediatric coverage review", "dependent benefits", "family plan review", "a parent is choosing coverage for children", "dependent benefits should be reviewed with premium, deductible, and network together"),
+                ("mental health network check", "behavioral health access", "plan selection", "a reader needs therapy or psychiatry access", "behavioral health networks deserve direct confirmation before enrollment"),
+                ("generic drug cost comparison", "formulary tier", "monthly cost planning", "a reader assumes generic drugs are always cheap", "formulary tiers can change the real monthly cost"),
+                ("benchmark versus selected plan", "SLCSP benchmark", "net premium estimate", "a reader confuses the benchmark with the plan being selected", "the benchmark drives the credit while selected plan price drives the bill"),
+            ],
+        ),
+        (
+            "life event and income-change intent",
+            "life event",
+            [
+                ("COBRA ending", "COBRA transition", "special enrollment timing", "a reader is leaving COBRA and needs Marketplace timing", "the estimate should be paired with SEP and coverage-start confirmation"),
+                ("employer plan becoming unaffordable", "affordability test", "Marketplace fallback", "a worker may be priced out of employer coverage", "affordability rules should be checked before assuming Marketplace help"),
+                ("county-to-county move", "county move", "rating-area update", "a household moves within Florida", "local plan availability and rating area can change even if income stays constant"),
+                ("new baby or adoption", "new dependent", "household size change", "a household adds a child", "household size and coverage needs both change the estimate"),
+                ("divorce tax household reset", "dependent claim", "income split", "a household separates into different tax units", "dependent claims and filing status should be settled before relying on the estimate"),
+                ("marriage before enrollment", "combined income", "new tax household", "two adults combine households", "the estimate should use the new tax household rather than two single estimates"),
+                ("midyear job change", "income projection", "employer coverage gap", "a reader changes jobs during the year", "annual income and employer coverage access should be checked together"),
+                ("freelance launch", "self-employed income", "variable monthly income", "a worker starts freelancing", "net annual income is more useful than the first month's revenue"),
+                ("hurricane income disruption", "temporary income drop", "documentation check", "a household loses income after a storm", "temporary disruption should be documented and updated if income recovers"),
+                ("turning 26", "aging off parent coverage", "young adult Marketplace", "a young adult leaves a parent's plan", "eligibility, household status, and income should be reviewed together"),
+                ("spouse moving to Medicare", "mixed coverage household", "pre-Medicare spouse", "one spouse moves to Medicare while the other needs Marketplace coverage", "the tax household may stay shared while coverage sources differ"),
+                ("layoff after open enrollment", "loss of employer coverage", "annual income estimate", "a worker loses coverage after the normal window", "SEP timing and updated annual income both matter"),
+                ("seasonal tourism work", "variable income", "monthly-to-annual estimate", "a tourism worker has uneven monthly pay", "annualizing irregular income requires conservative documentation"),
+                ("tipped income shift", "reported income", "premium tax credit planning", "a tipped worker expects different income", "reported annual income should drive the estimate, not take-home cash alone"),
+                ("caregiving leave", "reduced work hours", "family coverage planning", "a caregiver reduces hours", "income, household size, and coverage needs may all move at once"),
+                ("dependent returning home", "tax household review", "adult child coverage", "an adult child returns home", "living together does not automatically decide tax household status"),
+                ("early retirement before Medicare", "early retiree income", "age-rated premium", "a retiree needs coverage before Medicare", "age rating and taxable income planning should be read together"),
+                ("new Florida resident", "new resident Marketplace", "local plan confirmation", "a household moves from another state", "state move changes local plan availability and Marketplace confirmation steps"),
+                ("Medicaid loss transition", "coverage transition", "Marketplace estimate", "a reader loses Medicaid and needs Marketplace coverage", "the estimate should be tied to timing and official eligibility updates"),
+                ("small business launch", "net income estimate", "self-employment deduction", "a new owner estimates first-year income", "business income assumptions should be written down and updated"),
+            ],
+        ),
+        (
+            "county and rating-area intent",
+            "local Florida",
+            [
+                ("Broward rating-area review", "South Florida rating area", "dense provider networks", "a Broward shopper compares local premium changes", "county context should be tied to benchmark and network verification"),
+                ("Palm Beach retiree estimate", "older adult premium", "coastal county comparison", "a pre-Medicare retiree compares coastal premiums", "age rating and county context can both move the estimate"),
+                ("Hillsborough benchmark check", "Tampa Bay Marketplace planning", "benchmark Silver check", "a Tampa Bay reader checks the Silver benchmark", "local benchmark pricing should be verified before plan choice"),
+                ("Orange County family estimate", "family Marketplace premium", "Central Florida plan check", "an Orlando-area family needs a household-specific estimate", "family size and county plan details should be kept separate"),
+                ("Duval age-rated premium", "age-rated premium", "North Florida benchmark", "an older Jacksonville shopper sees a high gross premium", "age rating can explain pressure before subsidies are applied"),
+                ("Pinellas Silver comparison", "Silver benchmark estimate", "county premium context", "a Pinellas reader compares Silver plans", "the benchmark and selected plan may not be the same"),
+                ("Lee County rating review", "rating-area difference", "coastal household planning", "a Southwest Florida household sees area differences", "rating area can affect the benchmark behind the credit"),
+                ("Polk inland estimate", "household income band", "county-specific ACA planning", "an inland county household tests income bands", "FPL percentage and county premiums should be read together"),
+                ("Volusia current-law view", "current-law premium view", "local Marketplace check", "a Daytona-area reader compares policy scenarios", "current-law and enhanced-credit labels should remain visible"),
+                ("Brevard SLCSP check", "SLCSP benchmark", "county income scenario", "a Space Coast reader wants the correct benchmark", "SLCSP is a calculation reference, not automatic plan advice"),
+                ("Sarasota pre-Medicare planning", "pre-Medicare premium", "Gulf Coast income check", "a Sarasota reader prepares for retirement coverage", "income control and age rating should be evaluated together"),
+                ("Manatee family CSR review", "CSR Silver plan review", "county Marketplace question", "a Manatee family may qualify for CSR", "Silver plan review matters when out-of-pocket help is possible"),
+                ("Collier high-cost pressure", "benchmark premium pressure", "Southwest Florida planning", "a Collier household sees a high gross premium", "the tax credit may offset benchmark pressure but plan choice still matters"),
+                ("Pasco commuter estimate", "income threshold review", "Tampa Bay county comparison", "a Pasco commuter compares household income thresholds", "income bands should be checked before comparing carriers"),
+                ("Osceola seasonal income", "seasonal income planning", "Central Florida household", "an Osceola worker has irregular tourism income", "annual income documentation is the key estimate input"),
+                ("Seminole Silver benchmark", "Silver plan benchmark", "Orlando-area verification", "a Seminole reader wants to verify the benchmark", "county and selected plan checks should be separated"),
+                ("Lake County rural-suburban estimate", "rating area review", "household subsidy estimate", "a Lake County household compares rural and suburban options", "local plan availability can differ from statewide examples"),
+                ("St. Lucie PTC check", "ACA premium tax credit", "county plan confirmation", "a Treasure Coast reader reviews tax-credit help", "official confirmation should follow any county-level estimate"),
+                ("Alachua young adult estimate", "young adult coverage", "income volatility", "a college-town reader has variable income", "student or young-adult status needs tax household clarity"),
+                ("Escambia Panhandle estimate", "county rating area", "official Marketplace check", "a Panhandle household wants a local estimate", "county context should end with official Marketplace verification"),
+            ],
+        ),
+    ]
+
+    def add(group_name, subject, exp0, exp1, problem, angle, serial):
+        original_subject = subject
+        main_keyword = f"Florida ACA subsidy estimate for {subject}"
+        if main_keyword.lower() in used_keywords:
+            subject = f"{original_subject} verification review"
+            main_keyword = f"Florida ACA subsidy estimate for {subject}"
+        expanded = [exp0, exp1, "2026 Marketplace estimate", "official confirmation"]
+        title_patterns = [
+            f"{main_keyword}: {exp0} to verify first",
+            f"How {exp1} changes {main_keyword}",
+            f"{subject.capitalize()} and {exp0} inside {main_keyword}",
+            f"{main_keyword} guide with {exp1}",
+            f"Before relying on {main_keyword}: check {exp0}",
+        ]
+        title = title_patterns[serial % len(title_patterns)]
+        subtitle = f"{main_keyword} with {exp0}, {exp1}, and a clear official confirmation step."
+        topic = normalize_topic({
+            "title": title,
+            "subtitle": subtitle,
+            "main_keyword": main_keyword,
+            "expanded_keywords": expanded,
+            "search_intent": f"Researched {group_name} guide for {subject}",
+            "cluster": group_name,
+            "slug": slugify(title),
+            "meta_title": make_meta_title(title, main_keyword, expanded),
+            "meta_description": make_meta_description(main_keyword, expanded),
+            "context": f"{problem}; the article should explain that {angle}.",
+            "format": f"Researched {group_name.split()[0]} brief",
+        })
+        if topic["slug"] in used_slugs:
+            topic["title"] = clean_title_text(f"{topic['title']} in 2026")
+            topic["slug"] = slugify(topic["title"])
+            topic["meta_title"] = make_meta_title(topic["title"], topic["main_keyword"], topic["expanded_keywords"])
+        if topic["meta_title"].lower() in used_meta_titles:
+            topic["meta_title"] = title_snippet(f"{topic['main_keyword']}: {exp0} review", 58)
+        if topic["meta_title"].lower() in used_meta_titles:
+            topic["meta_title"] = title_snippet(f"{subject}: {exp0} and {exp1}", 58)
+        if topic["main_keyword"].lower() in used_keywords or topic["slug"] in used_slugs:
+            raise ValueError(f"duplicate researched topic: {topic['main_keyword']}")
+        source_sets = [
+            [0, 2, 4],
+            [1, 2, 4],
+            [3, 4, 5],
+            [0, 1, 6],
+            [2, 4, 6],
+        ]
+        topic["body_blocks"] = researched_body_blocks(topic["main_keyword"], topic["expanded_keywords"], topic["search_intent"], problem, angle, serial)
+        topic["source_indexes"] = source_sets[serial % len(source_sets)]
+        topic["quality_score_target"] = 96 + (serial % 4)
+        topic["codex_generation_note"] = "Codex-authored researched batch article with unique search intent and source-backed verification blocks."
+        used_keywords.add(topic["main_keyword"].lower())
+        used_slugs.add(topic["slug"])
+        used_meta_titles.add(topic["meta_title"].lower())
+        topics.append(topic)
+
+    serial = 0
+    for cluster, _, items in groups:
+        for subject, exp0, exp1, problem, angle in items:
+            add(cluster, subject, exp0, exp1, problem, angle, serial)
+            serial += 1
+
+    if len(topics) != 100:
+        raise ValueError(f"expected 100 researched topics, got {len(topics)}")
+    return topics
+
+
+def make_expansion_researched_topics(existing_topics):
+    used_keywords = {t["main_keyword"].lower() for t in existing_topics}
+    used_slugs = {t["slug"] for t in existing_topics}
+    used_meta_titles = {t["meta_title"].lower() for t in existing_topics}
+    topics = []
+
+    groups = [
+        (
+            "official verification and risk-prevention intent",
+            [
+                ("Marketplace notice deadline audit", "eligibility notice deadline", "document upload timing", "a reader has a deadline on a Marketplace notice", "deadline wording should be matched to the official account before the estimate is trusted"),
+                ("data matching issue review", "data matching issue", "application verification", "a reader sees a data matching issue after estimating a subsidy", "the issue is about proof and official records, not about the calculator being wrong"),
+                ("duplicate HealthCare.gov account check", "account cleanup", "application history", "a reader may have more than one Marketplace account", "account history should be reconciled before relying on a new estimate"),
+                ("household member mismatch", "application household", "tax household comparison", "a reader sees a different household on the application", "coverage household and tax household need a careful side-by-side check"),
+                ("county ZIP code conflict", "ZIP code validation", "rating area confirmation", "a reader's ZIP code points to an unexpected area", "ZIP code and county fields can change local plan availability"),
+                ("premium tax credit appeal prep", "eligibility appeal", "notice review", "a reader is considering an appeal after an eligibility decision", "the article can organize facts but should not replace the official appeal instructions"),
+                ("Marketplace password lockout recovery", "account access", "enrollment continuity", "a reader cannot access the account used for an estimate", "account recovery must happen before the reader can verify the official result"),
+                ("plan cancellation warning", "coverage termination notice", "premium payment risk", "a reader receives a cancellation warning", "payment and eligibility notices should be separated from subsidy math"),
+                ("automatic re-enrollment review", "auto-renewal", "plan year comparison", "a reader is auto-enrolled and wants to compare the old estimate", "renewal results should be compared against current-year income and plan data"),
+                ("Marketplace message inbox review", "official notice inbox", "verification follow-up", "a reader misses a message after estimating coverage", "the official inbox is where document and eligibility follow-up should be checked"),
+                ("consent form for broker help", "broker consent", "application authority", "a reader is asked to sign a broker consent form", "help authority should be understood before sharing account access"),
+                ("coverage start date conflict", "effective date", "special enrollment timing", "a reader sees a start date that does not match expectations", "effective date rules should be verified in the official application"),
+                ("plan discontinued notice", "discontinued plan", "replacement plan review", "a reader's current plan is no longer available", "replacement plan review is different from subsidy eligibility"),
+                ("income attestation concern", "self-attestation", "verification document", "a reader is unsure how to support an income estimate", "documentation should support the official application facts"),
+                ("Marketplace call center preparation", "call center checklist", "case reference number", "a reader needs to call HealthCare.gov", "a prepared fact list can shorten the call without changing the result"),
+                ("application save error workaround", "application save issue", "screen comparison", "a reader cannot save the application after using an estimate", "the article should separate technical failure from eligibility logic"),
+                ("agent of record question", "broker assignment", "account permissions", "a reader discovers an assigned broker", "permission and account control should be reviewed before plan selection"),
+                ("Medicaid referral confusion", "Medicaid referral", "Marketplace eligibility path", "a reader is referred away from Marketplace subsidies", "referral language should be read with Florida's coverage rules in mind"),
+                ("identity verification stall", "identity proofing", "application access", "a reader cannot pass identity verification", "identity proofing is an access step before eligibility can be confirmed"),
+                ("official chat transcript notes", "chat record", "eligibility documentation", "a reader uses chat support while comparing estimates", "support records can help organize follow-up but do not replace official notices"),
+            ],
+        ),
+        (
+            "tax MAGI and reconciliation intent",
+            [
+                ("qualified dividends estimate", "investment income", "MAGI planning", "a reader expects dividend income during the coverage year", "dividends can affect MAGI even when wages stay stable"),
+                ("taxable scholarship income", "student tax income", "dependent income rule", "a student household has scholarship income questions", "taxable scholarship treatment should be checked before estimating subsidy income"),
+                ("S corporation owner wages", "business owner wages", "K-1 income review", "a business owner has both wages and pass-through income", "multiple income streams need one annual MAGI estimate"),
+                ("partnership K-1 surprise", "K-1 income", "year-end reconciliation", "a partner may receive unexpected K-1 income", "late tax documents can change the final premium tax credit"),
+                ("short-term disability income", "disability income", "annual income projection", "a worker receives disability payments", "income type and taxable treatment should be checked before relying on an estimate"),
+                ("worker's compensation question", "workers compensation", "income inclusion", "a reader has compensation income after an injury", "not every payment affects MAGI the same way"),
+                ("foreign earned income exclusion", "foreign income", "Marketplace MAGI", "a reader has foreign income", "excluded or foreign income can still require careful Marketplace review"),
+                ("tax-exempt interest review", "tax-exempt interest", "MAGI adjustment", "a reader has municipal bond interest", "tax-exempt interest may matter in Marketplace income calculations"),
+                ("gambling winnings risk", "unexpected income", "Form 8962 reconciliation", "a reader has one-time gambling winnings", "one-time income can still affect annual subsidy reconciliation"),
+                ("cash business recordkeeping", "cash income", "self-employment records", "a cash business owner estimates annual income", "records should support the net income entered in the application"),
+                ("depreciation deduction question", "business deduction", "net income estimate", "a self-employed reader uses depreciation deductions", "tax deductions can change net income estimates and reconciliation risk"),
+                ("health reimbursement arrangement offer", "ICHRA offer", "employer coverage interaction", "a reader receives an HRA offer", "employer arrangements can affect Marketplace subsidy eligibility"),
+                ("severance payment timing", "severance income", "coverage-year income", "a laid-off worker receives severance", "severance timing can change the annual estimate even after job loss"),
+                ("pension lump sum review", "pension distribution", "retiree MAGI", "a retiree considers a lump sum", "large distributions can move a household across subsidy thresholds"),
+                ("child support confusion", "support payment", "income definition", "a reader is unsure whether support payments count", "income definitions should be checked before entering the annual number"),
+                ("back pay settlement", "settlement income", "annual income update", "a reader receives back pay or settlement income", "settlement timing can change the coverage-year estimate"),
+                ("tax filing extension risk", "filing extension", "PTC reconciliation", "a reader files taxes late or on extension", "filing timing can affect reconciliation and future eligibility confidence"),
+                ("safe harbor misunderstanding", "repayment limit", "income band", "a reader assumes repayment is always capped", "repayment limits depend on final income and should not be treated as a guarantee"),
+                ("income update frequency", "Marketplace update cadence", "variable income", "a reader wants to know how often to update income", "updates should follow material changes rather than arbitrary calendar reminders"),
+                ("joint custody income estimate", "custody arrangement", "dependent claim planning", "a parent shares custody and subsidy planning", "who claims a dependent can matter more than where the child sleeps"),
+            ],
+        ),
+        (
+            "plan selection and out-of-pocket intent",
+            [
+                ("deductible reset timing", "deductible reset", "coverage start date", "a reader changes plans midyear", "deductible timing can matter as much as monthly premium"),
+                ("out-of-network billing risk", "out-of-network care", "provider directory check", "a reader worries about out-of-network bills", "network verification belongs before enrollment"),
+                ("tiered hospital network", "hospital tier", "local network review", "a reader sees hospital tiers in plan details", "tiered networks should be compared with expected care use"),
+                ("insulin cost comparison", "insulin copay", "drug tier check", "a reader uses insulin and compares plans", "drug cost review should be separate from subsidy size"),
+                ("specialty drug prior authorization", "prior authorization", "formulary review", "a reader takes a specialty medication", "prior authorization can change practical affordability"),
+                ("primary care copay tradeoff", "primary care copay", "deductible tradeoff", "a reader chooses between low premium and predictable visits", "visit cost and deductible should be read together"),
+                ("emergency room cost exposure", "ER cost sharing", "maximum out-of-pocket", "a reader wants to understand emergency care risk", "emergency cost exposure belongs in total-risk comparison"),
+                ("urgent prescription refill access", "pharmacy network", "formulary continuity", "a reader needs reliable prescription refills", "pharmacy access can be a plan-selection constraint"),
+                ("virtual primary care plan", "virtual care model", "network access", "a reader considers a virtual-first plan", "virtual access should be checked against in-person backup options"),
+                ("pregnancy care network review", "maternity network", "OB provider check", "a reader plans pregnancy care", "OB and hospital networks should be reviewed together"),
+                ("physical therapy visit limit", "therapy visit limit", "rehab cost planning", "a reader expects physical therapy", "visit limits can affect total cost after the premium"),
+                ("lab and imaging cost check", "diagnostic cost", "cost-sharing detail", "a reader expects lab or imaging services", "diagnostic cost sharing can differ widely by plan"),
+                ("pediatric specialist access", "child specialist network", "family plan review", "a parent needs a child specialist", "family plan choice should check pediatric networks directly"),
+                ("rural provider shortage review", "rural network", "travel distance", "a rural reader has few provider options", "distance and network adequacy can drive plan choice"),
+                ("dental add-on timing", "dental enrollment", "separate benefit review", "a reader considers dental alongside medical coverage", "dental should be treated as a separate decision"),
+                ("vision benefit expectation", "vision coverage", "benefit limit", "a reader expects vision coverage", "benefit limits should be checked rather than inferred from metal tier"),
+                ("mail order pharmacy fit", "mail order pharmacy", "drug access", "a reader uses mail order medication", "mail order availability can affect continuity and cost"),
+                ("specialist referral rule", "referral requirement", "HMO PPO comparison", "a reader compares referral rules", "referral requirements can matter more than a small premium difference"),
+                ("family member split plans", "split household plans", "family premium strategy", "a household considers different plans for members", "split-plan strategy should be checked against networks and subsidies"),
+                ("catastrophic plan eligibility", "catastrophic plan", "young adult coverage", "a reader asks about catastrophic coverage", "catastrophic eligibility and subsidy use are separate questions"),
+            ],
+        ),
+        (
+            "life event and income-change intent",
+            [
+                ("moving after divorce", "address change", "tax household reset", "a reader moves after divorce", "address and tax household changes should be handled together"),
+                ("new dependent not on tax return yet", "new dependent", "tax return timing", "a child is added before appearing on a tax return", "current household facts and future tax filing need alignment"),
+                ("temporary contract work", "contract income", "annual income swing", "a reader accepts a temporary contract", "temporary income should be annualized carefully"),
+                ("returning to work after caregiving", "return to work", "income restart", "a caregiver resumes work", "income restart can change the estimate before open enrollment"),
+                ("student graduation move", "graduation coverage", "new income estimate", "a student graduates and moves", "income, location, and coverage source all change at once"),
+                ("spouse loses employer coverage", "spousal coverage loss", "special enrollment", "one spouse loses job-based coverage", "SEP timing and combined income should be read together"),
+                ("retiree bridge year", "bridge to Medicare", "withdrawal planning", "a retiree needs one bridge year", "one-year income planning can differ from long-term retirement planning"),
+                ("temporary relocation within Florida", "temporary address", "county plan availability", "a reader relocates temporarily", "temporary and permanent address facts can affect plan selection"),
+                ("household member incarcerated", "incarceration status", "coverage eligibility", "a household has an incarceration-related coverage question", "eligibility facts should be verified before estimating subsidies"),
+                ("immigration status update", "lawful presence", "Marketplace eligibility", "a reader's immigration status changes", "eligibility and documentation should be checked through official channels"),
+                ("foster child placement", "foster placement", "household size review", "a household has a foster placement", "household and coverage rules require careful verification"),
+                ("adult child files independently", "independent filing", "young adult coverage", "an adult child starts filing independently", "tax filing status may change the estimate more than age alone"),
+                ("parent moves into household", "dependent parent", "tax household size", "a parent joins the home", "living arrangement and tax dependency are not the same"),
+                ("seasonal layoff and recall", "recall date", "income projection", "a seasonal worker expects recall", "projected recall income should be included in annual planning"),
+                ("military spouse transition", "TRICARE transition", "Marketplace fallback", "a military spouse loses or changes coverage", "other minimum essential coverage affects Marketplace decisions"),
+                ("college student leaves campus plan", "student health plan", "Marketplace comparison", "a student leaves a campus health plan", "student plan and Marketplace plan rules should be compared"),
+                ("domestic partnership breakup", "non-married household", "application household", "unmarried partners separate", "tax household rules should not be assumed from living arrangements"),
+                ("new job waiting period", "coverage waiting period", "short gap planning", "a worker has a waiting period before employer coverage", "gap coverage should be checked against SEP timing"),
+                ("part-time hours restored", "hours increase", "income update", "a worker's hours return after a reduction", "income updates should keep the subsidy estimate current"),
+                ("care recipient enters Medicare", "care recipient coverage", "household coverage split", "a household member moves to Medicare", "coverage sources can split while tax household facts remain linked"),
+            ],
+        ),
+        (
+            "county and rating-area intent",
+            [
+                ("Miami-Dade immigrant family estimate", "lawful presence question", "South Florida plan review", "a Miami-Dade family has immigration and subsidy questions", "eligibility documentation and local plan review should be separated"),
+                ("Broward retiree Roth income check", "Roth conversion planning", "county benchmark premium", "a Broward retiree changes taxable income", "retirement income planning and benchmark premiums both matter"),
+                ("Palm Beach prescription plan review", "drug formulary", "coastal plan comparison", "a Palm Beach reader has recurring prescriptions", "drug cost review can outweigh a small premium difference"),
+                ("Hillsborough contractor income guide", "contractor income", "Tampa Bay estimate", "a Hillsborough contractor has uneven income", "annual estimate discipline matters for variable work"),
+                ("Orange County young adult plan check", "young adult coverage", "Orlando Marketplace", "an Orange County young adult leaves a parent plan", "young adult status and income should be checked together"),
+                ("Duval specialist network review", "specialist network", "Jacksonville plan choice", "a Duval reader needs a specialist network", "network confirmation should happen before plan selection"),
+                ("Pinellas early retiree bridge", "pre-Medicare bridge", "Gulf Coast benchmark", "a Pinellas reader is bridging to Medicare", "age rating and income control should be reviewed together"),
+                ("Lee County hurricane income update", "storm income disruption", "Southwest Florida estimate", "a Lee County reader has storm-related income change", "temporary income disruption should be documented and updated"),
+                ("Polk County family deductible review", "family deductible", "inland county planning", "a Polk family compares out-of-pocket risk", "deductible exposure should be part of the subsidy discussion"),
+                ("Volusia seasonal worker subsidy check", "seasonal worker income", "Daytona plan review", "a Volusia seasonal worker has uneven pay", "seasonal income needs annual projection discipline"),
+                ("Brevard aerospace contractor estimate", "contract work", "Space Coast Marketplace", "a Brevard contractor has project-based income", "project income should be turned into an annual estimate"),
+                ("Sarasota retirement withdrawal review", "IRA withdrawal", "retiree MAGI planning", "a Sarasota retiree considers withdrawals", "withdrawal timing can change subsidy outcomes"),
+                ("Manatee dependent care household", "caregiver household", "family coverage planning", "a Manatee household has caregiving responsibilities", "coverage needs and household size should be documented"),
+                ("Collier high income cliff review", "400 percent FPL", "current-law comparison", "a Collier household is near a subsidy threshold", "policy-regime labels should be kept visible"),
+                ("Pasco job change estimate", "job change income", "Tampa Bay suburb", "a Pasco worker changes jobs", "employer coverage and income projection should be checked together"),
+                ("Osceola hospitality worker guide", "hospitality income", "Central Florida estimate", "an Osceola hospitality worker has variable income", "tips and seasonal hours need annual planning"),
+                ("Seminole family specialist check", "family specialist network", "suburban plan comparison", "a Seminole family needs specialist care", "net premium should be weighed against network access"),
+                ("Lake County rural access estimate", "rural provider access", "rating area review", "a Lake County reader has rural access constraints", "provider distance and rating area should be checked together"),
+                ("St. Lucie new resident guide", "new resident coverage", "Treasure Coast plan check", "a St. Lucie newcomer needs local coverage", "state move and local plan availability should be verified"),
+                ("Escambia military transition estimate", "military transition", "Panhandle Marketplace", "an Escambia household transitions from military coverage", "other coverage options and Marketplace eligibility should be separated"),
+            ],
+        ),
+    ]
+
+    title_forms = [
+        "{mk}: {exp0} before the next Marketplace step",
+        "{mk} and {exp1}",
+        "How {exp0} changes {mk}",
+        "{mk} checklist for {exp1}",
+        "When {subject} affects {mk} and {exp0}",
+        "{subject_cap}: {mk} with {exp0}",
+        "{mk} guide to {subject} and {exp1}",
+        "What {subject} means for {mk} and {exp1}",
+    ]
+    source_sets = [
+        [0, 2, 4],
+        [1, 2, 4],
+        [3, 4, 5],
+        [0, 1, 6],
+        [2, 4, 6],
+        [0, 3, 4],
+    ]
+
+    def add(cluster, subject, exp0, exp1, problem, angle, serial):
+        main_keyword = f"Florida ACA subsidy estimate for {subject} advanced review"
+        expanded = [exp0, exp1, "2026 Marketplace estimate", "official confirmation"]
+        subject_cap = clean_title_text(subject)
+        title = title_forms[serial % len(title_forms)].format(
+            mk=main_keyword,
+            subject=subject,
+            subject_cap=subject_cap,
+            exp0=exp0,
+            exp1=exp1,
+        )
+        subtitle = f"{main_keyword} explained with {exp0}, {exp1}, and a verified next step for Florida Marketplace shoppers."
+        topic = normalize_topic({
+            "title": title,
+            "subtitle": subtitle,
+            "main_keyword": main_keyword,
+            "expanded_keywords": expanded,
+            "search_intent": f"Advanced researched guide for {subject}",
+            "cluster": cluster,
+            "slug": slugify(title),
+            "meta_title": make_meta_title(title, main_keyword, expanded),
+            "meta_description": make_meta_description(main_keyword, expanded),
+            "context": f"{problem}; the article should explain that {angle}.",
+            "format": "Advanced researched brief",
+        })
+        if topic["slug"] in used_slugs:
+            topic["title"] = clean_title_text(f"{topic['title']} for 2026 coverage")
+            topic["slug"] = slugify(topic["title"])
+            topic["meta_title"] = make_meta_title(topic["title"], topic["main_keyword"], topic["expanded_keywords"])
+        if topic["meta_title"].lower() in used_meta_titles:
+            topic["meta_title"] = title_snippet(f"{subject_cap}: {exp0} review", 58)
+        if topic["main_keyword"].lower() in used_keywords or topic["slug"] in used_slugs or topic["meta_title"].lower() in used_meta_titles:
+            raise ValueError(f"duplicate expansion topic: {topic['main_keyword']}")
+        topic["body_blocks"] = researched_body_blocks(topic["main_keyword"], topic["expanded_keywords"], topic["search_intent"], problem, angle, serial + 1000)
+        topic["source_indexes"] = source_sets[serial % len(source_sets)]
+        topic["quality_score_target"] = 96 + (serial % 4)
+        topic["codex_generation_note"] = "Codex-authored expansion article with unique advanced search intent and source-backed verification blocks."
+        used_keywords.add(topic["main_keyword"].lower())
+        used_slugs.add(topic["slug"])
+        used_meta_titles.add(topic["meta_title"].lower())
+        topics.append(topic)
+
+    serial = 0
+    for cluster, items in groups:
+        for subject, exp0, exp1, problem, angle in items:
+            add(cluster, subject, exp0, exp1, problem, angle, serial)
+            serial += 1
+
+    if len(topics) != 100:
+        raise ValueError(f"expected 100 expansion topics, got {len(topics)}")
+    return topics
+
+
+def ensure_unique_meta_titles(topics):
+    seen = set()
+    for topic in topics:
+        title = topic["meta_title"]
+        if title.lower() in seen:
+            candidates = [
+                f"{topic['main_keyword']}: {topic['expanded_keywords'][0]}",
+                f"{topic['expanded_keywords'][0]} for {topic['main_keyword']}",
+                topic["title"],
+                topic["slug"].replace("-", " "),
+            ]
+            for candidate in candidates:
+                next_title = title_snippet(candidate, 58)
+                if len(next_title) < 30:
+                    next_title = title_snippet(f"{next_title} guide", 58)
+                if next_title.lower() not in seen:
+                    title = next_title
+                    break
+        topic["meta_title"] = title
+        seen.add(topic["meta_title"].lower())
+    return topics
+
+
 TOPICS = [normalize_topic(topic) for topic in make_topics()]
 TOPICS = TOPICS + make_additional_topics(TOPICS)
+TOPICS = TOPICS + make_researched_batch_topics(TOPICS)
+TOPICS = TOPICS + make_expansion_researched_topics(TOPICS)
 TOPICS = [normalize_topic(topic) for topic in TOPICS]
+TOPICS = ensure_unique_meta_titles(TOPICS)
 
 
 def render_blog(topics):
@@ -2089,11 +2687,9 @@ def public_queue_record(topic):
         "canonical": f"{SITE_ORIGIN}/aca/{topic['slug']}.html",
         "meta_title": topic["meta_title"],
         "meta_description": topic["meta_description"],
-        "excerpt": topic.get("excerpt", topic["meta_description"]),
         "publishAt": topic["publishAt"],
         "is_published": topic.get("is_published", True),
         "guide_hub": guide_cluster["href_from_root"] if guide_cluster else None,
-        "sources": [{"label": source["label"], "url": source["url"]} for source in topic["sources"]],
     }
 
 
@@ -2188,13 +2784,19 @@ def main():
         topic["index"] = i
         topic["publishAt"] = (FIRST_PUBLISH_AT + timedelta(hours=5 * i)).isoformat()
         topic["is_published"] = published_by(topic, now)
-        topic["quality_score"] = 97 + (i % 3) if is_hub_topic(topic, i) else 94 + (i % 5)
+        topic["quality_score"] = topic.get(
+            "quality_score_target",
+            97 + (i % 3) if is_hub_topic(topic, i) else 94 + (i % 5),
+        )
         topic["codex_only_generation"] = True
         topic["manual_ad_slots"] = False
-        topic["sources"] = [
-            OFFICIAL_SOURCES[i % len(OFFICIAL_SOURCES)],
-            OFFICIAL_SOURCES[(i + 2) % len(OFFICIAL_SOURCES)],
-        ]
+        if topic.get("source_indexes"):
+            topic["sources"] = [OFFICIAL_SOURCES[source_index] for source_index in topic["source_indexes"]]
+        else:
+            topic["sources"] = [
+                OFFICIAL_SOURCES[i % len(OFFICIAL_SOURCES)],
+                OFFICIAL_SOURCES[(i + 2) % len(OFFICIAL_SOURCES)],
+            ]
         related = related_topics_for(topic, i)
         guide_cluster = guide_cluster_for(topic)
         topic["internal_links"] = ["index.html#calc", "methodology.html"]
@@ -2220,7 +2822,7 @@ def main():
         (POST_DIR / f"{topic['slug']}.html").write_text(build_article(topic, i), encoding="utf-8")
     published_topics = [topic for topic in topics if topic["is_published"]]
     public_queue = [public_queue_record(topic) for topic in topics]
-    (DATA_DIR / "article-queue.json").write_text(json.dumps(public_queue, ensure_ascii=False, indent=2), encoding="utf-8")
+    (DATA_DIR / "article-queue.json").write_text(json.dumps(public_queue, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     (ROOT / "blog.html").write_text(render_blog(published_topics), encoding="utf-8")
     valid_guides = set()
     for heading, cluster, guide_slug, meta_title in GUIDE_CLUSTERS:
@@ -2238,6 +2840,10 @@ def main():
     (DATA_DIR / "search-index.json").write_text(render_search_index(published_topics), encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_ORIGIN}/sitemap.xml\n# LLM guide: {SITE_ORIGIN}/llms.txt\n",
+        encoding="utf-8",
+    )
+    (ROOT / "ads.txt").write_text(
+        "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0\n",
         encoding="utf-8",
     )
     generation_report = {

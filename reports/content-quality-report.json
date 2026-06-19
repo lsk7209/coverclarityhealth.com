@@ -1,10 +1,10 @@
 {
-  "queue_count": 200,
+  "queue_count": 400,
   "quality_score_min_max": [
     94,
     99
   ],
-  "codex_only_articles": 200,
+  "codex_only_articles": 400,
   "manual_ad_slot_articles": 0,
   "site_origin": "https://coverclarityhealth.com",
   "production_site_origin_required": true,
@@ -12,30 +12,30 @@
   "vercel_json_present": true,
   "content_quality_workflow_present": true,
   "readme_present": true,
-  "article_files": 200,
-  "published_article_files": 52,
-  "scheduled_article_files": 148,
+  "article_files": 400,
+  "published_article_files": 53,
+  "scheduled_article_files": 347,
   "guide_files": 5,
-  "feed_items": 52,
-  "sitemap_urls": 61,
-  "sitemap_article_urls": 52,
+  "feed_items": 53,
+  "sitemap_urls": 62,
+  "sitemap_article_urls": 53,
   "sitemap_guide_urls": 0,
-  "search_index_documents": 57,
-  "search_index_articles": 53,
+  "search_index_documents": 58,
+  "search_index_articles": 54,
   "search_index_guides": 0,
   "search_index_trust_pages": 4,
-  "blog_size_bytes": 33774,
+  "blog_size_bytes": 33837,
   "blog_schema_posts": 10,
-  "html_files_checked": 215,
-  "html_with_skip_links": 215,
-  "html_with_focus_visible": 215,
-  "html_with_search_discovery": 215,
+  "html_files_checked": 415,
+  "html_with_skip_links": 415,
+  "html_with_focus_visible": 415,
+  "html_with_search_discovery": 415,
   "opensearch_present": true,
   "public_origin_mismatch_count": 0,
   "llms_has_sitemap": true,
   "llms_has_feed": true,
   "llms_has_search_index": true,
-  "visible_guide_links": 100,
+  "visible_guide_links": 300,
   "article_feed_alt_missing": 0,
   "article_trust_missing": 0,
   "article_cta_missing": 0,
@@ -43,11 +43,11 @@
   "article_external_link_missing": 0,
   "overused_sentence_count": 0,
   "schema_counts": {
-    "Article": 200,
-    "BreadcrumbList": 200,
-    "Organization": 200,
-    "WebSite": 200,
-    "FAQPage": 143
+    "Article": 400,
+    "BreadcrumbList": 400,
+    "Organization": 400,
+    "WebSite": 400,
+    "FAQPage": 276
   },
   "guide_counts": {
     "county-and-rating-area-guides.html": 0,
@@ -57,22 +57,22 @@
     "tax-magi-and-reconciliation-guides.html": 0
   },
   "word_count_min_avg_max": [
-    1407,
-    1724,
-    2656
+    1365,
+    1609,
+    2648
   ],
   "hub_word_min_avg_max": [
-    2351,
-    2481,
-    2656
+    2335,
+    2474,
+    2648
   ],
   "nonhub_word_min_avg_max": [
-    1407,
-    1590,
-    1791
+    1365,
+    1539,
+    1790
   ],
   "first_publish_at": "2026-06-08T13:23:00+09:00",
-  "last_publish_at": "2026-07-20T00:23:00+09:00",
+  "last_publish_at": "2026-08-30T16:23:00+09:00",
   "errors": [],
   "error_count": 0
 }
