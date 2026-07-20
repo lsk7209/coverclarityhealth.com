@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 19
+      "article_count": 20
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5721,6 +5721,34 @@
         "aca/what-plan-cancellation-warning-means-for-florida-aca-subsidy-estimate-for-plan-cancellation-warning-advanced.html",
         "aca/florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-marketplace-message-inbox-review-advanced-review-and-verification-follow-up.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-coverage-gap-warning-check-below-100-percent-fpl",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for coverage gap warning: check below 100 percent FPL",
+      "subtitle": "Florida ACA subsidy estimate for coverage gap warning with below 100 percent FPL, Florida Medicaid status, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-coverage-gap-warning-check-below-100-percent-fpl.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-coverage-gap-warning-check-below-100-percent-fpl.html",
+      "main_keyword": "Florida ACA subsidy estimate for coverage gap warning",
+      "expanded_keywords": [
+        "Below 100 percent FPL",
+        "Florida Medicaid status",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for coverage gap warning explained with Below 100 percent FPL, Florida Medicaid status, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-21T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-message-inbox-review-advanced-review-and-verification-follow-up.html",
+        "aca/how-broker-consent-changes-florida-aca-subsidy-estimate-for-consent-form-for-broker-help-advanced-review.html"
       ]
     }
   ]

@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53349
+        "bytes": 53318
       },
       {
         "file": "index.html",
@@ -91,19 +91,19 @@
       },
       {
         "file": "blog.html",
-        "bytes": 14191
+        "bytes": 14199
+      },
+      {
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 13569
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 13312
-      },
-      {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 12994
       }
     ],
-    "article_queue_bytes": 489794,
-    "search_index_bytes": 365985
+    "article_queue_bytes": 489793,
+    "search_index_bytes": 367942
   },
   "errors": [],
   "warnings": []
