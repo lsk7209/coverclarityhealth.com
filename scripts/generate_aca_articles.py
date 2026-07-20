@@ -2455,6 +2455,11 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
         if has_items
         else f"{heading} will collect focused Florida ACA subsidy articles once scheduled guides in this cluster reach their publish time."
     )
+    meta_description = (
+        f"{heading}: {len(items)} Florida ACA subsidy guides covering county, life event, plan, MAGI, and verification questions."
+        if has_items
+        else f"{heading}: Florida ACA subsidy guides publish here once scheduled articles in this cluster go live."
+    )
     robots = "index,follow,max-image-preview:large" if has_items else "noindex,follow"
     schemas = [
         organization_schema(),
@@ -2489,7 +2494,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(meta_title)} | CoverClarity</title>
-  <meta name="description" content="{esc(lead)}">
+  <meta name="description" content="{esc(meta_description)}">
   <meta name="robots" content="{robots}">
   <link rel="canonical" href="{SITE_ORIGIN}/guides/{guide_slug}.html">
   <link rel="alternate" type="application/rss+xml" title="CoverClarity Florida ACA Subsidy Guides" href="{SITE_ORIGIN}/feed.xml">
@@ -2540,6 +2545,7 @@ def render_sitemap(topics):
         (f"{SITE_ORIGIN}/editorial-policy.html", "0.6"),
         (f"{SITE_ORIGIN}/sources-corrections.html", "0.6"),
         (f"{SITE_ORIGIN}/privacy.html", "0.4"),
+        (f"{SITE_ORIGIN}/terms.html", "0.4"),
         (f"{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html", "0.75"),
     ]
     urls.extend(
