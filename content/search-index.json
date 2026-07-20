@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 20
+      "article_count": 21
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5749,6 +5749,34 @@
         "aca/florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-marketplace-message-inbox-review-advanced-review-and-verification-follow-up.html",
         "aca/how-broker-consent-changes-florida-aca-subsidy-estimate-for-consent-form-for-broker-help-advanced-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-county-entry-audit-rating-area-selection-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for county entry audit: rating-area selection to verify first",
+      "subtitle": "Florida ACA subsidy estimate for county entry audit with rating-area selection, local benchmark premium, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-county-entry-audit-rating-area-selection-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-county-entry-audit-rating-area-selection-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for county entry audit",
+      "expanded_keywords": [
+        "Rating-area selection",
+        "Local benchmark premium",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for county entry audit explained with Rating-area selection, Local benchmark premium, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-21T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-message-inbox-review-advanced-review-and-verification-follow-up.html",
+        "aca/how-broker-consent-changes-florida-aca-subsidy-estimate-for-consent-form-for-broker-help-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-coverage-start-date-conflict-advanced-review-checklist-for-special.html"
       ]
     }
   ]
