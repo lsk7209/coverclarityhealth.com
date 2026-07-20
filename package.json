@@ -10,6 +10,7 @@
     "analytics:apply": "python scripts/apply_ga4_measurement.py",
     "adsense:apply": "python scripts/apply_ads_txt.py",
     "validate": "python scripts/validate_content_quality.py --write-report",
+    "audit:publication-density": "python scripts/audit_publication_density.py",
     "validate:production": "python scripts/validate_content_quality.py --write-report --require-site-origin",
     "audit:seo": "python scripts/audit_seo_adsense.py --write-report",
     "audit:performance": "python scripts/audit_performance_budget.py --write-report",
