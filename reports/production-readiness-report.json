@@ -1,23 +1,11 @@
 {
-  "generatedAt": "2026-06-19T01:24:26.187324+00:00",
+  "generatedAt": "2026-07-20T15:16:05.793653+00:00",
   "git_snapshot": {
-    "head": "c869cad411ebd1d8db33f1d47b029f8665f4aab5",
+    "head": "3289006dbd95dca18efeb5eeb5631e52d759cdeb",
     "worktree_clean": false,
     "changed_paths": [
-      "404.html",
-      "about.html",
-      "aca-enhanced-subsidies-2026-florida.html",
-      "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
       "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html",
-      "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
-      "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
-      "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
-      "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
-      "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
       "aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
-      "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
-      "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
-      "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
       "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
       "aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html",
       "aca/aca-subsidy-estimate-after-retirement-account-withdrawals-a-florida-reader-s-guide-to-magi-planning.html",
@@ -34,13 +22,6 @@
       "aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html",
       "aca/aca-subsidy-estimate-with-adult-children-without-the-jargon-dependents-and-age-rating-and-next-steps.html",
       "aca/alimony-income-questions-and-the-florida-aca-subsidy-estimate-for-2026.html",
-      "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
-      "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
-      "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
-      "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
-      "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
-      "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
-      "aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html",
       "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html",
       "aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html",
       "aca/before-choosing-silver-benchmark-versus-selected-plan-read-the-florida-aca-subsidy-estimate-this-way.html",
@@ -52,15 +33,9 @@
       "aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html",
       "aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
       "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
-      "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
-      "aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
       "aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html",
       "aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html",
       "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html",
-      "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
-      "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
-      "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
-      "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
       "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
       "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
       "aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html",
@@ -70,9 +45,11 @@
       "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html",
       "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-after-subsidies-premium-is-not-the-whole-answer.html",
       "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
+      "aca/florida-aca-subsidy-estimate-for-marketplace-application-mismatch-input-mismatch-to-verify-first.html",
       "aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html",
       "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html",
       "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
+      "aca/florida-aca-subsidy-estimate-for-zero-premium-tax-credit-result-guide-with-current-law-threshold.html",
       "aca/florida-aca-subsidy-estimate-when-calculator-result-seems-too-low-troubleshooting-without-guessing.html",
       "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html",
       "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html",
@@ -99,6 +76,7 @@
       "aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
       "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
       "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "aca/how-rating-area-check-changes-florida-aca-subsidy-estimate-for-slcsp-benchmark-review.html",
       "aca/how-rental-income-can-change-a-florida-aca-subsidy-estimate.html",
       "aca/how-spouse-income-mismatch-can-change-a-florida-aca-subsidy-estimate.html",
       "aca/how-to-read-aca-subsidy-estimate-for-divorced-parents-inside-a-2026-premium-estimate.html",
@@ -114,44 +92,24 @@
       "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
       "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html",
       "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
+      "aca/income-document-request-and-verification-notice-inside-florida-aca-subsidy-estimate-for-income-document.html",
       "aca/income-just-over-400-percent-fpl-and-the-florida-aca-subsidy-estimate-for-2026.html",
-      "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
-      "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
-      "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-      "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
-      "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
-      "aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html",
       "aca/official-source-list-for-a-florida-aca-subsidy-estimate-irs-hhs-cms-and-marketplace-checks.html",
       "aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
       "aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html",
-      "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
-      "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
-      "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "aca/part-year-florida-residency-and-the-florida-aca-subsidy-estimate-for-2026.html",
       "aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html",
       "aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
       "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html",
-      "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
-      "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
-      "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
       "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
-      "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html",
-      "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
       "aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html",
       "aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html",
       "aca/silver-csr-94-plan-value-inside-a-florida-aca-subsidy-estimate.html",
-      "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
-      "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
-      "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
-      "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
       "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
       "aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
       "aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html",
-      "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
-      "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
-      "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
       "aca/the-practical-aca-subsidy-estimate-after-a-raise-checklist-for-2026-aca-planning.html",
       "aca/the-practical-aca-subsidy-estimate-for-caregivers-checklist-for-2026-aca-planning.html",
@@ -163,11 +121,6 @@
       "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
       "aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html",
       "aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html",
-      "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
-      "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
-      "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
-      "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
-      "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
       "aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html",
       "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
       "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
@@ -198,140 +151,25 @@
       "aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html",
       "aca/why-final-plan-premium-changed-at-checkout-can-happen-in-a-florida-aca-subsidy-estimate.html",
       "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html",
-      "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
-      "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
-      "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
-      "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
       "aca/why-premium-tax-credit-is-zero-can-happen-in-a-florida-aca-subsidy-estimate.html",
       "aca/why-special-enrollment-proof-can-happen-in-a-florida-aca-subsidy-estimate.html",
       "aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html",
-      "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
       "aca/year-end-bonus-and-the-florida-aca-subsidy-estimate-for-2026.html",
-      "ads.txt",
       "blog.html",
-      "contact.html",
       "content/article-queue.json",
       "content/search-index.json",
-      "editorial-policy.html",
       "feed.xml",
       "guides/county-and-rating-area-guides.html",
       "guides/life-event-and-income-change-guides.html",
       "guides/official-verification-and-troubleshooting-guides.html",
       "guides/plan-selection-and-out-of-pocket-guides.html",
       "guides/tax-magi-and-reconciliation-guides.html",
-      "index.html",
-      "methodology.html",
-      "privacy.html",
+      "llms.txt",
       "reports/article-generation-report.json",
       "reports/content-quality-report.json",
       "reports/performance-budget-report.json",
       "reports/seo-adsense-audit-report.json",
-      "scripts/apply_ads_txt.py",
-      "scripts/audit_seo_adsense.py",
-      "scripts/generate_aca_articles.py",
-      "scripts/validate_content_quality.py",
-      "sitemap.xml",
-      "sources-corrections.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-audit-trail-for-subsidy-estimates-check-recordkeeping.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-benchmark-versus-selected-plan-check-slcsp-benchmark.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-brevard-slcsp-check-check-slcsp-benchmark.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-coverage-gap-warning-check-below-100-percent-fpl.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-csr-73-limit-check-partial-csr-value.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-divorce-tax-household-reset-check-dependent-claim.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-duval-age-rated-premium-check-age-rated-premium.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-escambia-panhandle-estimate-check-county-rating-area.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-filing-separately-issue-check-filing-status-issue.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-hsa-eligible-plan-check-check-hsa-plan-rules.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-osceola-seasonal-income-check-seasonal-income-planning.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-side-hustle-income-review-check-secondary-income.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-source-trust-audit-check-irs-hhs-cms-references.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-telehealth-plan-review-check-care-access.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-unemployment-compensation-year-check-annual-income-estimate.html",
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-year-end-bonus-risk-check-income-spike.html",
-      "aca/business-loss-year-and-net-income-uncertainty-inside-florida-aca-subsidy-estimate-for-business-loss-year.html",
-      "aca/capital-gains-before-open-enrollment-and-investment-income-inside-florida-aca-subsidy-estimate-for-capital.html",
-      "aca/collier-high-cost-pressure-and-benchmark-premium-pressure-inside-florida-aca-subsidy-estimate-for-collier.html",
-      "aca/county-to-county-move-and-county-move-inside-florida-aca-subsidy-estimate-for-county-to-county-move.html",
-      "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
-      "aca/csr-missing-on-screen-and-cost-sharing-reduction-check-inside-florida-aca-subsidy-estimate-for-csr-missing-on.html",
-      "aca/final-eligibility-notice-and-marketplace-eligibility-notice-inside-florida-aca-subsidy-estimate-for-final.html",
-      "aca/florida-aca-subsidy-estimate-for-advance-credit-repayment-tax-reconciliation-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility.html",
-      "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
-      "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-broward-rating-area-review-south-florida-rating-area-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-cobra-ending-cobra-transition-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-commission-income-volatility-variable-pay-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-county-entry-audit-rating-area-selection-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html",
-      "aca/florida-aca-subsidy-estimate-for-dental-coverage-beside-aca-plans-verification-review-guide-with-marketplace.html",
-      "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-duplicate-application-concern-application-cleanup-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-family-deductible-exposure-family-out-of-pocket-exposure-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-generic-drug-cost-comparison-verification-review-guide-with-monthly-cost.html",
-      "aca/florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-hospital-network-question-guide-with-county-plan-comparison.html",
-      "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
-      "aca/florida-aca-subsidy-estimate-for-magi-forecast-worksheet-guide-with-subsidy-planning.html",
-      "aca/florida-aca-subsidy-estimate-for-marketplace-application-mismatch-input-mismatch-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-marriage-before-enrollment-combined-income-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
-      "aca/florida-aca-subsidy-estimate-for-navigator-conversation-prep-guide-with-question-checklist.html",
-      "aca/florida-aca-subsidy-estimate-for-new-baby-or-adoption-guide-with-household-size-change.html",
-      "aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html",
-      "aca/florida-aca-subsidy-estimate-for-part-year-florida-move-guide-with-annual-income-projection.html",
-      "aca/florida-aca-subsidy-estimate-for-pasco-commuter-estimate-guide-with-tampa-bay-county-comparison.html",
-      "aca/florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-premium-estimate-too-low-input-audit-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-rental-income-swing-magi-estimate-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-roth-conversion-window-modified-adjusted-gross-income-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-sarasota-pre-medicare-planning-pre-medicare-premium-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-self-employment-deduction-review-guide-with-schedule-c-planning.html",
-      "aca/florida-aca-subsidy-estimate-for-seminole-silver-benchmark-silver-plan-benchmark-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-special-enrollment-proof-guide-with-coverage-start-date.html",
-      "aca/florida-aca-subsidy-estimate-for-spouse-income-mismatch-guide-with-marketplace-household.html",
-      "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
-      "aca/florida-aca-subsidy-estimate-for-urgent-care-access-local-provider-check-to-verify-first.html",
-      "aca/florida-aca-subsidy-estimate-for-volusia-current-law-view-guide-with-local-marketplace-check.html",
-      "aca/florida-aca-subsidy-estimate-for-zero-premium-tax-credit-result-guide-with-current-law-threshold.html",
-      "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
-      "aca/hillsborough-benchmark-check-and-tampa-bay-marketplace-planning-inside-florida-aca-subsidy-estimate-for.html",
-      "aca/how-age-rated-premium-changes-florida-aca-subsidy-estimate-for-early-retirement-before-medicare.html",
-      "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
-      "aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
-      "aca/how-coastal-household-planning-changes-florida-aca-subsidy-estimate-for-lee-county-rating-review.html",
-      "aca/how-county-marketplace-question-changes-florida-aca-subsidy-estimate-for-manatee-family-csr-review.html",
-      "aca/how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment.html",
-      "aca/how-early-retirement-estimate-changes-florida-aca-subsidy-estimate-for-social-security-benefit-mix.html",
-      "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
-      "aca/how-family-plan-review-changes-florida-aca-subsidy-estimate-for-pediatric-coverage-review.html",
-      "aca/how-fpl-percentage-changes-florida-aca-subsidy-estimate-for-ira-withdrawal-timing.html",
-      "aca/how-household-subsidy-estimate-changes-florida-aca-subsidy-estimate-for-lake-county-rural-suburban-estimate.html",
-      "aca/how-marketplace-eligibility-warning-changes-florida-aca-subsidy-estimate-for-income-under-100-percent-fpl.html",
-      "aca/how-marketplace-fallback-changes-florida-aca-subsidy-estimate-for-employer-plan-becoming-unaffordable.html",
-      "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
-      "aca/how-official-price-confirmation-changes-florida-aca-subsidy-estimate-for-checkout-price-change.html",
-      "aca/how-plan-comparison-changes-florida-aca-subsidy-estimate-for-maximum-out-of-pocket-limit-verification-review.html",
-      "aca/how-policy-regime-comparison-changes-florida-aca-subsidy-estimate-for-premium-estimate-too-high.html",
-      "aca/how-rating-area-check-changes-florida-aca-subsidy-estimate-for-slcsp-benchmark-review.html",
-      "aca/how-self-employed-estimate-changes-florida-aca-subsidy-estimate-for-1099-k-reporting-question.html",
-      "aca/how-silver-plan-review-changes-florida-aca-subsidy-estimate-for-prescription-heavy-household.html",
-      "aca/income-document-request-and-verification-notice-inside-florida-aca-subsidy-estimate-for-income-document.html",
-      "aca/income-over-400-percent-fpl-and-subsidy-cliff-inside-florida-aca-subsidy-estimate-for-income-over-400-percent.html",
-      "aca/mental-health-network-check-and-behavioral-health-access-inside-florida-aca-subsidy-estimate-for-mental.html",
-      "aca/navigator-versus-broker-help-and-enrollment-assistance-inside-florida-aca-subsidy-estimate-for-navigator.html",
-      "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
-      "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
-      "aca/polk-inland-estimate-and-household-income-band-inside-florida-aca-subsidy-estimate-for-polk-inland-estimate.html",
-      "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
-      "aca/specialist-network-review-and-provider-network-inside-florida-aca-subsidy-estimate-for-specialist-network.html",
-      "aca/st-lucie-ptc-check-and-aca-premium-tax-credit-inside-florida-aca-subsidy-estimate-for-st-lucie-ptc-check.html",
-      "aca/student-dependent-income-and-dependent-filing-status-inside-florida-aca-subsidy-estimate-for-student.html"
+      "sitemap.xml"
     ]
   },
   "ready_for_production_submission": false,
@@ -348,18 +186,18 @@
     },
     {
       "name": "seo_adsense_audit",
-      "ok": true,
-      "detail": "SEO and AdSense audit passed with 0 errors and 0 warnings"
-    },
-    {
-      "name": "performance_budget_audit",
       "ok": false,
       "detail": {
-        "message": "Performance budget audit did not pass cleanly",
+        "message": "SEO and AdSense audit did not pass cleanly",
         "passed": true,
         "error_count": 0,
         "warning_count": 1
       }
+    },
+    {
+      "name": "performance_budget_audit",
+      "ok": true,
+      "detail": "Performance budget audit passed with 0 errors and 0 warnings"
     },
     {
       "name": "production_origin_applied",
@@ -369,7 +207,7 @@
     {
       "name": "git_repository",
       "ok": true,
-      "detail": "D:/web/gungangbohum"
+      "detail": "/home/runner/work/coverclarityhealth.com/coverclarityhealth.com"
     },
     {
       "name": "git_has_commit",
@@ -385,10 +223,8 @@
       "name": "github_remote",
       "ok": true,
       "detail": [
-        "gungangbohum\thttps://github.com/lsk7209/gungangbohum.git (fetch)",
-        "gungangbohum\thttps://github.com/lsk7209/gungangbohum.git (push)",
-        "origin\thttps://github.com/lsk7209/coverclarityhealth.com.git (fetch)",
-        "origin\thttps://github.com/lsk7209/coverclarityhealth.com.git (push)"
+        "origin\thttps://github.com/lsk7209/coverclarityhealth.com (fetch)",
+        "origin\thttps://github.com/lsk7209/coverclarityhealth.com (push)"
       ]
     },
     {
@@ -417,8 +253,8 @@
       "detail": {
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
-        "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true,
+        "GSC_CLIENT_JSON": false,
+        "GSC_TOKEN_JSON": false,
         "errors": [
           {
             "name": "GSC_SITE_URL",
@@ -427,6 +263,14 @@
           {
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_CLIENT_JSON",
+            "error": "Missing GSC_CLIENT_JSON or D:\\env\\adsense_oauth_client.json"
+          },
+          {
+            "name": "GSC_TOKEN_JSON",
+            "error": "Missing GSC_TOKEN_JSON or D:\\env\\gsc_token.json"
           }
         ],
         "GSC_URL_ALIGNMENT": false
@@ -436,7 +280,7 @@
       "name": "github_gsc_configuration",
       "ok": false,
       "detail": {
-        "repo": "lsk7209/coverclarityhealth.com",
+        "repo": "",
         "GSC_CLIENT_JSON_secret": false,
         "GSC_TOKEN_JSON_secret": false,
         "GSC_SITE_URL_variable": false,
@@ -446,10 +290,10 @@
   ],
   "blockers": [
     {
-      "name": "performance_budget_audit",
+      "name": "seo_adsense_audit",
       "ok": false,
       "detail": {
-        "message": "Performance budget audit did not pass cleanly",
+        "message": "SEO and AdSense audit did not pass cleanly",
         "passed": true,
         "error_count": 0,
         "warning_count": 1
@@ -471,8 +315,8 @@
       "detail": {
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
-        "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true,
+        "GSC_CLIENT_JSON": false,
+        "GSC_TOKEN_JSON": false,
         "errors": [
           {
             "name": "GSC_SITE_URL",
@@ -481,6 +325,14 @@
           {
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_CLIENT_JSON",
+            "error": "Missing GSC_CLIENT_JSON or D:\\env\\adsense_oauth_client.json"
+          },
+          {
+            "name": "GSC_TOKEN_JSON",
+            "error": "Missing GSC_TOKEN_JSON or D:\\env\\gsc_token.json"
           }
         ],
         "GSC_URL_ALIGNMENT": false
@@ -490,7 +342,7 @@
       "name": "github_gsc_configuration",
       "ok": false,
       "detail": {
-        "repo": "lsk7209/coverclarityhealth.com",
+        "repo": "",
         "GSC_CLIENT_JSON_secret": false,
         "GSC_TOKEN_JSON_secret": false,
         "GSC_SITE_URL_variable": false,
@@ -505,7 +357,7 @@
       "github_gsc_configuration"
     ],
     "code_or_repository_blockers": [
-      "performance_budget_audit",
+      "seo_adsense_audit",
       "git_worktree_clean"
     ]
   },
@@ -521,54 +373,44 @@
     {
       "name": "GSC_SITEMAP_URL",
       "detail": "Set the production sitemap URL, normally SITE_ORIGIN + /sitemap.xml."
-    },
-    {
-      "name": "GITHUB_VAR_GSC_SITE_URL",
-      "detail": "Set the GitHub repository variable GSC_SITE_URL after the production domain is assigned."
-    },
-    {
-      "name": "GITHUB_VAR_GSC_SITEMAP_URL",
-      "detail": "Set the GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
     }
   ],
   "quality_snapshot": {
-    "article_files": 300,
+    "article_files": 400,
     "guide_files": 5,
-    "sitemap_urls": 62,
+    "sitemap_urls": 219,
     "site_origin_placeholder_count": 0,
     "site_origin_placeholder_sample": [],
     "public_origin_mismatch_count": 0,
     "error_count": 0
   },
   "article_generation_snapshot": {
-    "articles": 300,
-    "publishedArticles": 53,
-    "scheduledArticles": 247,
+    "articles": 400,
+    "publishedArticles": 204,
+    "scheduledArticles": 196,
     "minQualityScore": 94,
     "maxQualityScore": 99,
-    "codexOnlyGenerationArticles": 300,
+    "codexOnlyGenerationArticles": 400,
     "manualAdSlotArticles": 0
   },
   "seo_adsense_snapshot": {
-    "pages_checked": 315,
+    "pages_checked": 416,
     "error_count": 0,
-    "warning_count": 0,
+    "warning_count": 1,
     "ads_txt_present_valid": true,
     "adsense_auto_ads_only": true
   },
   "performance_snapshot": {
-    "html_files_checked": 315,
+    "html_files_checked": 416,
     "error_count": 0,
-    "warning_count": 1,
-    "largest_html_bytes": 45990,
-    "article_average_bytes": 25415
+    "warning_count": 0,
+    "largest_html_bytes": 53349,
+    "article_average_bytes": 25416
   },
   "next_required_actions": [
-    "Run npm run audit:performance and fix static performance budget issues before production submission.",
+    "Run npm run audit:seo and fix SEO or AdSense audit issues before production submission.",
     "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
-    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.",
-    "Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.",
-    "Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
+    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "pages_checked": 415,
+  "pages_checked": 416,
   "article_pages_checked": 401,
   "checklist": {
     "meta_title_per_page": true,
@@ -8,7 +8,7 @@
     "meta_description_per_page": true,
     "meta_description_length": true,
     "meta_description_unique": true,
-    "keyword_front_signal": true,
+    "keyword_front_signal": false,
     "canonical_per_page": true,
     "sitemap_canonical_consistency": true,
     "sitemap_xml_present": true,
@@ -21,8 +21,13 @@
     "adsense_auto_ads_only": true
   },
   "passed": true,
-  "warning_count": 0,
+  "warning_count": 1,
   "error_count": 0,
   "errors": [],
-  "warnings": []
+  "warnings": [
+    {
+      "file": "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html",
+      "type": "weak_keyword_front_signal"
+    }
+  ]
 }
