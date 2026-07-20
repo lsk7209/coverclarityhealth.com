@@ -9,6 +9,7 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  SITE_ORIGIN: "https://coverclarityhealth.com"
 
 permissions:
   contents: read
@@ -29,6 +30,8 @@ jobs:
         run: echo "PUBLICATION_NOW=$(python scripts/print_committed_publication_now.py)" >> "$GITHUB_ENV"
       - name: Generate static content
         run: python scripts/generate_aca_articles.py
+      - name: Apply production origin to static files
+        run: python scripts/apply_site_origin.py --origin "$SITE_ORIGIN"
       - name: Audit SEO and AdSense checklist
         run: python scripts/audit_seo_adsense.py --write-report
       - name: Audit performance budget
