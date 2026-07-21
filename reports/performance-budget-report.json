@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53262
+        "bytes": 53291
       },
       {
         "file": "index.html",
@@ -31,6 +31,10 @@
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 33639
+      },
+      {
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 33616
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
@@ -51,10 +55,6 @@
       {
         "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
         "bytes": 32822
-      },
-      {
-        "file": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
-        "bytes": 32770
       }
     ],
     "article_average_bytes": 25416,
@@ -90,20 +90,20 @@
         "bytes": 14869
       },
       {
-        "file": "blog.html",
-        "bytes": 14225
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 14657
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 14104
+        "file": "blog.html",
+        "bytes": 14309
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 13312
       }
     ],
-    "article_queue_bytes": 489792,
-    "search_index_bytes": 369844
+    "article_queue_bytes": 489791,
+    "search_index_bytes": 371770
   },
   "errors": [],
   "warnings": []

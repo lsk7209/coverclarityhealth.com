@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 21
+      "article_count": 22
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5777,6 +5777,34 @@
         "aca/florida-aca-subsidy-estimate-for-marketplace-message-inbox-review-advanced-review-and-verification-follow-up.html",
         "aca/how-broker-consent-changes-florida-aca-subsidy-estimate-for-consent-form-for-broker-help-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-coverage-start-date-conflict-advanced-review-checklist-for-special.html"
+      ]
+    },
+    {
+      "id": "how-official-price-confirmation-changes-florida-aca-subsidy-estimate-for-checkout-price-change",
+      "type": "article",
+      "title": "How official price confirmation changes Florida ACA subsidy estimate for checkout price change",
+      "subtitle": "Florida ACA subsidy estimate for checkout price change with plan availability, official price confirmation, and a clear official confirmation step.",
+      "url": "aca/how-official-price-confirmation-changes-florida-aca-subsidy-estimate-for-checkout-price-change.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-official-price-confirmation-changes-florida-aca-subsidy-estimate-for-checkout-price-change.html",
+      "main_keyword": "Florida ACA subsidy estimate for checkout price change",
+      "expanded_keywords": [
+        "Plan availability",
+        "Official price confirmation",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for checkout price change explained with Plan availability, Official price confirmation, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-21T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/how-broker-consent-changes-florida-aca-subsidy-estimate-for-consent-form-for-broker-help-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-coverage-start-date-conflict-advanced-review-checklist-for-special.html",
+        "aca/when-plan-discontinued-notice-affects-florida-aca-subsidy-estimate-for-plan-discontinued-notice-advanced.html"
       ]
     }
   ]
