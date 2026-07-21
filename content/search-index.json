@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 25
+      "article_count": 26
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5889,6 +5889,34 @@
         "aca/income-attestation-concern-florida-aca-subsidy-estimate-for-income-attestation-concern-advanced-review-with.html",
         "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html",
         "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-premium-estimate-too-low-input-audit-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for premium estimate too low: input audit to verify first",
+      "subtitle": "Florida ACA subsidy estimate for premium estimate too low with input audit, premium estimate review, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-premium-estimate-too-low-input-audit-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-premium-estimate-too-low-input-audit-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for premium estimate too low",
+      "expanded_keywords": [
+        "Input audit",
+        "Premium estimate review",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for premium estimate too low explained with Input audit, Premium estimate review, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-22T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html",
+        "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html",
+        "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html"
       ]
     }
   ]
