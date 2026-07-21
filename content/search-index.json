@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 24
+      "article_count": 25
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5861,6 +5861,34 @@
         "aca/when-plan-discontinued-notice-affects-florida-aca-subsidy-estimate-for-plan-discontinued-notice-advanced.html",
         "aca/income-attestation-concern-florida-aca-subsidy-estimate-for-income-attestation-concern-advanced-review-with.html",
         "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-source-trust-audit-check-irs-hhs-cms-references",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for source trust audit: check IRS HHS CMS references",
+      "subtitle": "Florida ACA subsidy estimate for source trust audit with IRS HHS CMS references, trust verification, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-source-trust-audit-check-irs-hhs-cms-references.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-source-trust-audit-check-irs-hhs-cms-references.html",
+      "main_keyword": "Florida ACA subsidy estimate for source trust audit",
+      "expanded_keywords": [
+        "IRS HHS CMS references",
+        "Trust verification",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for source trust audit explained with IRS HHS CMS references, Trust verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-22T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/income-attestation-concern-florida-aca-subsidy-estimate-for-income-attestation-concern-advanced-review-with.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html",
+        "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html"
       ]
     }
   ]
