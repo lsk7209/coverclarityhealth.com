@@ -18,11 +18,15 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53291
+        "bytes": 53488
       },
       {
         "file": "index.html",
         "bytes": 47524
+      },
+      {
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 34831
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -31,10 +35,6 @@
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 33639
-      },
-      {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 33616
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
@@ -86,24 +86,24 @@
         "bytes": 15677
       },
       {
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 15284
+      },
+      {
         "file": "guides/county-and-rating-area-guides.html",
         "bytes": 14869
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 14657
-      },
-      {
         "file": "blog.html",
-        "bytes": 14309
+        "bytes": 14365
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 13312
       }
     ],
-    "article_queue_bytes": 489791,
-    "search_index_bytes": 371770
+    "article_queue_bytes": 489790,
+    "search_index_bytes": 373772
   },
   "errors": [],
   "warnings": []
