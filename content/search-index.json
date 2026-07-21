@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 23
+      "article_count": 24
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5833,6 +5833,34 @@
         "aca/florida-aca-subsidy-estimate-for-coverage-start-date-conflict-advanced-review-checklist-for-special.html",
         "aca/when-plan-discontinued-notice-affects-florida-aca-subsidy-estimate-for-plan-discontinued-notice-advanced.html",
         "aca/income-attestation-concern-florida-aca-subsidy-estimate-for-income-attestation-concern-advanced-review-with.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-special-enrollment-proof-guide-with-coverage-start-date",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for special enrollment proof guide with coverage start date",
+      "subtitle": "Florida ACA subsidy estimate for special enrollment proof with qualifying life event, coverage start date, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-special-enrollment-proof-guide-with-coverage-start-date.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-special-enrollment-proof-guide-with-coverage-start-date.html",
+      "main_keyword": "Florida ACA subsidy estimate for special enrollment proof",
+      "expanded_keywords": [
+        "Qualifying life event",
+        "Coverage start date",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for special enrollment proof explained with Qualifying life event, Coverage start date, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-21T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/when-plan-discontinued-notice-affects-florida-aca-subsidy-estimate-for-plan-discontinued-notice-advanced.html",
+        "aca/income-attestation-concern-florida-aca-subsidy-estimate-for-income-attestation-concern-advanced-review-with.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html"
       ]
     }
   ]
