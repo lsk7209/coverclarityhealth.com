@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 28
+      "article_count": 29
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5973,6 +5973,34 @@
         "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html",
         "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-navigator-conversation-prep-guide-with-question-checklist",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for navigator conversation prep guide with question checklist",
+      "subtitle": "Florida ACA subsidy estimate for navigator conversation prep with enrollment assistance, question checklist, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-navigator-conversation-prep-guide-with-question-checklist.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-navigator-conversation-prep-guide-with-question-checklist.html",
+      "main_keyword": "Florida ACA subsidy estimate for navigator conversation prep",
+      "expanded_keywords": [
+        "Enrollment assistance",
+        "Question checklist",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for navigator conversation prep explained with Enrollment assistance, Question checklist, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-22T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html",
+        "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html"
       ]
     }
   ]
