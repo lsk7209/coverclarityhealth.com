@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 29
+      "article_count": 30
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6001,6 +6001,34 @@
         "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html",
         "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-audit-trail-for-subsidy-estimates-check-recordkeeping",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for audit trail for subsidy estimates: check recordkeeping",
+      "subtitle": "Florida ACA subsidy estimate for audit trail for subsidy estimates with recordkeeping, Form 8962 planning, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-audit-trail-for-subsidy-estimates-check-recordkeeping.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-audit-trail-for-subsidy-estimates-check-recordkeeping.html",
+      "main_keyword": "Florida ACA subsidy estimate for audit trail for subsidy estimates",
+      "expanded_keywords": [
+        "Recordkeeping",
+        "Form 8962 planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for audit trail for subsidy estimates explained with Recordkeeping, Form 8962 planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-23T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html",
+        "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html"
       ]
     }
   ]
