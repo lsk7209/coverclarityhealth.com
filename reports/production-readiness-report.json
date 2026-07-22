@@ -1,21 +1,9 @@
 {
-  "generatedAt": "2026-07-22T03:51:35.073962+00:00",
+  "generatedAt": "2026-07-22T06:44:58.666770+00:00",
   "git_snapshot": {
-    "head": "9b0f451a65f1712a98595901b96ea716ce635d1c",
-    "worktree_clean": false,
-    "changed_paths": [
-      "aca/how-policy-regime-comparison-changes-florida-aca-subsidy-estimate-for-premium-estimate-too-high.html",
-      "blog.html",
-      "content/article-queue.json",
-      "content/search-index.json",
-      "feed.xml",
-      "guides/official-verification-and-troubleshooting-guides.html",
-      "llms.txt",
-      "reports/article-generation-report.json",
-      "reports/content-quality-report.json",
-      "reports/performance-budget-report.json",
-      "sitemap.xml"
-    ]
+    "head": "43404c28fffb5b42f17af21f2d50e19d52e03f68",
+    "worktree_clean": true,
+    "changed_paths": []
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -61,8 +49,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -145,11 +133,6 @@
       }
     },
     {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
-    },
-    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -202,8 +185,7 @@
       "github_gsc_configuration"
     ],
     "code_or_repository_blockers": [
-      "seo_adsense_audit",
-      "git_worktree_clean"
+      "seo_adsense_audit"
     ]
   },
   "missing_external_inputs": [
@@ -254,7 +236,6 @@
   },
   "next_required_actions": [
     "Run npm run audit:seo and fix SEO or AdSense audit issues before production submission.",
-    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
