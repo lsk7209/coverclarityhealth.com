@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 27
+      "article_count": 28
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5945,6 +5945,34 @@
         "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html",
         "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html"
+      ]
+    },
+    {
+      "id": "final-eligibility-notice-and-marketplace-eligibility-notice-inside-florida-aca-subsidy-estimate-for-final",
+      "type": "article",
+      "title": "Final eligibility notice and Marketplace eligibility notice inside Florida ACA subsidy estimate for final eligibility notice",
+      "subtitle": "Florida ACA subsidy estimate for final eligibility notice with Marketplace eligibility notice, application result, and a clear official confirmation step.",
+      "url": "aca/final-eligibility-notice-and-marketplace-eligibility-notice-inside-florida-aca-subsidy-estimate-for-final.html",
+      "canonical": "https://coverclarityhealth.com/aca/final-eligibility-notice-and-marketplace-eligibility-notice-inside-florida-aca-subsidy-estimate-for-final.html",
+      "main_keyword": "Florida ACA subsidy estimate for final eligibility notice",
+      "expanded_keywords": [
+        "Marketplace eligibility notice",
+        "Application result",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for final eligibility notice explained with Marketplace eligibility notice, Application result, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-22T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html",
+        "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html"
       ]
     }
   ]
