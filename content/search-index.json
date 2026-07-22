@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 26
+      "article_count": 27
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -5917,6 +5917,34 @@
         "aca/florida-aca-subsidy-estimate-for-marketplace-call-center-preparation-advanced-review-guide-to-marketplace.html",
         "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html",
         "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html"
+      ]
+    },
+    {
+      "id": "how-policy-regime-comparison-changes-florida-aca-subsidy-estimate-for-premium-estimate-too-high",
+      "type": "article",
+      "title": "How policy-regime comparison changes Florida ACA subsidy estimate for premium estimate too high",
+      "subtitle": "Florida ACA subsidy estimate for premium estimate too high with threshold review, policy-regime comparison, and a clear official confirmation step.",
+      "url": "aca/how-policy-regime-comparison-changes-florida-aca-subsidy-estimate-for-premium-estimate-too-high.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-policy-regime-comparison-changes-florida-aca-subsidy-estimate-for-premium-estimate-too-high.html",
+      "main_keyword": "Florida ACA subsidy estimate for premium estimate too high",
+      "expanded_keywords": [
+        "Threshold review",
+        "Policy-regime comparison",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for premium estimate too high explained with Threshold review, Policy-regime comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-22T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/what-application-save-error-workaround-means-for-florida-aca-subsidy-estimate-for-application-save-error.html",
+        "aca/florida-aca-subsidy-estimate-for-agent-of-record-question-advanced-review-broker-assignment-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-referral-confusion-advanced-review-and-marketplace-eligibility-path.html"
       ]
     }
   ]
