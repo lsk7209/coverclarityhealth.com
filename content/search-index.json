@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 33
+      "article_count": 34
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6113,6 +6113,34 @@
         "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html",
         "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html",
         "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for broker quote comparison guide with lead-generation risk",
+      "subtitle": "Florida ACA subsidy estimate for broker quote comparison with quote versus estimate, lead-generation risk, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
+      "main_keyword": "Florida ACA subsidy estimate for broker quote comparison",
+      "expanded_keywords": [
+        "Quote versus estimate",
+        "Lead-generation risk",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for broker quote comparison explained with Quote versus estimate, Lead-generation risk, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-23T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html",
+        "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html",
+        "aca/what-to-do-when-coverage-gap-warning-appears-in-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]

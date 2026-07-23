@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53555
+        "bytes": 53504
       },
       {
         "file": "index.html",
@@ -26,7 +26,7 @@
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 46056
+        "bytes": 47121
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 20956
+        "bytes": 21485
       },
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 13312
       }
     ],
-    "article_queue_bytes": 489780,
-    "search_index_bytes": 393095
+    "article_queue_bytes": 489779,
+    "search_index_bytes": 394946
   },
   "errors": [],
   "warnings": []
