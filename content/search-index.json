@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 34
+      "article_count": 35
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6141,6 +6141,34 @@
         "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html",
         "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html",
         "aca/what-to-do-when-coverage-gap-warning-appears-in-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for privacy-first estimate workflow: check browser-only estimate",
+      "subtitle": "Florida ACA subsidy estimate for privacy-first estimate workflow with browser-only estimate, data minimization, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate for privacy-first estimate workflow",
+      "expanded_keywords": [
+        "Browser-only estimate",
+        "Data minimization",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for privacy-first estimate workflow explained with Browser-only estimate, Data minimization, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-24T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html",
+        "aca/what-to-do-when-coverage-gap-warning-appears-in-a-florida-aca-subsidy-estimate.html",
+        "aca/why-premium-tax-credit-is-zero-can-happen-in-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
