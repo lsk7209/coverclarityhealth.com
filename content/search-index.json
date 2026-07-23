@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 32
+      "article_count": 33
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6085,6 +6085,34 @@
         "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html",
         "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html",
         "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check",
+      "type": "article",
+      "title": "Plan year source check and 2026 plan year inside Florida ACA subsidy estimate for plan year source check",
+      "subtitle": "Florida ACA subsidy estimate for plan year source check with 2026 plan year, rule-year alignment, and a clear official confirmation step.",
+      "url": "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
+      "canonical": "https://coverclarityhealth.com/aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
+      "main_keyword": "Florida ACA subsidy estimate for plan year source check",
+      "expanded_keywords": [
+        "2026 plan year",
+        "Rule-year alignment",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for plan year source check explained with 2026 plan year, Rule-year alignment, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-23T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html",
+        "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html",
+        "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html"
       ]
     }
   ]
