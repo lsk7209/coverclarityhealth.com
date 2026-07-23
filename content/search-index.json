@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 31
+      "article_count": 32
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6057,6 +6057,34 @@
         "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html",
         "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html",
         "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment",
+      "type": "article",
+      "title": "How county verification changes Florida ACA subsidy estimate for address change during enrollment",
+      "subtitle": "Florida ACA subsidy estimate for address change during enrollment with mailing address, county verification, and a clear official confirmation step.",
+      "url": "aca/how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment.html",
+      "main_keyword": "Florida ACA subsidy estimate for address change during enrollment",
+      "expanded_keywords": [
+        "Mailing address",
+        "County verification",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for address change during enrollment explained with Mailing address, County verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-23T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html",
+        "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html",
+        "aca/why-income-update-after-enrollment-can-happen-in-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
