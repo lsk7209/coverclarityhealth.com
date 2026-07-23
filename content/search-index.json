@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 30
+      "article_count": 31
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -6029,6 +6029,34 @@
         "aca/how-identity-proofing-changes-florida-aca-subsidy-estimate-for-identity-verification-stall-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html",
         "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-duplicate-application-concern-application-cleanup-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for duplicate application concern: application cleanup to verify first",
+      "subtitle": "Florida ACA subsidy estimate for duplicate application concern with application cleanup, Marketplace account review, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-duplicate-application-concern-application-cleanup-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-duplicate-application-concern-application-cleanup-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for duplicate application concern",
+      "expanded_keywords": [
+        "Application cleanup",
+        "Marketplace account review",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for duplicate application concern explained with Application cleanup, Marketplace account review, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-23T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-official-chat-transcript-notes-advanced-review-checklist-for-eligibility.html",
+        "aca/florida-aca-subsidy-estimate-when-healthcare-gov-application-result-does-not-match-estimate-troubleshooting.html",
+        "aca/what-to-do-when-slcsp-benchmark-looks-wrong-in-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
