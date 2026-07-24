@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 22
+      "article_count": 23
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6225,6 +6225,34 @@
         "aca/florida-aca-subsidy-estimate-for-worker-s-compensation-question-advanced-review-and-income-inclusion.html",
         "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html"
+      ]
+    },
+    {
+      "id": "capital-gains-before-open-enrollment-and-investment-income-inside-florida-aca-subsidy-estimate-for-capital",
+      "type": "article",
+      "title": "Capital gains before open enrollment and investment income inside Florida ACA subsidy estimate for capital gains before open enrollment",
+      "subtitle": "Florida ACA subsidy estimate for capital gains before open enrollment with investment income, premium tax credit reconciliation, and a clear official confirmation step.",
+      "url": "aca/capital-gains-before-open-enrollment-and-investment-income-inside-florida-aca-subsidy-estimate-for-capital.html",
+      "canonical": "https://coverclarityhealth.com/aca/capital-gains-before-open-enrollment-and-investment-income-inside-florida-aca-subsidy-estimate-for-capital.html",
+      "main_keyword": "Florida ACA subsidy estimate for capital gains before open enrollment",
+      "expanded_keywords": [
+        "Investment income",
+        "Premium tax credit reconciliation",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for capital gains before open enrollment explained with Investment income, Premium tax credit reconciliation, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-24T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html",
+        "aca/when-gambling-winnings-risk-affects-florida-aca-subsidy-estimate-for-gambling-winnings-risk-advanced-review.html"
       ]
     }
   ]
