@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 21
+      "article_count": 22
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6197,6 +6197,34 @@
         "aca/florida-aca-subsidy-estimate-for-short-term-disability-income-advanced-review-disability-income-before-the.html",
         "aca/florida-aca-subsidy-estimate-for-worker-s-compensation-question-advanced-review-and-income-inclusion.html",
         "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html"
+      ]
+    },
+    {
+      "id": "how-fpl-percentage-changes-florida-aca-subsidy-estimate-for-ira-withdrawal-timing",
+      "type": "article",
+      "title": "How FPL percentage changes Florida ACA subsidy estimate for IRA withdrawal timing",
+      "subtitle": "Florida ACA subsidy estimate for IRA withdrawal timing with taxable retirement income, FPL percentage, and a clear official confirmation step.",
+      "url": "aca/how-fpl-percentage-changes-florida-aca-subsidy-estimate-for-ira-withdrawal-timing.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-fpl-percentage-changes-florida-aca-subsidy-estimate-for-ira-withdrawal-timing.html",
+      "main_keyword": "Florida ACA subsidy estimate for IRA withdrawal timing",
+      "expanded_keywords": [
+        "Taxable retirement income",
+        "FPL percentage",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for IRA withdrawal timing explained with Taxable retirement income, FPL percentage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-24T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-worker-s-compensation-question-advanced-review-and-income-inclusion.html",
+        "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html"
       ]
     }
   ]
