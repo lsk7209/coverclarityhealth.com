@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53879
+        "bytes": 53945
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
@@ -37,6 +37,10 @@
         "bytes": 33639
       },
       {
+        "file": "guides/tax-magi-and-reconciliation-guides.html",
+        "bytes": 33631
+      },
+      {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
         "bytes": 33587
       },
@@ -51,10 +55,6 @@
       {
         "file": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
         "bytes": 32872
-      },
-      {
-        "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 32822
       }
     ],
     "article_average_bytes": 25416,
@@ -94,16 +94,16 @@
         "bytes": 14869
       },
       {
-        "file": "blog.html",
-        "bytes": 14535
+        "file": "guides/tax-magi-and-reconciliation-guides.html",
+        "bytes": 14567
       },
       {
-        "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 14006
+        "file": "blog.html",
+        "bytes": 14559
       }
     ],
-    "article_queue_bytes": 489775,
-    "search_index_bytes": 402714
+    "article_queue_bytes": 489774,
+    "search_index_bytes": 404637
   },
   "errors": [],
   "warnings": []

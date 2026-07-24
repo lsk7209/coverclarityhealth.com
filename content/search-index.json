@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 23
+      "article_count": 24
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6253,6 +6253,34 @@
         "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html",
         "aca/when-gambling-winnings-risk-affects-florida-aca-subsidy-estimate-for-gambling-winnings-risk-advanced-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-self-employment-deduction-review-guide-with-schedule-c-planning",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for self-employment deduction review guide with Schedule C planning",
+      "subtitle": "Florida ACA subsidy estimate for self-employment deduction review with net business income, Schedule C planning, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-self-employment-deduction-review-guide-with-schedule-c-planning.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-self-employment-deduction-review-guide-with-schedule-c-planning.html",
+      "main_keyword": "Florida ACA subsidy estimate for self-employment deduction review",
+      "expanded_keywords": [
+        "Net business income",
+        "Schedule C planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for self-employment deduction review explained with Net business income, Schedule C planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-25T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html",
+        "aca/when-gambling-winnings-risk-affects-florida-aca-subsidy-estimate-for-gambling-winnings-risk-advanced-review.html",
+        "aca/cash-business-recordkeeping-florida-aca-subsidy-estimate-for-cash-business-recordkeeping-advanced-review-with.html"
       ]
     }
   ]
