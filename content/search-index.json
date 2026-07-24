@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 20
+      "article_count": 21
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6169,6 +6169,34 @@
         "aca/florida-aca-subsidy-estimate-when-csr-missing-from-silver-plan-screen-troubleshooting-without-guessing.html",
         "aca/what-to-do-when-coverage-gap-warning-appears-in-a-florida-aca-subsidy-estimate.html",
         "aca/why-premium-tax-credit-is-zero-can-happen-in-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-roth-conversion-window-modified-adjusted-gross-income-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Roth conversion window: modified adjusted gross income to verify first",
+      "subtitle": "Florida ACA subsidy estimate for Roth conversion window with modified adjusted gross income, retirement tax planning, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-roth-conversion-window-modified-adjusted-gross-income-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-roth-conversion-window-modified-adjusted-gross-income-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for Roth conversion window",
+      "expanded_keywords": [
+        "Modified adjusted gross income",
+        "Retirement tax planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Roth conversion window explained with Modified adjusted gross income, Retirement tax planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-24T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-short-term-disability-income-advanced-review-disability-income-before-the.html",
+        "aca/florida-aca-subsidy-estimate-for-worker-s-compensation-question-advanced-review-and-income-inclusion.html",
+        "aca/how-foreign-income-changes-florida-aca-subsidy-estimate-for-foreign-earned-income-exclusion-advanced-review.html"
       ]
     }
   ]
