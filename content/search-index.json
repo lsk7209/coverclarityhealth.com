@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 24
+      "article_count": 25
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6281,6 +6281,34 @@
         "aca/florida-aca-subsidy-estimate-for-tax-exempt-interest-review-advanced-review-checklist-for-magi-adjustment.html",
         "aca/when-gambling-winnings-risk-affects-florida-aca-subsidy-estimate-for-gambling-winnings-risk-advanced-review.html",
         "aca/cash-business-recordkeeping-florida-aca-subsidy-estimate-for-cash-business-recordkeeping-advanced-review-with.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-unemployment-compensation-year-check-annual-income-estimate",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for unemployment compensation year: check annual income estimate",
+      "subtitle": "Florida ACA subsidy estimate for unemployment compensation year with annual income estimate, Form 8962 risk, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-unemployment-compensation-year-check-annual-income-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-unemployment-compensation-year-check-annual-income-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate for unemployment compensation year",
+      "expanded_keywords": [
+        "Annual income estimate",
+        "Form 8962 risk",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for unemployment compensation year explained with Annual income estimate, Form 8962 risk, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-25T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/when-gambling-winnings-risk-affects-florida-aca-subsidy-estimate-for-gambling-winnings-risk-advanced-review.html",
+        "aca/cash-business-recordkeeping-florida-aca-subsidy-estimate-for-cash-business-recordkeeping-advanced-review-with.html",
+        "aca/florida-aca-subsidy-estimate-for-depreciation-deduction-question-advanced-review-guide-to-depreciation.html"
       ]
     }
   ]

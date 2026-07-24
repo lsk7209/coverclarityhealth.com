@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53945
+        "bytes": 53816
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
@@ -29,16 +29,16 @@
         "bytes": 47524
       },
       {
+        "file": "guides/tax-magi-and-reconciliation-guides.html",
+        "bytes": 34821
+      },
+      {
         "file": "guides/county-and-rating-area-guides.html",
         "bytes": 33704
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 33639
-      },
-      {
-        "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 33631
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
@@ -90,20 +90,20 @@
         "bytes": 15677
       },
       {
+        "file": "guides/tax-magi-and-reconciliation-guides.html",
+        "bytes": 15186
+      },
+      {
         "file": "guides/county-and-rating-area-guides.html",
         "bytes": 14869
       },
       {
-        "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 14567
-      },
-      {
         "file": "blog.html",
-        "bytes": 14559
+        "bytes": 14583
       }
     ],
-    "article_queue_bytes": 489774,
-    "search_index_bytes": 404637
+    "article_queue_bytes": 489773,
+    "search_index_bytes": 406602
   },
   "errors": [],
   "warnings": []
