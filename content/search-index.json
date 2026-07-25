@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 28
+      "article_count": 29
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6393,6 +6393,34 @@
         "aca/what-health-reimbursement-arrangement-offer-means-for-florida-aca-subsidy-estimate-for-health-reimbursement.html",
         "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-spouse-income-mismatch-guide-with-marketplace-household",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for spouse income mismatch guide with Marketplace household",
+      "subtitle": "Florida ACA subsidy estimate for spouse income mismatch with joint filing, Marketplace household, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-spouse-income-mismatch-guide-with-marketplace-household.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-spouse-income-mismatch-guide-with-marketplace-household.html",
+      "main_keyword": "Florida ACA subsidy estimate for spouse income mismatch",
+      "expanded_keywords": [
+        "Joint filing",
+        "Marketplace household",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for spouse income mismatch explained with Joint filing, Marketplace household, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-26T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html",
+        "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html"
       ]
     }
   ]
