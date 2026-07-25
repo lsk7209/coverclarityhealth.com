@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 27
+      "article_count": 28
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6365,6 +6365,34 @@
         "aca/florida-aca-subsidy-estimate-for-depreciation-deduction-question-advanced-review-guide-to-depreciation.html",
         "aca/what-health-reimbursement-arrangement-offer-means-for-florida-aca-subsidy-estimate-for-health-reimbursement.html",
         "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html"
+      ]
+    },
+    {
+      "id": "student-dependent-income-and-dependent-filing-status-inside-florida-aca-subsidy-estimate-for-student",
+      "type": "article",
+      "title": "Student dependent income and dependent filing status inside Florida ACA subsidy estimate for student dependent income",
+      "subtitle": "Florida ACA subsidy estimate for student dependent income with dependent filing status, household income, and a clear official confirmation step.",
+      "url": "aca/student-dependent-income-and-dependent-filing-status-inside-florida-aca-subsidy-estimate-for-student.html",
+      "canonical": "https://coverclarityhealth.com/aca/student-dependent-income-and-dependent-filing-status-inside-florida-aca-subsidy-estimate-for-student.html",
+      "main_keyword": "Florida ACA subsidy estimate for student dependent income",
+      "expanded_keywords": [
+        "Dependent filing status",
+        "Household income",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for student dependent income explained with Dependent filing status, Household income, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-25T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/what-health-reimbursement-arrangement-offer-means-for-florida-aca-subsidy-estimate-for-health-reimbursement.html",
+        "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html"
       ]
     }
   ]
