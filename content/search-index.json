@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 26
+      "article_count": 27
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6337,6 +6337,34 @@
         "aca/cash-business-recordkeeping-florida-aca-subsidy-estimate-for-cash-business-recordkeeping-advanced-review-with.html",
         "aca/florida-aca-subsidy-estimate-for-depreciation-deduction-question-advanced-review-guide-to-depreciation.html",
         "aca/what-health-reimbursement-arrangement-offer-means-for-florida-aca-subsidy-estimate-for-health-reimbursement.html"
+      ]
+    },
+    {
+      "id": "how-early-retirement-estimate-changes-florida-aca-subsidy-estimate-for-social-security-benefit-mix",
+      "type": "article",
+      "title": "How early retirement estimate changes Florida ACA subsidy estimate for Social Security benefit mix",
+      "subtitle": "Florida ACA subsidy estimate for Social Security benefit mix with taxable benefit planning, early retirement estimate, and a clear official confirmation step.",
+      "url": "aca/how-early-retirement-estimate-changes-florida-aca-subsidy-estimate-for-social-security-benefit-mix.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-early-retirement-estimate-changes-florida-aca-subsidy-estimate-for-social-security-benefit-mix.html",
+      "main_keyword": "Florida ACA subsidy estimate for Social Security benefit mix",
+      "expanded_keywords": [
+        "Taxable benefit planning",
+        "Early retirement estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Social Security benefit mix explained with Taxable benefit planning, Early retirement estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-25T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-depreciation-deduction-question-advanced-review-guide-to-depreciation.html",
+        "aca/what-health-reimbursement-arrangement-offer-means-for-florida-aca-subsidy-estimate-for-health-reimbursement.html",
+        "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html"
       ]
     }
   ]
