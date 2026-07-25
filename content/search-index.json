@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 29
+      "article_count": 30
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6421,6 +6421,34 @@
         "aca/florida-aca-subsidy-estimate-for-severance-payment-timing-advanced-review-severance-income-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html",
         "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-year-end-bonus-risk-check-income-spike",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for year-end bonus risk: check income spike",
+      "subtitle": "Florida ACA subsidy estimate for year-end bonus risk with income spike, advance premium tax credit, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-year-end-bonus-risk-check-income-spike.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-year-end-bonus-risk-check-income-spike.html",
+      "main_keyword": "Florida ACA subsidy estimate for year-end bonus risk",
+      "expanded_keywords": [
+        "Income spike",
+        "Advance premium tax credit",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for year-end bonus risk explained with Income spike, Advance premium tax credit, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-26T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html",
+        "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-back-pay-settlement-advanced-review-checklist-for-annual-income-update.html"
       ]
     }
   ]
