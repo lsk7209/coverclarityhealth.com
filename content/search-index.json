@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 30
+      "article_count": 31
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6449,6 +6449,34 @@
         "aca/florida-aca-subsidy-estimate-for-pension-lump-sum-review-advanced-review-and-retiree-magi.html",
         "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-back-pay-settlement-advanced-review-checklist-for-annual-income-update.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-commission-income-volatility-variable-pay-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for commission income volatility: variable pay to verify first",
+      "subtitle": "Florida ACA subsidy estimate for commission income volatility with variable pay, safe income update, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-commission-income-volatility-variable-pay-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-commission-income-volatility-variable-pay-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for commission income volatility",
+      "expanded_keywords": [
+        "Variable pay",
+        "Safe income update",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for commission income volatility explained with Variable pay, Safe income update, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-26T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-back-pay-settlement-advanced-review-checklist-for-annual-income-update.html",
+        "aca/when-tax-filing-extension-risk-affects-florida-aca-subsidy-estimate-for-tax-filing-extension-risk-advanced.html"
       ]
     }
   ]
