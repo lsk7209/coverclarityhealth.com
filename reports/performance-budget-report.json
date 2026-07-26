@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53172
+        "bytes": 53122
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
@@ -30,7 +30,7 @@
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 43535
+        "bytes": 44598
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -87,7 +87,7 @@
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 19618
+        "bytes": 20159
       },
       {
         "file": "index.html",
@@ -99,11 +99,11 @@
       },
       {
         "file": "blog.html",
-        "bytes": 14391
+        "bytes": 14371
       }
     ],
-    "article_queue_bytes": 489765,
-    "search_index_bytes": 421635
+    "article_queue_bytes": 489764,
+    "search_index_bytes": 423497
   },
   "errors": [],
   "warnings": []

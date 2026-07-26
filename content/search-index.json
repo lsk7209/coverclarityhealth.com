@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 33
+      "article_count": 34
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6533,6 +6533,34 @@
         "aca/when-tax-filing-extension-risk-affects-florida-aca-subsidy-estimate-for-tax-filing-extension-risk-advanced.html",
         "aca/safe-harbor-misunderstanding-florida-aca-subsidy-estimate-for-safe-harbor-misunderstanding-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-income-update-frequency-advanced-review-guide-to-income-update-frequency-and.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-part-year-florida-move-guide-with-annual-income-projection",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for part-year Florida move guide with annual income projection",
+      "subtitle": "Florida ACA subsidy estimate for part-year Florida move with state move, annual income projection, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-part-year-florida-move-guide-with-annual-income-projection.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-part-year-florida-move-guide-with-annual-income-projection.html",
+      "main_keyword": "Florida ACA subsidy estimate for part-year Florida move",
+      "expanded_keywords": [
+        "State move",
+        "Annual income projection",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for part-year Florida move explained with State move, Annual income projection, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-27T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/safe-harbor-misunderstanding-florida-aca-subsidy-estimate-for-safe-harbor-misunderstanding-advanced-review.html",
+        "aca/florida-aca-subsidy-estimate-for-income-update-frequency-advanced-review-guide-to-income-update-frequency-and.html",
+        "aca/what-joint-custody-income-estimate-means-for-florida-aca-subsidy-estimate-for-joint-custody-income-estimate.html"
       ]
     }
   ]
