@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 31
+      "article_count": 32
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6477,6 +6477,34 @@
         "aca/how-support-payment-changes-florida-aca-subsidy-estimate-for-child-support-confusion-advanced-review.html",
         "aca/florida-aca-subsidy-estimate-for-back-pay-settlement-advanced-review-checklist-for-annual-income-update.html",
         "aca/when-tax-filing-extension-risk-affects-florida-aca-subsidy-estimate-for-tax-filing-extension-risk-advanced.html"
+      ]
+    },
+    {
+      "id": "how-self-employed-estimate-changes-florida-aca-subsidy-estimate-for-1099-k-reporting-question",
+      "type": "article",
+      "title": "How self-employed estimate changes Florida ACA subsidy estimate for 1099-K reporting question",
+      "subtitle": "Florida ACA subsidy estimate for 1099-K reporting question with gross receipts versus net income, self-employed estimate, and a clear official confirmation step.",
+      "url": "aca/how-self-employed-estimate-changes-florida-aca-subsidy-estimate-for-1099-k-reporting-question.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-self-employed-estimate-changes-florida-aca-subsidy-estimate-for-1099-k-reporting-question.html",
+      "main_keyword": "Florida ACA subsidy estimate for 1099-K reporting question",
+      "expanded_keywords": [
+        "Gross receipts versus net income",
+        "Self-employed estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for 1099-K reporting question explained with Gross receipts versus net income, Self-employed estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-26T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-back-pay-settlement-advanced-review-checklist-for-annual-income-update.html",
+        "aca/when-tax-filing-extension-risk-affects-florida-aca-subsidy-estimate-for-tax-filing-extension-risk-advanced.html",
+        "aca/safe-harbor-misunderstanding-florida-aca-subsidy-estimate-for-safe-harbor-misunderstanding-advanced-review.html"
       ]
     }
   ]
