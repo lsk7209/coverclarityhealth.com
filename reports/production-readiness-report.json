@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-27T11:44:51.381003+00:00",
+  "generatedAt": "2026-07-27T15:18:01.606582+00:00",
   "git_snapshot": {
-    "head": "026c49190fc4c834504a93603968a7acc4cc44ea",
+    "head": "b625971fb35846ba9f1adb02f449ce32b82970b1",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/how-marketplace-eligibility-warning-changes-florida-aca-subsidy-estimate-for-income-under-100-percent-fpl.html",
+      "aca/income-over-400-percent-fpl-and-subsidy-cliff-inside-florida-aca-subsidy-estimate-for-income-over-400-percent.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -223,7 +223,7 @@
   "quality_snapshot": {
     "article_files": 400,
     "guide_files": 5,
-    "sitemap_urls": 252,
+    "sitemap_urls": 253,
     "site_origin_placeholder_count": 0,
     "site_origin_placeholder_sample": [],
     "public_origin_mismatch_count": 0,
@@ -231,8 +231,8 @@
   },
   "article_generation_snapshot": {
     "articles": 400,
-    "publishedArticles": 237,
-    "scheduledArticles": 163,
+    "publishedArticles": 238,
+    "scheduledArticles": 162,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 400,
@@ -249,7 +249,7 @@
     "html_files_checked": 416,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 53087,
+    "largest_html_bytes": 53253,
     "article_average_bytes": 25416
   },
   "next_required_actions": [

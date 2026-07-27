@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 37
+      "article_count": 38
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6645,6 +6645,34 @@
         "aca/florida-aca-subsidy-estimate-with-roth-conversion-income-magi-questions-to-settle.html",
         "aca/how-ira-withdrawal-planning-can-change-a-florida-aca-subsidy-estimate.html",
         "aca/capital-gains-before-enrollment-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "income-over-400-percent-fpl-and-subsidy-cliff-inside-florida-aca-subsidy-estimate-for-income-over-400-percent",
+      "type": "article",
+      "title": "Income over 400 percent FPL and subsidy cliff inside Florida ACA subsidy estimate for income over 400 percent FPL",
+      "subtitle": "Florida ACA subsidy estimate for income over 400 percent FPL with subsidy cliff, current-law comparison, and a clear official confirmation step.",
+      "url": "aca/income-over-400-percent-fpl-and-subsidy-cliff-inside-florida-aca-subsidy-estimate-for-income-over-400-percent.html",
+      "canonical": "https://coverclarityhealth.com/aca/income-over-400-percent-fpl-and-subsidy-cliff-inside-florida-aca-subsidy-estimate-for-income-over-400-percent.html",
+      "main_keyword": "Florida ACA subsidy estimate for income over 400 percent FPL",
+      "expanded_keywords": [
+        "Subsidy cliff",
+        "Current-law comparison",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for income over 400 percent FPL explained with Subsidy cliff, Current-law comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-27T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/how-ira-withdrawal-planning-can-change-a-florida-aca-subsidy-estimate.html",
+        "aca/capital-gains-before-enrollment-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html"
       ]
     }
   ]
