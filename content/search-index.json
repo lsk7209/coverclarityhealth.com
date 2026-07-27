@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 38
+      "article_count": 39
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6673,6 +6673,34 @@
         "aca/how-ira-withdrawal-planning-can-change-a-florida-aca-subsidy-estimate.html",
         "aca/capital-gains-before-enrollment-and-the-florida-aca-subsidy-estimate-for-2026.html",
         "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-magi-forecast-worksheet-guide-with-subsidy-planning",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for MAGI forecast worksheet guide with subsidy planning",
+      "subtitle": "Florida ACA subsidy estimate for MAGI forecast worksheet with income forecast, subsidy planning, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-magi-forecast-worksheet-guide-with-subsidy-planning.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-magi-forecast-worksheet-guide-with-subsidy-planning.html",
+      "main_keyword": "Florida ACA subsidy estimate for MAGI forecast worksheet",
+      "expanded_keywords": [
+        "Income forecast",
+        "Subsidy planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for MAGI forecast worksheet explained with Income forecast, Subsidy planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-28T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/capital-gains-before-enrollment-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html",
+        "aca/florida-aca-subsidy-estimate-with-unemployment-compensation-magi-questions-to-settle.html"
       ]
     }
   ]
