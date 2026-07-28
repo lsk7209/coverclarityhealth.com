@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 22
+      "article_count": 23
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6785,6 +6785,34 @@
         "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html",
         "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html"
+      ]
+    },
+    {
+      "id": "csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check",
+      "type": "article",
+      "title": "CSR 94 value check and cost-sharing reduction inside Florida ACA subsidy estimate for CSR 94 value check",
+      "subtitle": "Florida ACA subsidy estimate for CSR 94 value check with cost-sharing reduction, low out-of-pocket design, and a clear official confirmation step.",
+      "url": "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
+      "canonical": "https://coverclarityhealth.com/aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
+      "main_keyword": "Florida ACA subsidy estimate for CSR 94 value check",
+      "expanded_keywords": [
+        "Cost-sharing reduction",
+        "Low out-of-pocket design",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for CSR 94 value check explained with Cost-sharing reduction, Low out-of-pocket design, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-28T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html",
+        "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html"
       ]
     }
   ]

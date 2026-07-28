@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53232
+        "bytes": 53319
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -31,6 +31,10 @@
       {
         "file": "index.html",
         "bytes": 47524
+      },
+      {
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 34143
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -51,10 +55,6 @@
       {
         "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
         "bytes": 33204
-      },
-      {
-        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 32985
       }
     ],
     "article_average_bytes": 25416,
@@ -94,16 +94,16 @@
         "bytes": 15677
       },
       {
-        "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 14869
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 15017
       },
       {
-        "file": "blog.html",
-        "bytes": 14457
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 14869
       }
     ],
-    "article_queue_bytes": 489756,
-    "search_index_bytes": 438264
+    "article_queue_bytes": 489755,
+    "search_index_bytes": 440145
   },
   "errors": [],
   "warnings": []
