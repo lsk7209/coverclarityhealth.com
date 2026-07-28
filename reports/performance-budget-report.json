@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53253
+        "bytes": 53232
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -53,8 +53,8 @@
         "bytes": 33204
       },
       {
-        "file": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
-        "bytes": 32872
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 32985
       }
     ],
     "article_average_bytes": 25416,
@@ -99,11 +99,11 @@
       },
       {
         "file": "blog.html",
-        "bytes": 14473
+        "bytes": 14457
       }
     ],
-    "article_queue_bytes": 489757,
-    "search_index_bytes": 436434
+    "article_queue_bytes": 489756,
+    "search_index_bytes": 438264
   },
   "errors": [],
   "warnings": []

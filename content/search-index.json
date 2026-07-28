@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 21
+      "article_count": 22
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6757,6 +6757,34 @@
         "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
         "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits",
+      "type": "article",
+      "title": "How net premium tradeoff changes Florida ACA subsidy estimate for Gold plan after credits",
+      "subtitle": "Florida ACA subsidy estimate for Gold plan after credits with Gold plan comparison, net premium tradeoff, and a clear official confirmation step.",
+      "url": "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
+      "main_keyword": "Florida ACA subsidy estimate for Gold plan after credits",
+      "expanded_keywords": [
+        "Gold plan comparison",
+        "Net premium tradeoff",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Gold plan after credits explained with Gold plan comparison, Net premium tradeoff, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-28T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]
