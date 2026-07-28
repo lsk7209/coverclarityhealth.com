@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 20
+      "article_count": 21
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6729,6 +6729,34 @@
         "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html",
         "aca/florida-aca-subsidy-estimate-with-unemployment-compensation-magi-questions-to-settle.html",
         "aca/how-rental-income-can-change-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Bronze versus Silver decision: metal tier comparison to verify first",
+      "subtitle": "Florida ACA subsidy estimate for Bronze versus Silver decision with metal tier comparison, CSR eligibility, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for Bronze versus Silver decision",
+      "expanded_keywords": [
+        "Metal tier comparison",
+        "CSR eligibility",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Bronze versus Silver decision explained with Metal tier comparison, CSR eligibility, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-28T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
+        "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
