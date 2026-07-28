@@ -99,7 +99,7 @@
       "canonical": "https://coverclarityhealth.com/guides/tax-magi-and-reconciliation-guides.html",
       "cluster": "Tax, MAGI, and reconciliation",
       "description": "Florida ACA MAGI and tax reconciliation guides",
-      "article_count": 39
+      "article_count": 40
     },
     {
       "id": "official-verification-and-troubleshooting-guides",
@@ -6701,6 +6701,34 @@
         "aca/capital-gains-before-enrollment-and-the-florida-aca-subsidy-estimate-for-2026.html",
         "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html",
         "aca/florida-aca-subsidy-estimate-with-unemployment-compensation-magi-questions-to-settle.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-side-hustle-income-review-check-secondary-income",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for side-hustle income review: check secondary income",
+      "subtitle": "Florida ACA subsidy estimate for side-hustle income review with secondary income, annual estimate update, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-side-hustle-income-review-check-secondary-income.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-side-hustle-income-review-check-secondary-income.html",
+      "main_keyword": "Florida ACA subsidy estimate for side-hustle income review",
+      "expanded_keywords": [
+        "Secondary income",
+        "Annual estimate update",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Tax, MAGI, and reconciliation",
+      "guide_hub": "guides/tax-magi-and-reconciliation-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for side-hustle income review explained with Secondary income, Annual estimate update, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-28T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/tax-magi-and-reconciliation-guides.html",
+        "aca/what-to-verify-in-a-florida-aca-subsidy-estimate-with-self-employment-deductions.html",
+        "aca/florida-aca-subsidy-estimate-with-unemployment-compensation-magi-questions-to-settle.html",
+        "aca/how-rental-income-can-change-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
