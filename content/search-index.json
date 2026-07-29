@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 27
+      "article_count": 28
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6925,6 +6925,34 @@
         "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html",
         "aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html",
         "aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html"
+      ]
+    },
+    {
+      "id": "specialist-network-review-and-provider-network-inside-florida-aca-subsidy-estimate-for-specialist-network",
+      "type": "article",
+      "title": "Specialist network review and provider network inside Florida ACA subsidy estimate for specialist network review",
+      "subtitle": "Florida ACA subsidy estimate for specialist network review with provider network, Marketplace verification, and a clear official confirmation step.",
+      "url": "aca/specialist-network-review-and-provider-network-inside-florida-aca-subsidy-estimate-for-specialist-network.html",
+      "canonical": "https://coverclarityhealth.com/aca/specialist-network-review-and-provider-network-inside-florida-aca-subsidy-estimate-for-specialist-network.html",
+      "main_keyword": "Florida ACA subsidy estimate for specialist network review",
+      "expanded_keywords": [
+        "Provider network",
+        "Marketplace verification",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for specialist network review explained with Provider network, Marketplace verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-30T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html",
+        "aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html",
+        "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html"
       ]
     }
   ]
