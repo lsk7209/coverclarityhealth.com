@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 25
+      "article_count": 26
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6869,6 +6869,34 @@
         "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
         "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for high deductible choice: deductible risk to verify first",
+      "subtitle": "Florida ACA subsidy estimate for high deductible choice with deductible risk, premium tradeoff, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for high deductible choice",
+      "expanded_keywords": [
+        "Deductible risk",
+        "Premium tradeoff",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for high deductible choice explained with Deductible risk, Premium tradeoff, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-29T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]
