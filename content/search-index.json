@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 33
+      "article_count": 34
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7093,6 +7093,34 @@
         "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html",
         "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/generic-drug-cost-comparison-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-dental-coverage-beside-aca-plans-verification-review-guide-with-marketplace",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for dental coverage beside ACA plans verification review guide with Marketplace plan limits",
+      "subtitle": "Florida ACA subsidy estimate for dental coverage beside ACA plans verification review with separate dental decision, Marketplace plan limits, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-dental-coverage-beside-aca-plans-verification-review-guide-with-marketplace.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-dental-coverage-beside-aca-plans-verification-review-guide-with-marketplace.html",
+      "main_keyword": "Florida ACA subsidy estimate for dental coverage beside ACA plans verification review",
+      "expanded_keywords": [
+        "Separate dental decision",
+        "Marketplace plan limits",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for dental coverage beside ACA plans verification review explained with Separate dental decision, Marketplace plan limits, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-07-31T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/generic-drug-cost-comparison-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-silver-benchmark-versus-selected-plan-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]

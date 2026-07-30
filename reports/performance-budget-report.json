@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53610
+        "bytes": 53961
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -34,7 +34,7 @@
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 45290
+        "bytes": 46543
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -91,7 +91,7 @@
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 20671
+        "bytes": 21304
       },
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 14869
       }
     ],
-    "article_queue_bytes": 489745,
-    "search_index_bytes": 458793
+    "article_queue_bytes": 489744,
+    "search_index_bytes": 460808
   },
   "errors": [],
   "warnings": []
