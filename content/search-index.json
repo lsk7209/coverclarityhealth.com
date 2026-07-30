@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 29
+      "article_count": 30
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -6981,6 +6981,34 @@
         "aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html",
         "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-hsa-eligible-plan-check-check-hsa-plan-rules",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for HSA eligible plan check: check HSA plan rules",
+      "subtitle": "Florida ACA subsidy estimate for HSA eligible plan check with HSA plan rules, metal tier choice, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-hsa-eligible-plan-check-check-hsa-plan-rules.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-hsa-eligible-plan-check-check-hsa-plan-rules.html",
+      "main_keyword": "Florida ACA subsidy estimate for HSA eligible plan check",
+      "expanded_keywords": [
+        "HSA plan rules",
+        "Metal tier choice",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for HSA eligible plan check explained with HSA plan rules, Metal tier choice, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-30T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]
