@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 32
+      "article_count": 33
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7065,6 +7065,34 @@
         "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html",
         "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html",
         "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html"
+      ]
+    },
+    {
+      "id": "navigator-versus-broker-help-and-enrollment-assistance-inside-florida-aca-subsidy-estimate-for-navigator",
+      "type": "article",
+      "title": "Navigator versus broker help and enrollment assistance inside Florida ACA subsidy estimate for navigator versus broker help",
+      "subtitle": "Florida ACA subsidy estimate for navigator versus broker help with enrollment assistance, conflict-free verification, and a clear official confirmation step.",
+      "url": "aca/navigator-versus-broker-help-and-enrollment-assistance-inside-florida-aca-subsidy-estimate-for-navigator.html",
+      "canonical": "https://coverclarityhealth.com/aca/navigator-versus-broker-help-and-enrollment-assistance-inside-florida-aca-subsidy-estimate-for-navigator.html",
+      "main_keyword": "Florida ACA subsidy estimate for navigator versus broker help",
+      "expanded_keywords": [
+        "Enrollment assistance",
+        "Conflict-free verification",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for navigator versus broker help explained with Enrollment assistance, Conflict-free verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-31T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html",
+        "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/generic-drug-cost-comparison-inside-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
