@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 30
+      "article_count": 31
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7009,6 +7009,34 @@
         "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
         "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-family-deductible-exposure-family-out-of-pocket-exposure-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for family deductible exposure: family out-of-pocket exposure to verify first",
+      "subtitle": "Florida ACA subsidy estimate for family deductible exposure with family out-of-pocket exposure, monthly premium, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-family-deductible-exposure-family-out-of-pocket-exposure-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-family-deductible-exposure-family-out-of-pocket-exposure-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for family deductible exposure",
+      "expanded_keywords": [
+        "Family out-of-pocket exposure",
+        "Monthly premium",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for family deductible exposure explained with Family out-of-pocket exposure, Monthly premium, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-30T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html",
+        "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html"
       ]
     }
   ]
