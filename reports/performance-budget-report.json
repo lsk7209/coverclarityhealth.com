@@ -18,19 +18,19 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53799
+        "bytes": 53668
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
         "bytes": 51308
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 48326
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 48672
       },
       {
-        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 47615
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 48326
       },
       {
         "file": "index.html",
@@ -86,12 +86,12 @@
         "bytes": 23591
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 22104
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 22378
       },
       {
-        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 21847
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 22104
       },
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 14869
       }
     ],
-    "article_queue_bytes": 489743,
-    "search_index_bytes": 462625
+    "article_queue_bytes": 489742,
+    "search_index_bytes": 464462
   },
   "errors": [],
   "warnings": []

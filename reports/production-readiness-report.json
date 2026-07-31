@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-07-31T07:18:22.271153+00:00",
+  "generatedAt": "2026-07-31T10:00:49.642686+00:00",
   "git_snapshot": {
-    "head": "b5477a8f6f010b68e0f229ce39def7d8cbd49168",
-    "worktree_clean": true,
-    "changed_paths": []
+    "head": "c3a0da5c5dcdeaf5c62083394c7a93a073c85810",
+    "worktree_clean": false,
+    "changed_paths": [
+      "aca/florida-aca-subsidy-estimate-for-urgent-care-access-local-provider-check-to-verify-first.html",
+      "blog.html",
+      "content/article-queue.json",
+      "content/search-index.json",
+      "feed.xml",
+      "guides/plan-selection-and-out-of-pocket-guides.html",
+      "llms.txt",
+      "reports/article-generation-report.json",
+      "reports/content-quality-report.json",
+      "reports/performance-budget-report.json",
+      "sitemap.xml"
+    ]
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -49,8 +61,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -133,6 +145,11 @@
       }
     },
     {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
+    },
+    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -185,7 +202,8 @@
       "github_gsc_configuration"
     ],
     "code_or_repository_blockers": [
-      "seo_adsense_audit"
+      "seo_adsense_audit",
+      "git_worktree_clean"
     ]
   },
   "missing_external_inputs": [
@@ -205,7 +223,7 @@
   "quality_snapshot": {
     "article_files": 400,
     "guide_files": 5,
-    "sitemap_urls": 270,
+    "sitemap_urls": 271,
     "site_origin_placeholder_count": 0,
     "site_origin_placeholder_sample": [],
     "public_origin_mismatch_count": 0,
@@ -213,8 +231,8 @@
   },
   "article_generation_snapshot": {
     "articles": 400,
-    "publishedArticles": 255,
-    "scheduledArticles": 145,
+    "publishedArticles": 256,
+    "scheduledArticles": 144,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 400,
@@ -231,11 +249,12 @@
     "html_files_checked": 416,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 53799,
+    "largest_html_bytes": 53668,
     "article_average_bytes": 25416
   },
   "next_required_actions": [
     "Run npm run audit:seo and fix SEO or AdSense audit issues before production submission.",
+    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
