@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 37
+      "article_count": 38
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7205,6 +7205,34 @@
         "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
         "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
         "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html"
+      ]
+    },
+    {
+      "id": "mental-health-network-check-and-behavioral-health-access-inside-florida-aca-subsidy-estimate-for-mental",
+      "type": "article",
+      "title": "Mental health network check and behavioral health access inside Florida ACA subsidy estimate for mental health network check",
+      "subtitle": "Florida ACA subsidy estimate for mental health network check with behavioral health access, plan selection, and a clear official confirmation step.",
+      "url": "aca/mental-health-network-check-and-behavioral-health-access-inside-florida-aca-subsidy-estimate-for-mental.html",
+      "canonical": "https://coverclarityhealth.com/aca/mental-health-network-check-and-behavioral-health-access-inside-florida-aca-subsidy-estimate-for-mental.html",
+      "main_keyword": "Florida ACA subsidy estimate for mental health network check",
+      "expanded_keywords": [
+        "Behavioral health access",
+        "Plan selection",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for mental health network check explained with Behavioral health access, Plan selection, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-01T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
+        "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
+        "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html"
       ]
     }
   ]
