@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 36
+      "article_count": 37
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7177,6 +7177,34 @@
         "aca/before-choosing-silver-benchmark-versus-selected-plan-read-the-florida-aca-subsidy-estimate-this-way.html",
         "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
         "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html"
+      ]
+    },
+    {
+      "id": "how-family-plan-review-changes-florida-aca-subsidy-estimate-for-pediatric-coverage-review",
+      "type": "article",
+      "title": "How family plan review changes Florida ACA subsidy estimate for pediatric coverage review",
+      "subtitle": "Florida ACA subsidy estimate for pediatric coverage review with dependent benefits, family plan review, and a clear official confirmation step.",
+      "url": "aca/how-family-plan-review-changes-florida-aca-subsidy-estimate-for-pediatric-coverage-review.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-family-plan-review-changes-florida-aca-subsidy-estimate-for-pediatric-coverage-review.html",
+      "main_keyword": "Florida ACA subsidy estimate for pediatric coverage review",
+      "expanded_keywords": [
+        "Dependent benefits",
+        "Family plan review",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for pediatric coverage review explained with Dependent benefits, Family plan review, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-31T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-decision-metal-tier-comparison-to-verify-first.html",
+        "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
+        "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html"
       ]
     }
   ]
