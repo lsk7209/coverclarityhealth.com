@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 38
+      "article_count": 39
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7233,6 +7233,34 @@
         "aca/how-net-premium-tradeoff-changes-florida-aca-subsidy-estimate-for-gold-plan-after-credits.html",
         "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
         "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-generic-drug-cost-comparison-verification-review-guide-with-monthly-cost",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for generic drug cost comparison verification review guide with monthly cost planning",
+      "subtitle": "Florida ACA subsidy estimate for generic drug cost comparison verification review with formulary tier, monthly cost planning, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-generic-drug-cost-comparison-verification-review-guide-with-monthly-cost.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-generic-drug-cost-comparison-verification-review-guide-with-monthly-cost.html",
+      "main_keyword": "Florida ACA subsidy estimate for generic drug cost comparison verification review",
+      "expanded_keywords": [
+        "Formulary tier",
+        "Monthly cost planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for generic drug cost comparison verification review explained with Formulary tier, Monthly cost planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-01T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
+        "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-csr-73-limit-check-partial-csr-value.html"
       ]
     }
   ]
