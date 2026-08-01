@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 20
+      "article_count": 21
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7289,6 +7289,34 @@
         "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-csr-73-limit-check-partial-csr-value.html",
         "aca/florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-cobra-ending-cobra-transition-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for COBRA ending: COBRA transition to verify first",
+      "subtitle": "Florida ACA subsidy estimate for COBRA ending with COBRA transition, special enrollment timing, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-cobra-ending-cobra-transition-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-cobra-ending-cobra-transition-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for COBRA ending",
+      "expanded_keywords": [
+        "COBRA transition",
+        "Special enrollment timing",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for COBRA ending explained with COBRA transition, Special enrollment timing, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-01T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-marriage-before-enrollment-combined-income-to-verify-first.html",
+        "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
+        "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html"
       ]
     }
   ]

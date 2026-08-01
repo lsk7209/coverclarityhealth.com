@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 54163
+        "bytes": 53955
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 14869
       }
     ],
-    "article_queue_bytes": 489738,
-    "search_index_bytes": 472117
+    "article_queue_bytes": 489737,
+    "search_index_bytes": 473872
   },
   "errors": [],
   "warnings": []
