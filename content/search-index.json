@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 22
+      "article_count": 23
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7345,6 +7345,34 @@
         "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
         "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
         "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html"
+      ]
+    },
+    {
+      "id": "county-to-county-move-and-county-move-inside-florida-aca-subsidy-estimate-for-county-to-county-move",
+      "type": "article",
+      "title": "County-to-county move and county move inside Florida ACA subsidy estimate for county-to-county move",
+      "subtitle": "Florida ACA subsidy estimate for county-to-county move with county move, rating-area update, and a clear official confirmation step.",
+      "url": "aca/county-to-county-move-and-county-move-inside-florida-aca-subsidy-estimate-for-county-to-county-move.html",
+      "canonical": "https://coverclarityhealth.com/aca/county-to-county-move-and-county-move-inside-florida-aca-subsidy-estimate-for-county-to-county-move.html",
+      "main_keyword": "Florida ACA subsidy estimate for county-to-county move",
+      "expanded_keywords": [
+        "County move",
+        "Rating-area update",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for county-to-county move explained with County move, Rating-area update, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-02T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
+        "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html"
       ]
     }
   ]
