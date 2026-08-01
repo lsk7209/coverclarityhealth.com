@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 21
+      "article_count": 22
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7317,6 +7317,34 @@
         "aca/florida-aca-subsidy-estimate-for-marriage-before-enrollment-combined-income-to-verify-first.html",
         "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
         "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html"
+      ]
+    },
+    {
+      "id": "how-marketplace-fallback-changes-florida-aca-subsidy-estimate-for-employer-plan-becoming-unaffordable",
+      "type": "article",
+      "title": "How Marketplace fallback changes Florida ACA subsidy estimate for employer plan becoming unaffordable",
+      "subtitle": "Florida ACA subsidy estimate for employer plan becoming unaffordable with affordability test, Marketplace fallback, and a clear official confirmation step.",
+      "url": "aca/how-marketplace-fallback-changes-florida-aca-subsidy-estimate-for-employer-plan-becoming-unaffordable.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-marketplace-fallback-changes-florida-aca-subsidy-estimate-for-employer-plan-becoming-unaffordable.html",
+      "main_keyword": "Florida ACA subsidy estimate for employer plan becoming unaffordable",
+      "expanded_keywords": [
+        "Affordability test",
+        "Marketplace fallback",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for employer plan becoming unaffordable explained with Affordability test, Marketplace fallback, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-01T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
+        "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
+        "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html"
       ]
     }
   ]
