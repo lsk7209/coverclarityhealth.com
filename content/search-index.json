@@ -89,7 +89,7 @@
       "canonical": "https://coverclarityhealth.com/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 39
+      "article_count": 40
     },
     {
       "id": "tax-magi-and-reconciliation-guides",
@@ -7261,6 +7261,34 @@
         "aca/csr-94-value-check-and-cost-sharing-reduction-inside-florida-aca-subsidy-estimate-for-csr-94-value-check.html",
         "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-csr-73-limit-check-partial-csr-value.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-benchmark-versus-selected-plan-check-slcsp-benchmark",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for benchmark versus selected plan: check SLCSP benchmark",
+      "subtitle": "Florida ACA subsidy estimate for benchmark versus selected plan with SLCSP benchmark, net premium estimate, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-benchmark-versus-selected-plan-check-slcsp-benchmark.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-benchmark-versus-selected-plan-check-slcsp-benchmark.html",
+      "main_keyword": "Florida ACA subsidy estimate for benchmark versus selected plan",
+      "expanded_keywords": [
+        "SLCSP benchmark",
+        "Net premium estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for benchmark versus selected plan explained with SLCSP benchmark, Net premium estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-01T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-csr-87-tradeoff-guide-with-deductible-comparison.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-csr-73-limit-check-partial-csr-value.html",
+        "aca/florida-aca-subsidy-estimate-for-high-deductible-choice-deductible-risk-to-verify-first.html"
       ]
     }
   ]
