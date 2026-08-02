@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 23
+      "article_count": 24
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7373,6 +7373,34 @@
         "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
         "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-new-baby-or-adoption-guide-with-household-size-change",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for new baby or adoption guide with household size change",
+      "subtitle": "Florida ACA subsidy estimate for new baby or adoption with new dependent, household size change, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-new-baby-or-adoption-guide-with-household-size-change.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-new-baby-or-adoption-guide-with-household-size-change.html",
+      "main_keyword": "Florida ACA subsidy estimate for new baby or adoption",
+      "expanded_keywords": [
+        "New dependent",
+        "Household size change",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for new baby or adoption explained with New dependent, Household size change, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-02T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
+        "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html"
       ]
     }
   ]

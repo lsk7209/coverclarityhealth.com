@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53929
+        "bytes": 53589
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -53,8 +53,8 @@
         "bytes": 33369
       },
       {
-        "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
-        "bytes": 33204
+        "file": "guides/life-event-and-income-change-guides.html",
+        "bytes": 33255
       }
     ],
     "article_average_bytes": 25416,
@@ -102,8 +102,8 @@
         "bytes": 14869
       }
     ],
-    "article_queue_bytes": 489735,
-    "search_index_bytes": 477615
+    "article_queue_bytes": 489734,
+    "search_index_bytes": 479413
   },
   "errors": [],
   "warnings": []
