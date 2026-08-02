@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 26
+      "article_count": 27
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7457,6 +7457,34 @@
         "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html",
         "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
         "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html"
+      ]
+    },
+    {
+      "id": "how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change",
+      "type": "article",
+      "title": "How employer coverage gap changes Florida ACA subsidy estimate for midyear job change",
+      "subtitle": "Florida ACA subsidy estimate for midyear job change with income projection, employer coverage gap, and a clear official confirmation step.",
+      "url": "aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-employer-coverage-gap-changes-florida-aca-subsidy-estimate-for-midyear-job-change.html",
+      "main_keyword": "Florida ACA subsidy estimate for midyear job change",
+      "expanded_keywords": [
+        "Income projection",
+        "Employer coverage gap",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for midyear job change explained with Income projection, Employer coverage gap, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-02T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
+        "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
+        "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html"
       ]
     }
   ]
