@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 24
+      "article_count": 25
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7401,6 +7401,34 @@
         "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
         "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-divorce-tax-household-reset-check-dependent-claim",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for divorce tax household reset: check dependent claim",
+      "subtitle": "Florida ACA subsidy estimate for divorce tax household reset with dependent claim, income split, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-divorce-tax-household-reset-check-dependent-claim.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-divorce-tax-household-reset-check-dependent-claim.html",
+      "main_keyword": "Florida ACA subsidy estimate for divorce tax household reset",
+      "expanded_keywords": [
+        "Dependent claim",
+        "Income split",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for divorce tax household reset explained with Dependent claim, Income split, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-02T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
+        "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html",
+        "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html"
       ]
     }
   ]

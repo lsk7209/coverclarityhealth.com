@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53589
+        "bytes": 53517
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -37,6 +37,10 @@
         "bytes": 47524
       },
       {
+        "file": "guides/life-event-and-income-change-guides.html",
+        "bytes": 34371
+      },
+      {
         "file": "guides/county-and-rating-area-guides.html",
         "bytes": 33704
       },
@@ -51,10 +55,6 @@
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
         "bytes": 33369
-      },
-      {
-        "file": "guides/life-event-and-income-change-guides.html",
-        "bytes": 33255
       }
     ],
     "article_average_bytes": 25416,
@@ -98,12 +98,12 @@
         "bytes": 15677
       },
       {
-        "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 14869
+        "file": "guides/life-event-and-income-change-guides.html",
+        "bytes": 15007
       }
     ],
-    "article_queue_bytes": 489734,
-    "search_index_bytes": 479413
+    "article_queue_bytes": 489733,
+    "search_index_bytes": 481273
   },
   "errors": [],
   "warnings": []
