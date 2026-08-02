@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 27
+      "article_count": 28
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7485,6 +7485,34 @@
         "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
         "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
         "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html"
+      ]
+    },
+    {
+      "id": "freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch",
+      "type": "article",
+      "title": "Freelance launch and self-employed income inside Florida ACA subsidy estimate for freelance launch",
+      "subtitle": "Florida ACA subsidy estimate for freelance launch with self-employed income, variable monthly income, and a clear official confirmation step.",
+      "url": "aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
+      "canonical": "https://coverclarityhealth.com/aca/freelance-launch-and-self-employed-income-inside-florida-aca-subsidy-estimate-for-freelance-launch.html",
+      "main_keyword": "Florida ACA subsidy estimate for freelance launch",
+      "expanded_keywords": [
+        "Self-employed income",
+        "Variable monthly income",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for freelance launch explained with Self-employed income, Variable monthly income, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-03T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
+        "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html"
       ]
     }
   ]
