@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 28
+      "article_count": 29
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7513,6 +7513,34 @@
         "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
         "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for hurricane income disruption guide with documentation check",
+      "subtitle": "Florida ACA subsidy estimate for hurricane income disruption with temporary income drop, documentation check, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-hurricane-income-disruption-guide-with-documentation-check.html",
+      "main_keyword": "Florida ACA subsidy estimate for hurricane income disruption",
+      "expanded_keywords": [
+        "Temporary income drop",
+        "Documentation check",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for hurricane income disruption explained with Temporary income drop, Documentation check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-03T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
+        "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html"
       ]
     }
   ]
