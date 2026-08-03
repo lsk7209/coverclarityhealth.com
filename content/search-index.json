@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 31
+      "article_count": 32
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7597,6 +7597,34 @@
         "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html",
         "aca/how-age-rated-premium-changes-florida-aca-subsidy-estimate-for-early-retirement-before-medicare.html",
         "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html"
+      ]
+    },
+    {
+      "id": "how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment",
+      "type": "article",
+      "title": "How annual income estimate changes Florida ACA subsidy estimate for layoff after open enrollment",
+      "subtitle": "Florida ACA subsidy estimate for layoff after open enrollment with loss of employer coverage, annual income estimate, and a clear official confirmation step.",
+      "url": "aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-annual-income-estimate-changes-florida-aca-subsidy-estimate-for-layoff-after-open-enrollment.html",
+      "main_keyword": "Florida ACA subsidy estimate for layoff after open enrollment",
+      "expanded_keywords": [
+        "Loss of employer coverage",
+        "Annual income estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for layoff after open enrollment explained with Loss of employer coverage, Annual income estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-04T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-age-rated-premium-changes-florida-aca-subsidy-estimate-for-early-retirement-before-medicare.html",
+        "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html"
       ]
     }
   ]
