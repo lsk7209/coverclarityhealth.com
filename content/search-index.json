@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 32
+      "article_count": 33
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7625,6 +7625,34 @@
         "aca/how-age-rated-premium-changes-florida-aca-subsidy-estimate-for-early-retirement-before-medicare.html",
         "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
         "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html"
+      ]
+    },
+    {
+      "id": "seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work",
+      "type": "article",
+      "title": "Seasonal tourism work and variable income inside Florida ACA subsidy estimate for seasonal tourism work",
+      "subtitle": "Florida ACA subsidy estimate for seasonal tourism work with variable income, monthly-to-annual estimate, and a clear official confirmation step.",
+      "url": "aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
+      "canonical": "https://coverclarityhealth.com/aca/seasonal-tourism-work-and-variable-income-inside-florida-aca-subsidy-estimate-for-seasonal-tourism-work.html",
+      "main_keyword": "Florida ACA subsidy estimate for seasonal tourism work",
+      "expanded_keywords": [
+        "Variable income",
+        "Monthly-to-annual estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for seasonal tourism work explained with Variable income, Monthly-to-annual estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-04T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html"
       ]
     }
   ]
