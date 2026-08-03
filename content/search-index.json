@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 29
+      "article_count": 30
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7541,6 +7541,34 @@
         "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
         "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for turning 26: check aging off parent coverage",
+      "subtitle": "Florida ACA subsidy estimate for turning 26 with aging off parent coverage, young adult Marketplace, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
+      "main_keyword": "Florida ACA subsidy estimate for turning 26",
+      "expanded_keywords": [
+        "Aging off parent coverage",
+        "Young adult Marketplace",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for turning 26 explained with Aging off parent coverage, Young adult Marketplace, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-03T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
+        "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html",
+        "aca/how-age-rated-premium-changes-florida-aca-subsidy-estimate-for-early-retirement-before-medicare.html"
       ]
     }
   ]
