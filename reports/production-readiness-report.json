@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-03T07:51:48.123250+00:00",
+  "generatedAt": "2026-08-03T11:49:08.853183+00:00",
   "git_snapshot": {
-    "head": "82da122631d9f04c49a0014e7bd612b47562ad96",
+    "head": "46452be2ca614fe6be6abc598740c2b4deaf0f8c",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/before-relying-on-florida-aca-subsidy-estimate-for-turning-26-check-aging-off-parent-coverage.html",
+      "aca/florida-aca-subsidy-estimate-for-spouse-moving-to-medicare-mixed-coverage-household-to-verify-first.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -223,7 +223,7 @@
   "quality_snapshot": {
     "article_files": 400,
     "guide_files": 5,
-    "sitemap_urls": 285,
+    "sitemap_urls": 286,
     "site_origin_placeholder_count": 0,
     "site_origin_placeholder_sample": [],
     "public_origin_mismatch_count": 0,
@@ -231,8 +231,8 @@
   },
   "article_generation_snapshot": {
     "articles": 400,
-    "publishedArticles": 270,
-    "scheduledArticles": 130,
+    "publishedArticles": 271,
+    "scheduledArticles": 129,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 400,
