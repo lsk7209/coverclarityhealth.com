@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 34
+      "article_count": 35
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7681,6 +7681,34 @@
         "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
         "aca/when-moving-after-divorce-affects-florida-aca-subsidy-estimate-for-moving-after-divorce-advanced-review-and.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for caregiving leave: check reduced work hours",
+      "subtitle": "Florida ACA subsidy estimate for caregiving leave with reduced work hours, family coverage planning, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-caregiving-leave-check-reduced-work-hours.html",
+      "main_keyword": "Florida ACA subsidy estimate for caregiving leave",
+      "expanded_keywords": [
+        "Reduced work hours",
+        "Family coverage planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for caregiving leave explained with Reduced work hours, Family coverage planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-04T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
+        "aca/when-moving-after-divorce-affects-florida-aca-subsidy-estimate-for-moving-after-divorce-advanced-review-and.html",
+        "aca/new-dependent-not-on-tax-return-yet-florida-aca-subsidy-estimate-for-new-dependent-not-on-tax-return-yet.html"
       ]
     }
   ]
