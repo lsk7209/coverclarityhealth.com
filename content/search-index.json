@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 33
+      "article_count": 34
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7653,6 +7653,34 @@
         "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
         "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for tipped income shift guide with premium tax credit planning",
+      "subtitle": "Florida ACA subsidy estimate for tipped income shift with reported income, premium tax credit planning, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-tipped-income-shift-guide-with-premium-tax-credit-planning.html",
+      "main_keyword": "Florida ACA subsidy estimate for tipped income shift",
+      "expanded_keywords": [
+        "Reported income",
+        "Premium tax credit planning",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for tipped income shift explained with Reported income, Premium tax credit planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-04T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
+        "aca/when-moving-after-divorce-affects-florida-aca-subsidy-estimate-for-moving-after-divorce-advanced-review-and.html"
       ]
     }
   ]

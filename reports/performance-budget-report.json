@@ -22,7 +22,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 53121
+        "bytes": 53044
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -38,7 +38,7 @@
       },
       {
         "file": "guides/life-event-and-income-change-guides.html",
-        "bytes": 43091
+        "bytes": 44157
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -95,15 +95,15 @@
       },
       {
         "file": "guides/life-event-and-income-change-guides.html",
-        "bytes": 19453
+        "bytes": 19994
       },
       {
         "file": "index.html",
         "bytes": 15677
       }
     ],
-    "article_queue_bytes": 489725,
-    "search_index_bytes": 496203
+    "article_queue_bytes": 489724,
+    "search_index_bytes": 498053
   },
   "errors": [],
   "warnings": []
