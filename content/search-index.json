@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 35
+      "article_count": 36
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7709,6 +7709,34 @@
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
         "aca/when-moving-after-divorce-affects-florida-aca-subsidy-estimate-for-moving-after-divorce-advanced-review-and.html",
         "aca/new-dependent-not-on-tax-return-yet-florida-aca-subsidy-estimate-for-new-dependent-not-on-tax-return-yet.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for dependent returning home: tax household review to verify first",
+      "subtitle": "Florida ACA subsidy estimate for dependent returning home with tax household review, adult child coverage, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-dependent-returning-home-tax-household-review-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for dependent returning home",
+      "expanded_keywords": [
+        "Tax household review",
+        "Adult child coverage",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for dependent returning home explained with Tax household review, Adult child coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-04T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-moving-after-divorce-affects-florida-aca-subsidy-estimate-for-moving-after-divorce-advanced-review-and.html",
+        "aca/new-dependent-not-on-tax-return-yet-florida-aca-subsidy-estimate-for-new-dependent-not-on-tax-return-yet.html",
+        "aca/florida-aca-subsidy-estimate-for-temporary-contract-work-advanced-review-guide-to-temporary-contract-work-and.html"
       ]
     }
   ]
