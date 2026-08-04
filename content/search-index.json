@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 37
+      "article_count": 38
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7765,6 +7765,34 @@
         "aca/new-dependent-not-on-tax-return-yet-florida-aca-subsidy-estimate-for-new-dependent-not-on-tax-return-yet.html",
         "aca/florida-aca-subsidy-estimate-for-temporary-contract-work-advanced-review-guide-to-temporary-contract-work-and.html",
         "aca/what-returning-to-work-after-caregiving-means-for-florida-aca-subsidy-estimate-for-returning-to-work-after.html"
+      ]
+    },
+    {
+      "id": "new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident",
+      "type": "article",
+      "title": "New Florida resident and new resident Marketplace inside Florida ACA subsidy estimate for new Florida resident",
+      "subtitle": "Florida ACA subsidy estimate for new Florida resident with new resident Marketplace, local plan confirmation, and a clear official confirmation step.",
+      "url": "aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
+      "canonical": "https://coverclarityhealth.com/aca/new-florida-resident-and-new-resident-marketplace-inside-florida-aca-subsidy-estimate-for-new-florida-resident.html",
+      "main_keyword": "Florida ACA subsidy estimate for new Florida resident",
+      "expanded_keywords": [
+        "New resident Marketplace",
+        "Local plan confirmation",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for new Florida resident explained with New resident Marketplace, Local plan confirmation, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-05T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-temporary-contract-work-advanced-review-guide-to-temporary-contract-work-and.html",
+        "aca/what-returning-to-work-after-caregiving-means-for-florida-aca-subsidy-estimate-for-returning-to-work-after.html",
+        "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html"
       ]
     }
   ]
