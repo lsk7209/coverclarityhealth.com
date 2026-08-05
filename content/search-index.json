@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 39
+      "article_count": 40
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7821,6 +7821,34 @@
         "aca/what-returning-to-work-after-caregiving-means-for-florida-aca-subsidy-estimate-for-returning-to-work-after.html",
         "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-spouse-loses-employer-coverage-advanced-review-and-special-enrollment.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for small business launch: check net income estimate",
+      "subtitle": "Florida ACA subsidy estimate for small business launch with net income estimate, self-employment deduction, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-small-business-launch-check-net-income-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate for small business launch",
+      "expanded_keywords": [
+        "Net income estimate",
+        "Self-employment deduction",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for small business launch explained with Net income estimate, Self-employment deduction, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-05T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-spouse-loses-employer-coverage-advanced-review-and-special-enrollment.html",
+        "aca/how-bridge-to-medicare-changes-florida-aca-subsidy-estimate-for-retiree-bridge-year-advanced-review.html"
       ]
     }
   ]
