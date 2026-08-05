@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 26
+      "article_count": 27
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -7877,6 +7877,34 @@
         "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
         "aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
         "aca/hillsborough-benchmark-check-and-tampa-bay-marketplace-planning-inside-florida-aca-subsidy-estimate-for.html"
+      ]
+    },
+    {
+      "id": "how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate",
+      "type": "article",
+      "title": "How coastal county comparison changes Florida ACA subsidy estimate for Palm Beach retiree estimate",
+      "subtitle": "Florida ACA subsidy estimate for Palm Beach retiree estimate with older adult premium, coastal county comparison, and a clear official confirmation step.",
+      "url": "aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate for Palm Beach retiree estimate",
+      "expanded_keywords": [
+        "Older adult premium",
+        "Coastal county comparison",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Palm Beach retiree estimate explained with Older adult premium, Coastal county comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-06T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-broward-rating-area-review-south-florida-rating-area-to-verify-first.html",
+        "aca/hillsborough-benchmark-check-and-tampa-bay-marketplace-planning-inside-florida-aca-subsidy-estimate-for.html",
+        "aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html"
       ]
     }
   ]
