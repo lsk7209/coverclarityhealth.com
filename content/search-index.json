@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 25
+      "article_count": 26
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -7849,6 +7849,34 @@
         "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html",
         "aca/florida-aca-subsidy-estimate-for-spouse-loses-employer-coverage-advanced-review-and-special-enrollment.html",
         "aca/how-bridge-to-medicare-changes-florida-aca-subsidy-estimate-for-retiree-bridge-year-advanced-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-broward-rating-area-review-south-florida-rating-area-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Broward rating-area review: South Florida rating area to verify first",
+      "subtitle": "Florida ACA subsidy estimate for Broward rating-area review with South Florida rating area, dense provider networks, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-broward-rating-area-review-south-florida-rating-area-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-broward-rating-area-review-south-florida-rating-area-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for Broward rating-area review",
+      "expanded_keywords": [
+        "South Florida rating area",
+        "Dense provider networks",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Broward rating-area review explained with South Florida rating area, Dense provider networks, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-05T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
+        "aca/hillsborough-benchmark-check-and-tampa-bay-marketplace-planning-inside-florida-aca-subsidy-estimate-for.html"
       ]
     }
   ]
