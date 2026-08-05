@@ -79,7 +79,7 @@
       "canonical": "https://coverclarityhealth.com/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 38
+      "article_count": 39
     },
     {
       "id": "plan-selection-and-out-of-pocket-guides",
@@ -7793,6 +7793,34 @@
         "aca/florida-aca-subsidy-estimate-for-temporary-contract-work-advanced-review-guide-to-temporary-contract-work-and.html",
         "aca/what-returning-to-work-after-caregiving-means-for-florida-aca-subsidy-estimate-for-returning-to-work-after.html",
         "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Medicaid loss transition guide with Marketplace estimate",
+      "subtitle": "Florida ACA subsidy estimate for Medicaid loss transition with coverage transition, Marketplace estimate, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-medicaid-loss-transition-guide-with-marketplace-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate for Medicaid loss transition",
+      "expanded_keywords": [
+        "Coverage transition",
+        "Marketplace estimate",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Medicaid loss transition explained with Coverage transition, Marketplace estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-05T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/what-returning-to-work-after-caregiving-means-for-florida-aca-subsidy-estimate-for-returning-to-work-after.html",
+        "aca/florida-aca-subsidy-estimate-for-student-graduation-move-advanced-review-graduation-coverage-before-the-next.html",
+        "aca/florida-aca-subsidy-estimate-for-spouse-loses-employer-coverage-advanced-review-and-special-enrollment.html"
       ]
     }
   ]
