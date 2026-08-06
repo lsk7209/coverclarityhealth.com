@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 30
+      "article_count": 31
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -7989,6 +7989,34 @@
         "aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html",
         "aca/florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first.html",
         "aca/how-coastal-household-planning-changes-florida-aca-subsidy-estimate-for-lee-county-rating-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Pinellas Silver comparison: Silver benchmark estimate to verify first",
+      "subtitle": "Florida ACA subsidy estimate for Pinellas Silver comparison with Silver benchmark estimate, county premium context, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for Pinellas Silver comparison",
+      "expanded_keywords": [
+        "Silver benchmark estimate",
+        "County premium context",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Pinellas Silver comparison explained with Silver benchmark estimate, County premium context, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-06T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-duval-age-rated-premium-check-age-rated-premium.html",
+        "aca/how-coastal-household-planning-changes-florida-aca-subsidy-estimate-for-lee-county-rating-review.html",
+        "aca/polk-inland-estimate-and-household-income-band-inside-florida-aca-subsidy-estimate-for-polk-inland-estimate.html"
       ]
     }
   ]
