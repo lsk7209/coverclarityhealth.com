@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 28
+      "article_count": 29
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -7933,6 +7933,34 @@
         "aca/how-coastal-county-comparison-changes-florida-aca-subsidy-estimate-for-palm-beach-retiree-estimate.html",
         "aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-duval-age-rated-premium-check-age-rated-premium.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Orange County family estimate guide with Central Florida plan check",
+      "subtitle": "Florida ACA subsidy estimate for Orange County family estimate with family Marketplace premium, Central Florida plan check, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-orange-county-family-estimate-guide-with-central-florida-plan-check.html",
+      "main_keyword": "Florida ACA subsidy estimate for Orange County family estimate",
+      "expanded_keywords": [
+        "Family Marketplace premium",
+        "Central Florida plan check",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Orange County family estimate explained with Family Marketplace premium, Central Florida plan check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-06T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/hillsborough-benchmark-check-and-tampa-bay-marketplace-planning-inside-florida-aca-subsidy-estimate-for.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-duval-age-rated-premium-check-age-rated-premium.html",
+        "aca/florida-aca-subsidy-estimate-for-pinellas-silver-comparison-silver-benchmark-estimate-to-verify-first.html"
       ]
     }
   ]
