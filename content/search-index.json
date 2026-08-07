@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 35
+      "article_count": 36
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -8129,6 +8129,34 @@
         "aca/florida-aca-subsidy-estimate-for-volusia-current-law-view-guide-with-local-marketplace-check.html",
         "aca/florida-aca-subsidy-estimate-for-sarasota-pre-medicare-planning-pre-medicare-premium-to-verify-first.html",
         "aca/how-county-marketplace-question-changes-florida-aca-subsidy-estimate-for-manatee-family-csr-review.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-sarasota-pre-medicare-planning-pre-medicare-premium-to-verify-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Sarasota pre-Medicare planning: pre-Medicare premium to verify first",
+      "subtitle": "Florida ACA subsidy estimate for Sarasota pre-Medicare planning with pre-Medicare premium, Gulf Coast income check, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-sarasota-pre-medicare-planning-pre-medicare-premium-to-verify-first.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-sarasota-pre-medicare-planning-pre-medicare-premium-to-verify-first.html",
+      "main_keyword": "Florida ACA subsidy estimate for Sarasota pre-Medicare planning",
+      "expanded_keywords": [
+        "Pre-Medicare premium",
+        "Gulf Coast income check",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Sarasota pre-Medicare planning explained with Pre-Medicare premium, Gulf Coast income check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-07T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-brevard-slcsp-check-check-slcsp-benchmark.html",
+        "aca/how-county-marketplace-question-changes-florida-aca-subsidy-estimate-for-manatee-family-csr-review.html",
+        "aca/collier-high-cost-pressure-and-benchmark-premium-pressure-inside-florida-aca-subsidy-estimate-for-collier.html"
       ]
     }
   ]
