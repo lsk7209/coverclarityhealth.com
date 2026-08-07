@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53682
+        "bytes": 53732
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -42,7 +42,7 @@
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 46100
+        "bytes": 47215
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
@@ -99,11 +99,11 @@
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 21236
+        "bytes": 21805
       }
     ],
-    "article_queue_bytes": 489707,
-    "search_index_bytes": 530347
+    "article_queue_bytes": 489706,
+    "search_index_bytes": 532252
   },
   "errors": [],
   "warnings": []
