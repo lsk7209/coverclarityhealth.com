@@ -18,11 +18,15 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53715
+        "bytes": 53666
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 53316
+      },
+      {
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 51790
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -31,10 +35,6 @@
       {
         "file": "guides/life-event-and-income-change-guides.html",
         "bytes": 50774
-      },
-      {
-        "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 50687
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
@@ -87,7 +87,7 @@
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 23596
+        "bytes": 24159
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 22104
       }
     ],
-    "article_queue_bytes": 489703,
-    "search_index_bytes": 538036
+    "article_queue_bytes": 489702,
+    "search_index_bytes": 539941
   },
   "errors": [],
   "warnings": []
