@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 53666
+        "bytes": 53785
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -26,7 +26,7 @@
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 51790
+        "bytes": 52964
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -82,12 +82,12 @@
     ],
     "largest_inline_script": [
       {
-        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 24748
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 24764
       },
       {
-        "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 24159
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 24748
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 22104
       }
     ],
-    "article_queue_bytes": 489702,
-    "search_index_bytes": 539941
+    "article_queue_bytes": 489701,
+    "search_index_bytes": 541887
   },
   "errors": [],
   "warnings": []
