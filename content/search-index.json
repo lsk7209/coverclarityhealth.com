@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 39
+      "article_count": 40
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -8241,6 +8241,34 @@
         "aca/collier-high-cost-pressure-and-benchmark-premium-pressure-inside-florida-aca-subsidy-estimate-for-collier.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-osceola-seasonal-income-check-seasonal-income-planning.html",
         "aca/florida-aca-subsidy-estimate-for-seminole-silver-benchmark-silver-plan-benchmark-to-verify-first.html"
+      ]
+    },
+    {
+      "id": "before-relying-on-florida-aca-subsidy-estimate-for-osceola-seasonal-income-check-seasonal-income-planning",
+      "type": "article",
+      "title": "Before relying on Florida ACA subsidy estimate for Osceola seasonal income: check seasonal income planning",
+      "subtitle": "Florida ACA subsidy estimate for Osceola seasonal income with seasonal income planning, Central Florida household, and a clear official confirmation step.",
+      "url": "aca/before-relying-on-florida-aca-subsidy-estimate-for-osceola-seasonal-income-check-seasonal-income-planning.html",
+      "canonical": "https://coverclarityhealth.com/aca/before-relying-on-florida-aca-subsidy-estimate-for-osceola-seasonal-income-check-seasonal-income-planning.html",
+      "main_keyword": "Florida ACA subsidy estimate for Osceola seasonal income",
+      "expanded_keywords": [
+        "Seasonal income planning",
+        "Central Florida household",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Osceola seasonal income explained with Seasonal income planning, Central Florida household, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-08T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-pasco-commuter-estimate-guide-with-tampa-bay-county-comparison.html",
+        "aca/florida-aca-subsidy-estimate-for-seminole-silver-benchmark-silver-plan-benchmark-to-verify-first.html",
+        "aca/how-household-subsidy-estimate-changes-florida-aca-subsidy-estimate-for-lake-county-rural-suburban-estimate.html"
       ]
     }
   ]
