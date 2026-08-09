@@ -69,7 +69,7 @@
       "canonical": "https://coverclarityhealth.com/guides/county-and-rating-area-guides.html",
       "cluster": "County and rating area",
       "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 43
+      "article_count": 44
     },
     {
       "id": "life-event-and-income-change-guides",
@@ -8353,6 +8353,34 @@
         "aca/how-household-subsidy-estimate-changes-florida-aca-subsidy-estimate-for-lake-county-rural-suburban-estimate.html",
         "aca/florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-escambia-panhandle-estimate-check-county-rating-area.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Alachua young adult estimate guide with income volatility",
+      "subtitle": "Florida ACA subsidy estimate for Alachua young adult estimate with young adult coverage, income volatility, and a clear official confirmation step.",
+      "url": "aca/florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility.html",
+      "main_keyword": "Florida ACA subsidy estimate for Alachua young adult estimate",
+      "expanded_keywords": [
+        "Young adult coverage",
+        "Income volatility",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Alachua young adult estimate explained with Young adult coverage, Income volatility, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-09T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/st-lucie-ptc-check-and-aca-premium-tax-credit-inside-florida-aca-subsidy-estimate-for-st-lucie-ptc-check.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-escambia-panhandle-estimate-check-county-rating-area.html",
+        "aca/florida-aca-subsidy-estimate-for-miami-dade-immigrant-family-estimate-advanced-review-lawful-presence.html"
       ]
     }
   ]
