@@ -17,16 +17,16 @@
   "measurements": {
     "largest_html": [
       {
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 54112
+      },
+      {
         "file": "blog.html",
-        "bytes": 53785
+        "bytes": 53786
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 53316
-      },
-      {
-        "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 52964
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "guides/county-and-rating-area-guides.html",
-        "bytes": 24764
+        "bytes": 25361
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 22104
       }
     ],
-    "article_queue_bytes": 489701,
-    "search_index_bytes": 541887
+    "article_queue_bytes": 489700,
+    "search_index_bytes": 543791
   },
   "errors": [],
   "warnings": []
