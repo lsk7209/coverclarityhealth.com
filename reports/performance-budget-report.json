@@ -22,7 +22,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 54276
+        "bytes": 54520
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -33,12 +33,12 @@
         "bytes": 51308
       },
       {
-        "file": "guides/life-event-and-income-change-guides.html",
-        "bytes": 50774
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 50872
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 49661
+        "file": "guides/life-event-and-income-change-guides.html",
+        "bytes": 50774
       },
       {
         "file": "index.html",
@@ -99,11 +99,11 @@
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 22771
+        "bytes": 23364
       }
     ],
-    "article_queue_bytes": 489697,
-    "search_index_bytes": 549660
+    "article_queue_bytes": 489696,
+    "search_index_bytes": 551697
   },
   "errors": [],
   "warnings": []
