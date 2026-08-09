@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 35
+      "article_count": 36
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -8409,6 +8409,34 @@
         "aca/florida-aca-subsidy-estimate-for-alachua-young-adult-estimate-guide-with-income-volatility.html",
         "aca/florida-aca-subsidy-estimate-for-miami-dade-immigrant-family-estimate-advanced-review-lawful-presence.html",
         "aca/florida-aca-subsidy-estimate-for-broward-retiree-roth-income-check-advanced-review-and-county-benchmark.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for Marketplace notice deadline audit advanced review: eligibility notice deadline before the next Marketplace step",
+      "subtitle": "Florida ACA subsidy estimate for Marketplace notice deadline audit advanced review explained with eligibility notice deadline, document upload timing, and a verified next step for Florida Marketplace shoppers.",
+      "url": "aca/florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice.html",
+      "main_keyword": "Florida ACA subsidy estimate for Marketplace notice deadline audit advanced review",
+      "expanded_keywords": [
+        "Eligibility notice deadline",
+        "Document upload timing",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Marketplace notice deadline audit advanced review explained with Eligibility notice deadline, Document upload timing, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-08-10T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-duplicate-application-concern-application-cleanup-to-verify-first.html",
+        "aca/how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment.html",
+        "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html"
       ]
     }
   ]

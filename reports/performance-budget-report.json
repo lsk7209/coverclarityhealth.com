@@ -22,7 +22,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 53712
+        "bytes": 54276
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -38,7 +38,7 @@
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 48326
+        "bytes": 49661
       },
       {
         "file": "index.html",
@@ -99,11 +99,11 @@
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 22104
+        "bytes": 22771
       }
     ],
-    "article_queue_bytes": 489698,
-    "search_index_bytes": 547556
+    "article_queue_bytes": 489697,
+    "search_index_bytes": 549660
   },
   "errors": [],
   "warnings": []
