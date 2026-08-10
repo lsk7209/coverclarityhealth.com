@@ -22,19 +22,19 @@
       },
       {
         "file": "blog.html",
-        "bytes": 54520
+        "bytes": 54590
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
         "bytes": 53316
       },
       {
-        "file": "guides/tax-magi-and-reconciliation-guides.html",
-        "bytes": 51308
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 52131
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 50872
+        "file": "guides/tax-magi-and-reconciliation-guides.html",
+        "bytes": 51308
       },
       {
         "file": "guides/life-event-and-income-change-guides.html",
@@ -90,20 +90,20 @@
         "bytes": 24748
       },
       {
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 23987
+      },
+      {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
         "bytes": 23591
       },
       {
         "file": "guides/life-event-and-income-change-guides.html",
         "bytes": 23374
-      },
-      {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 23364
       }
     ],
-    "article_queue_bytes": 489696,
-    "search_index_bytes": 551697
+    "article_queue_bytes": 489695,
+    "search_index_bytes": 553779
   },
   "errors": [],
   "warnings": []

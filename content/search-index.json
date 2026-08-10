@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 37
+      "article_count": 38
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -8465,6 +8465,34 @@
         "aca/how-county-verification-changes-florida-aca-subsidy-estimate-for-address-change-during-enrollment.html",
         "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
         "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html"
+      ]
+    },
+    {
+      "id": "how-account-cleanup-changes-florida-aca-subsidy-estimate-for-duplicate-healthcare-gov-account-check-advanced",
+      "type": "article",
+      "title": "How account cleanup changes Florida ACA subsidy estimate for duplicate HealthCare.gov account check advanced review",
+      "subtitle": "Florida ACA subsidy estimate for duplicate HealthCare.gov account check advanced review explained with account cleanup, application history, and a verified next step for Florida Marketplace shoppers.",
+      "url": "aca/how-account-cleanup-changes-florida-aca-subsidy-estimate-for-duplicate-healthcare-gov-account-check-advanced.html",
+      "canonical": "https://coverclarityhealth.com/aca/how-account-cleanup-changes-florida-aca-subsidy-estimate-for-duplicate-healthcare-gov-account-check-advanced.html",
+      "main_keyword": "Florida ACA subsidy estimate for duplicate HealthCare.gov account check advanced review",
+      "expanded_keywords": [
+        "Account cleanup",
+        "Application history",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for duplicate HealthCare.gov account check advanced review explained with Account cleanup, Application history, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-10T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
+        "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html"
       ]
     }
   ]
