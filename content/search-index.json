@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 40
+      "article_count": 41
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -8549,6 +8549,34 @@
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html",
         "aca/florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice.html",
         "aca/florida-aca-subsidy-estimate-for-data-matching-issue-review-advanced-review-and-application-verification.html"
+      ]
+    },
+    {
+      "id": "premium-tax-credit-appeal-prep-florida-aca-subsidy-estimate-for-premium-tax-credit-appeal-prep-advanced",
+      "type": "article",
+      "title": "Premium tax credit appeal prep: Florida ACA subsidy estimate for premium tax credit appeal prep advanced review with eligibility appeal",
+      "subtitle": "Florida ACA subsidy estimate for premium tax credit appeal prep advanced review explained with eligibility appeal, notice review, and a verified next step for Florida Marketplace shoppers.",
+      "url": "aca/premium-tax-credit-appeal-prep-florida-aca-subsidy-estimate-for-premium-tax-credit-appeal-prep-advanced.html",
+      "canonical": "https://coverclarityhealth.com/aca/premium-tax-credit-appeal-prep-florida-aca-subsidy-estimate-for-premium-tax-credit-appeal-prep-advanced.html",
+      "main_keyword": "Florida ACA subsidy estimate for premium tax credit appeal prep advanced review",
+      "expanded_keywords": [
+        "Eligibility appeal",
+        "Notice review",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for premium tax credit appeal prep advanced review explained with Eligibility appeal, Notice review, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-11T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice.html",
+        "aca/florida-aca-subsidy-estimate-for-data-matching-issue-review-advanced-review-and-application-verification.html",
+        "aca/how-account-cleanup-changes-florida-aca-subsidy-estimate-for-duplicate-healthcare-gov-account-check-advanced.html"
       ]
     }
   ]

@@ -21,12 +21,12 @@
         "bytes": 56315
       },
       {
-        "file": "blog.html",
-        "bytes": 55003
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 55959
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 54666
+        "file": "blog.html",
+        "bytes": 55303
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -87,7 +87,7 @@
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 25249
+        "bytes": 25902
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 23374
       }
     ],
-    "article_queue_bytes": 489693,
-    "search_index_bytes": 557920
+    "article_queue_bytes": 489692,
+    "search_index_bytes": 559985
   },
   "errors": [],
   "warnings": []
