@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 38
+      "article_count": 39
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -8493,6 +8493,34 @@
         "aca/plan-year-source-check-and-2026-plan-year-inside-florida-aca-subsidy-estimate-for-plan-year-source-check.html",
         "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
         "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-household-member-mismatch-advanced-review-checklist-for-tax-household",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for household member mismatch advanced review checklist for tax household comparison",
+      "subtitle": "Florida ACA subsidy estimate for household member mismatch advanced review explained with application household, tax household comparison, and a verified next step for Florida Marketplace shoppers.",
+      "url": "aca/florida-aca-subsidy-estimate-for-household-member-mismatch-advanced-review-checklist-for-tax-household.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-household-member-mismatch-advanced-review-checklist-for-tax-household.html",
+      "main_keyword": "Florida ACA subsidy estimate for household member mismatch advanced review",
+      "expanded_keywords": [
+        "Application household",
+        "Tax household comparison",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for household member mismatch advanced review explained with Application household, Tax household comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-10T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-broker-quote-comparison-guide-with-lead-generation-risk.html",
+        "aca/before-relying-on-florida-aca-subsidy-estimate-for-privacy-first-estimate-workflow-check-browser-only-estimate.html",
+        "aca/florida-aca-subsidy-estimate-for-marketplace-notice-deadline-audit-advanced-review-eligibility-notice.html"
       ]
     }
   ]
