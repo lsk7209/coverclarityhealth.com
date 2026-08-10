@@ -22,11 +22,11 @@
       },
       {
         "file": "blog.html",
-        "bytes": 54803
+        "bytes": 55003
       },
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 53364
+        "bytes": 54666
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -86,12 +86,12 @@
         "bytes": 26489
       },
       {
-        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 24748
+        "file": "guides/official-verification-and-troubleshooting-guides.html",
+        "bytes": 25249
       },
       {
-        "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 24594
+        "file": "guides/plan-selection-and-out-of-pocket-guides.html",
+        "bytes": 24748
       },
       {
         "file": "guides/tax-magi-and-reconciliation-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 23374
       }
     ],
-    "article_queue_bytes": 489694,
-    "search_index_bytes": 555832
+    "article_queue_bytes": 489693,
+    "search_index_bytes": 557920
   },
   "errors": [],
   "warnings": []
