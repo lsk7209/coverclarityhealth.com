@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 57347
+        "bytes": 58681
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -26,7 +26,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 55695
+        "bytes": 56027
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "guides/official-verification-and-troubleshooting-guides.html",
-        "bytes": 26611
+        "bytes": 27284
       },
       {
         "file": "guides/county-and-rating-area-guides.html",
@@ -102,8 +102,8 @@
         "bytes": 23374
       }
     ],
-    "article_queue_bytes": 489691,
-    "search_index_bytes": 562120
+    "article_queue_bytes": 489690,
+    "search_index_bytes": 564239
   },
   "errors": [],
   "warnings": []
