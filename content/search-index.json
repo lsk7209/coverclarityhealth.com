@@ -109,7 +109,7 @@
       "canonical": "https://coverclarityhealth.com/guides/official-verification-and-troubleshooting-guides.html",
       "cluster": "Official verification and troubleshooting",
       "description": "Florida ACA estimate verification guides",
-      "article_count": 43
+      "article_count": 44
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -8633,6 +8633,34 @@
         "aca/how-account-cleanup-changes-florida-aca-subsidy-estimate-for-duplicate-healthcare-gov-account-check-advanced.html",
         "aca/florida-aca-subsidy-estimate-for-household-member-mismatch-advanced-review-checklist-for-tax-household.html",
         "aca/when-county-zip-code-conflict-affects-florida-aca-subsidy-estimate-for-county-zip-code-conflict-advanced.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for automatic re-enrollment review advanced review: auto-renewal before the next Marketplace step",
+      "subtitle": "Florida ACA subsidy estimate for automatic re-enrollment review advanced review explained with auto-renewal, plan year comparison, and a verified next step for Florida Marketplace shoppers.",
+      "url": "aca/florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next.html",
+      "canonical": "https://coverclarityhealth.com/aca/florida-aca-subsidy-estimate-for-automatic-re-enrollment-review-advanced-review-auto-renewal-before-the-next.html",
+      "main_keyword": "Florida ACA subsidy estimate for automatic re-enrollment review advanced review",
+      "expanded_keywords": [
+        "Auto-renewal",
+        "Plan year comparison",
+        "2026 Marketplace estimate",
+        "Official confirmation"
+      ],
+      "cluster": "Official verification and troubleshooting",
+      "guide_hub": "guides/official-verification-and-troubleshooting-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for automatic re-enrollment review advanced review explained with Auto-renewal, Plan year comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-08-11T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/official-verification-and-troubleshooting-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-household-member-mismatch-advanced-review-checklist-for-tax-household.html",
+        "aca/when-county-zip-code-conflict-affects-florida-aca-subsidy-estimate-for-county-zip-code-conflict-advanced.html",
+        "aca/premium-tax-credit-appeal-prep-florida-aca-subsidy-estimate-for-premium-tax-credit-appeal-prep-advanced.html"
       ]
     }
   ]
