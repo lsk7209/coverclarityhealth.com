@@ -1,8 +1,8 @@
 name: Publish scheduled content
 
 on:
-  schedule:
-    - cron: "23 * * * *"
+  # Scheduled publishing is paused while generated pages exceed the enforced
+  # performance budgets. Keep manual runs available for repair verification.
   workflow_dispatch:
 
 env:
