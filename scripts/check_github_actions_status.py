@@ -1,7 +1,9 @@
 import argparse
 import json
+import re
 import subprocess
 from datetime import datetime, timezone
+from pathlib import Path
 
 
 def run(args):
@@ -133,7 +135,9 @@ def main():
         check_workflow(repo, branch, head, "Content quality", required=True),
         check_workflow(repo, branch, head, "Submit sitemap to Google Search Console", required=args.require_gsc_success),
     ]
-    if not args.skip_scheduled_check:
+    scheduled_workflow = (Path(__file__).resolve().parents[1] / ".github" / "workflows" / "publish-scheduled-content.yml").read_text(encoding="utf-8")
+    schedule_paused = bool(re.search(r'^\s*PUBLISH_SCHEDULE_PAUSED:\s*["\']true["\']\s*$', scheduled_workflow, re.MULTILINE))
+    if not args.skip_scheduled_check and not schedule_paused:
         checks.append(check_latest_workflow(
             repo,
             branch,

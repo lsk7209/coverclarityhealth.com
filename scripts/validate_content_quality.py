@@ -25,6 +25,22 @@ BAD_PATTERNS = re.compile(
     r"\uCA0C|\u0431\u0434",
     re.IGNORECASE,
 )
+
+
+def publish_schedule_contract_errors(workflow):
+    paused = bool(re.search(r'^\s*PUBLISH_SCHEDULE_PAUSED:\s*["\']true["\']\s*$', workflow, re.MULTILINE))
+    has_schedule = bool(re.search(r"^\s*schedule:\s*$", workflow, re.MULTILINE))
+    has_hourly_cron = "23 * * * *" in workflow
+    has_manual_dispatch = bool(re.search(r"^\s*workflow_dispatch:\s*$", workflow, re.MULTILINE))
+    errors = []
+    if paused:
+        if has_schedule:
+            errors.append("publish_scheduled_workflow_paused_with_schedule")
+        if not has_manual_dispatch:
+            errors.append("publish_scheduled_workflow_paused_without_manual_dispatch")
+    elif not has_hourly_cron:
+        errors.append("publish_scheduled_workflow_missing_hourly_due_content_check")
+    return errors
 CLUSTER_ARTICLES = {
     "County and rating area",
     "Life event and income change",
@@ -410,9 +426,7 @@ def validate(require_site_origin=False):
         scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
         if "print_committed_publication_now.py" in scheduled_workflow or "PUBLICATION_NOW=" in scheduled_workflow:
             errors.append({"type": "publish_scheduled_workflow_must_use_real_publication_time"})
-        schedule_paused = "publication-schedule: paused-performance-budget" in scheduled_workflow
-        if schedule_paused and "workflow_dispatch:" not in scheduled_workflow:
-            errors.append({"type": "publish_scheduled_workflow_paused_without_manual_dispatch"})
+        errors.extend({"type": error_type} for error_type in publish_schedule_contract_errors(scheduled_workflow))
         for needle, label in [
             ("production_readiness_audit.py --write-report", "readiness_report_step"),
             ("reports/article-generation-report.json", "article_generation_report_commit"),
@@ -422,8 +436,6 @@ def validate(require_site_origin=False):
         ]:
             if needle not in scheduled_workflow:
                 errors.append({"type": f"publish_scheduled_workflow_missing_{label}"})
-        if "23 * * * *" not in scheduled_workflow and not schedule_paused:
-            errors.append({"type": "publish_scheduled_workflow_missing_hourly_due_content_check"})
     if readiness_script_path.exists():
         readiness_script = readiness_script_path.read_text(encoding="utf-8")
         for needle, label in [
