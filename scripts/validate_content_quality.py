@@ -410,8 +410,10 @@ def validate(require_site_origin=False):
         scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
         if "print_committed_publication_now.py" in scheduled_workflow or "PUBLICATION_NOW=" in scheduled_workflow:
             errors.append({"type": "publish_scheduled_workflow_must_use_real_publication_time"})
+        schedule_paused = "publication-schedule: paused-performance-budget" in scheduled_workflow
+        if schedule_paused and "workflow_dispatch:" not in scheduled_workflow:
+            errors.append({"type": "publish_scheduled_workflow_paused_without_manual_dispatch"})
         for needle, label in [
-            ("23 * * * *", "hourly_due_content_check"),
             ("production_readiness_audit.py --write-report", "readiness_report_step"),
             ("reports/article-generation-report.json", "article_generation_report_commit"),
             ("reports/production-readiness-report.json", "readiness_report_commit"),
@@ -420,6 +422,8 @@ def validate(require_site_origin=False):
         ]:
             if needle not in scheduled_workflow:
                 errors.append({"type": f"publish_scheduled_workflow_missing_{label}"})
+        if "23 * * * *" not in scheduled_workflow and not schedule_paused:
+            errors.append({"type": "publish_scheduled_workflow_missing_hourly_due_content_check"})
     if readiness_script_path.exists():
         readiness_script = readiness_script_path.read_text(encoding="utf-8")
         for needle, label in [
