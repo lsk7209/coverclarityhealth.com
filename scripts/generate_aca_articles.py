@@ -1306,7 +1306,7 @@ def build_article(topic, idx):
   </style>
   {schema_html}
 {HEAD_INTEGRATIONS}
-</head>
+<script defer src="https://multi-dashboard-one.vercel.app/fleet-widget.js" data-affiliate-fleet-bootstrap></script></head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
   <header class="top"><div class="wrap nav"><a class="brand" href="../index.html">CoverClarity</a><nav><a href="../index.html#calc">Calculator</a><a href="../blog.html">Blog</a><a href="../methodology.html">Methodology</a><a href="../editorial-policy.html">Editorial policy</a></nav></div></header>
@@ -2328,7 +2328,7 @@ def render_blog(topics):
   </style>
   {blog_schema_html}
 {HEAD_INTEGRATIONS}
-</head>
+<script defer src="https://multi-dashboard-one.vercel.app/fleet-widget.js" data-affiliate-fleet-bootstrap></script></head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
   <header class="top"><div class="wrap nav"><a class="brand" href="index.html">CoverClarity</a><nav><a href="index.html#calc">Calculator</a><a href="methodology.html">Methodology</a><a href="editorial-policy.html">Editorial policy</a></nav></div></header>
@@ -2512,7 +2512,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
   </style>
   {schema_html}
 {HEAD_INTEGRATIONS}
-</head>
+<script defer src="https://multi-dashboard-one.vercel.app/fleet-widget.js" data-affiliate-fleet-bootstrap></script></head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
   <header class="top"><div class="wrap nav"><a class="brand" href="../index.html">CoverClarity</a><nav><a href="../index.html#calc">Calculator</a><a href="../blog.html">Blog</a><a href="../methodology.html">Methodology</a><a href="../editorial-policy.html">Editorial policy</a></nav></div></header>
